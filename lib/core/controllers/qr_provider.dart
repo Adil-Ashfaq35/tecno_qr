@@ -1,6 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_state_manager/get_state_manager.dart';
+
 import 'package:hive_flutter/hive_flutter.dart';
 
 class QrCodeProvider extends GetxController {
@@ -8,10 +7,13 @@ class QrCodeProvider extends GetxController {
   static QrCodeProvider instance = Get.find();
   final box = Hive.box('');
 
-  String? qrData = 'dsdsds';
+  RxString texttoGenerate = ''.obs;
 
   List createdQrs = [];
   List scannedQrs = [];
+  void setTexttogenerate(String text) {
+    texttoGenerate.value = text;
+  }
 
   void getQrs() {
     createdQrs = box.get('createdQrList') ?? [];

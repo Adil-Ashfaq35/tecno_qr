@@ -4,6 +4,8 @@ import 'package:get/get.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:technoapp_qr/core/controllers/navigation_controller.dart';
 import 'package:technoapp_qr/core/controllers/qr_provider.dart';
+import 'package:technoapp_qr/core/controllers/qr_scan.provider.dart';
+import 'package:technoapp_qr/core/controllers/result_controller.dart';
 
 import 'constants/utils/apptheme.dart';
 import 'core/router/router_generator.dart';
@@ -19,8 +21,14 @@ Future<void> init() async {
 
   await Hive.initFlutter();
   await Hive.openBox('');
+  initControllers();
+}
+
+void initControllers() {
   Get.put(NavigationController());
   Get.put(QrCodeProvider());
+  Get.put(ResultController());
+  Get.put(QrScanProvider());
 }
 
 class MyApp extends StatelessWidget {
@@ -34,7 +42,7 @@ class MyApp extends StatelessWidget {
         title: "QR Code",
         onGenerateRoute: RouteGenerator.onGeneratedRoutes,
         theme: AppTheme.lightTheme,
-        initialRoute: RouteGenerator.mainSplashScreen,
+        initialRoute: RouteGenerator.customDrawer,
         // routes: {
         //   '/Home': (_) =>  HomePage(),
         //    '/CreateQr': (_) => CreateQrPage(),

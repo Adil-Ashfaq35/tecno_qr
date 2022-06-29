@@ -1,17 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:google_mlkit_barcode_scanning/google_mlkit_barcode_scanning.dart';
 import 'package:image_picker/image_picker.dart';
 import 'dart:io';
 
+import 'package:technoapp_qr/constants/controllers.dart';
 
-
-class QrScanProvider extends GetxController{
+class QrScanProvider extends GetxController {
   QrScanProvider() : super();
+  static QrScanProvider instance = Get.find();
   final ImagePicker _picker = ImagePicker();
   File? imageFile;
   dynamic pickerError;
-  String qrResult = 'No Result';
+  RxString qrResult = 'No Result'.obs;
+  Rx<BarcodeType> barcodeType = BarcodeType.text.obs;
 
   Future<bool> pickImageGallery() async {
     try {
@@ -25,12 +28,14 @@ class QrScanProvider extends GetxController{
     }
   }
 
-  Future<void> qrScan() async {
-    qrResult = 'No Result';
+  Future<bool> qrScan() async {
+    qrResult = 'No Result'.obs;
     if (await pickImageGallery() == false) {
-      return;
+      return false;
     }
     String result = '';
+    String rawValue = '';
+
     final InputImage inputImage = InputImage.fromFile(imageFile!);
     final BarcodeScanner barcodeScanner = BarcodeScanner();
 
@@ -39,17 +44,22 @@ class QrScanProvider extends GetxController{
     result += 'Detected ${barcodes.length} barcodes.\n';
     for (final Barcode barcode in barcodes) {
       final Rect boundingBox = barcode.boundingBox!;
-      final String rawValue = barcode.rawValue!;
+      rawValue = barcode.rawValue!;
       final valueType = barcode.type;
+
+      barcodeType.value = valueType;
+
       result += '\n# Barcode:\n '
           'bbox=$boundingBox\n '
           'rawValue=$rawValue\n '
           'type=$valueType';
     }
     if (result.isNotEmpty) {
-      qrResult = result;
-
-  
+      qrResult.value = rawValue;
+      resultController.setResult(qrResult.value,barcodeType);
+      return true;
+    } else {
+      return false;
     }
   }
 }

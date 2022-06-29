@@ -11,15 +11,18 @@ import 'package:get/get.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:qr_flutter/qr_flutter.dart';
+import 'package:share_plus/share_plus.dart';
 
 import '../constants/controllers.dart';
+import 'widgets/appbar_design.dart';
+import 'widgets/options_widget.dart';
 
 class CreateQrPage extends StatelessWidget {
   final qrKey = GlobalKey();
 
   CreateQrPage({Key? key}) : super(key: key);
 
-  takeScreenShot(ref) async {
+  Future<File?> takeScreenShot(ref) async {
     PermissionStatus res;
     try {
       res = await Permission.storage.request();
@@ -40,6 +43,7 @@ class CreateQrPage extends StatelessWidget {
           GallerySaver.saveImage(imgFile.path).then((success) async {
             await ref.createQr(ref.qrData!);
           });
+          return imgFile;
         }
       }
     } on Exception catch (e) {
@@ -52,17 +56,33 @@ class CreateQrPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBarWidget(
+          title: 'Qr Code',
+          iconButton: IconButton(
+              onPressed: () {
+                navigationController.goBack();
+              },
+              icon: const Icon(Icons.arrow_back))),
       body: SafeArea(
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
+            const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Text(
+                'Result QR code',
+                style: TextStyle(
+                    color: Color.fromARGB(115, 33, 33, 33),
+                    fontWeight: FontWeight.bold,
+                    fontSize: 25),
+              ),
+            ),
             const SizedBox(height: 25),
             Center(
               child: RepaintBoundary(
                 key: qrKey,
                 child: QrImage(
-                  data: qrProvider.qrData!,
+                  data: qrProvider.texttoGenerate.value,
                   size: 250,
                   backgroundColor: Colors.white,
                   version: QrVersions.auto,
@@ -70,10 +90,27 @@ class CreateQrPage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 25),
-            CupertinoButton(
-              child: const Text("Download"),
-              onPressed: () => takeScreenShot(qrProvider),
+            OptionsWidget(
+              icon: CupertinoIcons.camera,
+              optionText: 'Download',
+              onTap: () {
+                takeScreenShot(qrProvider);
+              },
             ),
+            OptionsWidget(
+              icon: Icons.share,
+              optionText: 'Share',
+              onTap: () async {
+                File? imagefile = await takeScreenShot(qrProvider);
+                Share.shareFiles(['${imagefile?.path}/image.jpg'],
+                    text: 'Qr Code');
+              },
+            ),
+            // CupertinoButton(
+            //   child: const Text("Download"),
+            //   onPressed: () => takeScreenShot(qrProvider),
+            // ),
+
             const SizedBox(height: 25)
           ],
         ),

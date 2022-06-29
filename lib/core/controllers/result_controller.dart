@@ -1,0 +1,19 @@
+import 'package:get/get.dart';
+import 'package:mobile_scanner/mobile_scanner.dart';
+import 'package:url_launcher/url_launcher.dart';
+
+class ResultController extends GetxController {
+  static ResultController instance = Get.find();
+
+  RxString resultText = 'NO RESULT!'.obs;
+  Rx<BarcodeType> barcodeType = BarcodeType.text.obs;
+  void setResult(var result, var type) {
+    resultText.value = result;
+  //  barcodeType.value = type;
+  }
+
+  void navigatetoLink() async {
+    final Uri _url = Uri.parse(resultText.value);
+    if (!await launchUrl(_url)) throw 'Could not launch $_url';
+  }
+}

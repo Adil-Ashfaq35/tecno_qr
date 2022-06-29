@@ -1,5 +1,4 @@
 import 'dart:io';
-import 'dart:math';
 
 import 'package:google_mlkit_barcode_scanning/google_mlkit_barcode_scanning.dart';
 import 'package:image_picker/image_picker.dart';
@@ -7,55 +6,24 @@ import 'package:transparent_image/transparent_image.dart'
     show kTransparentImage;
 import 'package:flutter/material.dart';
 
-class GoogleMLKitExample extends StatefulWidget {
-  const GoogleMLKitExample({Key? key}) : super(key: key);
+class ReadLocal extends StatefulWidget {
+  const ReadLocal({Key? key}) : super(key: key);
 
   @override
   // ignore: library_private_types_in_public_api
-  _GoogleMLKitExampleState createState() => _GoogleMLKitExampleState();
+  _ReadLocalState createState() => _ReadLocalState();
 }
 
-class _GoogleMLKitExampleState extends State<GoogleMLKitExample> {
+class _ReadLocalState extends State<ReadLocal> {
   File? _imageFile;
   String _mlResult = '<no result>';
   final _picker = ImagePicker();
 
   Future<bool> _pickImage() async {
     setState(() => _imageFile = null);
-    final File? imageFile = await showDialog<File>(
-      context: context,
-      builder: (ctx) => SimpleDialog(
-        children: <Widget>[
-          ListTile(
-            leading: const Icon(Icons.camera_alt),
-            title: const Text('Take picture'),
-            onTap: () async {
-              final XFile? pickedFile =
-                  await _picker.pickImage(source: ImageSource.camera);
-              if (mounted && pickedFile != null) {
-                Navigator.pop(ctx, File(pickedFile.path));
-              }
-            },
-          ),
-          ListTile(
-            leading: const Icon(Icons.image),
-            title: const Text('Pick from gallery'),
-            onTap: () async {
-              try {
-                final XFile? pickedFile =
-                    await _picker.pickImage(source: ImageSource.gallery);
-                if (mounted && pickedFile != null) {
-                  Navigator.pop(ctx, File(pickedFile.path));
-                }
-              } catch (e) {
-                print(e);
-                Navigator.pop(ctx, null);
-              }
-            },
-          ),
-        ],
-      ),
-    );
+    final File? imageFile;
+    imageFile = await fromGallery();
+
     if (mounted && imageFile == null) {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text('Please pick one image first.')),
@@ -65,6 +33,21 @@ class _GoogleMLKitExampleState extends State<GoogleMLKitExample> {
     setState(() => this._imageFile = imageFile);
     print('picked image: ${this._imageFile}');
     return true;
+  }
+
+  Future<File?> fromGallery() async {
+    try {
+      final XFile? pickedFile =
+          await _picker.pickImage(source: ImageSource.gallery);
+      if (mounted && pickedFile != null) {
+        return File(pickedFile.path);
+      } else {
+        return null;
+      }
+    } catch (e) {
+      print(e);
+      return null;
+    }
   }
 
   // Future<void> _imageLabelling() async {

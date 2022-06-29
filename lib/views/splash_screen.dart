@@ -14,11 +14,10 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen>
     with TickerProviderStateMixin {
- 
-
   @override
   void initState() {
     super.initState();
+
     Timer(const Duration(milliseconds: 3000), () => checkState());
   }
 

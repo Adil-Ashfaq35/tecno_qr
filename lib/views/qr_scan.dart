@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
+import 'package:technoapp_qr/constants/controllers.dart';
+import 'package:technoapp_qr/core/router/router_generator.dart';
 
 class ScanQr extends StatefulWidget {
   const ScanQr({Key? key}) : super(key: key);
@@ -15,10 +17,10 @@ class _ScanQrState extends State<ScanQr> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Mobile Scanner'),
+          title: const Text('Scan from Camera'),
           actions: [
             IconButton(
-              color: Colors.white,
+              color: Colors.amber,
               icon: ValueListenableBuilder(
                 valueListenable: cameraController.torchState,
                 builder: (context, state, child) {
@@ -52,6 +54,7 @@ class _ScanQrState extends State<ScanQr> {
           ],
         ),
         body: MobileScanner(
+
             allowDuplicates: false,
             controller: cameraController,
             onDetect: (barcode, args) {
@@ -59,7 +62,11 @@ class _ScanQrState extends State<ScanQr> {
                 debugPrint('Failed to scan Barcode');
               } else {
                 final String code = barcode.rawValue!;
+                resultController.setResult(code, barcode.type);
+
                 debugPrint('Barcode found! $code');
+                navigationController
+                    .navigateToNamed(RouteGenerator.resultScreen);
               }
             }));
   }

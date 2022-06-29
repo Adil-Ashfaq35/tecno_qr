@@ -1,21 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:technoapp_qr/readlocal.dart';
+import 'package:technoapp_qr/views/custom_drawer.dart';
+import 'package:technoapp_qr/views/enter_qr.dart';
 import 'package:technoapp_qr/views/home_screen.dart';
+import 'package:technoapp_qr/views/qr_scan.dart';
+import 'package:technoapp_qr/views/result_screen.dart';
 import 'package:technoapp_qr/views/splash_screen.dart';
 
 import '../../views/generate_qr.dart';
 
 class RouteGenerator {
   // ignore: todo
-// TODO : ROUTES GENERATOR CLASS THAT CONTROLS THE FLOW OF NAVIGATION/ROUTING
 
   static const String mainSplashScreen = '/main-splash-screen';
 
   // Drawer
   static const String customDrawer = '/custom-drawer';
   static const String homeScreen = '/home_screen';
-
+  static const String scanQr = '/qr_scan';
   static const String createQr = '/generate_qr';
-
+  static const String readLocal = '/read_local';
+  static const String resultScreen = '/result_screen';
+  static const String enterText = '/enter_text';
   // FUNCTION THAT HANDLES ROUTING
   static Route<dynamic> onGeneratedRoutes(RouteSettings settings) {
     late dynamic args;
@@ -27,12 +33,20 @@ class RouteGenerator {
       case mainSplashScreen:
         return _getPageRoute(const SplashScreen());
       case homeScreen:
-        return _getPageRoute(const HomeScreen());
+        return _getPageRoute( HomeScreen());
       case createQr:
         return _getPageRoute(CreateQrPage());
+      case scanQr:
+        return _getPageRoute(const ScanQr());
+      case readLocal:
+        return _getPageRoute(const ReadLocal());
+      case resultScreen:
+        return _getPageRoute(const ResultScreen());
 
-      // case customDrawer:
-      //   return _getPageRoute(const CustomDrawer());
+      case enterText:
+        return _getPageRoute(EnterText());
+      case customDrawer:
+        return _getPageRoute(const CustomDrawer());
 
       default:
         return _errorRoute();
