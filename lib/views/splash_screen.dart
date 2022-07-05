@@ -48,6 +48,6 @@ class _SplashScreenState extends State<SplashScreen>
   }
 
   checkState() {
-    navigationController.getOffAll(RouteGenerator.homeScreen);
+    navigationController.getOffAll(RouteGenerator.customDrawer);
   }
 }

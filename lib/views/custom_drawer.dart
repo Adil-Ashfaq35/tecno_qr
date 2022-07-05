@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:share_plus/share_plus.dart';
+import 'package:technoapp_qr/constants/controllers.dart';
 import 'package:technoapp_qr/views/home_screen.dart';
 
 import '../constants/utils/apptheme.dart';
@@ -19,7 +20,6 @@ class _CustomDrawerState extends State<CustomDrawer>
   late AnimationController animationController;
 
   bool visible = false;
-
 
   @override
   void initState() {
@@ -49,152 +49,67 @@ class _CustomDrawerState extends State<CustomDrawer>
                       SizedBox(
                         height: 0.12.sh,
                       ),
-                      InkWell(
-                        onTap: () async {
-                          // navigationController
-                          //     .navigateToNamed(RouteGenerator.myPhotos);
-                          //TODO:: Change package name
-                          // PackageInfo info = await getVersion();
-                          // Share.share(
-                          //     'Let me recommend you this Application: https://play.google.com/store/apps/details?id=com.geeklone.quitmustpro',
-                          //     subject: 'Sharing App');
-                          // // Share.share(
-                          // //     'Let me recommend you this Application: https://play.google.com/store/apps/details?id=${info.packageName}',
-                          // //     subject: 'Sharing App');
-                        },
-                        child: Row(
-                          children: [
-                            // Padding(
-                            //   padding: EdgeInsets.only(right: 10.sp),
-                            //   child: SizedBox(
-                            //     height: 0.055.sh,
-                            //     child: Image.asset(
-                            //       // ImagePath.myPhotos,
-                            //       scale: 1.2,
-                            //     ),
-                            //   ),
-                            // ),
-                            Text(
-                              "My Photos",
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .headline2
-                                  ?.copyWith(
-                                      color: Colors.white, fontSize: 16.sp),
-                            )
-                          ],
-                        ),
+                      Menuitem(
+                        callback: () {},
+                        title: 'Home',
+                        iconData: Icons.home,
                       ),
                       SizedBox(
                         height: 0.05.sh,
                       ),
-                      InkWell(
-                        onTap: () async {
+                      Menuitem(
+                        callback: () {
+                          navigationController
+                              .navigateToNamed(RouteGenerator.historyScreen);
+                        },
+                        title: 'History',
+                        iconData: Icons.history,
+                      ),
+                      SizedBox(
+                        height: 0.05.sh,
+                      ),
+                      Menuitem(
+                        callback: () {},
+                        title: 'Language',
+                        iconData: Icons.language,
+                      ),
+                      SizedBox(
+                        height: 0.05.sh,
+                      ),
+                      Menuitem(
+                          callback: () {},
+                          title: 'FAQ',
+                          iconData: Icons.question_answer),
+                      SizedBox(
+                        height: 0.05.sh,
+                      ),
+                      Menuitem(
+                        callback: () async {
                           //    PackageInfo info = await getVersion();
                           Share.share(
                               'Let me recommend you this Application: https://play.google.com/store/apps/details?id=com.geeklone.toonapp',
                               subject: 'Sharing App');
                         },
-                        child: Row(
-                          children: [
-                            // Padding(
-                            //   padding: EdgeInsets.only(right: 10.sp),
-                            //   child: SizedBox(
-                            //     height: 0.055.sh,
-                            //     child: Image.asset(
-                            //       ImagePath.shareIcon,
-                            //       scale: 1.2,
-                            //     ),
-                            //   ),
-                            // ),
-                            Text(
-                              "Share App",
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .headline2
-                                  ?.copyWith(
-                                      color: Colors.white, fontSize: 16.sp),
-                            )
-                          ],
-                        ),
+                        title: 'Share App',
+                        iconData: Icons.share,
                       ),
                       SizedBox(
                         height: 0.05.sh,
                       ),
-                      InkWell(
-                        onTap: () async {
-                          // PackageInfo info = await getVersion();
-                          // LaunchReview.launch(androidAppId: info.packageName);
-                        },
-                        child: Row(
-                          children: [
-                            Padding(
-                              padding: EdgeInsets.only(right: 10.sp),
-                              child: SizedBox(
-                                height: 0.055.sh,
-                                child: Icon(Icons.star),
-                              ),
-                            ),
-                            Text(
-                              "Rate Us",
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .headline2
-                                  ?.copyWith(
-                                      color: Colors.white, fontSize: 16.sp),
-                            )
-                          ],
-                        ),
-                      ),
+                      Menuitem(
+                          callback: () async {
+                            //    PackageInfo info = await getVersion();
+                            Share.share(
+                                'Let me recommend you this Application: https://play.google.com/store/apps/details?id=com.geeklone.toonapp',
+                                subject: 'Sharing App');
+                          },
+                          title: 'Privacy Policy',
+                          iconData: Icons.privacy_tip),
                       SizedBox(
                         height: 0.05.sh,
-                      ),
-                      InkWell(
-                        onTap: () {
-                          // navigationController
-                          //     .navigateToNamed(RouteGenerator.privacyPolicy);
-                        },
-                        child: Row(
-                          children: [
-                            Padding(
-                              padding: EdgeInsets.only(right: 10.sp),
-                              child: SizedBox(
-                                  height: 0.055.sh, child: Icon(Icons.policy)),
-                            ),
-                            Text(
-                              "Privacy Policy",
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .headline2
-                                  ?.copyWith(
-                                      color: Colors.white, fontSize: 16.sp),
-                            )
-                          ],
-                        ),
                       ),
                     ],
                   ),
-                  // Column(
-                  //   children: [
-                  //     FutureBuilder(
-                  //         future: myFuture,
-                  //         builder: (context,
-                  //             AsyncSnapshot<PackageInfo> versionNumber) {
-                  //           return AnimatedOpacity(
-                  //               opacity: visible ? 1.0 : 0.0,
-                  //               duration: const Duration(milliseconds: 500),
-                  //               child: Text(
-                  //                 'App Version ${versionNumber.data?.version}',
-                  //                 style: Theme.of(context)
-                  //                     .textTheme
-                  //                     .headline1
-                  //                     ?.copyWith(
-                  //                         color: Colors.white, fontSize: 13.sp),
-                  //               ));
-                  //         }),
-                  //     SizedBox(height: 0.1.sh)
-                  //   ],
-                  // )
                 ],
               ),
             ),
@@ -214,8 +129,8 @@ class _CustomDrawerState extends State<CustomDrawer>
           animation: toggleAnimation,
         ));
     return ScreenUtilInit(
-      builder: (context,widget) => Scaffold(
-        backgroundColor:AppTheme.primaryColor,
+      builder: (context, widget) => Scaffold(
+        backgroundColor: AppTheme.lightBackgroundColor,
         // body: Center(child: Text(),),
         body: AnimatedBuilder(
             animation: animationController,
@@ -253,6 +168,43 @@ class _CustomDrawerState extends State<CustomDrawer>
         ? animationController.forward()
         : animationController.reverse();
   }
+}
 
-  
+class Menuitem extends StatelessWidget {
+  const Menuitem({
+    Key? key,
+    required this.title,
+    required this.callback,
+    required this.iconData,
+  }) : super(key: key);
+  final String title;
+  final VoidCallback callback;
+  final IconData iconData;
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: () async {
+        callback();
+      },
+      child: Row(
+        //   mainAxisAlignment: MainAxisAlignment.s,
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(right: 8),
+            child: Icon(
+              iconData,
+              color: Colors.white,
+            ),
+          ),
+          Text(
+            title,
+            style: Theme.of(context)
+                .textTheme
+                .headline2
+                ?.copyWith(color: Colors.white, fontSize: 16.sp),
+          )
+        ],
+      ),
+    );
+  }
 }

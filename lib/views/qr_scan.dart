@@ -54,20 +54,30 @@ class _ScanQrState extends State<ScanQr> {
           ],
         ),
         body: MobileScanner(
-
             allowDuplicates: false,
             controller: cameraController,
             onDetect: (barcode, args) {
-              if (barcode.rawValue == null) {
-                debugPrint('Failed to scan Barcode');
-              } else {
-                final String code = barcode.rawValue!;
-                resultController.setResult(code, barcode.type);
+              if (mounted) {
+                if (barcode.rawValue == null) {
+                  debugPrint('Failed to scan Barcode');
+                } else {
+                  final String code = barcode.rawValue!;
+                  resultController.setResult(code, barcode.type,true);
 
-                debugPrint('Barcode found! $code');
-                navigationController
-                    .navigateToNamed(RouteGenerator.resultScreen);
+                  debugPrint('Barcode found! $code');
+
+                  navigationController
+                      .navigateToNamed(RouteGenerator.resultScreen);
+                  dispose();
+                }
               }
             }));
+  }
+
+  @override
+  void dispose() {
+    cameraController.dispose();
+
+    super.dispose();
   }
 }

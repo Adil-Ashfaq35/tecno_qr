@@ -56,7 +56,8 @@ class QrScanProvider extends GetxController {
     }
     if (result.isNotEmpty) {
       qrResult.value = rawValue;
-      resultController.setResult(qrResult.value,barcodeType);
+
+      resultController.setResult(qrResult.value,barcodeType,false);
       return true;
     } else {
       return false;

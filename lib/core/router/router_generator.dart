@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:technoapp_qr/readlocal.dart';
 import 'package:technoapp_qr/views/custom_drawer.dart';
 import 'package:technoapp_qr/views/enter_qr.dart';
+import 'package:technoapp_qr/views/history_screen.dart';
 import 'package:technoapp_qr/views/home_screen.dart';
 import 'package:technoapp_qr/views/qr_scan.dart';
 import 'package:technoapp_qr/views/result_screen.dart';
@@ -22,6 +23,7 @@ class RouteGenerator {
   static const String readLocal = '/read_local';
   static const String resultScreen = '/result_screen';
   static const String enterText = '/enter_text';
+  static const String historyScreen = '/history_screen';
   // FUNCTION THAT HANDLES ROUTING
   static Route<dynamic> onGeneratedRoutes(RouteSettings settings) {
     late dynamic args;
@@ -33,7 +35,7 @@ class RouteGenerator {
       case mainSplashScreen:
         return _getPageRoute(const SplashScreen());
       case homeScreen:
-        return _getPageRoute( HomeScreen());
+        return _getPageRoute(HomeScreen());
       case createQr:
         return _getPageRoute(CreateQrPage());
       case scanQr:
@@ -47,7 +49,8 @@ class RouteGenerator {
         return _getPageRoute(EnterText());
       case customDrawer:
         return _getPageRoute(const CustomDrawer());
-
+      case historyScreen:
+        return _getPageRoute( HistoryScreen());
       default:
         return _errorRoute();
     }

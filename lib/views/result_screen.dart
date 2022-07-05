@@ -5,6 +5,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:technoapp_qr/constants/controllers.dart';
+import 'package:technoapp_qr/core/router/router_generator.dart';
+import 'package:technoapp_qr/views/home_screen.dart';
 import 'package:technoapp_qr/views/widgets/appbar_design.dart';
 import 'package:technoapp_qr/views/widgets/options_widget.dart';
 import '../constants/utils/apptheme.dart';
@@ -19,7 +21,7 @@ class ResultScreen extends StatelessWidget {
         title: 'Result Screen',
           iconButton: IconButton(
               onPressed: () {
-                navigationController.goBack();
+                navigationController.getOffAll(RouteGenerator.homeScreen);
               },
               icon: const Icon(Icons.arrow_back))),
       body: Container(

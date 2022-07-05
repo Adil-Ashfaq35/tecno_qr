@@ -4,6 +4,13 @@ import 'package:hive_flutter/hive_flutter.dart';
 
 class QrCodeProvider extends GetxController {
   QrCodeProvider() : super();
+
+  @override
+  void onInit() {
+    getQrs();
+    super.onInit();
+  }
+
   static QrCodeProvider instance = Get.find();
   final box = Hive.box('');
 

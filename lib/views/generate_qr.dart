@@ -22,7 +22,7 @@ class CreateQrPage extends StatelessWidget {
 
   CreateQrPage({Key? key}) : super(key: key);
 
-  Future<File?> takeScreenShot(ref) async {
+  Future<File?> takeScreenShot() async {
     PermissionStatus res;
     try {
       res = await Permission.storage.request();
@@ -36,13 +36,15 @@ class CreateQrPage extends StatelessWidget {
         if (byteData != null) {
           final pngBytes = byteData.buffer.asUint8List();
           final directory = (await getApplicationDocumentsDirectory()).path;
+         
           final imgFile = File(
-            '$directory/${DateTime.now()}${ref.qrData!}.png',
+            '$directory/${DateTime.now()}${qrProvider.texttoGenerate}.png',
           );
           imgFile.writeAsBytes(pngBytes);
           GallerySaver.saveImage(imgFile.path).then((success) async {
-            await ref.createQr(ref.qrData!);
+            await qrProvider.createQr(qrProvider.texttoGenerate.value);
           });
+    
           return imgFile;
         }
       }
@@ -94,14 +96,14 @@ class CreateQrPage extends StatelessWidget {
               icon: CupertinoIcons.camera,
               optionText: 'Download',
               onTap: () {
-                takeScreenShot(qrProvider);
+                takeScreenShot();
               },
             ),
             OptionsWidget(
               icon: Icons.share,
               optionText: 'Share',
               onTap: () async {
-                File? imagefile = await takeScreenShot(qrProvider);
+                File? imagefile = await takeScreenShot();
                 Share.shareFiles(['${imagefile?.path}/image.jpg'],
                     text: 'Qr Code');
               },

@@ -10,26 +10,26 @@ import 'package:technoapp_qr/views/widgets/appbar_design.dart';
 import 'package:technoapp_qr/views/widgets/options_widget.dart';
 
 class HomeScreen extends StatelessWidget {
-const  HomeScreen({Key? key,  this.animation}) : super(key: key);
- final VoidCallback? animation;
+  const HomeScreen({Key? key, this.animation}) : super(key: key);
+  final VoidCallback? animation;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBarWidget(
         title: 'Techno App',
-          iconButton:IconButton(
-                            hoverColor: AppTheme.splashColor,
-                            disabledColor: Colors.grey[200],
-                            focusColor: AppTheme.splashColor,
-                            highlightColor: AppTheme.splashColor,
-                            splashColor: AppTheme.splashColor,
-                            splashRadius: 20.r,
-                            icon:Icon(Icons.menu),
-                            onPressed: () {
-                            animation!;
-                            },
-                          ),
-              ),
+        iconButton: IconButton(
+          hoverColor: AppTheme.splashColor,
+          disabledColor: Colors.grey[200],
+          focusColor: AppTheme.splashColor,
+          highlightColor: AppTheme.splashColor,
+          splashColor: AppTheme.splashColor,
+          splashRadius: 20.r,
+          icon: Icon(Icons.menu),
+          onPressed: () {
+            animation!();
+          },
+        ),
+      ),
       body: Container(
         decoration: const BoxDecoration(color: AppTheme.lightBackgroundColor),
         child: Column(mainAxisAlignment: MainAxisAlignment.center,
