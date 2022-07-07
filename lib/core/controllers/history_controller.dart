@@ -1,9 +1,11 @@
 import 'dart:io';
 
+import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 
 import 'package:hive/hive.dart';
 import 'package:technoapp_qr/models/history_model.dart';
+import 'package:technoapp_qr/models/imagesqr_model.dart';
 
 import '../../models/qr_model.dart';
 import 'package:path_provider/path_provider.dart';
@@ -15,7 +17,7 @@ class HistoryController extends GetxController {
   RxList<QRModel> scanQrs = <QRModel>[].obs;
   RxList<QRModel> readQrs = <QRModel>[].obs;
   List get qrCodes => qrList;
-  var images = <String>[].obs;
+  var images = <QrImage>[].obs;
 
   final box = Hive.box<QRModel>('historyBox');
   @override
@@ -79,11 +81,13 @@ class HistoryController extends GetxController {
     final _imagesFile =
         imagesDirectory.listSync().map((item) => item.path)
         .where((item) => item.endsWith(".png"))
-        .toList(growable: false);;
+        .toList(growable: false);
     for (var img in _imagesFile) {
-      images.add(img);
+      images.add(QrImage(imageName: img, isExpanded: false));
     }
-    print("Length  = :${images.length}");
+    if (kDebugMode) {
+      print("Length  = :${images.length}");
+    }
   }
 
   Future<String> getFilePath() async {

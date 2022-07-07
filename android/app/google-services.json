@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "461826574453",
+    "project_id": "technocode-srg",
+    "storage_bucket": "technocode-srg.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:461826574453:android:f4c3c2562774dcf431503c",
+        "android_client_info": {
+          "package_name": "com.example.technoapp_qr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "461826574453-i1f3k59qaoitrc81m6ppsfbqt7idfhgv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_I88TnvOx508-joDMhEpy0ZG08hipPL8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "461826574453-i1f3k59qaoitrc81m6ppsfbqt7idfhgv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
