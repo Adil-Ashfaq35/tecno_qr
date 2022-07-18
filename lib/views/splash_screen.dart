@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:technoapp_qr/constants/const_settings.dart';
 import 'package:technoapp_qr/constants/controllers.dart';
 import 'package:technoapp_qr/core/router/router_generator.dart';
 
@@ -18,7 +19,7 @@ class _SplashScreenState extends State<SplashScreen>
   void initState() {
     super.initState();
 
-    Timer(const Duration(seconds: 5), () => checkState());
+    Timer(const Duration(seconds: ConstantSettings.splashScreenTime), () => checkState());
   }
 
   @override

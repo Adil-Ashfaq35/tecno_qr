@@ -5,7 +5,7 @@ import 'package:technoapp_qr/constants/utils/apptheme.dart';
 class CustomWidgets {
   static BoxDecoration customDecoration() {
     return BoxDecoration(
-        color: Colors.amber[50],
+        color: AppTheme.primaryColor.withOpacity(0.8),
         boxShadow: [
           BoxShadow(
             color: Colors.black45.withOpacity(0.25),

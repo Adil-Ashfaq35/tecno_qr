@@ -4,9 +4,12 @@ import 'package:technoapp_qr/views/custom_drawer.dart';
 import 'package:technoapp_qr/views/enter_qr.dart';
 import 'package:technoapp_qr/views/history_screen.dart';
 import 'package:technoapp_qr/views/home_screen.dart';
+import 'package:technoapp_qr/views/image_display.dart';
 import 'package:technoapp_qr/views/qr_scan.dart';
 import 'package:technoapp_qr/views/result_screen.dart';
 import 'package:technoapp_qr/views/splash_screen.dart';
+import 'package:technoapp_qr/views/widgets/faq_screen.dart';
+import 'package:technoapp_qr/views/widgets/written_texts_screen.dart';
 
 import '../../views/generate_qr.dart';
 
@@ -24,6 +27,9 @@ class RouteGenerator {
   static const String resultScreen = '/result_screen';
   static const String enterText = '/enter_text';
   static const String historyScreen = '/history_screen';
+  static const String policyScreen = '/policy_screen';
+  static const String faqPage = '/faq_page';
+  static const String displayImage = '/image_display';
   // FUNCTION THAT HANDLES ROUTING
   static Route<dynamic> onGeneratedRoutes(RouteSettings settings) {
     late dynamic args;
@@ -35,7 +41,7 @@ class RouteGenerator {
       case mainSplashScreen:
         return _getPageRoute(const SplashScreen());
       case homeScreen:
-        return _getPageRoute(HomeScreen());
+        return _getPageRoute(const HomeScreen());
       case createQr:
         return _getPageRoute(CreateQrPage());
       case scanQr:
@@ -50,7 +56,13 @@ class RouteGenerator {
       case customDrawer:
         return _getPageRoute(const CustomDrawer());
       case historyScreen:
-        return _getPageRoute( HistoryScreen());
+        return _getPageRoute(HistoryScreen());
+      case policyScreen:
+        return _getPageRoute(const PrivacyPolicy());
+      case faqPage:
+        return _getPageRoute(FAQPage());
+      case displayImage:
+        return _getPageRoute(const DisplayImage());
       default:
         return _errorRoute();
     }

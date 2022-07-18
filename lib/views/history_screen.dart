@@ -56,7 +56,7 @@ class _HistoryScreenState extends State<HistoryScreen> {
             SliverList(
                 delegate: SliverChildListDelegate([
               SizedBox(
-                  height: 0.76.sh,
+                  height: 0.90.sh,
                   child: RefreshIndicator(
                     onRefresh: () async {},
                     child: CustomScrollView(
@@ -191,12 +191,11 @@ class _ExpansionPanelhistoryState extends State<ExpansionPanelhistory> {
       itemBuilder: (BuildContext context, int index) {
         return ExpansionPanelList(
           animationDuration: Duration(milliseconds: 1000),
-          
+
           //  dividerColor: Colors.red,
           elevation: 1,
           children: [
             ExpansionPanel(
-          
               body: Container(
                 padding: EdgeInsets.all(10),
                 child: Column(
@@ -217,7 +216,7 @@ class _ExpansionPanelhistoryState extends State<ExpansionPanelhistory> {
                 ),
               ),
               isExpanded: widget.isQRCreated
-                  ? widget.images[index].isExpanded!
+                  ? widget.images[index].isExpanded
                   : widget.qrslist[index].isExpanded,
               headerBuilder: (BuildContext context, bool isExpanded) {
                 return Container(
@@ -238,8 +237,8 @@ class _ExpansionPanelhistoryState extends State<ExpansionPanelhistory> {
           expansionCallback: (int item, bool status) {
             if (widget.isQRCreated) {
               setState(() {
-                widget.images[index].isExpanded !=
-                    !widget.images[index].isExpanded!;
+                widget.images[index].isExpanded =
+                    !widget.images[index].isExpanded;
               });
             } else {
               setState(() {

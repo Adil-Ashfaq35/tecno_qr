@@ -12,6 +12,7 @@ import 'package:path_provider/path_provider.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 import 'package:share_plus/share_plus.dart';
+import 'package:technoapp_qr/core/router/router_generator.dart';
 
 import '../constants/controllers.dart';
 import 'widgets/appbar_design.dart';
@@ -36,7 +37,7 @@ class CreateQrPage extends StatelessWidget {
         if (byteData != null) {
           final pngBytes = byteData.buffer.asUint8List();
           final directory = (await getApplicationDocumentsDirectory()).path;
-         
+
           final imgFile = File(
             '$directory/${DateTime.now()}${qrProvider.texttoGenerate}.png',
           );
@@ -44,7 +45,7 @@ class CreateQrPage extends StatelessWidget {
           GallerySaver.saveImage(imgFile.path).then((success) async {
             await qrProvider.createQr(qrProvider.texttoGenerate.value);
           });
-    
+
           return imgFile;
         }
       }
@@ -62,7 +63,7 @@ class CreateQrPage extends StatelessWidget {
           title: 'Qr Code',
           iconButton: IconButton(
               onPressed: () {
-                navigationController.goBack();
+                navigationController.getOffAll(RouteGenerator.customDrawer);
               },
               icon: const Icon(Icons.arrow_back))),
       body: SafeArea(
@@ -96,6 +97,7 @@ class CreateQrPage extends StatelessWidget {
               icon: CupertinoIcons.camera,
               optionText: 'Download',
               onTap: () {
+                
                 takeScreenShot();
               },
             ),

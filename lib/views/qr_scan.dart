@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
 import 'package:technoapp_qr/constants/controllers.dart';
+import 'package:technoapp_qr/constants/utils/apptheme.dart';
 import 'package:technoapp_qr/core/router/router_generator.dart';
 
 class ScanQr extends StatefulWidget {
@@ -17,7 +18,9 @@ class _ScanQrState extends State<ScanQr> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Scan from Camera'),
+          backgroundColor: AppTheme.primaryColor,
+          title: const Text('Scan from Camera',
+              style: TextStyle(color: Colors.white)),
           actions: [
             IconButton(
               color: Colors.amber,
@@ -62,7 +65,7 @@ class _ScanQrState extends State<ScanQr> {
                   debugPrint('Failed to scan Barcode');
                 } else {
                   final String code = barcode.rawValue!;
-                  resultController.setResult(code, barcode.type,true);
+                  resultController.setResult(code, barcode.type, true);
 
                   debugPrint('Barcode found! $code');
 

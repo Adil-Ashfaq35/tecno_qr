@@ -45,6 +45,7 @@ class HistoryController extends GetxController {
   }
 
   getItem() async {
+    qrList.value = [];
     qrList.value = box.values.toList();
     divisbleQR(qrList);
   }
@@ -61,6 +62,9 @@ class HistoryController extends GetxController {
 
   divisbleQR(RxList<QRModel> qrList) {
     qrHistory.clear();
+    scanQrs.value = [];
+    readQrs.value = [];
+
     for (var element in qrList) {
       if (element.iscreate) {
         scanQrs.add(element);
@@ -78,8 +82,9 @@ class HistoryController extends GetxController {
     String path = await getFilePath();
     images.value = [];
     final imagesDirectory = Directory('$path/');
-    final _imagesFile =
-        imagesDirectory.listSync().map((item) => item.path)
+    final _imagesFile = imagesDirectory
+        .listSync()
+        .map((item) => item.path)
         .where((item) => item.endsWith(".png"))
         .toList(growable: false);
     for (var img in _imagesFile) {

@@ -14,3 +14,4 @@ abstract class HistoryModel with _$HistoryModel{
   }) = _HistoryModel;
 }
 
+ 

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/route_manager.dart';
 
 import 'package:share_plus/share_plus.dart';
 import 'package:technoapp_qr/constants/controllers.dart';
@@ -32,7 +33,7 @@ class _CustomDrawerState extends State<CustomDrawer>
   Widget build(BuildContext context) {
     Widget _buildDrawer() => Drawer(
           elevation: 0,
-          backgroundColor: Color.fromARGB(255, 28, 92, 146),
+          backgroundColor: const Color.fromARGB(255, 28, 92, 146),
           child: SingleChildScrollView(
             physics: const BouncingScrollPhysics(),
             child: Container(
@@ -50,7 +51,10 @@ class _CustomDrawerState extends State<CustomDrawer>
                         height: 0.12.sh,
                       ),
                       Menuitem(
-                        callback: () {},
+                        callback: () {
+                          navigationController
+                              .getOffAll(RouteGenerator.customDrawer);
+                        },
                         title: 'Home',
                         iconData: Icons.home,
                       ),
@@ -77,7 +81,10 @@ class _CustomDrawerState extends State<CustomDrawer>
                         height: 0.05.sh,
                       ),
                       Menuitem(
-                          callback: () {},
+                          callback: () {
+                            navigationController
+                                .navigateToNamed(RouteGenerator.faqPage);
+                          },
                           title: 'FAQ',
                           iconData: Icons.question_answer),
                       SizedBox(
@@ -99,9 +106,8 @@ class _CustomDrawerState extends State<CustomDrawer>
                       Menuitem(
                           callback: () async {
                             //    PackageInfo info = await getVersion();
-                            Share.share(
-                                'Let me recommend you this Application: https://play.google.com/store/apps/details?id=com.geeklone.toonapp',
-                                subject: 'Sharing App');
+                            navigationController
+                                .navigateToNamed(RouteGenerator.policyScreen);
                           },
                           title: 'Privacy Policy',
                           iconData: Icons.privacy_tip),

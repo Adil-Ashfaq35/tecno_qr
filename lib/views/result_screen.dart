@@ -21,7 +21,7 @@ class ResultScreen extends StatelessWidget {
         title: 'Result Screen',
           iconButton: IconButton(
               onPressed: () {
-                navigationController.getOffAll(RouteGenerator.homeScreen);
+                navigationController.getOffAll(RouteGenerator.customDrawer);
               },
               icon: const Icon(Icons.arrow_back))),
       body: Container(

@@ -28,11 +28,17 @@ class QrScanProvider extends GetxController {
     }
   }
 
-  Future<bool> qrScan() async {
-    qrResult = 'No Result'.obs;
+  Future<bool> pickImage() async {
     if (await pickImageGallery() == false) {
       return false;
+    } else {
+      return true;
     }
+  }
+
+  Future<bool> qrScan() async {
+    qrResult = 'No Result'.obs;
+
     String result = '';
     String rawValue = '';
 
@@ -54,10 +60,10 @@ class QrScanProvider extends GetxController {
           'rawValue=$rawValue\n '
           'type=$valueType';
     }
-    if (result.isNotEmpty) {
+    if (rawValue.isNotEmpty) {
       qrResult.value = rawValue;
 
-      resultController.setResult(qrResult.value,barcodeType,false);
+      resultController.setResult(qrResult.value, barcodeType, false);
       return true;
     } else {
       return false;

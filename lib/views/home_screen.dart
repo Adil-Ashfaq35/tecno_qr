@@ -46,10 +46,10 @@ class HomeScreen extends StatelessWidget {
                 icon: CupertinoIcons.photo,
                 optionText: 'Read from Local Storage ',
                 onTap: () async {
-                  bool isCompleted = await qrScanProvider.qrScan();
+                  bool isCompleted = await qrScanProvider.pickImage();
                   isCompleted
                       ? navigationController
-                          .navigateToNamed(RouteGenerator.resultScreen)
+                          .navigateToNamed(RouteGenerator.displayImage)
                       : null;
                 },
               ),

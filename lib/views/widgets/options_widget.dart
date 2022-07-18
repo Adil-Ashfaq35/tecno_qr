@@ -23,15 +23,15 @@ class OptionsWidget extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Container(
-              margin: EdgeInsets.fromLTRB(40.sp, 20.sp, 40.sp, 20.sp),
+              margin: EdgeInsets.fromLTRB(40.sp, 20.sp, 30.sp, 20.sp),
               height: 50.h,
               width: 50.w,
               decoration: CustomWidgets.customDecoration(),
               child: Center(
                   child: Icon(
                 icon,
-                size: 40.h,
-                color: Colors.black,
+                size: 35.h,
+                color: Colors.white,
               )),
             ),
             Text(
