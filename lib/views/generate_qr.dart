@@ -1,4 +1,5 @@
 import 'dart:io';
+
 import 'dart:ui' as ui;
 
 import 'package:flutter/cupertino.dart';
@@ -23,7 +24,7 @@ class CreateQrPage extends StatelessWidget {
 
   CreateQrPage({Key? key}) : super(key: key);
 
-  Future<File?> takeScreenShot() async {
+  Future<File?> takeScreenShot(context) async {
     PermissionStatus res;
     try {
       res = await Permission.storage.request();
@@ -44,6 +45,7 @@ class CreateQrPage extends StatelessWidget {
           imgFile.writeAsBytes(pngBytes);
           GallerySaver.saveImage(imgFile.path).then((success) async {
             await qrProvider.createQr(qrProvider.texttoGenerate.value);
+            ScaffoldMessenger.of(context).showSnackBar( SnackBar(content: Text("Your file is Downloaded to ${directory}")));
           });
 
           return imgFile;
@@ -97,7 +99,7 @@ class CreateQrPage extends StatelessWidget {
               icon: CupertinoIcons.camera,
               optionText: 'Download',
               onTap: () {
-                takeScreenShot();
+                takeScreenShot(context);
 
               },
             ),
@@ -105,7 +107,7 @@ class CreateQrPage extends StatelessWidget {
               icon: Icons.share,
               optionText: 'Share',
               onTap: () async {
-                File? imagefile = await takeScreenShot();
+                File? imagefile = await takeScreenShot(context);
                 Share.shareFiles(['${imagefile?.path}/image.jpg'],
                     text: 'Qr Code');
               },
