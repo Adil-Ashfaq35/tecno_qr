@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'dart:ui' as ui;
 
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -46,6 +47,11 @@ class CreateQrPage extends StatelessWidget {
           GallerySaver.saveImage(imgFile.path).then((success) async {
             await qrProvider.createQr(qrProvider.texttoGenerate.value);
             ScaffoldMessenger.of(context).showSnackBar( SnackBar(content: Text("Your file is Downloaded to ${directory}")));
+            FirebaseAnalytics.instance.logEvent(name: "Downloaded_the_qr",
+            parameters: {
+              "downloaded_code":"generated_from_text",
+            }
+            );
           });
 
           return imgFile;
@@ -110,6 +116,10 @@ class CreateQrPage extends StatelessWidget {
                 File? imagefile = await takeScreenShot(context);
                 Share.shareFiles(['${imagefile?.path}/image.jpg'],
                     text: 'Qr Code');
+                FirebaseAnalytics.instance.logEvent(name: "share_qr",parameters: {
+                   "qr_shared":"shared_gen_qr",
+
+                });
               },
             ),
             // CupertinoButton(

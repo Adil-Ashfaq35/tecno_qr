@@ -1,3 +1,4 @@
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -24,7 +25,7 @@ class HomeScreen extends StatelessWidget {
           highlightColor: AppTheme.splashColor,
           splashColor: AppTheme.splashColor,
           splashRadius: 20.r,
-          icon: Icon(Icons.menu),
+          icon:const Icon(Icons.menu),
           onPressed: () {
             animation!();
           },
@@ -38,14 +39,24 @@ class HomeScreen extends StatelessWidget {
               OptionsWidget(
                 icon: CupertinoIcons.camera,
                 optionText: 'Scan from Camera',
-                onTap: () {
+                onTap: () async {
                   navigationController.navigateToNamed(RouteGenerator.scanQr);
+                  FirebaseAnalytics.instance.logEvent(name: "Scan_from_camera",
+                  parameters: {
+                    "image":"scanning from camera",
+                  }
+                  );
                 },
               ),
               OptionsWidget(
                 icon: CupertinoIcons.photo,
                 optionText: 'Read from Local Storage ',
                 onTap: () async {
+                  FirebaseAnalytics.instance.logEvent(name: "Read_from_local_storage",
+                  parameters: {
+                    "image":"read_from_local_storage",
+                  },
+                  );
                   bool isCompleted = await qrScanProvider.pickImage();
                   isCompleted
                       ? navigationController
@@ -57,6 +68,11 @@ class HomeScreen extends StatelessWidget {
                 icon: CupertinoIcons.pen,
                 optionText: 'Generate From Text',
                 onTap: () {
+                  FirebaseAnalytics.instance.logEvent(name: "Generate_from_text",
+                    parameters: {
+                      "QrGenerated":"Generated_from_text",
+                    },
+                  );
                   navigationController
                       .navigateToNamed(RouteGenerator.enterText);
                 },

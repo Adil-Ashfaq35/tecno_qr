@@ -54,6 +54,11 @@ dependencies:
   freezed: ^2.0.3+1
   firebase_core: ^1.19.1
   cloud_firestore: ^3.2.1
+
+  ## firebase analytics
+
+  firebase_crashlytics: ^2.8.5
+  firebase_analytics: ^9.2.0
        
 
   
