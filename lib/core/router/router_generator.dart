@@ -11,6 +11,7 @@ import 'package:technoapp_qr/views/splash_screen.dart';
 import 'package:technoapp_qr/views/widgets/faq_screen.dart';
 import 'package:technoapp_qr/views/widgets/written_texts_screen.dart';
 
+import '../../views/about.dart';
 import '../../views/generate_qr.dart';
 
 class RouteGenerator {
@@ -30,6 +31,7 @@ class RouteGenerator {
   static const String policyScreen = '/policy_screen';
   static const String faqPage = '/faq_page';
   static const String displayImage = '/image_display';
+  static const String aboutScreen = '/about_screen';
   // FUNCTION THAT HANDLES ROUTING
   static Route<dynamic> onGeneratedRoutes(RouteSettings settings) {
     late dynamic args;
@@ -63,6 +65,8 @@ class RouteGenerator {
         return _getPageRoute(FAQPage());
       case displayImage:
         return _getPageRoute(const DisplayImage());
+      case aboutScreen:
+        return _getPageRoute(const AboutScreen());
       default:
         return _errorRoute();
     }

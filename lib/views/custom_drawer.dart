@@ -117,6 +117,8 @@ class _CustomDrawerState extends State<CustomDrawer>
                       ),
                       Menuitem(
                           callback: () {
+                            navigationController
+                                .navigateToNamed(RouteGenerator.aboutScreen);
                           },
                           title: 'About',
                           iconData: Icons.person),
