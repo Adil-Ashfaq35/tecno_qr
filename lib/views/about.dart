@@ -51,7 +51,7 @@ class _AboutScreenState extends State<AboutScreen> {
           ),
           Padding(
             padding: const EdgeInsets.all(10.0),
-            child: Text("Copyright (c) 2021, Kato Shinya. All rights reserved.Use of this source code is governed by aBSD-style license that can be found in the LICENSE file.",
+            child: Text("Copyright (c) 2022, TechnoQr. All rights reserved.Use of this source code is governed by aBSD-style license that can be found in the LICENSE file.",
               style: Theme.of(context).textTheme.headline3?.copyWith(
                 color: AppTheme.darkTextColor,
                 fontSize: 20.sm,

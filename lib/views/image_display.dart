@@ -60,7 +60,7 @@ class _DisplayImageState extends State<DisplayImage> {
                 //   borderRadius: BorderRadius.circular(10.r),
                 child: Image.file(
                   File(qrScanProvider.imageFile!.path),
-                  fit: BoxFit.cover,
+                  fit: BoxFit.contain,
                 ),
               ),
             ),
@@ -69,11 +69,9 @@ class _DisplayImageState extends State<DisplayImage> {
                 child: BackdropFilter(
                     filter: ImageFilter.blur(sigmaX: 2, sigmaY: 2),
                     child: Container(
-                      height: 800.sh,
-                      width: 400.sw,
                       color: Colors.transparent.withOpacity(0.1),
                       alignment: Alignment.center,
-                      child: Lottie.asset('assets/lottie/scanlottie.json',
+                      child: Lottie.asset('assets/lottie/scanning.json',
                           animate: true, height: 200.sh, width: 400.sw),
                     ))),
           ],
