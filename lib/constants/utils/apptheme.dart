@@ -9,6 +9,7 @@ class AppTheme {
 
   static const Color darkBackgroundColor = Color(0xFF181C1E);
   static const Color darkCardColor = Color(0xFF262F34);
+
   static const Color darkLightColor = Color(0xFF656D77);
   static const Color lightBackgroundColor = Color(0xFFFFFFFF);
   static const Color lightComponentsColor = Color(0xFF40CAFF);
