@@ -46,7 +46,7 @@ class CreateQrPage extends StatelessWidget {
           imgFile.writeAsBytes(pngBytes);
           GallerySaver.saveImage(imgFile.path).then((success) async {
             await qrProvider.createQr(qrProvider.texttoGenerate.value);
-            ScaffoldMessenger.of(context).showSnackBar( SnackBar(content: Text("Your file is Downloaded to ${directory}")));
+            ScaffoldMessenger.of(context).showSnackBar( SnackBar(content: Text("Your file is Downloaded to $directory")));
             FirebaseAnalytics.instance.logEvent(name: "Downloaded_the_qr",
             parameters: {
               "downloaded_code":"generated_from_text",

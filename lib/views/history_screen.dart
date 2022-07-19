@@ -85,21 +85,19 @@ class _HistoryScreenState extends State<HistoryScreen> {
                           )),
                           SliverList(
                               delegate: SliverChildBuilderDelegate(
-                            (BuildContext context, int typeindex) {
-                              return HistoryScroll(
-                                scrollController: _scrollController,
-                                index: typeindex,
-                                title: 'Generate History',
-                                children: ExpansionPanelhistory(
-                                  qrslist: historyController
-                                      .qrHistory[typeindex].qrsList,
-                                  images: historyController.images,
-                                  isQRCreated: true,
-                                ),
-                              );
-                            },
-                            childCount: historyController.images.length,
-                          )),
+                                  (BuildContext context, int typeindex) {
+                            return HistoryScroll(
+                              scrollController: _scrollController,
+                              index: typeindex,
+                              title: 'Generate History',
+                              children: ExpansionPanelhistory(
+                                qrslist: historyController
+                                    .qrHistory[typeindex].qrsList,
+                                images: historyController.images,
+                                isQRCreated: true,
+                              ),
+                            );
+                          }, childCount: 1)),
                         ]),
                   )),
             ])),
@@ -196,6 +194,7 @@ class _ExpansionPanelhistoryState extends State<ExpansionPanelhistory> {
           elevation: 1,
           children: [
             ExpansionPanel(
+              canTapOnHeader: true,
               body: Container(
                 padding: EdgeInsets.all(10),
                 child: Column(
