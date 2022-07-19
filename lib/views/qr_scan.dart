@@ -1,3 +1,4 @@
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/material.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
 import 'package:technoapp_qr/constants/controllers.dart';
@@ -11,8 +12,14 @@ class ScanQr extends StatefulWidget {
   State<ScanQr> createState() => _ScanQrState();
 }
 
+
 class _ScanQrState extends State<ScanQr> {
   MobileScannerController cameraController = MobileScannerController();
+  @override
+  void initState() {
+    FirebaseAnalytics.instance.setCurrentScreen(screenName: "scan from camera");
+    super.initState();
+  }
   @override
   @override
   Widget build(BuildContext context) {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/route_manager.dart';
+
 
 import 'package:share_plus/share_plus.dart';
 import 'package:technoapp_qr/constants/controllers.dart';
@@ -90,6 +90,7 @@ class _CustomDrawerState extends State<CustomDrawer>
                       SizedBox(
                         height: 0.05.sh,
                       ),
+
                       Menuitem(
                         callback: () async {
                           //    PackageInfo info = await getVersion();
@@ -114,6 +115,11 @@ class _CustomDrawerState extends State<CustomDrawer>
                       SizedBox(
                         height: 0.05.sh,
                       ),
+                      Menuitem(
+                          callback: () {
+                          },
+                          title: 'About',
+                          iconData: Icons.person),
                     ],
                   ),
                 ],

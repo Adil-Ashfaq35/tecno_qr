@@ -1,3 +1,4 @@
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -28,8 +29,8 @@ Future<void> init() async {
   await Hive.openBox('');
   await Hive.openBox<QRModel>('historyBox');
   await Firebase.initializeApp();
-
   initControllers();
+  FirebaseAnalytics.instance.logEvent(name: "app start");
 }
 
 void initControllers() {
