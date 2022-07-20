@@ -31,6 +31,7 @@ class _HistoryScreenState extends State<HistoryScreen> {
   void initState() {
     super.initState();
     historyController.getItem();
+    historyController.getimageformLocal();
   }
 
   List<String> options = ['Scan History', 'Read History', 'Generate History'];
