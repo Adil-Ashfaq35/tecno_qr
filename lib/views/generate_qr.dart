@@ -25,7 +25,7 @@ class CreateQrPage extends StatelessWidget {
 
   CreateQrPage({Key? key}) : super(key: key);
 
-  Future<File?> takeScreenShot(context) async {
+  Future<File?> takeScreenShot(context,show) async {
     PermissionStatus res;
     try {
       res = await Permission.storage.request();
@@ -46,7 +46,7 @@ class CreateQrPage extends StatelessWidget {
           imgFile.writeAsBytes(pngBytes);
           GallerySaver.saveImage(imgFile.path).then((success) async {
             await qrProvider.createQr(qrProvider.texttoGenerate.value);
-            ScaffoldMessenger.of(context).showSnackBar( SnackBar(content: Text("Your file is Downloaded to $directory")));
+            show?ScaffoldMessenger.of(context).showSnackBar( SnackBar(content: Text("Your file is Downloaded to $directory"))):null;
             FirebaseAnalytics.instance.logEvent(name: "Downloaded_the_qr",
             parameters: {
               "downloaded_code":"generated_from_text",
@@ -105,7 +105,7 @@ class CreateQrPage extends StatelessWidget {
               icon: CupertinoIcons.camera,
               optionText: 'Download',
               onTap: () {
-                takeScreenShot(context);
+                takeScreenShot(context,true);
 
               },
             ),
@@ -113,8 +113,8 @@ class CreateQrPage extends StatelessWidget {
               icon: Icons.share,
               optionText: 'Share',
               onTap: () async {
-                File? imagefile = await takeScreenShot(context);
-                Share.shareFiles(['${imagefile?.path}/image.jpg'],
+                File? imagefile = await takeScreenShot(context,false);
+                Share.shareFiles(['${imagefile!.path}'],
                     text: 'Qr Code');
                 FirebaseAnalytics.instance.logEvent(name: "share_qr",parameters: {
                    "qr_shared":"shared_gen_qr",
