@@ -9,7 +9,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:gallery_saver/gallery_saver.dart';
 
-
 import 'package:path_provider/path_provider.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:qr_flutter/qr_flutter.dart';
@@ -25,7 +24,7 @@ class CreateQrPage extends StatelessWidget {
 
   CreateQrPage({Key? key}) : super(key: key);
 
-  Future<File?> takeScreenShot(context) async {
+  Future<File?> takeScreenShot(context, bool isFromdownload) async {
     PermissionStatus res;
     try {
       res = await Permission.storage.request();
@@ -46,12 +45,14 @@ class CreateQrPage extends StatelessWidget {
           imgFile.writeAsBytes(pngBytes);
           GallerySaver.saveImage(imgFile.path).then((success) async {
             await qrProvider.createQr(qrProvider.texttoGenerate.value);
-            ScaffoldMessenger.of(context).showSnackBar( SnackBar(content: Text("Your file is Downloaded to $directory")));
-            FirebaseAnalytics.instance.logEvent(name: "Downloaded_the_qr",
-            parameters: {
-              "downloaded_code":"generated_from_text",
-            }
-            );
+            isFromdownload
+                ? ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                    content: Text("Your file is Downloaded to $directory")))
+                : null;
+            FirebaseAnalytics.instance
+                .logEvent(name: "Downloaded_the_qr", parameters: {
+              "downloaded_code": "generated_from_text",
+            });
           });
 
           return imgFile;
@@ -105,20 +106,19 @@ class CreateQrPage extends StatelessWidget {
               icon: CupertinoIcons.camera,
               optionText: 'Download',
               onTap: () {
-                takeScreenShot(context);
-
+                takeScreenShot(context, true);
               },
             ),
             OptionsWidget(
               icon: Icons.share,
               optionText: 'Share',
               onTap: () async {
-                File? imagefile = await takeScreenShot(context);
+                File? imagefile = await takeScreenShot(context, false);
                 Share.shareFiles(['${imagefile?.path}/image.jpg'],
                     text: 'Qr Code');
-                FirebaseAnalytics.instance.logEvent(name: "share_qr",parameters: {
-                   "qr_shared":"shared_gen_qr",
-
+                FirebaseAnalytics.instance
+                    .logEvent(name: "share_qr", parameters: {
+                  "qr_shared": "shared_gen_qr",
                 });
               },
             ),
