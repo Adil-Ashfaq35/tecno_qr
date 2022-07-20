@@ -4,6 +4,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:intl/intl.dart';
 
 import 'package:technoapp_qr/constants/controllers.dart';
 import 'package:technoapp_qr/constants/utils/apptheme.dart';
@@ -27,6 +28,7 @@ class _HistoryScreenState extends State<HistoryScreen> {
   @override
   void initState() {
     super.initState();
+    qrProvider.getQrs();
     historyController.getItem();
     historyController.getimageformLocal();
   }
@@ -220,8 +222,9 @@ class _ExpansionPanelhistoryState extends State<ExpansionPanelhistory> {
                   padding: const EdgeInsets.all(10),
                   child: Text(
                     widget.isQRCreated
-                        ? basename(widget.images[index].imageName)
-                        : widget.qrslist[index].dateTime.toString(),
+                        ? widget.images[index].qrName
+                        : DateFormat('yyyy-MM-dd – kk:mm a')
+                            .format(widget.qrslist[index].dateTime),
                     style: const TextStyle(
                       color: AppTheme.primaryColor,
                       fontSize: 18,

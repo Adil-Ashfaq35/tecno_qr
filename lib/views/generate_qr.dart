@@ -8,6 +8,8 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:gallery_saver/gallery_saver.dart';
+import 'package:get/get.dart';
+import 'package:intl/intl.dart';
 
 import 'package:path_provider/path_provider.dart';
 import 'package:permission_handler/permission_handler.dart';
@@ -24,7 +26,7 @@ class CreateQrPage extends StatelessWidget {
 
   CreateQrPage({Key? key}) : super(key: key);
 
-  Future<File?> takeScreenShot(context, bool isFromdownload) async {
+  Future<File?> takeScreenShot(context, show) async {
     PermissionStatus res;
     try {
       res = await Permission.storage.request();
@@ -38,16 +40,24 @@ class CreateQrPage extends StatelessWidget {
         if (byteData != null) {
           final pngBytes = byteData.buffer.asUint8List();
           final directory = (await getApplicationDocumentsDirectory()).path;
+          String formattedDate =
+              DateFormat('yyyy-MM-dd – kk:mm a').format(DateTime.now());
 
           final imgFile = File(
-            '$directory/${DateTime.now()}${qrProvider.texttoGenerate}.png',
+            '$directory/$formattedDate.png',
           );
           imgFile.writeAsBytes(pngBytes);
           GallerySaver.saveImage(imgFile.path).then((success) async {
-            await qrProvider.createQr(qrProvider.texttoGenerate.value);
-            isFromdownload
-                ? ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                    content: Text("Your file is Downloaded to $directory")))
+            await qrProvider.createQr(
+                "Date:$formattedDate QrText:${qrProvider.texttoGenerate.value}");
+            show
+                ? Get.snackbar(
+                    'File Downloaded',
+                    'Your file is Downloaded to $directory',
+                    snackPosition: SnackPosition.BOTTOM,
+                    backgroundColor: Colors.greenAccent,
+                    colorText: Colors.white,
+                  )
                 : null;
             FirebaseAnalytics.instance
                 .logEvent(name: "Downloaded_the_qr", parameters: {
@@ -56,6 +66,8 @@ class CreateQrPage extends StatelessWidget {
           });
 
           return imgFile;
+        } else {
+          return null;
         }
       }
     } on Exception catch (e) {
@@ -114,8 +126,7 @@ class CreateQrPage extends StatelessWidget {
               optionText: 'Share',
               onTap: () async {
                 File? imagefile = await takeScreenShot(context, false);
-                Share.shareFiles(['${imagefile?.path}/image.jpg'],
-                    text: 'Qr Code');
+                Share.shareFiles(['${imagefile!.path}'], text: 'Qr Code');
                 FirebaseAnalytics.instance
                     .logEvent(name: "share_qr", parameters: {
                   "qr_shared": "shared_gen_qr",

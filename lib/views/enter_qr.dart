@@ -77,7 +77,7 @@ class EnterText extends StatelessWidget {
 
 // ignore: camel_case_types
 class TextField extends StatelessWidget {
-  TextField({
+  const TextField({
     Key? key,
     required this.inputController,
   }) : super(key: key);

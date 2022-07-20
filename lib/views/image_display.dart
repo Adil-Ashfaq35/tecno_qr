@@ -12,7 +12,6 @@ import 'package:technoapp_qr/views/widgets/appbar_design.dart';
 
 import '../constants/const_settings.dart';
 import '../constants/controllers.dart';
-import '../constants/utils/apptheme.dart';
 import '../core/router/router_generator.dart';
 
 class DisplayImage extends StatefulWidget {
@@ -48,34 +47,28 @@ class _DisplayImageState extends State<DisplayImage> {
           },
         ),
       ),
-      body: Container(
-        // margin: EdgeInsets.symmetric(horizontal: 0.05.sp, vertical: 30.h),
-        // decoration: BoxDecoration(
-        //   borderRadius: BorderRadius.circular(15.r),
-        // ),
-        child: Stack(
-          children: [
-            Positioned.fill(
-              child: ClipRRect(
-                //   borderRadius: BorderRadius.circular(10.r),
-                child: Image.file(
-                  File(qrScanProvider.imageFile!.path),
-                  fit: BoxFit.contain,
-                ),
+      body: Stack(
+        children: [
+          Positioned.fill(
+            child: ClipRRect(
+              //   borderRadius: BorderRadius.circular(10.r),
+              child: Image.file(
+                File(qrScanProvider.imageFile!.path),
+                fit: BoxFit.contain,
               ),
             ),
-            ClipRRect(
-                // Clip it cleanly.
-                child: BackdropFilter(
-                    filter: ImageFilter.blur(sigmaX: 2, sigmaY: 2),
-                    child: Container(
-                      color: Colors.transparent.withOpacity(0.1),
-                      alignment: Alignment.center,
-                      child: Lottie.asset('assets/lottie/scanning.json',
-                          animate: true, height: 200.sh, width: 400.sw),
-                    ))),
-          ],
-        ),
+          ),
+          ClipRRect(
+              // Clip it cleanly.
+              child: BackdropFilter(
+                  filter: ImageFilter.blur(sigmaX: 2, sigmaY: 2),
+                  child: Container(
+                    color: Colors.transparent.withOpacity(0.1),
+                    alignment: Alignment.center,
+                    child: Lottie.asset('assets/lottie/scanning.json',
+                        animate: true, height: 200.sh, width: 400.sw),
+                  ))),
+        ],
       ),
     );
   }
