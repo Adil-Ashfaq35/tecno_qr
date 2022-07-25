@@ -75,7 +75,10 @@ class _CustomDrawerState extends State<CustomDrawer>
                         height: 0.05.sh,
                       ),
                       Menuitem(
-                        callback: () {},
+                        callback: () {
+                          navigationController
+                              .navigateToNamed(RouteGenerator.languagePage);
+                        },
                         title: 'Language',
                         iconData: Icons.language,
                       ),
