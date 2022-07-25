@@ -33,8 +33,6 @@ class HistoryController extends GetxController {
   void setToRecord(String qrData, bool isCamSource) {
     DateTime now = DateTime.now();
 
-
-
     QRModel qrModel = QRModel(qrData, now, isCamSource, false);
 
     addItem(qrModel);
@@ -44,6 +42,7 @@ class HistoryController extends GetxController {
     try {
       box.add(item);
     } on Exception catch (e) {
+     
       throw Exception(e);
     }
   }
