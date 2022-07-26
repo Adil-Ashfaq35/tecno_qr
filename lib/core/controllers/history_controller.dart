@@ -4,6 +4,8 @@ import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 
 import 'package:hive/hive.dart';
+
+import 'package:technoapp_qr/constants/controllers.dart';
 import 'package:technoapp_qr/models/history_model.dart';
 import 'package:technoapp_qr/models/imagesqr_model.dart';
 
@@ -40,6 +42,7 @@ class HistoryController extends GetxController {
     try {
       box.add(item);
     } on Exception catch (e) {
+     
       throw Exception(e);
     }
   }
@@ -81,14 +84,23 @@ class HistoryController extends GetxController {
   getimageformLocal() async {
     String path = await getFilePath();
     images.value = [];
+    List qrList = qrProvider.createdQrs;
     final imagesDirectory = Directory('$path/');
     final _imagesFile = imagesDirectory
         .listSync()
         .map((item) => item.path)
         .where((item) => item.endsWith(".png"))
         .toList(growable: false);
-    for (var img in _imagesFile) {
-      images.add(QrImage(imageName: img, isExpanded: false));
+    if (kDebugMode) {
+      print(
+          "Length of images:${_imagesFile.length} \n Length of Created qrs:${qrList.length}");
+    }
+
+    for (int index = 0; index < _imagesFile.length; index++) {
+      images.add(QrImage(
+          imageName: _imagesFile[index],
+          isExpanded: false,
+          qrName: qrList[index]));
     }
     if (kDebugMode) {
       print("Length  = :${images.length}");

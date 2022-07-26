@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:flutter/foundation.dart';
 import 'package:google_mlkit_barcode_scanning/google_mlkit_barcode_scanning.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:transparent_image/transparent_image.dart'
@@ -30,8 +31,10 @@ class _ReadLocalState extends State<ReadLocal> {
       );
       return false;
     }
-    setState(() => this._imageFile = imageFile);
-    print('picked image: ${this._imageFile}');
+    setState(() => _imageFile = imageFile);
+    if (kDebugMode) {
+      print('picked image: ${this._imageFile}');
+    }
     return true;
   }
 

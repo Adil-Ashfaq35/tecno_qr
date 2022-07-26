@@ -11,7 +11,11 @@ import 'package:technoapp_qr/core/controllers/qr_provider.dart';
 import 'package:technoapp_qr/core/controllers/qr_scan.provider.dart';
 import 'package:technoapp_qr/core/controllers/result_controller.dart';
 import 'package:technoapp_qr/core/controllers/settings_controller.dart';
+
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
+import 'package:technoapp_qr/core/services/stream_service.dart';
+
 
 import 'constants/utils/apptheme.dart';
 import 'core/router/router_generator.dart';
@@ -21,7 +25,7 @@ import 'models/qr_model.dart';
 void main() async {
   await init();
 
-  runApp(const MyApp());
+  runApp( const MyApp());
 }
 
 Future<void> init() async {
@@ -45,7 +49,10 @@ void initControllers() {
   Get.put(HistoryController());
 }
 
+
 class MyApp extends StatefulWidget {
+
+
   const MyApp({Key? key}) : super(key: key);
 
   @override
@@ -77,6 +84,7 @@ class _MyAppState extends State<MyApp> {
     return ScreenUtilInit(builder: (BuildContext context, Widget? child) {
       return GetMaterialApp(
         debugShowCheckedModeBanner: false,
+        
         title: "QR Code",
         localizationsDelegates: AppLocalizations.localizationsDelegates,
         supportedLocales: AppLocalizations.supportedLocales,
