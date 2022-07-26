@@ -5,7 +5,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:technoapp_qr/constants/controllers.dart';
 import 'package:technoapp_qr/views/home_screen.dart';
+import 'package:url_launcher/url_launcher.dart';
 
+import '../constants/const_settings.dart';
 import '../constants/utils/apptheme.dart';
 import '../core/router/router_generator.dart';
 
@@ -73,24 +75,16 @@ class _CustomDrawerState extends State<CustomDrawer>
                         height: 0.05.sh,
                       ),
                       Menuitem(
-                        callback: () {},
+                        callback: () {
+                          navigationController
+                              .navigateToNamed(RouteGenerator.languagePage);
+                        },
                         title: 'Language',
                         iconData: Icons.language,
                       ),
                       SizedBox(
                         height: 0.05.sh,
                       ),
-                      Menuitem(
-                          callback: () {
-                            navigationController
-                                .navigateToNamed(RouteGenerator.faqPage);
-                          },
-                          title: 'FAQ',
-                          iconData: Icons.question_answer),
-                      SizedBox(
-                        height: 0.05.sh,
-                      ),
-
                       Menuitem(
                         callback: () async {
                           //    PackageInfo info = await getVersion();
@@ -107,11 +101,22 @@ class _CustomDrawerState extends State<CustomDrawer>
                       Menuitem(
                           callback: () async {
                             //    PackageInfo info = await getVersion();
-                            navigationController
-                                .navigateToNamed(RouteGenerator.policyScreen);
+                            launchUrl(Uri.parse(ConstantSettings.helpUrl));
                           },
                           title: 'Privacy Policy',
                           iconData: Icons.privacy_tip),
+                      SizedBox(
+                        height: 0.05.sh,
+                      ),
+
+                      Menuitem(
+                        callback: () async {
+                          //    PackageInfo info = await getVersion();
+                            launchUrl(Uri.parse(ConstantSettings.helpUrl));
+                        },
+                        title: 'Help',
+                        iconData: Icons.help,
+                      ),
                       SizedBox(
                         height: 0.05.sh,
                       ),

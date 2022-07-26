@@ -3,6 +3,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intl/intl.dart';
 
@@ -14,6 +15,7 @@ import 'package:technoapp_qr/views/widgets/appbar_design.dart';
 import 'package:path/path.dart';
 import '../models/qr_model.dart';
 
+// ignore: must_be_immutable
 class HistoryScreen extends StatefulWidget {
   ScrollController _scrollController = ScrollController();
 
@@ -220,14 +222,29 @@ class _ExpansionPanelhistoryState extends State<ExpansionPanelhistory> {
               headerBuilder: (BuildContext context, bool isExpanded) {
                 return Container(
                   padding: const EdgeInsets.all(10),
-                  child: Text(
-                    widget.isQRCreated
-                        ? widget.images[index].qrName
-                        : DateFormat('yyyy-MM-dd – kk:mm a')
-                            .format(widget.qrslist[index].dateTime),
-                    style: const TextStyle(
-                      color: AppTheme.primaryColor,
-                      fontSize: 18,
+                  child: ListTile(
+                    title: Text(
+                      widget.isQRCreated
+                          ? widget.images[index].qrName
+                          : DateFormat('yyyy-MM-dd – kk:mm a')
+                              .format(widget.qrslist[index].dateTime),
+                      style: const TextStyle(
+                        color: AppTheme.primaryColor,
+                        fontSize: 18,
+                      ),
+                    ),
+                    trailing: NeumorphicText(
+                      'Pushed',
+                      style: NeumorphicStyle(
+                        //depth: 4, //customize depth here
+                        color: Colors.green, //customize color here
+                      ),
+                      textStyle: NeumorphicTextStyle(
+                          fontSize: 12, fontWeight: FontWeight.bold
+
+                          //customize size here
+                          // AND others usual text style properties (fontFamily, fontWeight, ...)
+                          ),
                     ),
                   ),
                 );

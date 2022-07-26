@@ -5,6 +5,7 @@ import 'package:technoapp_qr/views/enter_qr.dart';
 import 'package:technoapp_qr/views/history_screen.dart';
 import 'package:technoapp_qr/views/home_screen.dart';
 import 'package:technoapp_qr/views/image_display.dart';
+import 'package:technoapp_qr/views/language.dart';
 import 'package:technoapp_qr/views/qr_scan.dart';
 import 'package:technoapp_qr/views/result_screen.dart';
 import 'package:technoapp_qr/views/splash_screen.dart';
@@ -32,6 +33,9 @@ class RouteGenerator {
   static const String faqPage = '/faq_page';
   static const String displayImage = '/image_display';
   static const String aboutScreen = '/about_screen';
+  static const String languagePage = '/language_page';
+
+
   // FUNCTION THAT HANDLES ROUTING
   static Route<dynamic> onGeneratedRoutes(RouteSettings settings) {
     late dynamic args;
@@ -67,6 +71,8 @@ class RouteGenerator {
         return _getPageRoute(const DisplayImage());
       case aboutScreen:
         return _getPageRoute(const AboutScreen());
+      case languagePage:
+        return _getPageRoute( LanguagePage());
       default:
         return _errorRoute();
     }
@@ -82,10 +88,10 @@ class RouteGenerator {
     return MaterialPageRoute(builder: (ctx) {
       return Scaffold(
         appBar: AppBar(
-          title: const Text('404'),
+          title: const Text(''),
         ),
         body: const Center(
-          child: Text('ERROR 404: Not Found'),
+          child: Text(''),
         ),
       );
     });

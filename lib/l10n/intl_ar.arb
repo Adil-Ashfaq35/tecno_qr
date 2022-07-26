@@ -1,0 +1,28 @@
+{
+  "techno_App": "تطبيق تكنو",
+  "read_From_Local_Storage":"قراءة من التخزين المحلي",
+  "scan_from_Camera": "مسح ضوئي من الكاميرا" ,
+  "generate_From_Text": "إنشاء من النص",
+  "home":"المنزل المنزل",
+  "history": "تاريخ",
+  "share_App": "مشاركة التطبيق",
+  "privacy_Policy": "سياسة الخصوصية",
+  "about": "حول" ,
+  "paste": "لصق" ,
+  "navigate": "التنقل" ,
+  "generate": "إنشاء" ,
+  "text": "نص" ,
+  "write_Text_Here": "اكتب نصًا هنا ...",
+  "enter_Qr": "أدخل ريال قطري" ,
+  "qr_Code": "Qr Code",
+  "result_Qr_Code": "رمز الاستجابة السريعة الناتج" ,
+  "share":"شارك شارك",
+  "download": "تنزيل" ,
+  "copy": "نسخ",
+  "result_Text": "نص النتيجة" ,
+  "history_Screen": "شاشة المحفوظات",
+  "scan_History": "مسح المحفوظات",
+  "read_History": "قراءة التاريخ",
+  "language": "اللغة"
+
+}
