@@ -1,0 +1,28 @@
+
+{
+  "home": "Главная страница",
+  "history":"история" ,
+  "language":"Язык",
+  "fAQ": "ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ",
+  "privacy_Policy":"Политика конфиденциальности",
+  "terms_Of_Use": "Условия использования",
+  "about":"О сайте",
+  "scan_Button_Text":"Сканировать с камеры" ,
+  "read_Button_Text":"Считывание из локального изображения",
+  "generate_Button_Text":"Генерировать из текста" ,
+  "result_Language_Label":"Результат",
+  "navigate_Button_Text":"Перейдите по адресу" ,
+  "copy_Button_Text":"Поделиться" ,
+  "download_Button_Text":"Загрузить" ,
+  "share_Button_Text":"Поделиться",
+  "scan_Tree_Item": "Сканировать историю",
+  "generate_Tree_item":"Генерировать историю",
+  "first_Line":"TecnoCode Version 6.0.1.0",
+  "second_Line":"© 2022 TecnoWays All rights reserved" ,
+  "third_Line":"© 2022-2025 TecnoWays All rights reserved",
+  "oK_Button_Text":"OK" ,
+  "cancel_Button_Text":"Отменить",
+  "save_Button_Text": "Сохранить ",
+  "shown_Only_On_The_Early_First_Time":"Устанавливая или используя это приложение, вы принимаете английскую версию политики конфиденциальности"
+}
+

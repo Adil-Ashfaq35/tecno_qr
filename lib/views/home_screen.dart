@@ -2,15 +2,12 @@ import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import 'package:technoapp_qr/constants/controllers.dart';
-
 import 'package:technoapp_qr/constants/utils/apptheme.dart';
 import 'package:technoapp_qr/core/router/router_generator.dart';
 import 'package:technoapp_qr/views/widgets/appbar_design.dart';
 import 'package:technoapp_qr/views/widgets/options_widget.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-
 import '../models/language/lnaguage_constant.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -20,7 +17,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBarWidget(
-        title: translation(context).techno_App,
+        title: "Tecno App",
         iconButton: IconButton(
           hoverColor: AppTheme.splashColor,
           disabledColor: Colors.grey[200],
@@ -41,7 +38,7 @@ class HomeScreen extends StatelessWidget {
             children: [
               OptionsWidget(
                 icon: CupertinoIcons.camera,
-                optionText: translation(context).scan_From_Camera,
+                optionText: translation(context).scan_Button_Text,
                 onTap: () async {
                   navigationController.navigateToNamed(RouteGenerator.scanQr);
                   FirebaseAnalytics.instance.logEvent(name: "Scan_from_camera",
@@ -53,7 +50,7 @@ class HomeScreen extends StatelessWidget {
               ),
               OptionsWidget(
                 icon: CupertinoIcons.photo,
-                optionText: '${AppLocalizations.of(context)?.read_From_Local_Storage}',
+                optionText: '${AppLocalizations.of(context)?.read_Button_Text}',
                 onTap: () async {
                   FirebaseAnalytics.instance.logEvent(name: "Read_from_local_storage",
                   parameters: {
@@ -69,7 +66,7 @@ class HomeScreen extends StatelessWidget {
               ),
               OptionsWidget(
                 icon: CupertinoIcons.pen,
-                optionText: translation(context).generate_From_Text,
+                optionText: translation(context).generate_Button_Text,
                 onTap: () {
                   FirebaseAnalytics.instance.logEvent(name: "Generate_from_text",
                     parameters: {

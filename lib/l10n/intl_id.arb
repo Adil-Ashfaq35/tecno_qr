@@ -1,0 +1,28 @@
+
+{
+  "home": "Rumah",
+  "history":"Sejarah" ,
+  "language":"Bahasa",
+  "fAQ": "Pertanyaan yang sering diajukan",
+  "privacy_Policy":"Kebijakan Privasi",
+  "terms_Of_Use": "Ketentuan penggunaan",
+  "about":"Tentang",
+  "scan_Button_Text":"Pindai dari Kamera" ,
+  "read_Button_Text":"Baca dari Gambar Lokal",
+  "generate_Button_Text":"Hasilkan dari Teks" ,
+  "result_Language_Label":"Hasil",
+  "navigate_Button_Text":"Navigasi" ,
+  "copy_Button_Text":"Salin" ,
+  "download_Button_Text":"Unduh" ,
+  "share_Button_Text":"Bagikan",
+  "scan_Tree_Item": "Pindai Riwayat",
+  "generate_Tree_item":"Hasilkan Riwayat",
+  "first_Line":"TecnoCode Versi 6.0.1.0",
+  "second_Line":"© 2022 TecnoWays Semua hak dilindungi undang-undang" ,
+  "third_Line":"© 2022-2025 TecnoWays Semua hak dilindungi undang-undang",
+  "oK_Button_Text":"OK" ,
+  "cancel_Button_Text":"Batal",
+  "save_Button_Text": "Simpan ",
+  "shown_Only_On_The_Early_First_Time":"Dengan menginstal atau menggunakan aplikasi ini, Anda menerima kebijakan privasi versi bahasa Inggris"
+}
+

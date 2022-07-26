@@ -2,14 +2,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:technoapp_qr/constants/controllers.dart';
 import 'package:technoapp_qr/core/router/router_generator.dart';
-import 'package:technoapp_qr/views/home_screen.dart';
 import 'package:technoapp_qr/views/widgets/appbar_design.dart';
 import 'package:technoapp_qr/views/widgets/options_widget.dart';
 import '../constants/utils/apptheme.dart';
+import '../models/language/lnaguage_constant.dart';
 
 class ResultScreen extends StatelessWidget {
   const ResultScreen({Key? key}) : super(key: key);
@@ -39,7 +38,7 @@ class ResultScreen extends StatelessWidget {
                       fontSize: 25),
                 ),
               ),
-              Expanded(
+              const Expanded(
                 flex: 1,
                 child: Resultbox(),
               ),
@@ -47,7 +46,7 @@ class ResultScreen extends StatelessWidget {
                 children: [
                   OptionsWidget(
                       icon: Icons.link,
-                      optionText: 'Navigate',
+                      optionText: translation(context).navigate_Button_Text,
                       onTap: () {
                         bool _validURL =
                             Uri.parse(resultController.resultText.value)
@@ -65,14 +64,14 @@ class ResultScreen extends StatelessWidget {
                       }),
                   OptionsWidget(
                       icon: Icons.share,
-                      optionText: 'Share',
+                      optionText: translation(context).share_Button_Text,
                       onTap: () {
                         Share.share(
                             'Here is the Qr Result text:${resultController.resultText.value}');
                       }),
                   OptionsWidget(
                       icon: Icons.copy,
-                      optionText: 'Copy',
+                      optionText: translation(context).copy_Button_Text,
                       onTap: () {
                         Clipboard.setData(ClipboardData(
                                 text: resultController.resultText.value))

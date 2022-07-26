@@ -1,0 +1,28 @@
+
+{
+  "home": "Anasayfa",
+  "history":"Tarih" ,
+  "language":"Dil",
+  "fAQ": "Sıkça sorulan sorular",
+  "privacy_Policy":"Gizlilik Politikası",
+  "terms_Of_Use": "Kullanım Koşulları",
+  "about":"Hakkında",
+  "scan_Button_Text":"Kameradan tarama" ,
+  "read_Button_Text":"Yerel görüntüden okuma",
+  "generate_Button_Text":"Metinden oluştur" ,
+  "result_Language_Label":"Sonuç",
+  "navigate_Button_Text":"Şuraya gidin" ,
+  "copy_Button_Text":"kopyala" ,
+  "download_Button_Text":"İndir" ,
+  "share_Button_Text":"Paylaş",
+  "scan_Tree_Item": "Tarama geçmişi",
+  "generate_Tree_item":"Geçmiş oluşturun",
+  "first_Line":"TecnoCode Version 6.0.1.0",
+  "second_Line":"© 2022 TecnoWays All rights reserved" ,
+  "third_Line":"© 2022-2025 TecnoWays All rights reserved",
+  "oK_Button_Text":"TAMAM." ,
+  "cancel_Button_Text":"İptal",
+  "save_Button_Text": "Kaydet ",
+  "shown_Only_On_The_Early_First_Time":"Bu uygulamayı yükleyerek veya kullanarak gizlilik politikasının İngilizce versiyonunu kabul etmiş olursunuz"
+}
+

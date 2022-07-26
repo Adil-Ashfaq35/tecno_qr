@@ -1,0 +1,28 @@
+
+{
+  "home": "Homepage",
+  "history":"cronologia" ,
+  "language":"La lingua",
+  "fAQ": "Domande frequenti",
+  "privacy_Policy":"Informativa sulla privacy",
+  "terms_Of_Use": "Condizioni d'uso",
+  "about":"Informazioni su",
+  "scan_Button_Text":"Scansione dalla fotocamera" ,
+  "read_Button_Text":"Leggere da un'immagine locale",
+  "generate_Button_Text":"Generazione da testo" ,
+  "result_Language_Label":"Risultato",
+  "navigate_Button_Text":"Navigare" ,
+  "copy_Button_Text":"Copia" ,
+  "download_Button_Text":"Scaricare" ,
+  "share_Button_Text":"Condividere",
+  "scan_Tree_Item": "Scansione della cronologia",
+  "generate_Tree_item":"Genera cronologia",
+  "first_Line":"TecnoCode Versione 6.0.1.0",
+  "second_Line":"© 2022 TecnoWays Tutti i diritti riservati" ,
+  "third_Line":"© 2022-2025 TecnoWays Tutti i diritti riservati",
+  "oK_Button_Text":"OK" ,
+  "cancel_Button_Text":"Annulla",
+  "save_Button_Text": "Salva ",
+  "shown_Only_On_The_Early_First_Time":"Installando o utilizzando questa applicazione si accetta la versione inglese dell'informativa sulla privacy."
+}
+

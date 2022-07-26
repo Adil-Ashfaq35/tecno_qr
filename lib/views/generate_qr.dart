@@ -8,6 +8,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:gallery_saver/gallery_saver.dart';
+import 'package:get/get.dart';
 
 
 import 'package:path_provider/path_provider.dart';
@@ -17,6 +18,7 @@ import 'package:share_plus/share_plus.dart';
 import 'package:technoapp_qr/core/router/router_generator.dart';
 
 import '../constants/controllers.dart';
+import '../models/language/lnaguage_constant.dart';
 import 'widgets/appbar_design.dart';
 import 'widgets/options_widget.dart';
 
@@ -103,7 +105,7 @@ class CreateQrPage extends StatelessWidget {
             const SizedBox(height: 25),
             OptionsWidget(
               icon: CupertinoIcons.camera,
-              optionText: 'Download',
+              optionText: translation(context).download_Button_Text,
               onTap: () {
                 takeScreenShot(context,true);
 
@@ -111,7 +113,7 @@ class CreateQrPage extends StatelessWidget {
             ),
             OptionsWidget(
               icon: Icons.share,
-              optionText: 'Share',
+              optionText: translation(context).share_Button_Text,
               onTap: () async {
                 File? imagefile = await takeScreenShot(context,false);
                 Share.shareFiles(['${imagefile!.path}'],

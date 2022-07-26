@@ -1,0 +1,28 @@
+
+{
+  "home": "擐憿",
+  "history":"历史" ,
+  "language":"语言",
+  "fAQ": "常问的问题",
+  "privacy_Policy":"隐私政策",
+  "terms_Of_Use": "使用条款",
+  "about":"关于",
+  "scan_Button_Text":"从相机扫描" ,
+  "read_Button_Text":"从本地图像中读取",
+  "generate_Button_Text":"从文本中生成" ,
+  "result_Language_Label":"结果",
+  "navigate_Button_Text":"导航" ,
+  "copy_Button_Text":"复制" ,
+  "download_Button_Text":"下载" ,
+  "share_Button_Text":"分享",
+  "scan_Tree_Item": "扫描历史记录",
+  "generate_Tree_item":"生成历史记录",
+  "first_Line":"TecnoCode 6.0.1.0 版",
+  "second_Line":"© 2022 TecnoWays 保留所有权利" ,
+  "third_Line":"© 2022-2025 TecnoWays 保留所有权利。",
+  "oK_Button_Text":"确定" ,
+  "cancel_Button_Text":"取消",
+  "save_Button_Text": "挽救 ",
+  "shown_Only_On_The_Early_First_Time":"安装或使用此应用程序，即表示您接受英文版本的隐私政策。"
+}
+

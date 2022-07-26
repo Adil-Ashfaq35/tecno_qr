@@ -23,33 +23,39 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "about": MessageLookupByLibrary.simpleMessage("کے بارے میں"),
-        "copy": MessageLookupByLibrary.simpleMessage("کاپی"),
-        "download": MessageLookupByLibrary.simpleMessage("ڈاؤن لوڈ کریں"),
-        "enter_Qr": MessageLookupByLibrary.simpleMessage("Qr درج کریں"),
-        "generate": MessageLookupByLibrary.simpleMessage("پیدا کریں"),
-        "generate_From_Text":
-            MessageLookupByLibrary.simpleMessage("متن سے تخلیق کریں"),
+        "cancel_Button_Text":
+            MessageLookupByLibrary.simpleMessage("منسوخ کریں۔"),
+        "copy_Button_Text": MessageLookupByLibrary.simpleMessage("کاپی کریں۔"),
+        "download_Button_Text":
+            MessageLookupByLibrary.simpleMessage("ڈاؤن لوڈ کریں"),
+        "fAQ": MessageLookupByLibrary.simpleMessage("اکثر پوچھے گئے سوالات"),
+        "first_Line":
+            MessageLookupByLibrary.simpleMessage("Tecnocode ورژن 6.0.1.0"),
+        "generate_Button_Text":
+            MessageLookupByLibrary.simpleMessage("متن سے پیدا کریں۔"),
+        "generate_Tree_item":
+            MessageLookupByLibrary.simpleMessage("تاریخ بنائیں"),
         "history": MessageLookupByLibrary.simpleMessage("تاریخ"),
-        "history_Screen": MessageLookupByLibrary.simpleMessage("ہسٹری اسکرین"),
-        "home": MessageLookupByLibrary.simpleMessage("گھر"),
+        "home": MessageLookupByLibrary.simpleMessage("ہوم پیج"),
         "language": MessageLookupByLibrary.simpleMessage("زبان"),
-        "navigate": MessageLookupByLibrary.simpleMessage("نیویگیٹ کریں,"),
-        "paste": MessageLookupByLibrary.simpleMessage("پیسٹ کریں"),
+        "navigate_Button_Text":
+            MessageLookupByLibrary.simpleMessage("نیویگیٹ کریں۔"),
+        "oK_Button_Text": MessageLookupByLibrary.simpleMessage("ٹھیک ہے"),
         "privacy_Policy":
             MessageLookupByLibrary.simpleMessage("رازداری کی پالیسی"),
-        "read_From_Local_Storage":
-            MessageLookupByLibrary.simpleMessage("مقامی اسٹوریج سے پڑھیں"),
-        "read_History": MessageLookupByLibrary.simpleMessage("تاریخ پڑھیں"),
-        "result_Qr_Code": MessageLookupByLibrary.simpleMessage("نتیجہ QR کوڈ"),
-        "result_Text": MessageLookupByLibrary.simpleMessage("نتائج کا متن"),
-        "scan_From_Camera":
-            MessageLookupByLibrary.simpleMessage("کیمرہ سے اسکین کریں"),
-        "scan_History": MessageLookupByLibrary.simpleMessage("اسکین ہسٹری"),
-        "share": MessageLookupByLibrary.simpleMessage("بانٹیں"),
-        "share_App": MessageLookupByLibrary.simpleMessage("ایپ شیئر کریں"),
-        "techno_App": MessageLookupByLibrary.simpleMessage("ٹیکنو ایپ"),
-        "text": MessageLookupByLibrary.simpleMessage("متن"),
-        "write_Text_Here":
-            MessageLookupByLibrary.simpleMessage("یہاں ٹیکسٹ لکھیں...")
+        "read_Button_Text":
+            MessageLookupByLibrary.simpleMessage("مقامی تصویر سے پڑھیں"),
+        "result_Language_Label": MessageLookupByLibrary.simpleMessage("نتیجہ"),
+        "save_Button_Text":
+            MessageLookupByLibrary.simpleMessage("محفوظ کریں۔ "),
+        "scan_Button_Text":
+            MessageLookupByLibrary.simpleMessage("کیمرے سے اسکین کریں۔"),
+        "scan_Tree_Item": MessageLookupByLibrary.simpleMessage("اسکین ہسٹری"),
+        "second_Line": MessageLookupByLibrary.simpleMessage(
+            "© 2022 TecnoWays تمام حقوق محفوظ ہیں۔"),
+        "share_Button_Text": MessageLookupByLibrary.simpleMessage("بانٹیں"),
+        "shown_Only_On_The_Early_First_Time": MessageLookupByLibrary.simpleMessage(
+            "اس ایپلی کیشن کو انسٹال یا استعمال کرکے آپ رازداری کی پالیسی کے انگریزی ورژن کو قبول کر رہے ہیں۔"),
+        "terms_Of_Use": MessageLookupByLibrary.simpleMessage("استعمال کی شرائط")
       };
 }

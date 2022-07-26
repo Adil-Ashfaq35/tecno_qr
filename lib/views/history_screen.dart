@@ -14,6 +14,7 @@ import 'package:technoapp_qr/core/router/router_generator.dart';
 import 'package:technoapp_qr/models/imagesqr_model.dart';
 import 'package:technoapp_qr/views/widgets/appbar_design.dart';
 import 'package:path/path.dart';
+import '../models/language/lnaguage_constant.dart';
 import '../models/qr_model.dart';
 
 class HistoryScreen extends StatefulWidget {
@@ -90,7 +91,7 @@ class _HistoryScreenState extends State<HistoryScreen> {
                             return HistoryScroll(
                               scrollController: _scrollController,
                               index: typeindex,
-                              title: 'Generate History',
+                              title: translation(context).generate_Button_Text,
                               children: ExpansionPanelhistory(
                                 qrslist: historyController
                                     .qrHistory[typeindex].qrsList,

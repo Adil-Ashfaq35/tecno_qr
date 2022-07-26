@@ -10,6 +10,7 @@ import 'package:url_launcher/url_launcher.dart';
 import '../constants/const_settings.dart';
 import '../constants/utils/apptheme.dart';
 import '../core/router/router_generator.dart';
+import '../models/language/lnaguage_constant.dart';
 
 class CustomDrawer extends StatefulWidget {
   const CustomDrawer({Key? key}) : super(key: key);
@@ -57,7 +58,7 @@ class _CustomDrawerState extends State<CustomDrawer>
                           navigationController
                               .getOffAll(RouteGenerator.customDrawer);
                         },
-                        title: 'Home',
+                        title: translation(context).home,
                         iconData: Icons.home,
                       ),
                       SizedBox(
@@ -68,7 +69,7 @@ class _CustomDrawerState extends State<CustomDrawer>
                           navigationController
                               .navigateToNamed(RouteGenerator.historyScreen);
                         },
-                        title: 'History',
+                        title:  translation(context).history,
                         iconData: Icons.history,
                       ),
                       SizedBox(
@@ -79,7 +80,7 @@ class _CustomDrawerState extends State<CustomDrawer>
                           navigationController
                               .navigateToNamed(RouteGenerator.languagePage);
                         },
-                        title: 'Language',
+                        title: translation(context).language,
                         iconData: Icons.language,
                       ),
                       SizedBox(
@@ -103,7 +104,7 @@ class _CustomDrawerState extends State<CustomDrawer>
                             //    PackageInfo info = await getVersion();
                             launchUrl(Uri.parse(ConstantSettings.helpUrl));
                           },
-                          title: 'Privacy Policy',
+                          title:  translation(context).privacy_Policy,
                           iconData: Icons.privacy_tip),
                       SizedBox(
                         height: 0.05.sh,
@@ -125,7 +126,7 @@ class _CustomDrawerState extends State<CustomDrawer>
                             navigationController
                                 .navigateToNamed(RouteGenerator.aboutScreen);
                           },
-                          title: 'About',
+                          title:  translation(context).about,
                           iconData: Icons.person),
                     ],
                   ),

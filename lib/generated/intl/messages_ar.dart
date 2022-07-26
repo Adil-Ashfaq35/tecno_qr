@@ -22,35 +22,38 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "about": MessageLookupByLibrary.simpleMessage("حول"),
-        "copy": MessageLookupByLibrary.simpleMessage("نسخ"),
-        "download": MessageLookupByLibrary.simpleMessage("تنزيل"),
-        "enter_Qr": MessageLookupByLibrary.simpleMessage("أدخل ريال قطري"),
-        "generate": MessageLookupByLibrary.simpleMessage("إنشاء"),
-        "generate_From_Text":
-            MessageLookupByLibrary.simpleMessage("إنشاء من النص"),
-        "history": MessageLookupByLibrary.simpleMessage("تاريخ"),
-        "history_Screen":
-            MessageLookupByLibrary.simpleMessage("شاشة المحفوظات"),
-        "home": MessageLookupByLibrary.simpleMessage("المنزل المنزل"),
+        "about": MessageLookupByLibrary.simpleMessage("حول التطبيق"),
+        "cancel_Button_Text": MessageLookupByLibrary.simpleMessage("إلغاء"),
+        "copy_Button_Text": MessageLookupByLibrary.simpleMessage("نسخ"),
+        "download_Button_Text": MessageLookupByLibrary.simpleMessage("تحميل"),
+        "fAQ": MessageLookupByLibrary.simpleMessage("الأسئلة الشائعة"),
+        "first_Line":
+            MessageLookupByLibrary.simpleMessage("إصدار TecnoCode 6.0.1.0"),
+        "generate_Button_Text":
+            MessageLookupByLibrary.simpleMessage("توليد كود من نص"),
+        "generate_Tree_item":
+            MessageLookupByLibrary.simpleMessage("سجل عمليات توليد الأكواد"),
+        "history": MessageLookupByLibrary.simpleMessage("سجل العمليات"),
+        "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
         "language": MessageLookupByLibrary.simpleMessage("اللغة"),
-        "navigate": MessageLookupByLibrary.simpleMessage("التنقل"),
-        "paste": MessageLookupByLibrary.simpleMessage("لصق"),
+        "navigate_Button_Text": MessageLookupByLibrary.simpleMessage("انتقال"),
+        "oK_Button_Text": MessageLookupByLibrary.simpleMessage("موافق"),
         "privacy_Policy":
             MessageLookupByLibrary.simpleMessage("سياسة الخصوصية"),
-        "qr_Code": MessageLookupByLibrary.simpleMessage("Qr Code"),
-        "read_From_Local_Storage":
-            MessageLookupByLibrary.simpleMessage("قراءة من التخزين المحلي"),
-        "read_History": MessageLookupByLibrary.simpleMessage("قراءة التاريخ"),
-        "result_Qr_Code": MessageLookupByLibrary.simpleMessage(
-            "رمز الاستجابة السريعة الناتج"),
-        "result_Text": MessageLookupByLibrary.simpleMessage("نص النتيجة"),
-        "scan_History": MessageLookupByLibrary.simpleMessage("مسح المحفوظات"),
-        "share": MessageLookupByLibrary.simpleMessage("شارك شارك"),
-        "share_App": MessageLookupByLibrary.simpleMessage("مشاركة التطبيق"),
-        "techno_App": MessageLookupByLibrary.simpleMessage("تطبيق تكنو"),
-        "text": MessageLookupByLibrary.simpleMessage("نص"),
-        "write_Text_Here":
-            MessageLookupByLibrary.simpleMessage("اكتب نصًا هنا ...")
+        "read_Button_Text":
+            MessageLookupByLibrary.simpleMessage("قراءة كود من صورة محلية"),
+        "result_Language_Label":
+            MessageLookupByLibrary.simpleMessage("النتيجة"),
+        "save_Button_Text": MessageLookupByLibrary.simpleMessage("حفظ "),
+        "scan_Button_Text":
+            MessageLookupByLibrary.simpleMessage("مسح كود بواسطة الكاميرا"),
+        "scan_Tree_Item":
+            MessageLookupByLibrary.simpleMessage("سجل عمليات مسح الأكواد"),
+        "second_Line": MessageLookupByLibrary.simpleMessage(
+            "© 2022 جميع الحقوق محفوظة لشركة TecnoWays"),
+        "share_Button_Text": MessageLookupByLibrary.simpleMessage("مشاركة"),
+        "shown_Only_On_The_Early_First_Time": MessageLookupByLibrary.simpleMessage(
+            "تثبيت هذا التطبيق أو استخدامه يعتبرموافقة منك على النسخة الإنجليزية من سياسة الخصوصية"),
+        "terms_Of_Use": MessageLookupByLibrary.simpleMessage("شروط الاستخدام")
       };
 }
