@@ -9,6 +9,9 @@ import 'package:technoapp_qr/constants/utils/apptheme.dart';
 import 'package:technoapp_qr/core/router/router_generator.dart';
 import 'package:technoapp_qr/views/widgets/appbar_design.dart';
 import 'package:technoapp_qr/views/widgets/options_widget.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
+import '../models/language/lnaguage_constant.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key, this.animation}) : super(key: key);
@@ -17,7 +20,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBarWidget(
-        title: 'Techno App',
+        title: translation(context).techno_App,
         iconButton: IconButton(
           hoverColor: AppTheme.splashColor,
           disabledColor: Colors.grey[200],
@@ -38,7 +41,7 @@ class HomeScreen extends StatelessWidget {
             children: [
               OptionsWidget(
                 icon: CupertinoIcons.camera,
-                optionText: 'Scan from Camera',
+                optionText: translation(context).scan_From_Camera,
                 onTap: () async {
                   navigationController.navigateToNamed(RouteGenerator.scanQr);
                   FirebaseAnalytics.instance.logEvent(name: "Scan_from_camera",
@@ -50,7 +53,7 @@ class HomeScreen extends StatelessWidget {
               ),
               OptionsWidget(
                 icon: CupertinoIcons.photo,
-                optionText: 'Read from Local Storage ',
+                optionText: '${AppLocalizations.of(context)?.read_From_Local_Storage}',
                 onTap: () async {
                   FirebaseAnalytics.instance.logEvent(name: "Read_from_local_storage",
                   parameters: {
@@ -66,7 +69,7 @@ class HomeScreen extends StatelessWidget {
               ),
               OptionsWidget(
                 icon: CupertinoIcons.pen,
-                optionText: 'Generate From Text',
+                optionText: translation(context).generate_From_Text,
                 onTap: () {
                   FirebaseAnalytics.instance.logEvent(name: "Generate_from_text",
                     parameters: {
