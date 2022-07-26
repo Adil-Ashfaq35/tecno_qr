@@ -4,25 +4,27 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:receive_sharing_intent/receive_sharing_intent.dart';
 import 'package:technoapp_qr/core/controllers/history_controller.dart';
 import 'package:technoapp_qr/core/controllers/navigation_controller.dart';
 import 'package:technoapp_qr/core/controllers/qr_provider.dart';
 import 'package:technoapp_qr/core/controllers/qr_scan.provider.dart';
 import 'package:technoapp_qr/core/controllers/result_controller.dart';
 import 'package:technoapp_qr/core/controllers/settings_controller.dart';
-import 'package:technoapp_qr/core/services/stream_service.dart';
 
 import 'constants/utils/apptheme.dart';
 import 'core/router/router_generator.dart';
 import 'models/qr_model.dart';
 
 void main() async {
-  await init();
+  InitData initData= await init();
 
-  runApp( const MyApp());
+  runApp( MyApp(initData:initData ));
 }
 
-Future<void> init() async {
+const String homeRoute = RouteGenerator.mainSplashScreen;
+
+Future<InitData> init() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   await Hive.initFlutter();
@@ -32,6 +34,12 @@ Future<void> init() async {
   await Firebase.initializeApp();
   initControllers();
   FirebaseAnalytics.instance.logEvent(name: "app start");
+
+  String sharedText = "";
+  String routeName = homeRoute;
+  //When application is closed
+  await ReceiveSharingIntent.getInitialMedia();
+  return InitData(sharedText, routeName);
 }
 
 void initControllers() {
@@ -44,15 +52,14 @@ void initControllers() {
 }
 
 class MyApp extends StatelessWidget {
-
-  const MyApp({Key? key}) : super(key: key);
-
+  const  MyApp({Key? key, required this.initData}) : super(key: key);
+   final InitData initData;
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(builder: (BuildContext context, Widget? child) {
       return GetMaterialApp(
         debugShowCheckedModeBanner: false,
-        
+
         title: "QR Code",
         onGenerateRoute: RouteGenerator.onGeneratedRoutes,
         theme: AppTheme.lightTheme,
@@ -63,4 +70,11 @@ class MyApp extends StatelessWidget {
       );
     });
   }
+}
+
+class InitData {
+  final String sharedMedia;
+  final String routeName;
+
+  InitData(this.sharedMedia, this.routeName);
 }
