@@ -4,10 +4,8 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:get/get_navigation/src/extension_navigation.dart';
-import 'package:get/get_navigation/src/snackbar/snackbar.dart';
-import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
+import 'package:intl/intl.dart';
+
 import 'package:technoapp_qr/constants/controllers.dart';
 import 'package:technoapp_qr/constants/utils/apptheme.dart';
 import 'package:technoapp_qr/core/router/router_generator.dart';
@@ -31,6 +29,7 @@ class _HistoryScreenState extends State<HistoryScreen> {
   @override
   void initState() {
     super.initState();
+    qrProvider.getQrs();
     historyController.getItem();
     historyController.getimageformLocal();
   }
@@ -224,8 +223,9 @@ class _ExpansionPanelhistoryState extends State<ExpansionPanelhistory> {
                   padding: const EdgeInsets.all(10),
                   child: Text(
                     widget.isQRCreated
-                        ? basename(widget.images[index].imageName)
-                        : widget.qrslist[index].dateTime.toString(),
+                        ? widget.images[index].qrName
+                        : DateFormat('yyyy-MM-dd – kk:mm a')
+                            .format(widget.qrslist[index].dateTime),
                     style: const TextStyle(
                       color: AppTheme.primaryColor,
                       fontSize: 18,

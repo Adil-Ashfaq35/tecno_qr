@@ -1,13 +1,13 @@
-import 'dart:ui';
+
 
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get.dart';
+
 import 'package:lottie/lottie.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
-import 'package:scan/scan.dart';
+
 import 'package:technoapp_qr/constants/controllers.dart';
 import 'package:technoapp_qr/constants/utils/apptheme.dart';
 import 'package:technoapp_qr/core/router/router_generator.dart';
@@ -19,18 +19,15 @@ class ScanQr extends StatefulWidget {
   State<ScanQr> createState() => _ScanQrState();
 }
 
-
 class _ScanQrState extends State<ScanQr> {
-
   MobileScannerController cameraController = MobileScannerController();
-
-
 
   @override
   void initState() {
     FirebaseAnalytics.instance.setCurrentScreen(screenName: "scan from camera");
     super.initState();
   }
+
   @override
   @override
   Widget build(BuildContext context) {
@@ -57,55 +54,57 @@ class _ScanQrState extends State<ScanQr> {
               onPressed: () => cameraController.toggleTorch(),
             ),
             IconButton(
-              color: Colors.white,
-              icon: ValueListenableBuilder(
-                valueListenable: cameraController.cameraFacingState,
-                builder: (context, state, child) {
-                  switch (state as CameraFacing) {
-                    case CameraFacing.front:
-                      return const Icon(Icons.camera_front);
-                    case CameraFacing.back:
-                      return const Icon(Icons.camera_rear);
-                  }
-                },
-              ),
-              iconSize: 32.0,
-              onPressed: () {
-                cameraController.switchCamera();
-              }
-            ),
+                color: Colors.white,
+                icon: ValueListenableBuilder(
+                  valueListenable: cameraController.cameraFacingState,
+                  builder: (context, state, child) {
+                    switch (state as CameraFacing) {
+                      case CameraFacing.front:
+                        return const Icon(Icons.camera_front);
+                      case CameraFacing.back:
+                        return const Icon(Icons.camera_rear);
+                    }
+                  },
+                ),
+                iconSize: 32.0,
+                onPressed: () {
+                  cameraController.switchCamera();
+                }),
           ],
         ),
         body: Stack(
-          children:[ MobileScanner(
-              allowDuplicates: false,
-              controller: cameraController,
-              onDetect: (barcode, args) {
-                if (mounted) {
-                  if (barcode.rawValue == null) {
-                    debugPrint('Failed to scan Barcode');
-                  } else {
-                    final String code = barcode.rawValue!;
-                    resultController.setResult(code, barcode.type, true);
-                    debugPrint('Barcode found! $code');
-                    navigationController
-                        .navigateToNamed(RouteGenerator.resultScreen);
-                    dispose();
-                  }}
-              }),
+          children: [
+            MobileScanner(
+                allowDuplicates: false,
+                controller: cameraController,
+                onDetect: (barcode, args) {
+                  if (mounted) {
+                    if (barcode.rawValue == null) {
+                      debugPrint('Failed to scan Barcode');
+                    } else {
+                      final String code = barcode.rawValue!;
+                      resultController.setResult(code, barcode.type, true);
+                      debugPrint('Barcode found! $code');
+                      navigationController
+                          .navigateToNamed(RouteGenerator.resultScreen);
+                                              dispose();
+                    }
+
+                  }
+                }),
             ClipRRect(
-              // Clip it cleanly.
+                // Clip it cleanly.
                 child: Container(
-                  alignment: Alignment.center,
-                  child: Lottie.asset('assets/lottie/scanning.json',
-                      animate: true, height: 300.sh, width: 400.sw,
-                  ),
-                )),
-
-
-  ],
-        )
-    );
+              alignment: Alignment.center,
+              child: Lottie.asset(
+                'assets/lottie/scanning.json',
+                animate: true,
+                height: 300.sh,
+                width: 400.sw,
+              ),
+            )),
+          ],
+        ));
   }
 
   @override
