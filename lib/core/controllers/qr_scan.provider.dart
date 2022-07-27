@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 
 import 'package:google_mlkit_barcode_scanning/google_mlkit_barcode_scanning.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:receive_sharing_intent/receive_sharing_intent.dart';
 import 'dart:io';
 
 import 'package:technoapp_qr/constants/controllers.dart';
@@ -15,7 +16,8 @@ class QrScanProvider extends GetxController {
   dynamic pickerError;
   RxString qrResult = 'No Result'.obs;
   Rx<BarcodeType> barcodeType = BarcodeType.text.obs;
-
+  List<SharedMediaFile>? sharedFiles;
+  RxBool fromIntent = false.obs;
   Future<bool> pickImageGallery() async {
     try {
       final XFile? pickedFile =
@@ -41,8 +43,7 @@ class QrScanProvider extends GetxController {
 
     String result = '';
     String rawValue = '';
-
-    final InputImage inputImage = InputImage.fromFile(imageFile!);
+  InputImage inputImage=  getInputImage();
     final BarcodeScanner barcodeScanner = BarcodeScanner();
 
     final List<Barcode> barcodes =
@@ -67,6 +68,18 @@ class QrScanProvider extends GetxController {
       return true;
     } else {
       return false;
+    }
+  }
+
+  InputImage getInputImage() {
+    if (fromIntent.value) {
+      final InputImage inputImage =
+          InputImage.fromFilePath(sharedFiles![0].path);
+
+      return inputImage;
+    } else {
+      final InputImage inputImage = InputImage.fromFile(imageFile!);
+      return inputImage;
     }
   }
 }

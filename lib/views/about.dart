@@ -6,6 +6,7 @@ import 'package:technoapp_qr/views/widgets/appbar_design.dart';
 
 import '../constants/controllers.dart';
 import '../constants/utils/apptheme.dart';
+
 import '../models/language/lnaguage_constant.dart';
 
 class AboutScreen extends StatefulWidget {

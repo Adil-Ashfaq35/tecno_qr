@@ -88,10 +88,10 @@ class RouteGenerator {
     return MaterialPageRoute(builder: (ctx) {
       return Scaffold(
         appBar: AppBar(
-          title: const Text('404'),
+          title: const Text(''),
         ),
         body: const Center(
-          child: Text('ERROR 404: Not Found'),
+          child: Text(''),
         ),
       );
     });

@@ -1,64 +1,42 @@
 import 'dart:async';
 
-import 'package:flutter/foundation.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:receive_sharing_intent/receive_sharing_intent.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+
 import 'package:technoapp_qr/constants/const_settings.dart';
 import 'package:technoapp_qr/constants/controllers.dart';
+import 'package:technoapp_qr/constants/utils/shared_pref.dart';
 import 'package:technoapp_qr/core/router/router_generator.dart';
+import 'package:technoapp_qr/views/widgets/dialogs/customDialog.dart';
+
+import '../constants/utils/apptheme.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _SplashScreenState createState() => _SplashScreenState();
 }
 
 class _SplashScreenState extends State<SplashScreen>
     with TickerProviderStateMixin {
-  StreamSubscription? _intentDataStreamSubscription;
-  List<SharedMediaFile>? _sharedFiles;
-  String? _sharedText;
-  bool isShared = false;
   @override
   void initState() {
     super.initState();
 
-    // For sharing images coming from outside the app while the app is in the memory
-    _intentDataStreamSubscription = ReceiveSharingIntent.getMediaStream()
-        .listen((List<SharedMediaFile> value) {
-        
-      _sharedFiles = value;
-      //navigationController.navigateToNamed(RouteGenerator.historyScreen);
-      isShared = true;
-      // setState(() {
-      if (kDebugMode) {
-        print("Shared:${_sharedFiles?.map((f) => f.path).join(",") ?? ""}");
-      }
+    initRouting();
+  }
 
-      setState(() {
-             isShared = true;
-      });
-      _sharedFiles = value;
-      // });
-    }, onError: (err) {
-      if (kDebugMode) {
-        print("getIntentDataStream error: $err");
-      }
-    });
+  Future<void> initRouting() async {
+    bool isFirstTime = await SharedPref().readBool('isFirsttime');
+    !isFirstTime
+        ? forFirstTime()
+        : navigationController.navigateToNamed(RouteGenerator.customDrawer);
 
     // For sharing images coming from outside the app while the app is closed
-    ReceiveSharingIntent.getInitialMedia().then((List<SharedMediaFile> value) {
-   //   navigationController.navigateToNamed(RouteGenerator.historyScreen);
-      setState(() {
-             isShared = true;
-      });
- 
-    });
-    isShared
-        ?  navigationController.navigateToNamed(RouteGenerator.historyScreen)
-        : Timer(const Duration(seconds: ConstantSettings.splashScreenTime),
-            () => checkState());
   }
 
   @override
@@ -89,5 +67,57 @@ class _SplashScreenState extends State<SplashScreen>
 
   checkState() {
     navigationController.getOffAll(RouteGenerator.customDrawer);
+  }
+
+  Future<void> forFirstTime() async {
+    bool isnetavailable = await settingController.checkInternet();
+    if (isnetavailable) {
+      bool isuserAgreed = false;
+      showDialog(
+        context: context,
+        barrierDismissible: false,
+        // ignore: prefer_const_constructors
+        builder: (_) => CustomDialogBox(
+          title: 'Privacy Policy',
+          text: 'Agree',
+          descriptions: 'Privacy Policy here',
+          img: const Icon(
+            Icons.privacy_tip,
+            color: AppTheme.primaryColor,
+            size: 20,
+          ),
+          onPressed: () {
+      settingController.addDocument();
+      
+          },
+
+        ),
+      );
+    
+    } else {
+      showDialog(
+        context: context,
+        // ignore: prefer_const_constructors
+        builder: (_) => CustomDialogBox(
+          title: 'Not Internet Available',
+          text: 'Retry',
+          descriptions:
+              'App needs to get connected to internet,Please enable the internet connection',
+          img: const Icon(
+            Icons.signal_wifi_connected_no_internet_4,
+            color: AppTheme.primaryColor,
+            size: 20,
+          ),
+          onPressed: () {
+            Get.back();
+            forFirstTime();
+          },
+        ),
+      );
+      // Timer(const Duration(seconds: ConstantSettings.splashScreenTime),
+      //     () => checkState())
+    }
+
+    await SharedPref().saveBool('isFirsttime', false);
   }
 }
