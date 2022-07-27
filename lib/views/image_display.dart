@@ -49,7 +49,9 @@ class _DisplayImageState extends State<DisplayImage> {
             child: ClipRRect(
               //   borderRadius: BorderRadius.circular(10.r),
               child: Image.file(
-                File(qrScanProvider.imageFile!.path),
+                File(qrScanProvider.fromIntent.value
+                    ? qrScanProvider.sharedFiles![0].path
+                    : qrScanProvider.imageFile!.path),
                 fit: BoxFit.contain,
               ),
             ),
