@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -7,7 +7,6 @@ import 'package:share_plus/share_plus.dart';
 import 'package:technoapp_qr/constants/controllers.dart';
 import 'package:technoapp_qr/core/router/router_generator.dart';
 import 'package:technoapp_qr/models/language/lnaguage_constant.dart';
-
 import 'package:technoapp_qr/views/widgets/appbar_design.dart';
 import 'package:technoapp_qr/views/widgets/options_widget.dart';
 import '../constants/utils/apptheme.dart';
