@@ -1,11 +1,17 @@
 import 'dart:async';
 
-import 'package:flutter/foundation.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 import 'package:technoapp_qr/constants/const_settings.dart';
 import 'package:technoapp_qr/constants/controllers.dart';
+import 'package:technoapp_qr/constants/utils/shared_pref.dart';
 import 'package:technoapp_qr/core/router/router_generator.dart';
+import 'package:technoapp_qr/views/widgets/dialogs/customDialog.dart';
+
+import '../constants/utils/apptheme.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -17,20 +23,20 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen>
     with TickerProviderStateMixin {
-
-
-
   @override
   void initState() {
     super.initState();
 
+    initRouting();
+  }
 
+  Future<void> initRouting() async {
+    bool isFirstTime = await SharedPref().readBool('isFirsttime');
+    !isFirstTime
+        ? forFirstTime()
+        : navigationController.navigateToNamed(RouteGenerator.customDrawer);
 
     // For sharing images coming from outside the app while the app is closed
-
-
-        Timer(const Duration(seconds: ConstantSettings.splashScreenTime),
-            () => checkState());
   }
 
   @override
@@ -60,6 +66,58 @@ class _SplashScreenState extends State<SplashScreen>
   }
 
   checkState() {
-navigationController.getOffAll(RouteGenerator.customDrawer);
+    navigationController.getOffAll(RouteGenerator.customDrawer);
+  }
+
+  Future<void> forFirstTime() async {
+    bool isnetavailable = await settingController.checkInternet();
+    if (isnetavailable) {
+      bool isuserAgreed = false;
+      showDialog(
+        context: context,
+        barrierDismissible: false,
+        // ignore: prefer_const_constructors
+        builder: (_) => CustomDialogBox(
+          title: 'Privacy Policy',
+          text: 'Agree',
+          descriptions: 'Privacy Policy here',
+          img: const Icon(
+            Icons.privacy_tip,
+            color: AppTheme.primaryColor,
+            size: 20,
+          ),
+          onPressed: () {
+      settingController.addDocument();
+      
+          },
+
+        ),
+      );
+    
+    } else {
+      showDialog(
+        context: context,
+        // ignore: prefer_const_constructors
+        builder: (_) => CustomDialogBox(
+          title: 'Not Internet Available',
+          text: 'Retry',
+          descriptions:
+              'App needs to get connected to internet,Please enable the internet connection',
+          img: const Icon(
+            Icons.signal_wifi_connected_no_internet_4,
+            color: AppTheme.primaryColor,
+            size: 20,
+          ),
+          onPressed: () {
+            Get.back();
+            forFirstTime();
+          },
+        ),
+      );
+      // Timer(const Duration(seconds: ConstantSettings.splashScreenTime),
+      //     () => checkState())
+    }
+
+    await SharedPref().saveBool('isFirsttime', false);
   }
 }
