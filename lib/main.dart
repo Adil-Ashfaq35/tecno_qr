@@ -77,6 +77,16 @@ class MyApp extends StatefulWidget {
     _MyAppState? state = context.findAncestorStateOfType<_MyAppState>();
     state?.setLocale(newLocale);
   }
+   static  Future<bool> currentLocale() async {
+    Locale locale= await getLocale();
+    if(locale.languageCode=="en"){
+      return QrCodeProvider.instance.changeLanguage.value=true;
+    }
+    else{
+      return QrCodeProvider.instance.changeLanguage.value=false;
+    }
+  }
+
 }
 
 class _MyAppState extends State<MyApp> {
@@ -116,8 +126,9 @@ class _MyAppState extends State<MyApp> {
   }
 
   @override
-  void didChangeDependencies() {
-    getLocale().then((locale) => {setLocale(locale)});
+  Future<void> didChangeDependencies() async {
+    Locale locale= await getLocale();
+    setLocale(locale);
     super.didChangeDependencies();
   }
 

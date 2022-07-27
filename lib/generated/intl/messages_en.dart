@@ -23,36 +23,56 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "about": MessageLookupByLibrary.simpleMessage("About"),
-        "copy": MessageLookupByLibrary.simpleMessage("Copy"),
-        "download": MessageLookupByLibrary.simpleMessage("Download"),
+        "cancel_Button_Text": MessageLookupByLibrary.simpleMessage("Cancel"),
+        "copied": MessageLookupByLibrary.simpleMessage("Copied"),
+        "copy_Button_Text": MessageLookupByLibrary.simpleMessage("Copy"),
+        "download_Button_Text":
+            MessageLookupByLibrary.simpleMessage("Download"),
         "enter_Qr": MessageLookupByLibrary.simpleMessage("Enter Qr"),
-        "generate": MessageLookupByLibrary.simpleMessage("Generate"),
-        "generate_From_Text":
-            MessageLookupByLibrary.simpleMessage("Generate From Text"),
+        "fAQ": MessageLookupByLibrary.simpleMessage("FAQ"),
+        "first_Line":
+            MessageLookupByLibrary.simpleMessage("TecnoCode Version 6.0.1.0"),
+        "generate_Button_Text":
+            MessageLookupByLibrary.simpleMessage("Generate from Text"),
+        "generate_Tree_item":
+            MessageLookupByLibrary.simpleMessage("Generate History"),
+        "help": MessageLookupByLibrary.simpleMessage("Help"),
         "history": MessageLookupByLibrary.simpleMessage("History"),
         "history_Screen":
-            MessageLookupByLibrary.simpleMessage("History screen"),
+            MessageLookupByLibrary.simpleMessage("History Screen"),
         "home": MessageLookupByLibrary.simpleMessage("Home"),
+        "invalid_Url": MessageLookupByLibrary.simpleMessage("Invalid url"),
         "language": MessageLookupByLibrary.simpleMessage("Language"),
-        "navigate": MessageLookupByLibrary.simpleMessage("Navigate"),
-        "paste": MessageLookupByLibrary.simpleMessage("Paste"),
+        "navigate_Button_Text":
+            MessageLookupByLibrary.simpleMessage("Navigate"),
+        "oK_Button_Text": MessageLookupByLibrary.simpleMessage("OK"),
+        "paste": MessageLookupByLibrary.simpleMessage("paste"),
         "privacy_Policy":
             MessageLookupByLibrary.simpleMessage("Privacy Policy"),
         "qr_Code": MessageLookupByLibrary.simpleMessage("Qr Code"),
-        "read_From_Local_Storage":
-            MessageLookupByLibrary.simpleMessage("Read from Local Storage"),
-        "read_History": MessageLookupByLibrary.simpleMessage("Read History"),
-        "result_Qr_Code":
-            MessageLookupByLibrary.simpleMessage("Result QR code"),
-        "result_Text": MessageLookupByLibrary.simpleMessage("Result Text"),
-        "scan_From_Camera":
+        "qr_Not_Found_In_Image":
+            MessageLookupByLibrary.simpleMessage("Qr not found in image"),
+        "read_Button_Text":
+            MessageLookupByLibrary.simpleMessage("Read from Local Image"),
+        "result_Language_Label": MessageLookupByLibrary.simpleMessage("Result"),
+        "result_Screen": MessageLookupByLibrary.simpleMessage("Result Screen"),
+        "result_Text_Type_Is_Not_Url_To_Navigate":
+            MessageLookupByLibrary.simpleMessage(
+                "Result Text type is not Url to navigate"),
+        "save_Button_Text": MessageLookupByLibrary.simpleMessage("Save "),
+        "scan_Button_Text":
             MessageLookupByLibrary.simpleMessage("Scan from Camera"),
-        "scan_History": MessageLookupByLibrary.simpleMessage("Scan History"),
-        "share": MessageLookupByLibrary.simpleMessage("Share"),
+        "scan_Tree_Item": MessageLookupByLibrary.simpleMessage("Scan History"),
+        "second_Line": MessageLookupByLibrary.simpleMessage(
+            "© 2022 TecnoWays All rights reserved"),
         "share_App": MessageLookupByLibrary.simpleMessage("Share App"),
-        "techno_App": MessageLookupByLibrary.simpleMessage("Techno App"),
+        "share_Button_Text": MessageLookupByLibrary.simpleMessage("Share"),
+        "shown_Only_On_The_Early_First_Time": MessageLookupByLibrary.simpleMessage(
+            "By installing or using this application you are accepting the privacy policy"),
+        "tecno_Code": MessageLookupByLibrary.simpleMessage("Tecno code"),
+        "terms_Of_Use": MessageLookupByLibrary.simpleMessage("Terms of use"),
         "text": MessageLookupByLibrary.simpleMessage("Text"),
-        "write_Text_Here":
-            MessageLookupByLibrary.simpleMessage("Write text here...")
+        "third_Line": MessageLookupByLibrary.simpleMessage(
+            "© 2022-2025 TecnoWays All rights reserved")
       };
 }

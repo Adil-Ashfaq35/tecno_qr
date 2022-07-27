@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:technoapp_qr/constants/controllers.dart';
 import 'package:technoapp_qr/core/router/router_generator.dart';
+import 'package:technoapp_qr/models/language/lnaguage_constant.dart';
 import 'package:technoapp_qr/views/widgets/appbar_design.dart';
 import 'package:technoapp_qr/views/widgets/options_widget.dart';
 import '../constants/utils/apptheme.dart';
@@ -16,7 +17,7 @@ class EnterText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBarWidget(
-        title: 'Enter Qr',
+        title: translation(context).enter_Qr,
           iconButton: IconButton(
               onPressed: () {
                 navigationController.goBack();
@@ -27,11 +28,11 @@ class EnterText extends StatelessWidget {
         child: Column(mainAxisAlignment: MainAxisAlignment.center,
             // crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              const Padding(
-                padding: EdgeInsets.all(8.0),
+               Padding(
+                padding: const EdgeInsets.all(8.0),
                 child: Text(
-                  'Text',
-                  style: TextStyle(
+                  translation(context).text,
+                  style: const TextStyle(
                       color: Color.fromARGB(115, 33, 33, 33),
                       fontWeight: FontWeight.bold,
                       fontSize: 25),
@@ -47,7 +48,7 @@ class EnterText extends StatelessWidget {
                 children: [
                   OptionsWidget(
                       icon: Icons.qr_code,
-                      optionText: 'Generate',
+                      optionText: translation(context).generate_Button_Text,
                       onTap: () {
                         if (_inputController.text.isNotEmpty) {
                           qrProvider.setTexttogenerate(_inputController.text);
@@ -57,7 +58,7 @@ class EnterText extends StatelessWidget {
                       }),
                   OptionsWidget(
                       icon: Icons.paste,
-                      optionText: 'Paste',
+                      optionText: translation(context).paste,
                       onTap: () async {
                         _inputController.text = (await _getClipboardText())!;
                       }),

@@ -11,6 +11,7 @@ import 'package:gallery_saver/gallery_saver.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 
+
 import 'package:path_provider/path_provider.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:qr_flutter/qr_flutter.dart';
@@ -18,6 +19,7 @@ import 'package:share_plus/share_plus.dart';
 import 'package:technoapp_qr/core/router/router_generator.dart';
 
 import '../constants/controllers.dart';
+import '../models/language/lnaguage_constant.dart';
 import 'widgets/appbar_design.dart';
 import 'widgets/options_widget.dart';
 
@@ -91,11 +93,11 @@ class CreateQrPage extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            const Padding(
-              padding: EdgeInsets.all(8.0),
+             Padding(
+              padding: const EdgeInsets.all(8.0),
               child: Text(
-                'Result QR code',
-                style: TextStyle(
+                "${translation(context).result_Language_Label}${translation(context).qr_Code}",
+                style: const TextStyle(
                     color: Color.fromARGB(115, 33, 33, 33),
                     fontWeight: FontWeight.bold,
                     fontSize: 25),
@@ -116,17 +118,17 @@ class CreateQrPage extends StatelessWidget {
             const SizedBox(height: 25),
             OptionsWidget(
               icon: CupertinoIcons.camera,
-              optionText: 'Download',
+              optionText: translation(context).download_Button_Text,
               onTap: () {
                 takeScreenShot(context, true);
               },
             ),
             OptionsWidget(
               icon: Icons.share,
-              optionText: 'Share',
+              optionText: translation(context).share_Button_Text,
               onTap: () async {
                 File? imagefile = await takeScreenShot(context, false);
-                Share.shareFiles(['${imagefile!.path}'], text: 'Qr Code');
+                Share.shareFiles([(imagefile!.path)], text: 'Qr Code');
                 FirebaseAnalytics.instance
                     .logEvent(name: "share_qr", parameters: {
                   "qr_shared": "shared_gen_qr",

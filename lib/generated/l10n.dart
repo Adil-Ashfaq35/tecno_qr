@@ -50,46 +50,6 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `Techno App`
-  String get techno_App {
-    return Intl.message(
-      'Techno App',
-      name: 'techno_App',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Read from Local Storage`
-  String get read_From_Local_Storage {
-    return Intl.message(
-      'Read from Local Storage',
-      name: 'read_From_Local_Storage',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Scan from Camera`
-  String get scan_From_Camera {
-    return Intl.message(
-      'Scan from Camera',
-      name: 'scan_From_Camera',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Generate From Text`
-  String get generate_From_Text {
-    return Intl.message(
-      'Generate From Text',
-      name: 'generate_From_Text',
-      desc: '',
-      args: [],
-    );
-  }
-
   /// `Home`
   String get home {
     return Intl.message(
@@ -110,11 +70,21 @@ class S {
     );
   }
 
-  /// `Share App`
-  String get share_App {
+  /// `Language`
+  String get language {
     return Intl.message(
-      'Share App',
-      name: 'share_App',
+      'Language',
+      name: 'language',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `FAQ`
+  String get fAQ {
+    return Intl.message(
+      'FAQ',
+      name: 'fAQ',
       desc: '',
       args: [],
     );
@@ -130,6 +100,16 @@ class S {
     );
   }
 
+  /// `Terms of use`
+  String get terms_Of_Use {
+    return Intl.message(
+      'Terms of use',
+      name: 'terms_Of_Use',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `About`
   String get about {
     return Intl.message(
@@ -140,51 +120,201 @@ class S {
     );
   }
 
-  /// `Paste`
-  String get paste {
+  /// `Scan from Camera`
+  String get scan_Button_Text {
     return Intl.message(
-      'Paste',
-      name: 'paste',
+      'Scan from Camera',
+      name: 'scan_Button_Text',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Read from Local Image`
+  String get read_Button_Text {
+    return Intl.message(
+      'Read from Local Image',
+      name: 'read_Button_Text',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Generate from Text`
+  String get generate_Button_Text {
+    return Intl.message(
+      'Generate from Text',
+      name: 'generate_Button_Text',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Result`
+  String get result_Language_Label {
+    return Intl.message(
+      'Result',
+      name: 'result_Language_Label',
       desc: '',
       args: [],
     );
   }
 
   /// `Navigate`
-  String get navigate {
+  String get navigate_Button_Text {
     return Intl.message(
       'Navigate',
-      name: 'navigate',
+      name: 'navigate_Button_Text',
       desc: '',
       args: [],
     );
   }
 
-  /// `Generate`
-  String get generate {
+  /// `Copy`
+  String get copy_Button_Text {
     return Intl.message(
-      'Generate',
-      name: 'generate',
+      'Copy',
+      name: 'copy_Button_Text',
       desc: '',
       args: [],
     );
   }
 
-  /// `Text`
-  String get text {
+  /// `Download`
+  String get download_Button_Text {
     return Intl.message(
-      'Text',
-      name: 'text',
+      'Download',
+      name: 'download_Button_Text',
       desc: '',
       args: [],
     );
   }
 
-  /// `Write text here...`
-  String get write_Text_Here {
+  /// `Share`
+  String get share_Button_Text {
     return Intl.message(
-      'Write text here...',
-      name: 'write_Text_Here',
+      'Share',
+      name: 'share_Button_Text',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Scan History`
+  String get scan_Tree_Item {
+    return Intl.message(
+      'Scan History',
+      name: 'scan_Tree_Item',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Generate History`
+  String get generate_Tree_item {
+    return Intl.message(
+      'Generate History',
+      name: 'generate_Tree_item',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `TecnoCode Version 6.0.1.0`
+  String get first_Line {
+    return Intl.message(
+      'TecnoCode Version 6.0.1.0',
+      name: 'first_Line',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `© 2022 TecnoWays All rights reserved`
+  String get second_Line {
+    return Intl.message(
+      '© 2022 TecnoWays All rights reserved',
+      name: 'second_Line',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `© 2022-2025 TecnoWays All rights reserved`
+  String get third_Line {
+    return Intl.message(
+      '© 2022-2025 TecnoWays All rights reserved',
+      name: 'third_Line',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `OK`
+  String get oK_Button_Text {
+    return Intl.message(
+      'OK',
+      name: 'oK_Button_Text',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cancel`
+  String get cancel_Button_Text {
+    return Intl.message(
+      'Cancel',
+      name: 'cancel_Button_Text',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Save `
+  String get save_Button_Text {
+    return Intl.message(
+      'Save ',
+      name: 'save_Button_Text',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `By installing or using this application you are accepting the privacy policy`
+  String get shown_Only_On_The_Early_First_Time {
+    return Intl.message(
+      'By installing or using this application you are accepting the privacy policy',
+      name: 'shown_Only_On_The_Early_First_Time',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Share App`
+  String get share_App {
+    return Intl.message(
+      'Share App',
+      name: 'share_App',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Help`
+  String get help {
+    return Intl.message(
+      'Help',
+      name: 'help',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Tecno code`
+  String get tecno_Code {
+    return Intl.message(
+      'Tecno code',
+      name: 'tecno_Code',
       desc: '',
       args: [],
     );
@@ -200,6 +330,26 @@ class S {
     );
   }
 
+  /// `Text`
+  String get text {
+    return Intl.message(
+      'Text',
+      name: 'text',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `paste`
+  String get paste {
+    return Intl.message(
+      'paste',
+      name: 'paste',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Qr Code`
   String get qr_Code {
     return Intl.message(
@@ -210,91 +360,61 @@ class S {
     );
   }
 
-  /// `Result QR code`
-  String get result_Qr_Code {
-    return Intl.message(
-      'Result QR code',
-      name: 'result_Qr_Code',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Share`
-  String get share {
-    return Intl.message(
-      'Share',
-      name: 'share',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Download`
-  String get download {
-    return Intl.message(
-      'Download',
-      name: 'download',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Copy`
-  String get copy {
-    return Intl.message(
-      'Copy',
-      name: 'copy',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Result Text`
-  String get result_Text {
-    return Intl.message(
-      'Result Text',
-      name: 'result_Text',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `History screen`
+  /// `History Screen`
   String get history_Screen {
     return Intl.message(
-      'History screen',
+      'History Screen',
       name: 'history_Screen',
       desc: '',
       args: [],
     );
   }
 
-  /// `Scan History`
-  String get scan_History {
+  /// `Qr not found in image`
+  String get qr_Not_Found_In_Image {
     return Intl.message(
-      'Scan History',
-      name: 'scan_History',
+      'Qr not found in image',
+      name: 'qr_Not_Found_In_Image',
       desc: '',
       args: [],
     );
   }
 
-  /// `Read History`
-  String get read_History {
+  /// `Result Screen`
+  String get result_Screen {
     return Intl.message(
-      'Read History',
-      name: 'read_History',
+      'Result Screen',
+      name: 'result_Screen',
       desc: '',
       args: [],
     );
   }
 
-  /// `Language`
-  String get language {
+  /// `Invalid url`
+  String get invalid_Url {
     return Intl.message(
-      'Language',
-      name: 'language',
+      'Invalid url',
+      name: 'invalid_Url',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Result Text type is not Url to navigate`
+  String get result_Text_Type_Is_Not_Url_To_Navigate {
+    return Intl.message(
+      'Result Text type is not Url to navigate',
+      name: 'result_Text_Type_Is_Not_Url_To_Navigate',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Copied`
+  String get copied {
+    return Intl.message(
+      'Copied',
+      name: 'copied',
       desc: '',
       args: [],
     );
@@ -308,7 +428,18 @@ class AppLocalizationDelegate extends LocalizationsDelegate<S> {
     return const <Locale>[
       Locale.fromSubtags(languageCode: 'en'),
       Locale.fromSubtags(languageCode: 'ar'),
+      Locale.fromSubtags(languageCode: 'de'),
+      Locale.fromSubtags(languageCode: 'es'),
+      Locale.fromSubtags(languageCode: 'fr'),
+      Locale.fromSubtags(languageCode: 'id'),
+      Locale.fromSubtags(languageCode: 'it'),
+      Locale.fromSubtags(languageCode: 'ms'),
+      Locale.fromSubtags(languageCode: 'nl'),
+      Locale.fromSubtags(languageCode: 'ru'),
+      Locale.fromSubtags(languageCode: 'tr'),
       Locale.fromSubtags(languageCode: 'ur'),
+      Locale.fromSubtags(languageCode: 'zh'),
+      Locale.fromSubtags(languageCode: 'zh'),
     ];
   }
 
