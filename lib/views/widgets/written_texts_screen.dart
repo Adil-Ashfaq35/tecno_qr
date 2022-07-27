@@ -47,8 +47,8 @@ class _PrivacyPolicyState extends State<PrivacyPolicy> {
         centerTitle: true,
       ),
       body:  Container(
-        padding: EdgeInsets.all(20),
-        child: Center(child: Text('Sample Data of Privacy Policy ')),
+        padding: const EdgeInsets.all(20),
+        child: const Center(child: Text('Sample Data of Privacy Policy ')),
       )
     );
   }

@@ -33,6 +33,7 @@ class _HistoryScreenState extends State<HistoryScreen> {
     qrProvider.getQrs();
     historyController.getItem();
     historyController.getimageformLocal();
+    settingController.addDocument();
   }
 
   List<String> options = ['Scan History', 'Read History', 'Generate History'];
