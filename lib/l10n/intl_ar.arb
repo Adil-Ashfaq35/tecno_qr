@@ -23,5 +23,18 @@
   "oK_Button_Text":"موافق" ,
   "cancel_Button_Text":"إلغاء",
   "save_Button_Text": "حفظ ",
-  "shown_Only_On_The_Early_First_Time":"تثبيت هذا التطبيق أو استخدامه يعتبرموافقة منك على النسخة الإنجليزية من سياسة الخصوصية"
+  "shown_Only_On_The_Early_First_Time":"تثبيت هذا التطبيق أو استخدامه يعتبرموافقة منك على النسخة الإنجليزية من سياسة الخصوصية",
+  "share_App": "مشاركة التطبيق",
+  "help": "يساعد",
+  "tecno_Code": "كود Tecno",
+  "enter_Qr": "أدخل ريال قطري" ,
+  "text": "نص",
+  "paste": "لصق" ,
+  "qr_Code": "رمز الاستجابة السريعة" ,
+  "history_Screen": "شاشة المحفوظات",
+  "qr_Not_Found_In_Image": "Qr غير موجود في الصورة",
+  "result_Screen": "شاشة النتائج" ,
+  "invalid_Url": "عنوان url غير صالح" ,
+  "result_Text_Type_Is_Not_Url_To_Navigate": "نوع نص النتيجة ليس عنوان Url للتنقل" ,
+  "copied": "نسخ"
 }

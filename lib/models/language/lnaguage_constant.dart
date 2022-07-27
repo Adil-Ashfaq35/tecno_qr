@@ -52,9 +52,9 @@ Locale _locale(String languageCode) {
     case MALAY:
       return const Locale(MALAY, "");
     case CHINESE_SM:
-      return const Locale(CHINESE_SM, "");
+      return const  Locale.fromSubtags(languageCode: CHINESE_SM,scriptCode: "Hans",countryCode: "CN");
     case CHINESE_TW:
-      return const Locale(CHINESE_TW, "");
+      return  const Locale.fromSubtags(languageCode: CHINESE_TW,scriptCode: "Hant",countryCode: "TW");
     case GERMAN:
       return const Locale(GERMAN, "");
     case DUTCH:

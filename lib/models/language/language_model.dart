@@ -4,6 +4,7 @@ class LanguageModel {
   final String name;
   final String languageCode;
 
+
   LanguageModel(this.id, this.flag, this.name, this.languageCode);
 
   static List<LanguageModel> languageList() {
@@ -22,6 +23,7 @@ class LanguageModel {
       LanguageModel(12, "🇮🇹", "Italiana", "it"),
       LanguageModel(13, "🇨🇳", "中国人", "zh"),
       LanguageModel(14, "🇭🇰", "中國人", "zh_TW"),
+
     ];
   }
 }

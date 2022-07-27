@@ -17,7 +17,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBarWidget(
-        title: "Tecno App",
+        title: translation(context).tecno_Code,
         iconButton: IconButton(
           hoverColor: AppTheme.splashColor,
           disabledColor: Colors.grey[200],

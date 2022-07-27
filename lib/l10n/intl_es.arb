@@ -22,5 +22,18 @@
   "oK_Button_Text":"OK" ,
   "cancel_Button_Text":"Cancelar",
   "save_Button_Text": "Guardar ",
-  "shown_Only_On_The_Early_First_Time":"Al instalar o utilizar esta aplicación está aceptando la versión en inglés de la política de privacidad"
+  "shown_Only_On_The_Early_First_Time":"Al instalar o utilizar esta aplicación está aceptando la versión en inglés de la política de privacidad",
+  "share_App": "Compartir aplicación",
+  "help": "ayuda",
+  "tecno_Code": "Tecnocódigo",
+  "enter_Qr": "Ingresar Qr",
+  "text": "Texto",
+  "paste": "pegar",
+  "qr_Code": "Código QR",
+  "history_Screen": "Pantalla de historial",
+  "qr_Not_Found_In_Image": "Qr no encontrado en la imagen",
+  "result_Screen": "Pantalla de resultados",
+  "invalid_Url": "URL no válida",
+  "result_Text_Type_Is_Not_Url_To_Navigate": "El tipo de texto de resultado no es URL para navegar",
+  "copied": "Copiado"
 }

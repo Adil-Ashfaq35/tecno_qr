@@ -22,5 +22,18 @@
   "oK_Button_Text":"ٹھیک ہے" ,
   "cancel_Button_Text":"منسوخ کریں۔",
   "save_Button_Text": "محفوظ کریں۔ ",
-  "shown_Only_On_The_Early_First_Time":"اس ایپلی کیشن کو انسٹال یا استعمال کرکے آپ رازداری کی پالیسی کے انگریزی ورژن کو قبول کر رہے ہیں۔"
+  "shown_Only_On_The_Early_First_Time":"اس ایپلی کیشن کو انسٹال یا استعمال کرکے آپ رازداری کی پالیسی کے انگریزی ورژن کو قبول کر رہے ہیں۔",
+  "share_App": "ایپ کا اشتراک کریں",
+  "help":" مدد",
+  "tecno_Code": "ٹیکنو کوڈ",
+  "enter_Qr": "Qr درج کریں",
+  "text": "متن",
+  "paste": "پیسٹ",
+  "qr_Code": "Qr کوڈ",
+  "history_Screen": "ہسٹری سکرین",
+  "qr_Not_Found_In_Image": "تصویر میں Qr نہیں ملا",
+  "result_Screen": "نتائج کی سکرین",
+  "invalid_Url": "غلط یو آر ایل",
+  "result_Text_Type_Is_Not_Url_To_Navigate": "نتیجہ کے متن کی قسم نیویگیٹ کرنے کے لیے یو آر ایل نہیں ہے",
+  "copied": "کاپی شدہ"
 }

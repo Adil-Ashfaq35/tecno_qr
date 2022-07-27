@@ -23,6 +23,19 @@
   "oK_Button_Text":"OK" ,
   "cancel_Button_Text":"Annuler",
   "save_Button_Text": "Sauvegarder ",
-  "shown_Only_On_The_Early_First_Time":"En installant ou en utilisant cette application, vous acceptez la version anglaise de la politique de confidentialité."
+  "shown_Only_On_The_Early_First_Time":"En installant ou en utilisant cette application, vous acceptez la version anglaise de la politique de confidentialité.",
+  "share_App": "Partager l'application",
+  "help":"aide",
+  "tecno_Code": "Code Tecno",
+  "enter_Qr": "Entrez Qr",
+  "text": "Texte",
+  "paste": "coller",
+  "qr_Code": "QrCode",
+  "history_Screen": "Écran d'historique",
+  "qr_Not_Found_In_Image": "Qr introuvable dans l'image",
+  "result_Screen": "Écran de résultat",
+  "invalid_Url": "URL invalide",
+  "result_Text_Type_Is_Not_Url_To_Navigate": "Le type de texte de résultat n'est pas l'URL pour naviguer",
+  "copied": "Copié"
 }
 

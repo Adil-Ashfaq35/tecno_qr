@@ -8,7 +8,7 @@
   "terms_Of_Use": "Условия использования",
   "about":"О сайте",
   "scan_Button_Text":"Сканировать с камеры" ,
-  "read_Button_Text":"Считывание из локального изображения",
+  "read_Button_Text":"местный образ",
   "generate_Button_Text":"Генерировать из текста" ,
   "result_Language_Label":"Результат",
   "navigate_Button_Text":"Перейдите по адресу" ,
@@ -23,6 +23,19 @@
   "oK_Button_Text":"OK" ,
   "cancel_Button_Text":"Отменить",
   "save_Button_Text": "Сохранить ",
-  "shown_Only_On_The_Early_First_Time":"Устанавливая или используя это приложение, вы принимаете английскую версию политики конфиденциальности"
+  "shown_Only_On_The_Early_First_Time":"Устанавливая или используя это приложение, вы принимаете английскую версию политики конфиденциальности",
+  "share_App": "Поделиться приложением",
+  "help": "помогите",
+  "tecno_Code": "Техно код",
+  "enter_Qr": "Введите Qr",
+  "text": "Текст",
+  "paste": "вставить",
+  "qr_Code": "Qr-код",
+  "history_Screen": "Экран истории",
+  "qr_Not_Found_In_Image": "Qr не найден на изображении",
+  "result_Screen": "Экран результатов",
+  "invalid_Url": "Неверный URL",
+  "result_Text_Type_Is_Not_Url_To_Navigate": "Тип текста результата не является URL для навигации",
+  "copied": "Скопировано"
 }
 

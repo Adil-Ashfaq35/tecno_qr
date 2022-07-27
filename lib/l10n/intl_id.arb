@@ -23,6 +23,19 @@
   "oK_Button_Text":"OK" ,
   "cancel_Button_Text":"Batal",
   "save_Button_Text": "Simpan ",
-  "shown_Only_On_The_Early_First_Time":"Dengan menginstal atau menggunakan aplikasi ini, Anda menerima kebijakan privasi versi bahasa Inggris"
+  "shown_Only_On_The_Early_First_Time":"Dengan menginstal atau menggunakan aplikasi ini, Anda menerima kebijakan privasi versi bahasa Inggris",
+  "share_App": "Bagikan Aplikasi",
+  "tolong": "tolong",
+  "tecno_Code": "Kode Tecno",
+  "enter_Qr": "Masukkan Qr",
+  "text": "Teks",
+  "paste": "tempel",
+  "qr_Code": "Kode QR",
+  "history_Screen": "Layar Riwayat",
+  "qr_Not_Found_In_Image": "Qr tidak ditemukan dalam gambar",
+  "result_Screen": "Layar Hasil",
+  "invalid_Url": "url tidak valid",
+  "result_Text_Type_Is_Not_Url_To_Navigate": "Jenis Teks Hasil bukan Url untuk dinavigasi",
+  "copied": "Disalin"
 }
 

@@ -34,7 +34,7 @@ class _HistoryScreenState extends State<HistoryScreen> {
     historyController.getimageformLocal();
   }
 
-  List<String> options = ['Scan History', 'Read History', 'Generate History'];
+  //List<String> options = ['Scan History', 'Read History', 'Generate History'];
   @override
   Widget build(BuildContext context) {
     return Scaffold(

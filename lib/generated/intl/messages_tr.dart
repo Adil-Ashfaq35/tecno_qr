@@ -24,8 +24,10 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "about": MessageLookupByLibrary.simpleMessage("Hakkında"),
         "cancel_Button_Text": MessageLookupByLibrary.simpleMessage("İptal"),
+        "copied": MessageLookupByLibrary.simpleMessage("Kopyalandı"),
         "copy_Button_Text": MessageLookupByLibrary.simpleMessage("kopyala"),
         "download_Button_Text": MessageLookupByLibrary.simpleMessage("İndir"),
+        "enter_Qr": MessageLookupByLibrary.simpleMessage("Qr girin"),
         "fAQ": MessageLookupByLibrary.simpleMessage("Sıkça sorulan sorular"),
         "first_Line":
             MessageLookupByLibrary.simpleMessage("TecnoCode Version 6.0.1.0"),
@@ -34,16 +36,26 @@ class MessageLookup extends MessageLookupByLibrary {
         "generate_Tree_item":
             MessageLookupByLibrary.simpleMessage("Geçmiş oluşturun"),
         "history": MessageLookupByLibrary.simpleMessage("Tarih"),
+        "history_Screen": MessageLookupByLibrary.simpleMessage("Geçmiş Ekranı"),
         "home": MessageLookupByLibrary.simpleMessage("Anasayfa"),
+        "invalid_Url": MessageLookupByLibrary.simpleMessage("Geçersiz url"),
         "language": MessageLookupByLibrary.simpleMessage("Dil"),
         "navigate_Button_Text":
             MessageLookupByLibrary.simpleMessage("Şuraya gidin"),
         "oK_Button_Text": MessageLookupByLibrary.simpleMessage("TAMAM."),
+        "paste": MessageLookupByLibrary.simpleMessage("yapıştır"),
         "privacy_Policy":
             MessageLookupByLibrary.simpleMessage("Gizlilik Politikası"),
+        "qr_Code": MessageLookupByLibrary.simpleMessage("Qr Kodu"),
+        "qr_Not_Found_In_Image":
+            MessageLookupByLibrary.simpleMessage("Qr resimde bulunamadı"),
         "read_Button_Text":
             MessageLookupByLibrary.simpleMessage("Yerel görüntüden okuma"),
         "result_Language_Label": MessageLookupByLibrary.simpleMessage("Sonuç"),
+        "result_Screen": MessageLookupByLibrary.simpleMessage("Sonuç Ekranı"),
+        "result_Text_Type_Is_Not_Url_To_Navigate":
+            MessageLookupByLibrary.simpleMessage(
+                "Sonuç Metin türü gezinmek için URL değil"),
         "save_Button_Text": MessageLookupByLibrary.simpleMessage("Kaydet "),
         "scan_Button_Text":
             MessageLookupByLibrary.simpleMessage("Kameradan tarama"),
@@ -51,11 +63,14 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Tarama geçmişi"),
         "second_Line": MessageLookupByLibrary.simpleMessage(
             "© 2022 TecnoWays All rights reserved"),
+        "share_App": MessageLookupByLibrary.simpleMessage("Uygulamayı Paylaş"),
         "share_Button_Text": MessageLookupByLibrary.simpleMessage("Paylaş"),
         "shown_Only_On_The_Early_First_Time": MessageLookupByLibrary.simpleMessage(
             "Bu uygulamayı yükleyerek veya kullanarak gizlilik politikasının İngilizce versiyonunu kabul etmiş olursunuz"),
+        "tecno_Code": MessageLookupByLibrary.simpleMessage("Tekno kodu"),
         "terms_Of_Use":
             MessageLookupByLibrary.simpleMessage("Kullanım Koşulları"),
+        "text": MessageLookupByLibrary.simpleMessage("Metin"),
         "third_Line": MessageLookupByLibrary.simpleMessage(
             "© 2022-2025 TecnoWays All rights reserved")
       };

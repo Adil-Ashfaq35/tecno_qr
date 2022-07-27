@@ -24,9 +24,11 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "about": MessageLookupByLibrary.simpleMessage("Informazioni su"),
         "cancel_Button_Text": MessageLookupByLibrary.simpleMessage("Annulla"),
+        "copied": MessageLookupByLibrary.simpleMessage("Copiato"),
         "copy_Button_Text": MessageLookupByLibrary.simpleMessage("Copia"),
         "download_Button_Text":
             MessageLookupByLibrary.simpleMessage("Scaricare"),
+        "enter_Qr": MessageLookupByLibrary.simpleMessage("Inserisci Qr"),
         "fAQ": MessageLookupByLibrary.simpleMessage("Domande frequenti"),
         "first_Line":
             MessageLookupByLibrary.simpleMessage("TecnoCode Versione 6.0.1.0"),
@@ -35,17 +37,29 @@ class MessageLookup extends MessageLookupByLibrary {
         "generate_Tree_item":
             MessageLookupByLibrary.simpleMessage("Genera cronologia"),
         "history": MessageLookupByLibrary.simpleMessage("cronologia"),
+        "history_Screen":
+            MessageLookupByLibrary.simpleMessage("Schermata cronologia"),
         "home": MessageLookupByLibrary.simpleMessage("Homepage"),
+        "invalid_Url": MessageLookupByLibrary.simpleMessage("Url non valido"),
         "language": MessageLookupByLibrary.simpleMessage("La lingua"),
         "navigate_Button_Text":
             MessageLookupByLibrary.simpleMessage("Navigare"),
         "oK_Button_Text": MessageLookupByLibrary.simpleMessage("OK"),
+        "paste": MessageLookupByLibrary.simpleMessage("incolla"),
         "privacy_Policy":
             MessageLookupByLibrary.simpleMessage("Informativa sulla privacy"),
+        "qr_Code": MessageLookupByLibrary.simpleMessage("Qr Code"),
+        "qr_Not_Found_In_Image": MessageLookupByLibrary.simpleMessage(
+            "Qr non trovato nell\'immagine"),
         "read_Button_Text": MessageLookupByLibrary.simpleMessage(
             "Leggere da un\'immagine locale"),
         "result_Language_Label":
             MessageLookupByLibrary.simpleMessage("Risultato"),
+        "result_Screen":
+            MessageLookupByLibrary.simpleMessage("Schermata dei risultati"),
+        "result_Text_Type_Is_Not_Url_To_Navigate":
+            MessageLookupByLibrary.simpleMessage(
+                "Il tipo di testo del risultato non è l\'URL per navigare"),
         "save_Button_Text": MessageLookupByLibrary.simpleMessage("Salva "),
         "scan_Button_Text":
             MessageLookupByLibrary.simpleMessage("Scansione dalla fotocamera"),
@@ -53,10 +67,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Scansione della cronologia"),
         "second_Line": MessageLookupByLibrary.simpleMessage(
             "© 2022 TecnoWays Tutti i diritti riservati"),
+        "share_App": MessageLookupByLibrary.simpleMessage("Condividi app"),
         "share_Button_Text":
             MessageLookupByLibrary.simpleMessage("Condividere"),
         "shown_Only_On_The_Early_First_Time": MessageLookupByLibrary.simpleMessage(
             "Installando o utilizzando questa applicazione si accetta la versione inglese dell\'informativa sulla privacy."),
+        "tecno_Code": MessageLookupByLibrary.simpleMessage("Codice Tecno"),
         "terms_Of_Use":
             MessageLookupByLibrary.simpleMessage("Condizioni d\'uso"),
         "third_Line": MessageLookupByLibrary.simpleMessage(

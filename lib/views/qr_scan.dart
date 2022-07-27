@@ -11,6 +11,7 @@ import 'package:mobile_scanner/mobile_scanner.dart';
 import 'package:technoapp_qr/constants/controllers.dart';
 import 'package:technoapp_qr/constants/utils/apptheme.dart';
 import 'package:technoapp_qr/core/router/router_generator.dart';
+import 'package:technoapp_qr/models/language/lnaguage_constant.dart';
 
 class ScanQr extends StatefulWidget {
   const ScanQr({Key? key}) : super(key: key);
@@ -34,8 +35,8 @@ class _ScanQrState extends State<ScanQr> {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: AppTheme.primaryColor,
-          title: const Text('Scan from Camera',
-              style: TextStyle(color: Colors.white)),
+          title:  Text(translation(context).scan_Button_Text,
+              style: const TextStyle(color: Colors.white)),
           actions: [
             IconButton(
               color: Colors.amber,

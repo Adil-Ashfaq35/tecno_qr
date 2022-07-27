@@ -23,6 +23,19 @@
   "oK_Button_Text":"OK" ,
   "cancel_Button_Text":"Abbrechen",
   "save_Button_Text": "Speichern ",
-  "shown_Only_On_The_Early_First_Time":"Durch die Installation oder Nutzung dieser Anwendung akzeptieren Sie die englische Version der Datenschutzrichtlinie"
+  "shown_Only_On_The_Early_First_Time":"Durch die Installation oder Nutzung dieser Anwendung akzeptieren Sie die englische Version der Datenschutzrichtlinie",
+  "share_App": "App teilen",
+  "help":" Hilfe",
+  "tecno_Code": "Tecno-Code",
+  "enter_Qr": "Qr eingeben",
+  "text": "Text",
+  "paste": "einfügen",
+  "qr_Code": "Qr-Code",
+  "history_Screen": "Verlaufsbildschirm",
+  "qr_Not_Found_In_Image": "qr nicht im Bild gefunden",
+  "result_Screen": "Ergebnisbildschirm",
+  "invalid_Url": "Ungültige URL",
+  "result_Text_Type_Is_Not_Url_To_Navigate": "Texttyp des Ergebnisses ist keine URL zum Navigieren",
+  "copied": "kopiert"
 }
 

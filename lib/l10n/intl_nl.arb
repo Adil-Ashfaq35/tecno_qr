@@ -23,6 +23,19 @@
   "oK_Button_Text":"OK" ,
   "cancel_Button_Text":"Annuleren",
   "save_Button_Text": "Save ",
-  "shown_Only_On_The_Early_First_Time":"Door deze toepassing te installeren of te gebruiken, aanvaardt u de Engelse versie van het privacybeleid"
+  "shown_Only_On_The_Early_First_Time":"Door deze toepassing te installeren of te gebruiken, aanvaardt u de Engelse versie van het privacybeleid",
+  "share_App": "App delen",
+  "Help":" help",
+  "tecno_Code": "Tecno-code",
+  "enter_Qr": "Voer Qr in",
+  "text": "Tekst",
+  "paste": "plakken",
+  "qr_Code": "Qr-code",
+  "history_Screen": "Geschiedenisscherm",
+  "qr_Not_Found_In_Image": "Qr niet gevonden in afbeelding",
+  "result_Screen": "Resultaatscherm",
+  "invalid_Url": "Ongeldige url",
+  "result_Text_Type_Is_Not_Url_To_Navigate": "Type resultaattekst is geen URL om te navigeren",
+  "copied": "Gekopieerd"
 }
 

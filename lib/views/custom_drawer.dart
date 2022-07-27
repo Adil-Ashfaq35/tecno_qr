@@ -93,7 +93,7 @@ class _CustomDrawerState extends State<CustomDrawer>
                               'Let me recommend you this Application: https://play.google.com/store/apps/details?id=com.geeklone.toonapp',
                               subject: 'Sharing App');
                         },
-                        title: 'Share App',
+                        title: translation(context).share_App,
                         iconData: Icons.share,
                       ),
                       SizedBox(
@@ -115,7 +115,7 @@ class _CustomDrawerState extends State<CustomDrawer>
                           //    PackageInfo info = await getVersion();
                             launchUrl(Uri.parse(ConstantSettings.helpUrl));
                         },
-                        title: 'Help',
+                        title: translation(context).help,
                         iconData: Icons.help,
                       ),
                       SizedBox(
@@ -210,7 +210,7 @@ class Menuitem extends StatelessWidget {
         //   mainAxisAlignment: MainAxisAlignment.s,
         children: [
           Padding(
-            padding: const EdgeInsets.only(right: 8),
+            padding:  EdgeInsets.only(right: 8.sm),
             child: Icon(
               iconData,
               color: Colors.white,

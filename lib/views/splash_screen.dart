@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:lottie/lottie.dart';
 import 'package:receive_sharing_intent/receive_sharing_intent.dart';
 import 'package:technoapp_qr/constants/const_settings.dart';
 import 'package:technoapp_qr/constants/controllers.dart';

@@ -10,7 +10,6 @@ import 'package:flutter/rendering.dart';
 import 'package:gallery_saver/gallery_saver.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
-import 'package:get/get.dart';
 
 
 import 'package:path_provider/path_provider.dart';
@@ -94,11 +93,11 @@ class CreateQrPage extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            const Padding(
-              padding: EdgeInsets.all(8.0),
+             Padding(
+              padding: const EdgeInsets.all(8.0),
               child: Text(
-                'Result QR code',
-                style: TextStyle(
+                "${translation(context).result_Language_Label}${translation(context).qr_Code}",
+                style: const TextStyle(
                     color: Color.fromARGB(115, 33, 33, 33),
                     fontWeight: FontWeight.bold,
                     fontSize: 25),
@@ -129,7 +128,7 @@ class CreateQrPage extends StatelessWidget {
               optionText: translation(context).share_Button_Text,
               onTap: () async {
                 File? imagefile = await takeScreenShot(context, false);
-                Share.shareFiles(['${imagefile!.path}'], text: 'Qr Code');
+                Share.shareFiles([(imagefile!.path)], text: 'Qr Code');
                 FirebaseAnalytics.instance
                     .logEvent(name: "share_qr", parameters: {
                   "qr_shared": "shared_gen_qr",

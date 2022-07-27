@@ -24,8 +24,10 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "about": MessageLookupByLibrary.simpleMessage("حول التطبيق"),
         "cancel_Button_Text": MessageLookupByLibrary.simpleMessage("إلغاء"),
+        "copied": MessageLookupByLibrary.simpleMessage("نسخ"),
         "copy_Button_Text": MessageLookupByLibrary.simpleMessage("نسخ"),
         "download_Button_Text": MessageLookupByLibrary.simpleMessage("تحميل"),
+        "enter_Qr": MessageLookupByLibrary.simpleMessage("أدخل ريال قطري"),
         "fAQ": MessageLookupByLibrary.simpleMessage("الأسئلة الشائعة"),
         "first_Line":
             MessageLookupByLibrary.simpleMessage("إصدار TecnoCode 6.0.1.0"),
@@ -33,17 +35,31 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("توليد كود من نص"),
         "generate_Tree_item":
             MessageLookupByLibrary.simpleMessage("سجل عمليات توليد الأكواد"),
+        "help": MessageLookupByLibrary.simpleMessage("يساعد"),
         "history": MessageLookupByLibrary.simpleMessage("سجل العمليات"),
+        "history_Screen":
+            MessageLookupByLibrary.simpleMessage("شاشة المحفوظات"),
         "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
+        "invalid_Url":
+            MessageLookupByLibrary.simpleMessage("عنوان url غير صالح"),
         "language": MessageLookupByLibrary.simpleMessage("اللغة"),
         "navigate_Button_Text": MessageLookupByLibrary.simpleMessage("انتقال"),
         "oK_Button_Text": MessageLookupByLibrary.simpleMessage("موافق"),
+        "paste": MessageLookupByLibrary.simpleMessage("لصق"),
         "privacy_Policy":
             MessageLookupByLibrary.simpleMessage("سياسة الخصوصية"),
+        "qr_Code":
+            MessageLookupByLibrary.simpleMessage("رمز الاستجابة السريعة"),
+        "qr_Not_Found_In_Image":
+            MessageLookupByLibrary.simpleMessage("Qr غير موجود في الصورة"),
         "read_Button_Text":
             MessageLookupByLibrary.simpleMessage("قراءة كود من صورة محلية"),
         "result_Language_Label":
             MessageLookupByLibrary.simpleMessage("النتيجة"),
+        "result_Screen": MessageLookupByLibrary.simpleMessage("شاشة النتائج"),
+        "result_Text_Type_Is_Not_Url_To_Navigate":
+            MessageLookupByLibrary.simpleMessage(
+                "نوع نص النتيجة ليس عنوان Url للتنقل"),
         "save_Button_Text": MessageLookupByLibrary.simpleMessage("حفظ "),
         "scan_Button_Text":
             MessageLookupByLibrary.simpleMessage("مسح كود بواسطة الكاميرا"),
@@ -51,9 +67,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("سجل عمليات مسح الأكواد"),
         "second_Line": MessageLookupByLibrary.simpleMessage(
             "© 2022 جميع الحقوق محفوظة لشركة TecnoWays"),
+        "share_App": MessageLookupByLibrary.simpleMessage("مشاركة التطبيق"),
         "share_Button_Text": MessageLookupByLibrary.simpleMessage("مشاركة"),
         "shown_Only_On_The_Early_First_Time": MessageLookupByLibrary.simpleMessage(
             "تثبيت هذا التطبيق أو استخدامه يعتبرموافقة منك على النسخة الإنجليزية من سياسة الخصوصية"),
-        "terms_Of_Use": MessageLookupByLibrary.simpleMessage("شروط الاستخدام")
+        "tecno_Code": MessageLookupByLibrary.simpleMessage("كود Tecno"),
+        "terms_Of_Use": MessageLookupByLibrary.simpleMessage("شروط الاستخدام"),
+        "text": MessageLookupByLibrary.simpleMessage("نص")
       };
 }

@@ -25,6 +25,18 @@
   "save_Button_Text": "Save ",
   "shown_Only_On_The_Early_First_Time":"By installing or using this application you are accepting the privacy policy",
   "share_App": "Share App",
-  "help": "Help"
+  "help": "Help",
+  "tecno_Code": "Tecno code",
+  "enter_Qr": "Enter Qr",
+  "text": "Text",
+  "paste": "paste",
+  "qr_Code": "Qr Code",
+  "history_Screen": "History Screen",
+  "qr_Not_Found_In_Image": "Qr not found in image",
+  "result_Screen": "Result Screen",
+  "invalid_Url": "Invalid url",
+  "result_Text_Type_Is_Not_Url_To_Navigate": "Result Text type is not Url to navigate",
+  "copied": "Copied"
+
 }
 

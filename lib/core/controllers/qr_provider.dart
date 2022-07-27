@@ -16,6 +16,7 @@ class QrCodeProvider extends GetxController {
 
   RxString texttoGenerate = ''.obs;
 
+
   List createdQrs = [];
   List scannedQrs = [];
   void setTexttogenerate(String text) {
@@ -39,4 +40,12 @@ class QrCodeProvider extends GetxController {
     box.put('scannedQrList', [...tempList, data]);
     scannedQrs.add(data);
   }
+
+  RxBool changeLanguage=  false.obs;
+
+
+
+
+
+
 }

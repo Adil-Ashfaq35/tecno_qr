@@ -309,6 +309,116 @@ class S {
       args: [],
     );
   }
+
+  /// `Tecno code`
+  String get tecno_Code {
+    return Intl.message(
+      'Tecno code',
+      name: 'tecno_Code',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter Qr`
+  String get enter_Qr {
+    return Intl.message(
+      'Enter Qr',
+      name: 'enter_Qr',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Text`
+  String get text {
+    return Intl.message(
+      'Text',
+      name: 'text',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `paste`
+  String get paste {
+    return Intl.message(
+      'paste',
+      name: 'paste',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Qr Code`
+  String get qr_Code {
+    return Intl.message(
+      'Qr Code',
+      name: 'qr_Code',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `History Screen`
+  String get history_Screen {
+    return Intl.message(
+      'History Screen',
+      name: 'history_Screen',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Qr not found in image`
+  String get qr_Not_Found_In_Image {
+    return Intl.message(
+      'Qr not found in image',
+      name: 'qr_Not_Found_In_Image',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Result Screen`
+  String get result_Screen {
+    return Intl.message(
+      'Result Screen',
+      name: 'result_Screen',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Invalid url`
+  String get invalid_Url {
+    return Intl.message(
+      'Invalid url',
+      name: 'invalid_Url',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Result Text type is not Url to navigate`
+  String get result_Text_Type_Is_Not_Url_To_Navigate {
+    return Intl.message(
+      'Result Text type is not Url to navigate',
+      name: 'result_Text_Type_Is_Not_Url_To_Navigate',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Copied`
+  String get copied {
+    return Intl.message(
+      'Copied',
+      name: 'copied',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
@@ -329,7 +439,7 @@ class AppLocalizationDelegate extends LocalizationsDelegate<S> {
       Locale.fromSubtags(languageCode: 'tr'),
       Locale.fromSubtags(languageCode: 'ur'),
       Locale.fromSubtags(languageCode: 'zh'),
-      Locale.fromSubtags(languageCode: 'zh', countryCode: 'TW'),
+      Locale.fromSubtags(languageCode: 'zh'),
     ];
   }
 

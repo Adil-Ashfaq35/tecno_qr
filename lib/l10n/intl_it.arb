@@ -23,6 +23,19 @@
   "oK_Button_Text":"OK" ,
   "cancel_Button_Text":"Annulla",
   "save_Button_Text": "Salva ",
-  "shown_Only_On_The_Early_First_Time":"Installando o utilizzando questa applicazione si accetta la versione inglese dell'informativa sulla privacy."
+  "shown_Only_On_The_Early_First_Time":"Installando o utilizzando questa applicazione si accetta la versione inglese dell'informativa sulla privacy.",
+  "share_App": "Condividi app",
+  "aiuto": "aiuto",
+  "tecno_Code": "Codice Tecno",
+  "enter_Qr": "Inserisci Qr",
+  "test": "Testo",
+  "paste": "incolla",
+  "qr_Code": "Qr Code",
+  "history_Screen": "Schermata cronologia",
+  "qr_Not_Found_In_Image": "Qr non trovato nell'immagine",
+  "result_Screen": "Schermata dei risultati",
+  "invalid_Url": "Url non valido",
+  "result_Text_Type_Is_Not_Url_To_Navigate": "Il tipo di testo del risultato non è l'URL per navigare",
+  "copied": "Copiato"
 }
 

@@ -23,6 +23,19 @@
   "oK_Button_Text":"okey" ,
   "cancel_Button_Text":"Batal",
   "save_Button_Text": "Jimat",
-  "shown_Only_On_The_Early_First_Time":"Dengan memasang atau menggunakan aplikasi ini anda menerima versi bahasa Inggeris dasar privasi"
+  "shown_Only_On_The_Early_First_Time":"Dengan memasang atau menggunakan aplikasi ini anda menerima versi bahasa Inggeris dasar privasi",
+  "share_App": "Kongsi Apl",
+  "tolong":" tolong",
+  "tecno_Code": "Kod tecno",
+  "enter_Qr": "Masukkan Qr",
+  "text": "Teks",
+  "paste": "tampal",
+  "qr_Code": "Qr Code",
+  "history_Screen": "Skrin Sejarah",
+  "qr_Not_Found_In_Image": "Qr tidak ditemui dalam imej",
+  "result_Screen": "Skrin Keputusan",
+  "invalid_Url": "URL tidak sah",
+  "result_Text_Type_Is_Not_Url_To_Navigate": "Jenis Teks Hasil bukan Url untuk dinavigasi",
+  "copied": "Disalin"
 }
 
