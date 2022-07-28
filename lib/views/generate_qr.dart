@@ -7,6 +7,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gallery_saver/gallery_saver.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
@@ -82,7 +83,7 @@ class CreateQrPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBarWidget(
-          title: 'Qr Code',
+          title: translation(context).qr_Code,
           iconButton: IconButton(
               onPressed: () {
                 navigationController.flowFromhistory.value?
@@ -108,9 +109,13 @@ class CreateQrPage extends StatelessWidget {
             Center(
               child: RepaintBoundary(
                 key: qrKey,
-                child: navigationController.flowFromhistory.value
-                    ? Image.file(
-                        File(historyController.currentHistoryImage.value))
+                child: navigationController.flowFromhistory.value ?
+                Image.file(
+                        File(historyController.currentHistoryImage.value),
+                height: 0.4.sh,
+                  width: 0.75.sw,
+
+                )
                     : QrImage(
                         data: qrProvider.texttoGenerate.value,
                         size: 250,

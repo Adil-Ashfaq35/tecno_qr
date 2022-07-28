@@ -30,8 +30,8 @@ class OptionsWidget extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Container(
-              margin:QrCodeProvider.instance.changeLanguage.value? EdgeInsets.fromLTRB(40.sm, 20.sm, 30.sm, 20.sm):
-              EdgeInsets.fromLTRB(20.sm, 20.sm, 10.sm, 20.sm),
+              margin:EdgeInsets.fromLTRB(40.sm, 20.sm, 30.sm, 20.sm),
+
               height: 50.h,
               width: 50.w,
               decoration: CustomWidgets.customDecoration(),
@@ -42,13 +42,16 @@ class OptionsWidget extends StatelessWidget {
                 color: Colors.white,
               )),
             ),
-            Text(
-                optionText,  overflow: TextOverflow.ellipsis,
-              style: TextStyle(
-                letterSpacing: 1,
-                fontSize: 16.sp,
-                fontWeight: FontWeight.bold,
-                color: Colors.black,
+            SizedBox(
+              width: 260.sm,
+              child: Text(
+                  optionText,   overflow: TextOverflow.clip,
+                style: TextStyle(
+                  letterSpacing: 1,
+                  fontSize: 16.sp,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                ),
               ),
             )
           ],

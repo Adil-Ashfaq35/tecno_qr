@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:permission_handler/permission_handler.dart';
@@ -6,6 +7,7 @@ import 'package:technoapp_qr/constants/controllers.dart';
 import 'package:technoapp_qr/constants/utils/shared_pref.dart';
 import 'package:technoapp_qr/core/router/router_generator.dart';
 import 'package:technoapp_qr/views/widgets/dialogs/customDialog.dart';
+import '../constants/const_settings.dart';
 import '../constants/utils/apptheme.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -29,7 +31,7 @@ class _SplashScreenState extends State<SplashScreen>
     PermissionStatus;
     bool isFirstTime = await SharedPref().readBool('isFirsttime');
     await Permission.storage.request();
-    !isFirstTime
+        isFirstTime
         ? forFirstTime()
         : navigationController.navigateToNamed(RouteGenerator.customDrawer);
 
@@ -42,23 +44,23 @@ class _SplashScreenState extends State<SplashScreen>
         body: Container(
       height: double.infinity,
       width: double.infinity,
-      decoration: const BoxDecoration(
-        gradient: LinearGradient(
-          colors: [
-            Color.fromARGB(255, 224, 214, 214),
-            Colors.blueGrey,
-            Colors.white
-          ],
-          begin: FractionalOffset.bottomLeft,
-          end: FractionalOffset.topCenter,
-        ),
-      ),
-      child: Center(
-        child: Image.asset(
-          'assets/images/gif.gif',
-          fit: BoxFit.fitHeight,
-        ),
-      ),
+      // decoration: const BoxDecoration(
+      //   gradient: LinearGradient(
+      //     colors: [
+      //       Color.fromARGB(255, 224, 214, 214),
+      //       Colors.blueGrey,
+      //       Colors.white
+      //     ],
+      //     begin: FractionalOffset.bottomLeft,
+      //     end: FractionalOffset.topCenter,
+      //   ),
+      // ),
+  //     child: Center(
+  //       child: Image.asset(
+  //         'assets/images/gif.gif',
+  //         fit: BoxFit.fitHeight,
+  //       ),
+  //     ),
     ));
   }
 
@@ -71,20 +73,26 @@ class _SplashScreenState extends State<SplashScreen>
     if (isnetavailable) {
       bool isuserAgreed = false;
       showDialog(
+
         context: context,
         barrierDismissible: false,
         // ignore: prefer_const_constructors
         builder: (_) => CustomDialogBox(
           title: 'Privacy Policy',
           text: 'Agree',
-          descriptions: 'Privacy Policy here',
+          descriptions: ConstantSettings.privacydes,
           img: const Icon(
-            Icons.privacy_tip,
+              Icons.privacy_tip_outlined,
             color: AppTheme.primaryColor,
-            size: 20,
+            size: 100,
           ),
           onPressed: () {
             settingController.addDocument();
+            isuserAgreed=true;
+            navigationController.getOffAll(RouteGenerator.customDrawer);
+
+
+
           },
         ),
       );
@@ -96,7 +104,7 @@ class _SplashScreenState extends State<SplashScreen>
           title: 'Not Internet Available',
           text: 'Retry',
           descriptions:
-              'App needs to get connected to internet,Please enable the internet connection',
+              '',
           img: const Icon(
             Icons.signal_wifi_connected_no_internet_4,
             color: AppTheme.primaryColor,
