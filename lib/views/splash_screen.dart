@@ -26,7 +26,7 @@ class _SplashScreenState extends State<SplashScreen>
   }
 
   Future<void> initRouting() async {
-    PermissionStatus ;
+    PermissionStatus;
     bool isFirstTime = await SharedPref().readBool('isFirsttime');
     await Permission.storage.request();
     !isFirstTime
@@ -84,13 +84,10 @@ class _SplashScreenState extends State<SplashScreen>
             size: 20,
           ),
           onPressed: () {
-      settingController.addDocument();
-      
+            settingController.addDocument();
           },
-
         ),
       );
-    
     } else {
       showDialog(
         context: context,

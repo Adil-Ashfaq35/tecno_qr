@@ -17,6 +17,8 @@ import '../models/qr_model.dart';
 class HistoryScreen extends StatefulWidget {
   ScrollController _scrollController = ScrollController();
 
+  HistoryScreen({Key? key}) : super(key: key);
+
   @override
   _HistoryScreenState createState() => _HistoryScreenState();
 }
