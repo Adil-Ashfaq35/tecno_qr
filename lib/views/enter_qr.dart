@@ -17,7 +17,7 @@ class EnterText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBarWidget(
-        title: translation(context).enter_Qr,
+          title: translation(context).enter_Qr,
           iconButton: IconButton(
               onPressed: () {
                 navigationController.goBack();
@@ -28,7 +28,7 @@ class EnterText extends StatelessWidget {
         child: Column(mainAxisAlignment: MainAxisAlignment.center,
             // crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-               Padding(
+              Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text(
                   translation(context).text,
@@ -52,6 +52,7 @@ class EnterText extends StatelessWidget {
                       onTap: () {
                         if (_inputController.text.isNotEmpty) {
                           qrProvider.setTexttogenerate(_inputController.text);
+                          navigationController.flowFromhistory.value = false;
                           navigationController
                               .navigateToNamed(RouteGenerator.createQr);
                         }
@@ -109,13 +110,12 @@ class TextField extends StatelessWidget {
                   child: ConstrainedBox(
                     constraints: BoxConstraints.tight(const Size(400, 400)),
                     child: TextFormField(
-                  
                       controller: inputController,
                       style: const TextStyle(
-                      
                           fontWeight: FontWeight.bold, fontSize: 15),
-                      decoration:
-                          const InputDecoration(border: InputBorder.none, hintText: 'Write text here...'),
+                      decoration: const InputDecoration(
+                          border: InputBorder.none,
+                          hintText: 'Write text here...'),
                       keyboardType: TextInputType.multiline,
                       onSaved: (String? value) {
                         debugPrint('Value for field  saved as "$value"');

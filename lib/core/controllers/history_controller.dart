@@ -21,6 +21,8 @@ class HistoryController extends GetxController {
   List get qrCodes => qrList;
   var images = <QrImage>[].obs;
 
+  RxString currentHistoryImage = ''.obs;
+
   final box = Hive.box<QRModel>('historyBox');
   @override
   Future<void> onInit() async {
@@ -42,7 +44,6 @@ class HistoryController extends GetxController {
     try {
       box.add(item);
     } on Exception catch (e) {
-     
       throw Exception(e);
     }
   }
@@ -86,21 +87,23 @@ class HistoryController extends GetxController {
     images.value = [];
     List qrList = qrProvider.createdQrs;
     final imagesDirectory = Directory('$path/');
-    final _imagesFile = imagesDirectory
+    final imagesFile = imagesDirectory
         .listSync()
         .map((item) => item.path)
         .where((item) => item.endsWith(".png"))
         .toList(growable: false);
     if (kDebugMode) {
       print(
-          "Length of images:${_imagesFile.length} \n Length of Created qrs:${qrList.length}");
+          "Length of images:${imagesFile.length} \n Length of Created qrs:${qrList.length}");
     }
 
-    for (int index = 0; index < _imagesFile.length; index++) {
+    for (int index = 0; index < imagesFile.length; index++) {
+      final splitted = qrList[index].toString().split('#');
       images.add(QrImage(
-          imageName: _imagesFile[index],
+          imageName: imagesFile[index],
           isExpanded: false,
-          qrName: qrList[index]));
+          qrName: splitted[1],
+          dateString: splitted[0]));
     }
     if (kDebugMode) {
       print("Length  = :${images.length}");

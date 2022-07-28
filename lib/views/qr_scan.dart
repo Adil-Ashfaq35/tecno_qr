@@ -83,6 +83,7 @@ class _ScanQrState extends State<ScanQr> {
                       final String code = barcode.rawValue!;
                       resultController.setResult(code, barcode.type, true);
                       debugPrint('Barcode found! $code');
+                            navigationController.flowFromhistory.value = false;
                       navigationController
                           .navigateToNamed(RouteGenerator.resultScreen);
                                               dispose();
