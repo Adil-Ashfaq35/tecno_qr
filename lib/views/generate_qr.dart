@@ -46,10 +46,11 @@ class CreateQrPage extends StatelessWidget {
           final imgFile = File(
             '$directory/$formattedDate.png',
           );
+
           imgFile.writeAsBytes(pngBytes);
           GallerySaver.saveImage(imgFile.path).then((success) async {
             await qrProvider.createQr(
-                "Date:$formattedDate QrText:${qrProvider.texttoGenerate.value}");
+                "$formattedDate # ${qrProvider.texttoGenerate.value}");
             show
                 ? Get.snackbar(
                     'File Downloaded',
@@ -84,6 +85,8 @@ class CreateQrPage extends StatelessWidget {
           title: 'Qr Code',
           iconButton: IconButton(
               onPressed: () {
+                navigationController.flowFromhistory.value?
+                navigationController.goBack():
                 navigationController.getOffAll(RouteGenerator.customDrawer);
               },
               icon: const Icon(Icons.arrow_back))),
@@ -91,7 +94,7 @@ class CreateQrPage extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-             Padding(
+            Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text(
                 "${translation(context).result_Language_Label}${translation(context).qr_Code}",
@@ -105,12 +108,15 @@ class CreateQrPage extends StatelessWidget {
             Center(
               child: RepaintBoundary(
                 key: qrKey,
-                child: QrImage(
-                  data: qrProvider.texttoGenerate.value,
-                  size: 250,
-                  backgroundColor: Colors.white,
-                  version: QrVersions.auto,
-                ),
+                child: navigationController.flowFromhistory.value
+                    ? Image.file(
+                        File(historyController.currentHistoryImage.value))
+                    : QrImage(
+                        data: qrProvider.texttoGenerate.value,
+                        size: 250,
+                        backgroundColor: Colors.white,
+                        version: QrVersions.auto,
+                      ),
               ),
             ),
             const SizedBox(height: 25),
