@@ -73,12 +73,16 @@ class _DisplayImageState extends State<DisplayImage> {
 
   checkState() async {
     bool isCompleted = await qrScanProvider.qrScan();
-    isCompleted
-        ? navigationController.getOffAll(RouteGenerator.resultScreen)
-        : Timer(
-            const Duration(seconds: ConstantSettings.imageShowTime),
-            () => ScaffoldMessenger.of(context).showSnackBar(
-                   SnackBar(content: Text(translation(context).qr_Not_Found_In_Image)),
-                ));
+    if (isCompleted) {
+      navigationController.flowFromhistory.value = false;
+      navigationController.getOffAll(RouteGenerator.resultScreen);
+    } else {
+      Timer(
+          const Duration(seconds: ConstantSettings.imageShowTime),
+          () => ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                    content: Text(translation(context).qr_Not_Found_In_Image)),
+              ));
+    }
   }
 }

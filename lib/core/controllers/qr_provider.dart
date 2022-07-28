@@ -26,6 +26,7 @@ class QrCodeProvider extends GetxController {
   void getQrs() {
     createdQrs = [];
     createdQrs = box.get('createdQrList') ?? [];
+    
     // scannedQrs = box.get('scannedQrList') ?? [];
   }
 

@@ -3,6 +3,8 @@ import 'package:get/get.dart';
 class NavigationController extends GetxController {
   static NavigationController instance = Get.find();
 
+  RxBool flowFromhistory= false.obs;
+  
   Future<dynamic>? navigateToNamed(String routeName) {
     return Get.toNamed(routeName);
   }
@@ -14,9 +16,10 @@ class NavigationController extends GetxController {
   Future<dynamic>? getOffAll(String routeName) {
     return Get.offAllNamed(routeName);
   }
-Future<dynamic>?getOff(String routeName)
-{
-  return Get.off(routeName);
-}
+
+  Future<dynamic>? getOff(String routeName) {
+    return Get.off(routeName);
+  }
+
   goBack() => Get.back();
 }

@@ -18,6 +18,7 @@ class ResultScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return WillPopScope(
       onWillPop: () {
+
         navigationController.getOffAll(RouteGenerator.customDrawer);
         return Future.value(false);
       },
@@ -26,6 +27,8 @@ class ResultScreen extends StatelessWidget {
             title: translation(context).result_Screen,
             iconButton: IconButton(
                 onPressed: () {
+                  navigationController. flowFromhistory.value?
+                   navigationController.goBack():
                   navigationController.getOffAll(RouteGenerator.customDrawer);
                 },
                 icon: const Icon(Icons.arrow_back))),

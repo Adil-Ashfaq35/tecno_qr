@@ -46,10 +46,12 @@ class CreateQrPage extends StatelessWidget {
           final imgFile = File(
             '$directory/$formattedDate.png',
           );
+
+          //TODO::DOWNLOAD AND SHARE FEATURE ON HISTORY ITEM
           imgFile.writeAsBytes(pngBytes);
           GallerySaver.saveImage(imgFile.path).then((success) async {
             await qrProvider.createQr(
-                "Date:$formattedDate QrText:${qrProvider.texttoGenerate.value}");
+                "$formattedDate # ${qrProvider.texttoGenerate.value}");
             show
                 ? Get.snackbar(
                     'File Downloaded',
@@ -105,7 +107,10 @@ class CreateQrPage extends StatelessWidget {
             Center(
               child: RepaintBoundary(
                 key: qrKey,
-                child: QrImage(
+                child: 
+                navigationController.flowFromhistory.value?
+              Image.file(File(historyController.currentHistoryImage.value)):
+                QrImage(
                   data: qrProvider.texttoGenerate.value,
                   size: 250,
                   backgroundColor: Colors.white,
