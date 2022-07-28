@@ -4,7 +4,6 @@ import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:hive_flutter/hive_flutter.dart';
@@ -16,9 +15,7 @@ import 'package:technoapp_qr/core/controllers/qr_provider.dart';
 import 'package:technoapp_qr/core/controllers/qr_scan.provider.dart';
 import 'package:technoapp_qr/core/controllers/result_controller.dart';
 import 'package:technoapp_qr/core/controllers/settings_controller.dart';
-
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-
 import 'constants/utils/apptheme.dart';
 import 'core/router/router_generator.dart';
 import 'models/language/lnaguage_constant.dart';
@@ -76,6 +73,7 @@ class MyApp extends StatefulWidget {
   static void setLocale(BuildContext context, Locale newLocale) {
     _MyAppState? state = context.findAncestorStateOfType<_MyAppState>();
     state?.setLocale(newLocale);
+
   }
    static  Future<bool> currentLocale() async {
     Locale locale= await getLocale();
@@ -104,6 +102,7 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
+    MyApp.currentLocale();
     intentDataStreamSubscription = ReceiveSharingIntent.getMediaStream().listen(
         (List<SharedMediaFile> value) {
       if (kDebugMode) {

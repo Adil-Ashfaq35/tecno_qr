@@ -2,23 +2,22 @@
 
 import 'dart:io';
 
-import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intl/intl.dart';
 
 import 'package:technoapp_qr/constants/controllers.dart';
 import 'package:technoapp_qr/constants/utils/apptheme.dart';
-import 'package:technoapp_qr/core/router/router_generator.dart';
 import 'package:technoapp_qr/models/imagesqr_model.dart';
 import 'package:technoapp_qr/views/widgets/appbar_design.dart';
-import 'package:path/path.dart';
 import '../models/language/lnaguage_constant.dart';
 import '../models/qr_model.dart';
 
 // ignore: must_be_immutable
 class HistoryScreen extends StatefulWidget {
   ScrollController _scrollController = ScrollController();
+
+  HistoryScreen({Key? key}) : super(key: key);
 
   @override
   _HistoryScreenState createState() => _HistoryScreenState();

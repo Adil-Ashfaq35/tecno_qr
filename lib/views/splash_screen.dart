@@ -1,16 +1,11 @@
 import 'dart:async';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-
-import 'package:technoapp_qr/constants/const_settings.dart';
+import 'package:permission_handler/permission_handler.dart';
 import 'package:technoapp_qr/constants/controllers.dart';
 import 'package:technoapp_qr/constants/utils/shared_pref.dart';
 import 'package:technoapp_qr/core/router/router_generator.dart';
 import 'package:technoapp_qr/views/widgets/dialogs/customDialog.dart';
-
 import '../constants/utils/apptheme.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -31,7 +26,9 @@ class _SplashScreenState extends State<SplashScreen>
   }
 
   Future<void> initRouting() async {
+    PermissionStatus;
     bool isFirstTime = await SharedPref().readBool('isFirsttime');
+    await Permission.storage.request();
     !isFirstTime
         ? forFirstTime()
         : navigationController.navigateToNamed(RouteGenerator.customDrawer);
@@ -87,13 +84,10 @@ class _SplashScreenState extends State<SplashScreen>
             size: 20,
           ),
           onPressed: () {
-      settingController.addDocument();
-      
+            settingController.addDocument();
           },
-
         ),
       );
-    
     } else {
       showDialog(
         context: context,
