@@ -36,6 +36,9 @@
   "result_Screen": "Ergebnisbildschirm",
   "invalid_Url": "Ungültige URL",
   "result_Text_Type_Is_Not_Url_To_Navigate": "Texttyp des Ergebnisses ist keine URL zum Navigieren",
-  "copied": "kopiert"
+  "copied": "kopiert",
+  "read_history": "Verlauf lesen"
+
+
 }
 

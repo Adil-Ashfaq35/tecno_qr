@@ -53,6 +53,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Qr non trovato nell\'immagine"),
         "read_Button_Text": MessageLookupByLibrary.simpleMessage(
             "Leggere da un\'immagine locale"),
+        "read_history":
+            MessageLookupByLibrary.simpleMessage("Leggi cronologia"),
         "result_Language_Label":
             MessageLookupByLibrary.simpleMessage("Risultato"),
         "result_Screen":

@@ -419,6 +419,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Read history`
+  String get read_history {
+    return Intl.message(
+      'Read history',
+      name: 'read_history',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

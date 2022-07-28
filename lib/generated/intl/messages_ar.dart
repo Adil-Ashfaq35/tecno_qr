@@ -54,6 +54,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Qr غير موجود في الصورة"),
         "read_Button_Text":
             MessageLookupByLibrary.simpleMessage("قراءة كود من صورة محلية"),
+        "read_history": MessageLookupByLibrary.simpleMessage("قراءة السجل"),
         "result_Language_Label":
             MessageLookupByLibrary.simpleMessage("النتيجة"),
         "result_Screen": MessageLookupByLibrary.simpleMessage("شاشة النتائج"),

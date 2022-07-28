@@ -36,7 +36,8 @@
   "result_Screen": "Result Screen",
   "invalid_Url": "Invalid url",
   "result_Text_Type_Is_Not_Url_To_Navigate": "Result Text type is not Url to navigate",
-  "copied": "Copied"
+  "copied": "Copied",
+  "read_history": "Read history"
 
 }
 

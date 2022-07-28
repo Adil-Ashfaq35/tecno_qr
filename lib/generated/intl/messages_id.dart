@@ -52,6 +52,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Qr tidak ditemukan dalam gambar"),
         "read_Button_Text":
             MessageLookupByLibrary.simpleMessage("Baca dari Gambar Lokal"),
+        "read_history": MessageLookupByLibrary.simpleMessage("Baca sejarah"),
         "result_Language_Label": MessageLookupByLibrary.simpleMessage("Hasil"),
         "result_Screen": MessageLookupByLibrary.simpleMessage("Layar Hasil"),
         "result_Text_Type_Is_Not_Url_To_Navigate":

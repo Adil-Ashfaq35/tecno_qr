@@ -26,6 +26,7 @@ class HistoryScreen extends StatefulWidget {
 class _HistoryScreenState extends State<HistoryScreen> {
   final ScrollController _scrollController = ScrollController();
 
+
   bool? get kDebugMode => null;
   @override
   void initState() {
@@ -74,8 +75,9 @@ class _HistoryScreenState extends State<HistoryScreen> {
                               return HistoryScroll(
                                 scrollController: _scrollController,
                                 index: typeindex,
-                                title: historyController
-                                    .qrHistory[typeindex].title,
+                                title:typeindex==0?
+                                    translation(context).scan_Tree_Item:translation(context).read_history,
+                                // historyController.qrHistory[typeindex].title,
                                 children: ExpansionPanelhistory(
                                   qrslist: historyController
                                       .qrHistory[typeindex].qrsList,
@@ -94,8 +96,8 @@ class _HistoryScreenState extends State<HistoryScreen> {
                               index: typeindex,
                               title: translation(context).generate_Button_Text,
                               children: ExpansionPanelhistory(
-                                qrslist: historyController
-                                    .qrHistory[typeindex].qrsList,
+                                qrslist:
+                                historyController.qrHistory[typeindex].qrsList,
                                 images: historyController.images,
                                 isQRCreated: true,
                               ),

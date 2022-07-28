@@ -54,6 +54,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Qr introuvable dans l\'image"),
         "read_Button_Text": MessageLookupByLibrary.simpleMessage(
             "Lire à partir d\'une image locale"),
+        "read_history":
+            MessageLookupByLibrary.simpleMessage("Lire l\'historique"),
         "result_Language_Label":
             MessageLookupByLibrary.simpleMessage("Résultat"),
         "result_Screen":

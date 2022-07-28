@@ -36,6 +36,7 @@
   "result_Screen": "Skrin Keputusan",
   "invalid_Url": "URL tidak sah",
   "result_Text_Type_Is_Not_Url_To_Navigate": "Jenis Teks Hasil bukan Url untuk dinavigasi",
-  "copied": "Disalin"
+  "copied": "Disalin",
+  "read_history": "Baca sejarah"
 }
 

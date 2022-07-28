@@ -53,6 +53,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Qr не найден на изображении"),
         "read_Button_Text":
             MessageLookupByLibrary.simpleMessage("местный образ"),
+        "read_history": MessageLookupByLibrary.simpleMessage("Читать историю"),
         "result_Language_Label":
             MessageLookupByLibrary.simpleMessage("Результат"),
         "result_Screen":

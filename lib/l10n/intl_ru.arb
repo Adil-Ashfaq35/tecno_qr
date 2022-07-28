@@ -36,6 +36,7 @@
   "result_Screen": "Экран результатов",
   "invalid_Url": "Неверный URL",
   "result_Text_Type_Is_Not_Url_To_Navigate": "Тип текста результата не является URL для навигации",
-  "copied": "Скопировано"
+  "copied": "Скопировано",
+  "read_history": "Читать историю"
 }
 

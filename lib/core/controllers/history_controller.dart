@@ -78,7 +78,9 @@ class HistoryController extends GetxController {
     qrHistory.add(HistoryModel(title: 'Scan History', qrsList: scanQrs));
     qrHistory.add(HistoryModel(title: 'Read History', qrsList: readQrs));
 
-    print(qrHistory);
+    if (kDebugMode) {
+      print(qrHistory);
+    }
   }
 
   getimageformLocal() async {
