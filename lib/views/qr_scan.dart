@@ -10,23 +10,14 @@ import 'package:technoapp_qr/constants/utils/apptheme.dart';
 import 'package:technoapp_qr/core/router/router_generator.dart';
 import 'package:technoapp_qr/models/language/lnaguage_constant.dart';
 
-class ScanQr extends StatefulWidget {
-  const ScanQr({Key? key}) : super(key: key);
 
-  @override
-  State<ScanQr> createState() => _ScanQrState();
-}
 
-class _ScanQrState extends State<ScanQr> {
+class ScanQr extends StatelessWidget {
   MobileScannerController cameraController = MobileScannerController();
 
-  @override
-  void initState() {
-    FirebaseAnalytics.instance.setCurrentScreen(screenName: "scan from camera");
-    super.initState();
-  }
 
-  @override
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -76,7 +67,7 @@ class _ScanQrState extends State<ScanQr> {
                 allowDuplicates: false,
                 controller: cameraController,
                 onDetect: (barcode, args) {
-                  if (mounted) {
+                  if (true) {
                     if (barcode.rawValue == null) {
                       debugPrint('Failed to scan Barcode');
                     } else {
@@ -86,7 +77,7 @@ class _ScanQrState extends State<ScanQr> {
                             navigationController.flowFromhistory.value = false;
                       navigationController
                           .navigateToNamed(RouteGenerator.resultScreen);
-                                              dispose();
+                                             dispose();
                     }
 
                   }
@@ -110,6 +101,5 @@ class _ScanQrState extends State<ScanQr> {
   void dispose() {
     cameraController.dispose();
 
-    super.dispose();
   }
 }

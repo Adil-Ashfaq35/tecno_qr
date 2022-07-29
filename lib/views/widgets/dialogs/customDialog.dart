@@ -1,9 +1,12 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:technoapp_qr/views/splash_screen.dart';
+import 'package:webview_flutter/webview_flutter.dart';
 
+import '../../../constants/const_settings.dart';
 import '../../../constants/utils/apptheme.dart';
 
 class ProcessDialog extends StatelessWidget {
@@ -122,41 +125,51 @@ class _CustomDialogBoxState extends State<CustomDialogBox> {
               borderRadius: BorderRadius.circular(Constants.padding),
               boxShadow: const [
                 BoxShadow(
-                    color: Colors.grey, offset: Offset(0, 0), blurRadius: 20),
+                    color: Colors.grey, offset: Offset(0, 0),),
               ]),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: <Widget>[
-              Text(
-                widget.title,
-                style: const TextStyle(
-                    fontSize: 15,
-                    fontWeight: FontWeight.w600,
-                    color: Colors.black),
-              ),
-              const SizedBox(
-                height: 15,
-              ),
-              Text(
-                widget.descriptions,
-                style: const TextStyle(fontSize: 12, color: Colors.black54),
-                textAlign: TextAlign.center,
-              ),
-              const SizedBox(
-                height: 22,
-              ),
-              Align(
-                alignment: Alignment.bottomLeft,
-                child: FlatButton(
-                    color: AppTheme.primaryColor,
-                    onPressed: widget.onPressed,
-                    child: Text(
-                      widget.text,
-                      style: const TextStyle(fontSize: 12, color: Colors.white),
-                    )),
-              ),
-            ],
+          child:
+          SizedBox(
+            height: 0.9.sh,
+            width: 0.8.sw,
+            child: const WebView(
+              javascriptMode: JavascriptMode.unrestricted,
+              initialUrl:ConstantSettings.privacyUrl,
+            ),
           ),
+          // Column(
+          //   mainAxisSize: MainAxisSize.max,
+          //   children: <Widget>[
+          //     // Text(
+          //     //   widget.title,
+          //     //   style:  TextStyle(
+          //     //       fontSize: 20.sm,
+          //     //       fontWeight: FontWeight.w600,
+          //     //       color: Colors.black),
+          //     // ),
+          //     // const SizedBox(
+          //     //   height: 15,
+          //     // ),
+          //     // Text(
+          //     //   widget.descriptions,softWrap: true,
+          //     //   style: TextStyle(fontSize: 13.sm, color: Colors.black54),
+          //     //   textAlign: TextAlign.center,
+          //     // ),
+          //
+          //     const SizedBox(
+          //       height: 22,
+          //     ),
+          //     Align(
+          //       alignment: Alignment.bottomLeft,
+          //       child: FlatButton(
+          //           color: AppTheme.primaryColor,
+          //           onPressed: widget.onPressed,
+          //           child: Text(
+          //             widget.text,
+          //             style: const TextStyle(fontSize: 12, color: Colors.white),
+          //           )),
+          //     ),
+          //   ],
+          // ),
         ),
         Positioned(
           left: 20,
@@ -171,6 +184,17 @@ class _CustomDialogBoxState extends State<CustomDialogBox> {
             ),
           ),
         ),
+          Align(
+          alignment: Alignment.bottomLeft,
+          child: FlatButton(
+              color: AppTheme.primaryColor,
+              onPressed: widget.onPressed,
+              child: Text(
+                widget.text,
+                style: const TextStyle(fontSize: 12, color: Colors.white),
+              )),
+        ),
+
       ],
     );
   }

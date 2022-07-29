@@ -47,6 +47,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "qr_Not_Found_In_Image":
             MessageLookupByLibrary.simpleMessage("图片中未找到 Qr"),
         "read_Button_Text": MessageLookupByLibrary.simpleMessage("从本地图像中读取"),
+        "read_history": MessageLookupByLibrary.simpleMessage("读历史"),
         "result_Language_Label": MessageLookupByLibrary.simpleMessage("结果"),
         "result_Screen": MessageLookupByLibrary.simpleMessage("结果屏幕"),
         "result_Text_Type_Is_Not_Url_To_Navigate":

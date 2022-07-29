@@ -51,7 +51,7 @@ class RouteGenerator {
       case createQr:
         return _getPageRoute(CreateQrPage());
       case scanQr:
-        return _getPageRoute(const ScanQr());
+        return _getPageRoute( ScanQr());
       case readLocal:
         return _getPageRoute(const ReadLocal());
       case resultScreen:

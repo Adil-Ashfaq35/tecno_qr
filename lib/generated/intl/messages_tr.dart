@@ -51,6 +51,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Qr resimde bulunamadı"),
         "read_Button_Text":
             MessageLookupByLibrary.simpleMessage("Yerel görüntüden okuma"),
+        "read_history": MessageLookupByLibrary.simpleMessage("Geçmişi oku"),
         "result_Language_Label": MessageLookupByLibrary.simpleMessage("Sonuç"),
         "result_Screen": MessageLookupByLibrary.simpleMessage("Sonuç Ekranı"),
         "result_Text_Type_Is_Not_Url_To_Navigate":

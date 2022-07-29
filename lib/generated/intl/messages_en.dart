@@ -33,7 +33,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "first_Line":
             MessageLookupByLibrary.simpleMessage("TecnoCode Version 6.0.1.0"),
         "generate_Button_Text":
-            MessageLookupByLibrary.simpleMessage("Generate from Text"),
+            MessageLookupByLibrary.simpleMessage("Generate From Text"),
         "generate_Tree_item":
             MessageLookupByLibrary.simpleMessage("Generate History"),
         "help": MessageLookupByLibrary.simpleMessage("Help"),
@@ -53,7 +53,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "qr_Not_Found_In_Image":
             MessageLookupByLibrary.simpleMessage("Qr not found in image"),
         "read_Button_Text":
-            MessageLookupByLibrary.simpleMessage("Read from Local Image"),
+            MessageLookupByLibrary.simpleMessage("Read From Local Image"),
+        "read_history": MessageLookupByLibrary.simpleMessage("Read History"),
         "result_Language_Label": MessageLookupByLibrary.simpleMessage("Result"),
         "result_Screen": MessageLookupByLibrary.simpleMessage("Result Screen"),
         "result_Text_Type_Is_Not_Url_To_Navigate":
@@ -61,7 +62,7 @@ class MessageLookup extends MessageLookupByLibrary {
                 "Result Text type is not Url to navigate"),
         "save_Button_Text": MessageLookupByLibrary.simpleMessage("Save "),
         "scan_Button_Text":
-            MessageLookupByLibrary.simpleMessage("Scan from Camera"),
+            MessageLookupByLibrary.simpleMessage("Scan From Camera"),
         "scan_Tree_Item": MessageLookupByLibrary.simpleMessage("Scan History"),
         "second_Line": MessageLookupByLibrary.simpleMessage(
             "© 2022 TecnoWays All rights reserved"),

@@ -36,5 +36,6 @@
   "result_Screen": "شاشة النتائج" ,
   "invalid_Url": "عنوان url غير صالح" ,
   "result_Text_Type_Is_Not_Url_To_Navigate": "نوع نص النتيجة ليس عنوان Url للتنقل" ,
-  "copied": "نسخ"
+  "copied": "نسخ",
+  "read_history": "قراءة السجل"
 }

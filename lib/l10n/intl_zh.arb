@@ -36,6 +36,8 @@
   "result_Screen": "结果屏幕",
   "invalid_Url": "无效的网址",
   "result_Text_Type_Is_Not_Url_To_Navigate": "结果文本类型不是要导航的 Url",
-  "copied":"复制"
+  "copied":"复制",
+  "read_history": "读历史"
+
 }
 

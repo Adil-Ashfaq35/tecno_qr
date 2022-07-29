@@ -61,6 +61,7 @@ dependencies:
   scan: ^1.6.0
   app_version: ^0.0.2
   shared_preferences: ^2.0.15
+  webview_flutter: ^3.0.4
 
 
   ## firebase analytics

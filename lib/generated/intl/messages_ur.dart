@@ -54,6 +54,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تصویر میں Qr نہیں ملا"),
         "read_Button_Text":
             MessageLookupByLibrary.simpleMessage("مقامی تصویر سے پڑھیں"),
+        "read_history": MessageLookupByLibrary.simpleMessage("تاریخ پڑھیں"),
         "result_Language_Label": MessageLookupByLibrary.simpleMessage("نتیجہ"),
         "result_Screen": MessageLookupByLibrary.simpleMessage("نتائج کی سکرین"),
         "result_Text_Type_Is_Not_Url_To_Navigate":

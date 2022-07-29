@@ -210,18 +210,22 @@ class Menuitem extends StatelessWidget {
         //   mainAxisAlignment: MainAxisAlignment.s,
         children: [
           Padding(
-            padding:  EdgeInsets.only(right: 8.sm),
+            padding:  EdgeInsets.only(right: 8.sm,),
             child: Icon(
               iconData,
               color: Colors.white,
             ),
           ),
-          Text(
-            title,
-            style: Theme.of(context)
-                .textTheme
-                .headline2
-                ?.copyWith(color: Colors.white, fontSize: 16.sp),
+          SizedBox(
+            width: 160.sm, //color: Colors.white,
+            child: Text(
+              title,
+              overflow: TextOverflow.clip,
+              style: Theme.of(context)
+                  .textTheme
+                  .headline2
+                  ?.copyWith(color: Colors.white, fontSize: 16.sp),
+            ),
           )
         ],
       ),

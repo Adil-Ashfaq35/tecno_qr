@@ -36,6 +36,7 @@
   "result_Screen": "結果屏幕",
   "invalid_Url": "無效的網址",
   "result_Text_Type_Is_Not_Url_To_Navigate": "結果文本類型不是要導航的 Url",
-  "copied":"複製"
+  "copied":"複製",
+  "read_history": "讀歷史"
 }
 
