@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:technoapp_qr/constants/controllers.dart';
 import 'package:technoapp_qr/core/router/router_generator.dart';
+import 'package:technoapp_qr/models/language/lnaguage_constant.dart';
 import 'package:technoapp_qr/views/widgets/appbar_design.dart';
 import 'package:technoapp_qr/views/widgets/options_widget.dart';
 import '../constants/utils/apptheme.dart';
@@ -15,8 +16,9 @@ class EnterText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBarWidget(
-        title: 'Enter Qr',
+          title: translation(context).enter_Qr,
           iconButton: IconButton(
               onPressed: () {
                 navigationController.goBack();
@@ -24,40 +26,40 @@ class EnterText extends StatelessWidget {
               icon: const Icon(Icons.arrow_back))),
       body: Container(
         decoration: const BoxDecoration(color: AppTheme.lightBackgroundColor),
-        child: Column(mainAxisAlignment: MainAxisAlignment.center,
+        child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             // crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisSize: MainAxisSize.max,
             children: [
-              const Padding(
-                padding: EdgeInsets.all(8.0),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
                 child: Text(
-                  'Text',
-                  style: TextStyle(
+                  translation(context).text,
+                  style: const TextStyle(
                       color: Color.fromARGB(115, 33, 33, 33),
                       fontWeight: FontWeight.bold,
                       fontSize: 25),
                 ),
               ),
-              Expanded(
-                flex: 1,
-                child: TextField(
-                  inputController: _inputController,
-                ),
+              TextField(
+                inputController: _inputController,
               ),
               Column(
                 children: [
                   OptionsWidget(
                       icon: Icons.qr_code,
-                      optionText: 'Generate',
+                      optionText: translation(context).generate_Button_Text,
                       onTap: () {
                         if (_inputController.text.isNotEmpty) {
                           qrProvider.setTexttogenerate(_inputController.text);
+                          navigationController.flowFromhistory.value = false;
                           navigationController
                               .navigateToNamed(RouteGenerator.createQr);
                         }
                       }),
                   OptionsWidget(
                       icon: Icons.paste,
-                      optionText: 'Paste',
+                      optionText: translation(context).paste,
                       onTap: () async {
                         _inputController.text = (await _getClipboardText())!;
                       }),
@@ -106,20 +108,21 @@ class TextField extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: ConstrainedBox(
-                    constraints: BoxConstraints.tight(const Size(400, 400)),
-                    child: TextFormField(
-                  
-                      controller: inputController,
-                      style: const TextStyle(
-                      
-                          fontWeight: FontWeight.bold, fontSize: 15),
-                      decoration:
-                          const InputDecoration(border: InputBorder.none, hintText: 'Write text here...'),
-                      keyboardType: TextInputType.multiline,
-                      onSaved: (String? value) {
-                        debugPrint('Value for field  saved as "$value"');
-                      },
-                      maxLines: 10,
+                    constraints: BoxConstraints.tight( Size(400.sm, 400.sm)),
+                    child: Expanded(
+                      child: TextFormField(
+                        controller: inputController,
+                        style: const TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 15),
+                        decoration: const InputDecoration(
+                            border: InputBorder.none,
+                            hintText: 'Write text here...'),
+                        keyboardType: TextInputType.multiline,
+                        onSaved: (String? value) {
+                          debugPrint('Value for field  saved as "$value"');
+                        },
+                        maxLines: 20,
+                      ),
                     ),
                   ),
                 ))));

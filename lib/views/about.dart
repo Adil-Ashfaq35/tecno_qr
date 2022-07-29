@@ -7,6 +7,8 @@ import 'package:technoapp_qr/views/widgets/appbar_design.dart';
 import '../constants/controllers.dart';
 import '../constants/utils/apptheme.dart';
 
+import '../models/language/lnaguage_constant.dart';
+
 class AboutScreen extends StatefulWidget {
   const AboutScreen({Key? key}) : super(key: key);
 
@@ -38,7 +40,7 @@ class _AboutScreenState extends State<AboutScreen> {
 
     return Scaffold(
       appBar:  AppBarWidget(
-          title: 'About',
+          title: translation(context).about,
           iconButton: IconButton(
               onPressed: () {
                 navigationController.goBack();
@@ -51,20 +53,30 @@ class _AboutScreenState extends State<AboutScreen> {
           ),
           Padding(
             padding: const EdgeInsets.all(10.0),
-            child: Text("Copyright (c) 2022, TechnoQr. All rights reserved.Use of this source code is governed by aBSD-style license that can be found in the LICENSE file.",
-              style: Theme.of(context).textTheme.headline3?.copyWith(
-                color: AppTheme.darkTextColor,
-                fontSize: 20.sm,
-              ),
-            ),
+            child:Column(
+              children: [
+                Text(translation(context).second_Line,
+                  style: Theme.of(context).textTheme.headline3?.copyWith(
+                    color: AppTheme.darkTextColor,
+                    fontSize: 20.sm,
+                  ),
+                ),
+                Text(translation(context).third_Line,
+                  style: Theme.of(context).textTheme.headline3?.copyWith(
+                    color: AppTheme.darkTextColor,
+                    fontSize: 20.sm,
+                  ),
+                ),
+              ],
+            )
           ),
           SizedBox(
             height: 0.04.sh,
           ),
           Center(
-         child:Text("version:  ${_packageInfo.version}",style: Theme.of(context).textTheme.bodyText1?.copyWith(
+         child:Text("TecnoCode Version:  ${_packageInfo.version}",style: Theme.of(context).textTheme.bodyText1?.copyWith(
            color: AppTheme.darkTextColor,
-           fontSize: 30.sm,
+           fontSize: 20.sm,
            fontWeight: FontWeight.bold,
          ),),
        )

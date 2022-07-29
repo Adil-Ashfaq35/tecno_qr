@@ -11,11 +11,14 @@ import 'package:technoapp_qr/constants/utils/apptheme.dart';
 import 'package:technoapp_qr/core/router/router_generator.dart';
 import 'package:technoapp_qr/models/imagesqr_model.dart';
 import 'package:technoapp_qr/views/widgets/appbar_design.dart';
-import 'package:path/path.dart';
+import '../models/language/lnaguage_constant.dart';
 import '../models/qr_model.dart';
 
+// ignore: must_be_immutable
 class HistoryScreen extends StatefulWidget {
   ScrollController _scrollController = ScrollController();
+
+  HistoryScreen({Key? key}) : super(key: key);
 
   @override
   _HistoryScreenState createState() => _HistoryScreenState();
@@ -24,6 +27,7 @@ class HistoryScreen extends StatefulWidget {
 class _HistoryScreenState extends State<HistoryScreen> {
   final ScrollController _scrollController = ScrollController();
 
+
   bool? get kDebugMode => null;
   @override
   void initState() {
@@ -31,9 +35,10 @@ class _HistoryScreenState extends State<HistoryScreen> {
     qrProvider.getQrs();
     historyController.getItem();
     historyController.getimageformLocal();
+    settingController.addDocument();
   }
 
-  List<String> options = ['Scan History', 'Read History', 'Generate History'];
+  //List<String> options = ['Scan History', 'Read History', 'Generate History'];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -71,8 +76,9 @@ class _HistoryScreenState extends State<HistoryScreen> {
                               return HistoryScroll(
                                 scrollController: _scrollController,
                                 index: typeindex,
-                                title: historyController
-                                    .qrHistory[typeindex].title,
+                                title:typeindex==0?
+                                    translation(context).scan_Tree_Item:translation(context).read_history,
+                                // historyController.qrHistory[typeindex].title,
                                 children: ExpansionPanelhistory(
                                   qrslist: historyController
                                       .qrHistory[typeindex].qrsList,
@@ -89,10 +95,10 @@ class _HistoryScreenState extends State<HistoryScreen> {
                             return HistoryScroll(
                               scrollController: _scrollController,
                               index: typeindex,
-                              title: 'Generate History',
+                              title: translation(context).generate_Button_Text,
                               children: ExpansionPanelhistory(
-                                qrslist: historyController
-                                    .qrHistory[typeindex].qrsList,
+                                qrslist:
+                                historyController.qrHistory[typeindex].qrsList,
                                 images: historyController.images,
                                 isQRCreated: true,
                               ),
@@ -197,21 +203,46 @@ class _ExpansionPanelhistoryState extends State<ExpansionPanelhistory> {
               canTapOnHeader: true,
               body: Container(
                 padding: EdgeInsets.all(10),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    widget.isQRCreated
-                        ? Image.file(File(widget.images[index].imageName))
-                        : Text(
-                            widget.qrslist[index].qrData,
-                            style: TextStyle(
-                                color: Colors.grey[700],
-                                fontSize: 15,
-                                letterSpacing: 0.3,
-                                height: 1.3),
-                          ),
-                  ],
+                child: GestureDetector(
+                  onTap: () {
+                    resultController.resultText.value = "";
+                    if (widget.isQRCreated) {
+                     historyController. currentHistoryImage.value = widget.images[index].imageName;
+                            navigationController.flowFromhistory.value = true;
+                       navigationController
+                        .navigateToNamed(RouteGenerator.createQr);
+                    } else {
+                      resultController.resultText.value =
+                          widget.qrslist[index].qrData;
+                    
+                    navigationController
+                        .navigateToNamed(RouteGenerator.resultScreen);
+                    }
+                   
+                  },
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      widget.isQRCreated
+                          ? Text(
+                              widget.images[index].qrName,
+                              style: TextStyle(
+                                  color: Colors.grey[700],
+                                  fontSize: 15,
+                                  letterSpacing: 0.3,
+                                  height: 1.3),
+                            )
+                          : Text(
+                              widget.qrslist[index].qrData,
+                              style: TextStyle(
+                                  color: Colors.grey[700],
+                                  fontSize: 15,
+                                  letterSpacing: 0.3,
+                                  height: 1.3),
+                            ),
+                    ],
+                  ),
                 ),
               ),
               isExpanded: widget.isQRCreated
@@ -220,15 +251,30 @@ class _ExpansionPanelhistoryState extends State<ExpansionPanelhistory> {
               headerBuilder: (BuildContext context, bool isExpanded) {
                 return Container(
                   padding: const EdgeInsets.all(10),
-                  child: Text(
-                    widget.isQRCreated
-                        ? widget.images[index].qrName
-                        : DateFormat('yyyy-MM-dd – kk:mm a')
-                            .format(widget.qrslist[index].dateTime),
-                    style: const TextStyle(
-                      color: AppTheme.primaryColor,
-                      fontSize: 18,
+                  child: ListTile(
+                    title: Text(
+                      widget.isQRCreated
+                          ? widget.images[index].dateString
+                          : DateFormat('yyyy-MM-dd – kk:mm a')
+                              .format(widget.qrslist[index].dateTime),
+                      style: const TextStyle(
+                        color: AppTheme.primaryColor,
+                        fontSize: 18,
+                      ),
                     ),
+                    // trailing: NeumorphicText(
+                    //   'Pushed',
+                    //   style: NeumorphicStyle(
+                    //     //depth: 4, //customize depth here
+                    //     color: Colors.green, //customize color here
+                    //   ),
+                    //   textStyle: NeumorphicTextStyle(
+                    //       fontSize: 12, fontWeight: FontWeight.bold
+
+                    //       //customize size here
+                    //       // AND others usual text style properties (fontFamily, fontWeight, ...)
+                    //       ),
+                    // ),
                   ),
                 );
               },

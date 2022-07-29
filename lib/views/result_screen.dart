@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -6,7 +6,7 @@ import 'package:get/get.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:technoapp_qr/constants/controllers.dart';
 import 'package:technoapp_qr/core/router/router_generator.dart';
-
+import 'package:technoapp_qr/models/language/lnaguage_constant.dart';
 import 'package:technoapp_qr/views/widgets/appbar_design.dart';
 import 'package:technoapp_qr/views/widgets/options_widget.dart';
 import '../constants/utils/apptheme.dart';
@@ -18,14 +18,17 @@ class ResultScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return WillPopScope(
       onWillPop: () {
+
         navigationController.getOffAll(RouteGenerator.customDrawer);
         return Future.value(false);
       },
       child: Scaffold(
         appBar: AppBarWidget(
-            title: 'Result Screen',
+            title: translation(context).result_Screen,
             iconButton: IconButton(
                 onPressed: () {
+                  navigationController. flowFromhistory.value?
+                   navigationController.goBack():
                   navigationController.getOffAll(RouteGenerator.customDrawer);
                 },
                 icon: const Icon(Icons.arrow_back))),
@@ -34,11 +37,11 @@ class ResultScreen extends StatelessWidget {
           child: Column(mainAxisAlignment: MainAxisAlignment.center,
               // crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                const Padding(
-                  padding: EdgeInsets.all(8.0),
+                 Padding(
+                  padding: const EdgeInsets.all(8.0),
                   child: Text(
-                    'Result Text',
-                    style: TextStyle(
+                    "${translation(context).result_Language_Label}${translation(context).text}",
+                    style: const TextStyle(
                         color: Color.fromARGB(115, 33, 33, 33),
                         fontWeight: FontWeight.bold,
                         fontSize: 25),
@@ -52,7 +55,7 @@ class ResultScreen extends StatelessWidget {
                   children: [
                     OptionsWidget(
                         icon: Icons.link,
-                        optionText: 'Navigate',
+                        optionText: translation(context).navigate_Button_Text,
                         onTap: () {
                           bool _validURL =
                               Uri.parse(resultController.resultText.value)
@@ -60,8 +63,8 @@ class ResultScreen extends StatelessWidget {
                           _validURL
                               ? resultController.navigatetoLink()
                               : Get.snackbar(
-                                  'Invalid url',
-                                  'Result Text type is not Url to navigate',
+                                  translation(context).invalid_Url,
+                                  translation(context).result_Text_Type_Is_Not_Url_To_Navigate,
                                   snackPosition: SnackPosition.BOTTOM,
                                   backgroundColor: AppTheme.errorColor,
                                   colorText: Colors.white,
@@ -69,14 +72,14 @@ class ResultScreen extends StatelessWidget {
                         }),
                     OptionsWidget(
                         icon: Icons.share,
-                        optionText: 'Share',
+                        optionText: translation(context).share_Button_Text,
                         onTap: () {
                           Share.share(
                               'Here is the Qr Result text:${resultController.resultText.value}');
                         }),
                     OptionsWidget(
                         icon: Icons.copy,
-                        optionText: 'Copy',
+                        optionText: translation(context).copy_Button_Text,
                         onTap: () {
                           Clipboard.setData(ClipboardData(
                                   text: resultController.resultText.value))
@@ -86,7 +89,7 @@ class ResultScreen extends StatelessWidget {
                                           const Duration(microseconds: 1500),
                                       backgroundColor: Colors.greenAccent,
                                       content: Text(
-                                          '${resultController.resultText.value} got Copied'))));
+                                          '${resultController.resultText.value}  ${translation(context).copied}'))));
                         })
                   ],
                 )
@@ -106,6 +109,7 @@ class Resultbox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: EdgeInsets.all(20.sm),
       margin: EdgeInsets.all(20.sp),
       decoration: BoxDecoration(
           color: Colors.white70,
@@ -118,7 +122,7 @@ class Resultbox extends StatelessWidget {
             ),
           ],
           borderRadius: BorderRadius.circular(10.r)),
-      child: Center(
+      child: SingleChildScrollView(
         child: Text(
           resultController.resultText.value,
           style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
