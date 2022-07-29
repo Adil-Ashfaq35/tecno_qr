@@ -70,7 +70,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "share_Button_Text": MessageLookupByLibrary.simpleMessage("Share"),
         "shown_Only_On_The_Early_First_Time": MessageLookupByLibrary.simpleMessage(
             "By installing or using this application you are accepting the privacy policy"),
-        "tecno_Code": MessageLookupByLibrary.simpleMessage("Tecno code"),
+        "tecno_Code": MessageLookupByLibrary.simpleMessage("TecnoCode"),
         "terms_Of_Use": MessageLookupByLibrary.simpleMessage("Terms of use"),
         "text": MessageLookupByLibrary.simpleMessage("Text"),
         "third_Line": MessageLookupByLibrary.simpleMessage(

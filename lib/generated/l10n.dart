@@ -310,10 +310,10 @@ class S {
     );
   }
 
-  /// `Tecno code`
+  /// `TecnoCode`
   String get tecno_Code {
     return Intl.message(
-      'Tecno code',
+      'TecnoCode',
       name: 'tecno_Code',
       desc: '',
       args: [],

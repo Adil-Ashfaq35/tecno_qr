@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../core/controllers/qr_provider.dart';
 import 'appbar_design.dart';
 
 class OptionsWidget extends StatelessWidget {
