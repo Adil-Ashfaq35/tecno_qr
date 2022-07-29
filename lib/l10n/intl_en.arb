@@ -7,9 +7,9 @@
   "privacy_Policy":"Privacy Policy",
   "terms_Of_Use": "Terms of use",
   "about":"About",
-  "scan_Button_Text":"Scan from Camera" ,
-  "read_Button_Text":"Read from Local Image",
-  "generate_Button_Text":"Generate from Text" ,
+  "scan_Button_Text":"Scan From Camera" ,
+  "read_Button_Text":"Read From Local Image",
+  "generate_Button_Text":"Generate From Text" ,
   "result_Language_Label":"Result",
   "navigate_Button_Text":"Navigate" ,
   "copy_Button_Text":"Copy" ,
@@ -37,7 +37,7 @@
   "invalid_Url": "Invalid url",
   "result_Text_Type_Is_Not_Url_To_Navigate": "Result Text type is not Url to navigate",
   "copied": "Copied",
-  "read_history": "Read history"
+  "read_history": "Read History"
 
 }
 

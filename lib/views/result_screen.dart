@@ -109,6 +109,7 @@ class Resultbox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: EdgeInsets.all(20.sm),
       margin: EdgeInsets.all(20.sp),
       decoration: BoxDecoration(
           color: Colors.white70,
@@ -121,7 +122,7 @@ class Resultbox extends StatelessWidget {
             ),
           ],
           borderRadius: BorderRadius.circular(10.r)),
-      child: Center(
+      child: SingleChildScrollView(
         child: Text(
           resultController.resultText.value,
           style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),

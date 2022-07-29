@@ -120,30 +120,30 @@ class S {
     );
   }
 
-  /// `Scan from Camera`
+  /// `Scan From Camera`
   String get scan_Button_Text {
     return Intl.message(
-      'Scan from Camera',
+      'Scan From Camera',
       name: 'scan_Button_Text',
       desc: '',
       args: [],
     );
   }
 
-  /// `Read from Local Image`
+  /// `Read From Local Image`
   String get read_Button_Text {
     return Intl.message(
-      'Read from Local Image',
+      'Read From Local Image',
       name: 'read_Button_Text',
       desc: '',
       args: [],
     );
   }
 
-  /// `Generate from Text`
+  /// `Generate From Text`
   String get generate_Button_Text {
     return Intl.message(
-      'Generate from Text',
+      'Generate From Text',
       name: 'generate_Button_Text',
       desc: '',
       args: [],
@@ -420,10 +420,10 @@ class S {
     );
   }
 
-  /// `Read history`
+  /// `Read History`
   String get read_history {
     return Intl.message(
-      'Read history',
+      'Read History',
       name: 'read_history',
       desc: '',
       args: [],
