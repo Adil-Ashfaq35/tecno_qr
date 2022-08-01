@@ -13,7 +13,7 @@ class LanguageModel {
       LanguageModel(2, "🇸🇦", "اَلْعَرَبِيَّةُ", "ar"),
       LanguageModel(3, "🇵🇰", "اردو", "ur"),
       LanguageModel(4, "🇫🇷", "Français", "fr"),
-      LanguageModel(5, "🇫🇷", "Español", "es"),
+      LanguageModel(5, "🇪🇸", "Español", "es"),
       LanguageModel(6, "🇷🇺", "Русский", "ru"),
       LanguageModel(7, "🇹🇷", "Türkçe", "tr"),
       LanguageModel(8, "🇮🇩", "Bahasa Indonesia", "id"),

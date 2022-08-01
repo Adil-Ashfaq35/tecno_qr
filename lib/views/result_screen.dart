@@ -12,6 +12,7 @@ import 'package:technoapp_qr/constants/controllers.dart';
 import 'package:technoapp_qr/core/router/router_generator.dart';
 import 'package:technoapp_qr/models/language/lnaguage_constant.dart';
 import 'package:technoapp_qr/views/widgets/appbar_design.dart';
+import 'package:technoapp_qr/views/widgets/dialogs/alertDialog.dart';
 import 'package:technoapp_qr/views/widgets/options_widget.dart';
 import '../constants/utils/apptheme.dart';
 
@@ -28,19 +29,59 @@ class _ResultScreenState extends State<ResultScreen> {
     permission();
     super.initState();
   }
-
   permission() async {
     PermissionStatus;
-    await Permission.storage.request();
-   if(PermissionStatus==false){
-     if (kDebugMode) {
-       print("permission denied");
-     }
-   }
+    PermissionStatus allow=  await Permission.storage.request();
+    if(allow.isGranted){
+      if (kDebugMode) {
+        print("permission granted");
+      }
+      else{
+        print("permission denied");
+      }
+    }
+    else if (allow.isPermanentlyDenied){
+      if (kDebugMode) {
+        print("persmission denied");
+      }
+      await showDialog(context: context, builder: (context){
+        return DialogWidget(
+          title: translation(context).local_Permission_Alert,
+          description: translation(context).local_Alert_Description,
+          cancelTap: (){
+            Get.back();
+          },
+          continueTap: () async {
+            Get.back();
+              await openAppSettings();
+
+          },
+        );
+      });
+    }
+    else if(allow.isDenied){
+      await showDialog(context: context, builder: (context){
+        return DialogWidget(
+          title:  translation(context).local_Permission_Alert,
+          description: translation(context).local_Alert_Description,
+          cancelTap: (){
+            Get.back();
+          },
+          continueTap: () async {
+            Get.back();
+            await openAppSettings();
+
+          },
+        );
+      });
+    }
+
   }
+
 
   @override
   Widget build(BuildContext context) {
+    
     return WillPopScope(
       onWillPop: () {
 
@@ -181,4 +222,43 @@ class Resultbox extends StatelessWidget {
       ),
     );
   }
+
 }
+
+
+
+
+// showAlertDialog(BuildContext context) {
+//   // set up the buttons
+//   Widget cancelButton = TextButton(
+//     child: const Text("Cancel"),
+//     onPressed:  () {
+//       Get.back();
+//     },
+//   );
+//   Widget continueButton = TextButton(
+//     child: const Text("Continue"),
+//     onPressed:  () async {
+//       Get.back();
+//       openAppSettings();
+//     },
+//   );
+//
+//   // set up the AlertDialog
+//   AlertDialog alert = AlertDialog(
+//     title: const Text("Permission Alert"),
+//     content: const Text("Allow access to local storage to enable this feature or you can follow the following steps to use the application without permission:\n1- Capture the QR Code image via your camera application or select a local image from your local files.\n2- Share the image to TecnoCode application.\n3- The result will be displayed directly in the TecnoCode application."),
+//     actions: [
+//       cancelButton,
+//       continueButton,
+//     ],
+//   );
+//
+//   // show the dialog
+//   showDialog(
+//     context: context,
+//     builder: (BuildContext context) {
+//       return alert;
+//     },
+//   );
+// }

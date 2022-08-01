@@ -23,6 +23,11 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "about": MessageLookupByLibrary.simpleMessage("کے بارے میں"),
+        "camera_Alert_Description": MessageLookupByLibrary.simpleMessage(
+            "اس فیچر کو فعال کرنے کے لیے کیمرے تک رسائی کی اجازت دیں یا آپ بغیر اجازت کے ایپلیکیشن کو استعمال کرنے کے لیے درج ذیل اقدامات پر عمل کر سکتے ہیں:\n1- اپنے کیمرہ ایپلیکیشن کے ذریعے کیو آر کوڈ کی تصویر کیپچر کریں یا اپنی مقامی فائلوں سے مقامی تصویر منتخب کریں۔\n2- تصویر کو ٹیکنو کوڈ ایپلیکیشن پر شیئر کریں۔\n3- نتیجہ براہ راست TecnoCode ایپلیکیشن میں دکھایا جائے گا۔"),
+        "camera_Permission_Alert":
+            MessageLookupByLibrary.simpleMessage("کیمرے کی اجازت درکار ہے۔"),
+        "cancel": MessageLookupByLibrary.simpleMessage("منسوخ کریں۔"),
         "cancel_Button_Text":
             MessageLookupByLibrary.simpleMessage("منسوخ کریں۔"),
         "copied": MessageLookupByLibrary.simpleMessage("کاپی شدہ"),
@@ -37,12 +42,18 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("متن سے پیدا کریں۔"),
         "generate_Tree_item":
             MessageLookupByLibrary.simpleMessage("تاریخ بنائیں"),
+        "grant_Access":
+            MessageLookupByLibrary.simpleMessage("رسائی فراہم کریں۔"),
         "help": MessageLookupByLibrary.simpleMessage(" مدد"),
         "history": MessageLookupByLibrary.simpleMessage("تاریخ"),
         "history_Screen": MessageLookupByLibrary.simpleMessage("ہسٹری سکرین"),
         "home": MessageLookupByLibrary.simpleMessage("ہوم پیج"),
         "invalid_Url": MessageLookupByLibrary.simpleMessage("غلط یو آر ایل"),
         "language": MessageLookupByLibrary.simpleMessage("زبان"),
+        "local_Alert_Description": MessageLookupByLibrary.simpleMessage(
+            "اس خصوصیت کو فعال کرنے کے لیے مقامی اسٹوریج تک رسائی کی اجازت دیں یا آپ بغیر اجازت کے ایپلیکیشن کو استعمال کرنے کے لیے درج ذیل مراحل پر عمل کر سکتے ہیں:\n1- اپنے کیمرہ ایپلیکیشن کے ذریعے کیو آر کوڈ کی تصویر کیپچر کریں یا اپنی مقامی فائلوں سے مقامی تصویر منتخب کریں۔\n2- تصویر کو ٹیکنو کوڈ ایپلیکیشن پر شیئر کریں۔\n3- نتیجہ براہ راست TecnoCode ایپلیکیشن میں دکھایا جائے گا۔"),
+        "local_Permission_Alert": MessageLookupByLibrary.simpleMessage(
+            "مقامی اسٹوریج کی اجازت درکار ہے۔"),
         "navigate_Button_Text":
             MessageLookupByLibrary.simpleMessage("نیویگیٹ کریں۔"),
         "oK_Button_Text": MessageLookupByLibrary.simpleMessage("ٹھیک ہے"),
@@ -54,7 +65,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تصویر میں Qr نہیں ملا"),
         "read_Button_Text":
             MessageLookupByLibrary.simpleMessage("مقامی تصویر سے پڑھیں"),
-        "read_history": MessageLookupByLibrary.simpleMessage("تاریخ پڑھیں"),
+        "read_History": MessageLookupByLibrary.simpleMessage("تاریخ پڑھیں"),
         "result_Language_Label": MessageLookupByLibrary.simpleMessage("نتیجہ"),
         "result_Screen": MessageLookupByLibrary.simpleMessage("نتائج کی سکرین"),
         "result_Text_Type_Is_Not_Url_To_Navigate":
@@ -66,7 +77,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("کیمرے سے اسکین کریں۔"),
         "scan_Tree_Item": MessageLookupByLibrary.simpleMessage("اسکین ہسٹری"),
         "second_Line": MessageLookupByLibrary.simpleMessage(
-            "© 2022 TecnoWays تمام حقوق محفوظ ہیں۔"),
+            "TecnoWays تمام حقوق محفوظ ہیں۔"),
         "share_App": MessageLookupByLibrary.simpleMessage("ایپ کا اشتراک کریں"),
         "share_Button_Text": MessageLookupByLibrary.simpleMessage("بانٹیں"),
         "shown_Only_On_The_Early_First_Time": MessageLookupByLibrary.simpleMessage(

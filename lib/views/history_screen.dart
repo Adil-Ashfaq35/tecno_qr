@@ -77,7 +77,7 @@ class _HistoryScreenState extends State<HistoryScreen> {
                                 scrollController: _scrollController,
                                 index: typeindex,
                                 title:typeindex==0?
-                                    translation(context).scan_Tree_Item:translation(context).read_history,
+                                    translation(context).scan_Tree_Item:translation(context).read_History,
                                 // historyController.qrHistory[typeindex].title,
                                 children: ExpansionPanelhistory(
                                   qrslist: historyController

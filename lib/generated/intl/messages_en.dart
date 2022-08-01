@@ -23,6 +23,11 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "about": MessageLookupByLibrary.simpleMessage("About"),
+        "camera_Alert_Description": MessageLookupByLibrary.simpleMessage(
+            "Allow access to camera to enable this feature or you can follow the following steps to use the application without permission:\n1- Capture the QR Code image via your camera application or select a local image from your local files.\n2- Share the image to TecnoCode application.\n3- The result will be displayed directly in the TecnoCode application."),
+        "camera_Permission_Alert": MessageLookupByLibrary.simpleMessage(
+            "Camera Permission is Required"),
+        "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "cancel_Button_Text": MessageLookupByLibrary.simpleMessage("Cancel"),
         "copied": MessageLookupByLibrary.simpleMessage("Copied"),
         "copy_Button_Text": MessageLookupByLibrary.simpleMessage("Copy"),
@@ -36,6 +41,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Generate From Text"),
         "generate_Tree_item":
             MessageLookupByLibrary.simpleMessage("Generate History"),
+        "grant_Access": MessageLookupByLibrary.simpleMessage("Grant Access"),
         "help": MessageLookupByLibrary.simpleMessage("Help"),
         "history": MessageLookupByLibrary.simpleMessage("History"),
         "history_Screen":
@@ -43,6 +49,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "home": MessageLookupByLibrary.simpleMessage("Home"),
         "invalid_Url": MessageLookupByLibrary.simpleMessage("Invalid url"),
         "language": MessageLookupByLibrary.simpleMessage("Language"),
+        "local_Alert_Description": MessageLookupByLibrary.simpleMessage(
+            "Allow access to local storage to enable this feature or you can follow the following steps to use the application without permission:\n1- Capture the QR Code image via your camera application or select a local image from your local files.\n2- Share the image to TecnoCode application.\n3- The result will be displayed directly in the TecnoCode application."),
+        "local_Permission_Alert": MessageLookupByLibrary.simpleMessage(
+            "Local Storage Permission is Required"),
         "navigate_Button_Text":
             MessageLookupByLibrary.simpleMessage("Navigate"),
         "oK_Button_Text": MessageLookupByLibrary.simpleMessage("OK"),
@@ -54,7 +64,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Qr not found in image"),
         "read_Button_Text":
             MessageLookupByLibrary.simpleMessage("Read From Local Image"),
-        "read_history": MessageLookupByLibrary.simpleMessage("Read History"),
+        "read_History": MessageLookupByLibrary.simpleMessage("Read History"),
         "result_Language_Label": MessageLookupByLibrary.simpleMessage("Result"),
         "result_Screen": MessageLookupByLibrary.simpleMessage("Result Screen"),
         "result_Text_Type_Is_Not_Url_To_Navigate":
@@ -65,7 +75,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Scan From Camera"),
         "scan_Tree_Item": MessageLookupByLibrary.simpleMessage("Scan History"),
         "second_Line": MessageLookupByLibrary.simpleMessage(
-            "© 2022 TecnoWays All rights reserved"),
+            " TecnoWays All rights reserved"),
         "share_App": MessageLookupByLibrary.simpleMessage("Share App"),
         "share_Button_Text": MessageLookupByLibrary.simpleMessage("Share"),
         "shown_Only_On_The_Early_First_Time": MessageLookupByLibrary.simpleMessage(
@@ -74,6 +84,6 @@ class MessageLookup extends MessageLookupByLibrary {
         "terms_Of_Use": MessageLookupByLibrary.simpleMessage("Terms of use"),
         "text": MessageLookupByLibrary.simpleMessage("Text"),
         "third_Line": MessageLookupByLibrary.simpleMessage(
-            "© 2022-2025 TecnoWays All rights reserved")
+            "TecnoWays All rights reserved")
       };
 }

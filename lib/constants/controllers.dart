@@ -4,7 +4,6 @@ import 'package:technoapp_qr/core/controllers/qr_provider.dart';
 import 'package:technoapp_qr/core/controllers/qr_scan.provider.dart';
 import 'package:technoapp_qr/core/controllers/result_controller.dart';
 import 'package:technoapp_qr/core/controllers/settings_controller.dart';
-import 'package:technoapp_qr/core/controllers/share_intent.controller.dart';
 
 import '../core/controllers/navigation_controller.dart';
 

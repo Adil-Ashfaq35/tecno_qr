@@ -18,8 +18,8 @@
   "scan_Tree_Item": "Scan History",
   "generate_Tree_item":"Generate History",
   "first_Line":"TecnoCode Version 6.0.1.0",
-  "second_Line":"© 2022 TecnoWays All rights reserved" ,
-  "third_Line":"© 2022-2025 TecnoWays All rights reserved",
+  "second_Line":" TecnoWays All rights reserved" ,
+  "third_Line":"TecnoWays All rights reserved",
   "oK_Button_Text":"OK" ,
   "cancel_Button_Text":"Cancel",
   "save_Button_Text": "Save ",
@@ -37,7 +37,12 @@
   "invalid_Url": "Invalid url",
   "result_Text_Type_Is_Not_Url_To_Navigate": "Result Text type is not Url to navigate",
   "copied": "Copied",
-  "read_history": "Read History"
-
+  "read_History": "Read History",
+  "local_Permission_Alert": "Local Storage Permission is Required",
+  "local_Alert_Description": "Allow access to local storage to enable this feature or you can follow the following steps to use the application without permission:\n1- Capture the QR Code image via your camera application or select a local image from your local files.\n2- Share the image to TecnoCode application.\n3- The result will be displayed directly in the TecnoCode application.",
+  "camera_Permission_Alert":"Camera Permission is Required",
+  "camera_Alert_Description": "Allow access to camera to enable this feature or you can follow the following steps to use the application without permission:\n1- Capture the QR Code image via your camera application or select a local image from your local files.\n2- Share the image to TecnoCode application.\n3- The result will be displayed directly in the TecnoCode application.",
+  "grant_Access":"Grant Access",
+  "cancel":"Cancel"
 }
 

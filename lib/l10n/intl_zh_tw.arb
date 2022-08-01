@@ -18,8 +18,8 @@
   "scan_Tree_Item": "掃描歷史",
   "generate_Tree_item":"生成歷史",
   "first_Line":"TecnoCode 版本 6.0.1.0",
-  "second_Line":"© 2022 TecnoWays 版權所有" ,
-  "third_Line":"© 2022-2025 TecnoWays 版權所有",
+  "second_Line":"TecnoWays 版權所有" ,
+  "third_Line":"TecnoWays 版權所有",
   "oK_Button_Text":"好的" ,
   "cancel_Button_Text":"取消",
   "save_Button_Text": "節省 ",
@@ -37,6 +37,12 @@
   "invalid_Url": "無效的網址",
   "result_Text_Type_Is_Not_Url_To_Navigate": "結果文本類型不是要導航的 Url",
   "copied":"複製",
-  "read_history": "讀歷史"
+  "read_History": "讀歷史",
+  "local_Permission_Alert": "需要本地存儲權限",
+  "local_Alert_Description": "允許訪問本地存儲以啟用此功能，或者您可以按照以下步驟在未經許可的情況下使用該應用程序：\n1- 通過相機應用程序捕獲 QR 碼圖像或從本地文件中選擇本地圖像。\n2- 將圖像分享到 TecnoCode 應用程序。\n3- 結果將直接顯示在 TecnoCode 應用程序中.",
+  "camera_Permission_Alert":"需要相機權限",
+  "camera_Alert_Description":"允許訪問相機以啟用此功能，或者您可以按照以下步驟在未經許可的情況下使用該應用程序：\n1- 通過相機應用程序捕獲 QR 碼圖像或從本地文件中選擇本地圖像。\n2- 將圖像分享到 TecnoCode 應用程序。\n3- 結果將直接顯示在 TecnoCode 應用程序中.",
+  "grant_Access":"授予訪問權限",
+  "cancel":"取消"
 }
 
