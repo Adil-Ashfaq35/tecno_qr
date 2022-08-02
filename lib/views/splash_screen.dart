@@ -30,7 +30,7 @@ class _SplashScreenState extends State<SplashScreen>
   Future<void> initRouting() async {
     bool isFirstTime = await SharedPref().readBool('isFirsttime');
 
-        !isFirstTime
+         isFirstTime
         ? forFirstTime()
         : navigationController.navigateToNamed(RouteGenerator.customDrawer);
 

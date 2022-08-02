@@ -38,7 +38,7 @@ class _CustomDrawerState extends State<CustomDrawer>
       context: context,
       builder: (context) => AlertDialog(
         title: const Text('Are you sure?'),
-        content: const Text('Do you want to exit an App'),
+        content: const Text('Do you want to exit this App'),
         actions: <Widget>[
           TextButton(
             onPressed: () => Navigator.of(context).pop(false), //<-- SEE HERE
