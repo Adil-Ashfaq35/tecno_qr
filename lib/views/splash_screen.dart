@@ -30,7 +30,7 @@ class _SplashScreenState extends State<SplashScreen>
   Future<void> initRouting() async {
     bool isFirstTime = await SharedPref().readBool('isFirsttime');
 
-        isFirstTime
+        !isFirstTime
         ? forFirstTime()
         : navigationController.navigateToNamed(RouteGenerator.customDrawer);
 
@@ -77,10 +77,9 @@ class _SplashScreenState extends State<SplashScreen>
         barrierDismissible: false,
         // ignore: prefer_const_constructors
         builder: (_) => CustomDialogBox(
-          title: 'Privacy Policy Confirmation',
-          text: 'Agree',
-          descriptions: ConstantSettings.privacydes,
-          img:const SizedBox.shrink(),
+          title: '',
+          text: 'Continue',
+          descriptions: "By installing this and using this application you are accepting the",
           onPressed: () async {
             settingController.addDocument();
 

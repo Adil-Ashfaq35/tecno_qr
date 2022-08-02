@@ -3,17 +3,17 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
+
+
 import 'package:lottie/lottie.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
-import 'package:permission_handler/permission_handler.dart';
+
 import 'package:technoapp_qr/constants/controllers.dart';
 import 'package:technoapp_qr/constants/utils/apptheme.dart';
 import 'package:technoapp_qr/core/router/router_generator.dart';
 import 'package:technoapp_qr/models/language/lnaguage_constant.dart';
-import 'package:technoapp_qr/views/result_screen.dart';
-import 'package:technoapp_qr/views/widgets/dialogs/alertDialog.dart';
+
+
 
 
 
@@ -33,11 +33,6 @@ class _ScanQrState extends State<ScanQr> {
   }
 
 
-        },
-      );
-    }
-
-  }
 
   @override
   Widget build(BuildContext context) {

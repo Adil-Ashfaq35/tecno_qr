@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:technoapp_qr/views/splash_screen.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 import '../../../constants/const_settings.dart';
@@ -94,6 +95,7 @@ class Constants {
   Constants._();
   static const double padding = 20;
   static const double avatarRadius = 40;
+  static const double size = 16;
 }
 
 class _CustomDialogBoxState extends State<CustomDialogBox> {
@@ -115,27 +117,52 @@ class _CustomDialogBoxState extends State<CustomDialogBox> {
         Container(
           padding: const EdgeInsets.only(
               left: Constants.padding,
-              top: Constants.avatarRadius + Constants.padding,
+              top: Constants.padding,
               right: Constants.padding,
               bottom: Constants.padding),
           margin: const EdgeInsets.only(top: Constants.avatarRadius),
           decoration: BoxDecoration(
               shape: BoxShape.rectangle,
               color: Colors.white,
-              borderRadius: BorderRadius.circular(Constants.padding),
+              borderRadius: BorderRadius.circular(8),
               boxShadow: const [
                 BoxShadow(
                     color: Colors.grey, offset: Offset(0, 0),),
               ]),
-          child:
-          SizedBox(
-            height: 0.9.sh,
-            width: 0.8.sw,
-            child: const WebView(
-              javascriptMode: JavascriptMode.unrestricted,
-              initialUrl:ConstantSettings.privacyUrl,
-            ),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children:  [
+              Text(widget.descriptions,softWrap: true,style:
+              Theme.of(context).textTheme.headline6?.copyWith(
+                fontSize: Constants.size.sm,
+              ),),
+             ClipOval(
+               child: TextButton(
+                    child:Text("Privacy Policy",style: Theme.of(context).textTheme.headline6?.copyWith(
+                      fontSize: Constants.size.sm,
+                       color: AppTheme.linkColor,
+                      decoration: TextDecoration.underline,
+                    ),),
+                    onPressed: (){
+                      launchUrl(Uri.parse(ConstantSettings.privacyUrl));
+                    },
+                  ),
+             ),
+              FlatButton(onPressed:widget.onPressed ,
+              color: AppTheme.linkColor, child: Text(widget.text,
+              style: Theme.of(context).textTheme.headline3?.copyWith(
+                fontSize: 14.sm,
+                color: Colors.black,
+                fontWeight: FontWeight.w500,
+              ),
+              ),
+              )
+
+
+            ],
           ),
+
           // Column(
           //   mainAxisSize: MainAxisSize.max,
           //   children: <Widget>[
@@ -184,21 +211,21 @@ class _CustomDialogBoxState extends State<CustomDialogBox> {
         //     ),
         //   ),
         // ),
-          Positioned(
-          right: 6,
-          bottom: 0,
-          child: FlatButton(
-              color: AppTheme.primaryColor,
-              onPressed: widget.onPressed,
-              shape: RoundedRectangleBorder(side: const BorderSide(
-                  width: 1,
-                  style: BorderStyle.solid
-              ), borderRadius: BorderRadius.circular(50)),
-              child: Text(
-                widget.text,
-                style: const TextStyle(fontSize: 15, color: Colors.white),
-              )),
-        ),
+        //   Positioned(
+        //   right: 6,
+        //   bottom: 0,
+        //   child: FlatButton(
+        //       color: AppTheme.primaryColor,
+        //       onPressed: widget.onPressed,
+        //       shape: RoundedRectangleBorder(side: const BorderSide(
+        //           width: 1,
+        //           style: BorderStyle.solid
+        //       ), borderRadius: BorderRadius.circular(50)),
+        //       child: Text(
+        //         widget.text,
+        //         style: const TextStyle(fontSize: 15, color: Colors.white),
+        //       )),
+        // ),
 
       ],
     );
