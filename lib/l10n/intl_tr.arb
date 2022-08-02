@@ -44,6 +44,7 @@
   "camera_Permission_Alert":"Kamera İzni Gerekli",
   "camera_Alert_Description":"Bu özelliği etkinleştirmek için kameraya erişime izin verin veya uygulamayı izinsiz kullanmak için aşağıdaki adımları takip edebilirsiniz:\n1- Kamera uygulamanız aracılığıyla QR Code görüntüsünü yakalayın veya yerel dosyalarınızdan yerel bir görüntü seçin.\n2- Resmi TecnoCode uygulamasına paylaşın.\n3- Sonuç doğrudan TecnoCode uygulamasında görüntülenecektir.",
   "grant_Access":"Erişim İzni",
-  "cancel":"İptal"
+  "cancel":"İptal",
+  "privacy_Policy_Confirmation":"Bu uygulamayı yükleyerek veya kullanarak gizlilik politikasının İngilizce versiyonunu kabul etmiş olursunuz"
 }
 

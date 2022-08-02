@@ -53,6 +53,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "oK_Button_Text": MessageLookupByLibrary.simpleMessage("好的"),
         "paste": MessageLookupByLibrary.simpleMessage("粘貼"),
         "privacy_Policy": MessageLookupByLibrary.simpleMessage("隱私政策"),
+        "privacy_Policy_Confirmation":
+            MessageLookupByLibrary.simpleMessage("安裝或使用此應用程序即表示您接受英文版隱私政策"),
         "qr_Code": MessageLookupByLibrary.simpleMessage("二維碼"),
         "qr_Not_Found_In_Image":
             MessageLookupByLibrary.simpleMessage("圖片中未找到 Qr"),

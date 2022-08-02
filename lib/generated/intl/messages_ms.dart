@@ -58,6 +58,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "oK_Button_Text": MessageLookupByLibrary.simpleMessage("okey"),
         "paste": MessageLookupByLibrary.simpleMessage("tampal"),
         "privacy_Policy": MessageLookupByLibrary.simpleMessage("Dasar Privasi"),
+        "privacy_Policy_Confirmation": MessageLookupByLibrary.simpleMessage(
+            "Dengan memasang atau menggunakan aplikasi ini anda menerima versi bahasa Inggeris dasar privasi"),
         "qr_Code": MessageLookupByLibrary.simpleMessage("Qr Code"),
         "qr_Not_Found_In_Image":
             MessageLookupByLibrary.simpleMessage("Qr tidak ditemui dalam imej"),

@@ -9,6 +9,7 @@ import 'package:technoapp_qr/core/router/router_generator.dart';
 import 'package:technoapp_qr/views/widgets/dialogs/customDialog.dart';
 import '../constants/const_settings.dart';
 import '../constants/utils/apptheme.dart';
+import '../models/language/lnaguage_constant.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -79,7 +80,7 @@ class _SplashScreenState extends State<SplashScreen>
         builder: (_) => CustomDialogBox(
           title: '',
           text: 'Continue',
-          descriptions: "By installing this and using this application you are accepting the",
+          descriptions:translation(context).privacy_Policy_Confirmation,
           onPressed: () async {
             settingController.addDocument();
 

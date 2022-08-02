@@ -43,6 +43,7 @@
   "camera_Permission_Alert":"Camera Permission is Required",
   "camera_Alert_Description": "Allow access to camera to enable this feature or you can follow the following steps to use the application without permission:\n1- Capture the QR Code image via your camera application or select a local image from your local files.\n2- Share the image to TecnoCode application.\n3- The result will be displayed directly in the TecnoCode application.",
   "grant_Access":"Grant Access",
-  "cancel":"Cancel"
+  "cancel":"Cancel",
+  "privacy_Policy_Confirmation":"By installing or using this application you are accepting the privacy policy"
 }
 

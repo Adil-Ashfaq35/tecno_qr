@@ -43,6 +43,7 @@
   "camera_Permission_Alert":"Cameratoestemming is vereist",
   "camera_Alert_Description":"Sta toegang tot de camera toe om deze functie in te schakelen of u kunt de volgende stappen volgen om de applicatie zonder toestemming te gebruiken:\n1- Leg de QR-codeafbeelding vast via uw cameratoepassing of selecteer een lokale afbeelding uit uw lokale bestanden.\n2- Deel de afbeelding met de TecnoCode-toepassing.\n3- Het resultaat wordt direct weergegeven in de TecnoCode-applicatie.",
   "grant_Access":"Toegang verlenen",
-  "cancel":"Annuleren"
+  "cancel":"Annuleren",
+  "privacy_Policy_Confirmation":"Door deze toepassing te installeren of te gebruiken, aanvaardt u de Engelse versie van het privacybeleid"
 }
 

@@ -489,6 +489,16 @@ class S {
       args: [],
     );
   }
+
+  /// `By installing or using this application you are accepting the privacy policy`
+  String get privacy_Policy_Confirmation {
+    return Intl.message(
+      'By installing or using this application you are accepting the privacy policy',
+      name: 'privacy_Policy_Confirmation',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

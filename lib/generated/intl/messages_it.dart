@@ -60,6 +60,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "paste": MessageLookupByLibrary.simpleMessage("incolla"),
         "privacy_Policy":
             MessageLookupByLibrary.simpleMessage("Informativa sulla privacy"),
+        "privacy_Policy_Confirmation": MessageLookupByLibrary.simpleMessage(
+            "Installando o utilizzando questa applicazione si accetta la versione inglese dell\'informativa sulla privacy."),
         "qr_Code": MessageLookupByLibrary.simpleMessage("Qr Code"),
         "qr_Not_Found_In_Image": MessageLookupByLibrary.simpleMessage(
             "Qr non trovato nell\'immagine"),

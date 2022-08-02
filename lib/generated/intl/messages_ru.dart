@@ -27,7 +27,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Разрешите доступ к камере, чтобы включить эту функцию, или вы можете выполнить следующие шаги, чтобы использовать приложение без разрешения:\n1- Захватите изображение QR-кода с помощью приложения камеры или выберите локальное изображение из ваших локальных файлов.\n2- Поделитесь изображением с приложением TecnoCode.\n3- Результат будет отображаться непосредственно в приложении TecnoCode."),
         "camera_Permission_Alert":
             MessageLookupByLibrary.simpleMessage("Требуется разрешение камеры"),
-        "cancel": MessageLookupByLibrary.simpleMessage("Отмена  "),
+        "cancel": MessageLookupByLibrary.simpleMessage("Отмена"),
         "cancel_Button_Text": MessageLookupByLibrary.simpleMessage("Отменить"),
         "copied": MessageLookupByLibrary.simpleMessage("Скопировано"),
         "copy_Button_Text": MessageLookupByLibrary.simpleMessage("Поделиться"),
@@ -59,6 +59,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "paste": MessageLookupByLibrary.simpleMessage("вставить"),
         "privacy_Policy":
             MessageLookupByLibrary.simpleMessage("Политика конфиденциальности"),
+        "privacy_Policy_Confirmation": MessageLookupByLibrary.simpleMessage(
+            "Устанавливая или используя это приложение, вы принимаете английскую версию политики конфиденциальности"),
         "qr_Code": MessageLookupByLibrary.simpleMessage("Qr-код"),
         "qr_Not_Found_In_Image":
             MessageLookupByLibrary.simpleMessage("Qr не найден на изображении"),

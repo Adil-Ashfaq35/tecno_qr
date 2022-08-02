@@ -43,6 +43,7 @@
   "camera_Permission_Alert":"需要相機權限",
   "camera_Alert_Description":"允許訪問相機以啟用此功能，或者您可以按照以下步驟在未經許可的情況下使用該應用程序：\n1- 通過相機應用程序捕獲 QR 碼圖像或從本地文件中選擇本地圖像。\n2- 將圖像分享到 TecnoCode 應用程序。\n3- 結果將直接顯示在 TecnoCode 應用程序中.",
   "grant_Access":"授予訪問權限",
-  "cancel":"取消"
+  "cancel":"取消",
+  "privacy_Policy_Confirmation":"安裝或使用此應用程序即表示您接受英文版隱私政策"
 }
 

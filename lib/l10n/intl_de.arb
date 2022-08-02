@@ -43,7 +43,8 @@
   "camera_Permission_Alert":"Eine Kameraerlaubnis ist erforderlich",
   "camera_Alert_Description":"Erlauben Sie den Zugriff auf die Kamera, um diese Funktion zu aktivieren, oder führen Sie die folgenden Schritte aus, um die Anwendung ohne Erlaubnis zu verwenden:\n1- Erfassen Sie das QR-Code-Bild über Ihre Kameraanwendung oder wählen Sie ein lokales Bild aus Ihren lokalen Dateien aus.\n2- Teilen Sie das Bild mit der TecnoCode-Anwendung.\n3- Das Ergebnis wird direkt in der TecnoCode-Anwendung angezeigt.",
   "grant_Access":"Zugang gewähren",
-  "cancel":"Absagen"
+  "cancel":"Absagen",
+  "privacy_Policy_Confirmation":"Durch die Installation oder Nutzung dieser Anwendung akzeptieren Sie die englische Version der Datenschutzrichtlinie"
 
 
 }

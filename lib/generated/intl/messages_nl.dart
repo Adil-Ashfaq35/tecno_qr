@@ -57,6 +57,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "oK_Button_Text": MessageLookupByLibrary.simpleMessage("OK"),
         "paste": MessageLookupByLibrary.simpleMessage("plakken"),
         "privacy_Policy": MessageLookupByLibrary.simpleMessage("Privacybeleid"),
+        "privacy_Policy_Confirmation": MessageLookupByLibrary.simpleMessage(
+            "Door deze toepassing te installeren of te gebruiken, aanvaardt u de Engelse versie van het privacybeleid"),
         "qr_Code": MessageLookupByLibrary.simpleMessage("Qr-code"),
         "qr_Not_Found_In_Image": MessageLookupByLibrary.simpleMessage(
             "Qr niet gevonden in afbeelding"),

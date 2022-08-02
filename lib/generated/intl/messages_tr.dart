@@ -57,6 +57,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "paste": MessageLookupByLibrary.simpleMessage("yapıştır"),
         "privacy_Policy":
             MessageLookupByLibrary.simpleMessage("Gizlilik Politikası"),
+        "privacy_Policy_Confirmation": MessageLookupByLibrary.simpleMessage(
+            "Bu uygulamayı yükleyerek veya kullanarak gizlilik politikasının İngilizce versiyonunu kabul etmiş olursunuz"),
         "qr_Code": MessageLookupByLibrary.simpleMessage("Qr Kodu"),
         "qr_Not_Found_In_Image":
             MessageLookupByLibrary.simpleMessage("Qr resimde bulunamadı"),
