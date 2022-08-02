@@ -42,10 +42,7 @@ class EnterText extends StatelessWidget {
                 ),
               ),
               Expanded(
-<<<<<<< HEAD
-=======
                 flex: 1,
->>>>>>> 8835fe954dfab7fffcfb7ae46118687f34cf617a
                 child: TextField(
                   inputController: _inputController,
                 ),

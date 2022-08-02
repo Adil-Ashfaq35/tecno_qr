@@ -120,24 +120,6 @@ class _ResultScreenState extends State<ResultScreen> {
                 Column(
                   children: [
                     OptionsWidget(
-<<<<<<< HEAD
-                        icon: Icons.link,
-                        optionText: translation(context).navigate_Button_Text,
-                        onTap: () {
-                          bool validURL =
-                              Uri.parse(resultController.resultText.value)
-                                  .isAbsolute;
-                          validURL
-                              ? resultController.navigatetoLink()
-                              : Get.snackbar(
-                                  translation(context).invalid_Url,
-                                  translation(context).result_Text_Type_Is_Not_Url_To_Navigate,
-                                  snackPosition: SnackPosition.BOTTOM,
-                                  backgroundColor: AppTheme.errorColor,
-                                  colorText: Colors.white,
-                                );
-                        }),
-=======
                             icon: Icons.link,
                             optionText: translation(context).navigate_Button_Text,
                             onTap:() {
@@ -165,7 +147,6 @@ class _ResultScreenState extends State<ResultScreen> {
 
                        ),
 
->>>>>>> 8835fe954dfab7fffcfb7ae46118687f34cf617a
                     OptionsWidget(
                         icon: Icons.share,
                         optionText: translation(context).share_Button_Text,
