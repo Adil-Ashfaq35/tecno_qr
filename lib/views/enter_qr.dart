@@ -1,13 +1,18 @@
+
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 import 'package:technoapp_qr/constants/controllers.dart';
 import 'package:technoapp_qr/core/router/router_generator.dart';
 import 'package:technoapp_qr/models/language/lnaguage_constant.dart';
 import 'package:technoapp_qr/views/widgets/appbar_design.dart';
+import 'package:technoapp_qr/views/widgets/dialogs/alertDialog.dart';
 import 'package:technoapp_qr/views/widgets/options_widget.dart';
 import '../constants/utils/apptheme.dart';
+import '../main.dart';
 
 class EnterText extends StatelessWidget {
   final TextEditingController _inputController = TextEditingController();
@@ -52,12 +57,51 @@ class EnterText extends StatelessWidget {
                   OptionsWidget(
                       icon: Icons.qr_code,
                       optionText: translation(context).generate_Button_Text,
-                      onTap: () {
-                        if (_inputController.text.isNotEmpty) {
-                          qrProvider.setTexttogenerate(_inputController.text);
-                          navigationController.flowFromhistory.value = false;
-                          navigationController
-                              .navigateToNamed(RouteGenerator.createQr);
+                      onTap: () async {
+
+
+                        PermissionStatus status=  await Permission.storage.request();
+                        if(status.isDenied){
+                          await showDialog(context: context, builder: (context){
+                            return DialogWidget(
+                              title: translation(context).local_Permission_Alert,
+                              description: translation(context).local_Alert_Description,
+                              cancelTap: (){
+                                navigationController.goBack();
+                              },
+                              continueTap: () async {
+                                navigationController.goBack();
+                                await openAppSettings(
+                                );
+                                navigationController.getOffAll(homeRoute);
+                              },
+                            );
+                          });
+                        }
+                        else if(status.isPermanentlyDenied){
+                          await showDialog(context: context, builder: (context){
+                            return DialogWidget(
+                              title: translation(context).local_Permission_Alert,
+                              description: translation(context).local_Alert_Description,
+                              cancelTap: (){
+                                navigationController.goBack();
+                              },
+                              continueTap: () async {
+                                navigationController.goBack();
+                                await openAppSettings(
+                                );
+                                navigationController.getOffAll(RouteGenerator.customDrawer);
+                              },
+                            );
+                          });
+                        }
+                        else if(status.isGranted){
+                          if (_inputController.text.isNotEmpty) {
+                            qrProvider.setTexttogenerate(_inputController.text);
+                            navigationController.flowFromhistory.value = false;
+                            navigationController
+                                .navigateToNamed(RouteGenerator.createQr);
+                          }
                         }
                       }),
                   OptionsWidget(
