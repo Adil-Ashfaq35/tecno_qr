@@ -1,15 +1,11 @@
 import 'dart:async';
 import 'dart:io';
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
+import 'package:technoapp_qr/models/language/lnaguage_constant.dart';
 import 'package:technoapp_qr/views/widgets/appbar_design.dart';
-
 import '../constants/const_settings.dart';
 import '../constants/controllers.dart';
 import '../core/router/router_generator.dart';
@@ -33,7 +29,7 @@ class _DisplayImageState extends State<DisplayImage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBarWidget(
-        title: 'Techno App',
+        title: translation(context).tecno_Code,
         iconButton: IconButton(
           // hoverColor: AppTheme.splashColor,
           // disabledColor: Colors.grey[200],
@@ -53,7 +49,9 @@ class _DisplayImageState extends State<DisplayImage> {
             child: ClipRRect(
               //   borderRadius: BorderRadius.circular(10.r),
               child: Image.file(
-                File(qrScanProvider.imageFile!.path),
+                File(qrScanProvider.fromIntent.value
+                    ? qrScanProvider.sharedFiles![0].path
+                    : qrScanProvider.imageFile!.path),
                 fit: BoxFit.contain,
               ),
             ),
@@ -75,12 +73,16 @@ class _DisplayImageState extends State<DisplayImage> {
 
   checkState() async {
     bool isCompleted = await qrScanProvider.qrScan();
-    isCompleted
-        ? navigationController.getOffAll(RouteGenerator.resultScreen)
-        : Timer(
-            const Duration(seconds: ConstantSettings.imageShowTime),
-            () => ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(content: Text('Qr not found in Image')),
-                ));
+    if (isCompleted) {
+      navigationController.flowFromhistory.value = false;
+      navigationController.getOffAll(RouteGenerator.resultScreen);
+    } else {
+      Timer(
+          const Duration(seconds: ConstantSettings.imageShowTime),
+          () => ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                    content: Text(translation(context).qr_Not_Found_In_Image)),
+              ));
+    }
   }
 }

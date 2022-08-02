@@ -10,10 +10,12 @@ class ResultController extends GetxController {
   RxString resultText = 'NO RESULT!'.obs;
   RxBool isCameraSource = true.obs;
   Rx<BarcodeType> barcodeType = BarcodeType.text.obs;
+  RxBool  isClicked=true.obs;
+
   
   void setResult(var result, var type, bool fromCam) {
 
-    resultText.value = result;
+    resultText.value = result.toString();
     isCameraSource.value = fromCam;
     savetoLocal(resultText.value);
 
@@ -33,5 +35,9 @@ class ResultController extends GetxController {
 
   void savetoLocal(String qrValue) {
     historyController.setToRecord(qrValue, isCameraSource.value);
+  }
+
+  updateState(bool clicked){
+    update();
   }
 }
