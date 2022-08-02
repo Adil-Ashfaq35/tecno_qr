@@ -13,7 +13,7 @@
 // class _ScanQrPageState extends State<ScanQrPage> {
 //   Barcode? result;
 //   QRViewController? controller;
-//   final GlobalKey qrKey = GlobalKey(debugLabel: 'QR');
+//   final GlobalKey qrKey = GlobalKey(debugLabel: 'QR'); 
 
 //   void _onQRViewCreated(QRViewController controller) {
 //     setState(() => this.controller = controller);

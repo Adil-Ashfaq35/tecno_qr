@@ -11,8 +11,8 @@ import 'package:permission_handler/permission_handler.dart';
 import 'package:technoapp_qr/constants/controllers.dart';
 import 'package:technoapp_qr/constants/utils/apptheme.dart';
 import 'package:technoapp_qr/core/router/router_generator.dart';
-import 'package:technoapp_qr/main.dart';
 import 'package:technoapp_qr/models/language/lnaguage_constant.dart';
+import 'package:technoapp_qr/views/result_screen.dart';
 import 'package:technoapp_qr/views/widgets/dialogs/alertDialog.dart';
 
 
@@ -27,52 +27,11 @@ class _ScanQrState extends State<ScanQr> {
   MobileScannerController cameraController = MobileScannerController();
   @override
   void initState() {
-    permission();
+
 
     super.initState();
   }
 
-  permission() async {
-    PermissionStatus;
-    PermissionStatus allow=  await Permission.camera.request();
-    if(allow.isGranted){
-      if (kDebugMode) {
-        print("permission granted");
-      }
-      else{
-        print("permission denied");
-      }
-    }
-    else if (allow.isPermanentlyDenied){
-      if (kDebugMode) {
-        print("persmission denied");
-      }
-      await showDialog(context: context, builder: (context){
-        return DialogWidget(
-          title: translation(context).camera_Permission_Alert,
-          description: translation(context).camera_Alert_Description,
-          cancelTap: (){
-            Get.back();
-          },
-          continueTap: () async {
-            Get.back();
-            await openAppSettings(
-            );
-            navigationController.getOffAll(RouteGenerator.customDrawer);
-          },
-        );
-      });
-    }
-    else if(allow.isDenied){
-               DialogWidget(
-        title:  translation(context).camera_Permission_Alert,
-        description:translation(context).camera_Alert_Description,
-        cancelTap: (){
-          Get.back();
-        },
-        continueTap: () async {
-          Get.back();
-          await openAppSettings();
 
         },
       );

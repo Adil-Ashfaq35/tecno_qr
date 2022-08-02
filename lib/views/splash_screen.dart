@@ -30,7 +30,7 @@ class _SplashScreenState extends State<SplashScreen>
   Future<void> initRouting() async {
     bool isFirstTime = await SharedPref().readBool('isFirsttime');
 
-        !isFirstTime
+        isFirstTime
         ? forFirstTime()
         : navigationController.navigateToNamed(RouteGenerator.customDrawer);
 
@@ -70,7 +70,7 @@ class _SplashScreenState extends State<SplashScreen>
   Future<void> forFirstTime() async {
     bool isnetavailable = await settingController.checkInternet();
     if (isnetavailable) {
-      bool isuserAgreed = false;
+
       showDialog(
 
         context: context,
@@ -80,9 +80,12 @@ class _SplashScreenState extends State<SplashScreen>
           title: 'Privacy Policy Confirmation',
           text: 'Agree',
           descriptions: ConstantSettings.privacydes,
-          onPressed: () {
+          img:const SizedBox.shrink(),
+          onPressed: () async {
             settingController.addDocument();
-            isuserAgreed=true;
+
+                await SharedPref().saveBool('isFirsttime', false);
+
             navigationController.getOffAll(RouteGenerator.customDrawer);
 
 
@@ -99,11 +102,7 @@ class _SplashScreenState extends State<SplashScreen>
           text: 'Retry',
           descriptions:
               '',
-          img: const Icon(
-            Icons.signal_wifi_connected_no_internet_4,
-            color: AppTheme.primaryColor,
-            size: 20,
-          ),
+          img: const SizedBox.shrink(),
           onPressed: () {
             Get.back();
             forFirstTime();
@@ -114,6 +113,6 @@ class _SplashScreenState extends State<SplashScreen>
       //     () => checkState())
     }
 
-    await SharedPref().saveBool('isFirsttime', false);
+
   }
 }
