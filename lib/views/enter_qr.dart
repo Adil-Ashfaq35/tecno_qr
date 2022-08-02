@@ -29,7 +29,7 @@ class EnterText extends StatelessWidget {
         child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             // crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisSize: MainAxisSize.max,
+
             children: [
               Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -41,8 +41,11 @@ class EnterText extends StatelessWidget {
                       fontSize: 25),
                 ),
               ),
-              TextField(
-                inputController: _inputController,
+              Expanded(
+                flex: 1,
+                child: TextField(
+                  inputController: _inputController,
+                ),
               ),
               Column(
                 children: [
@@ -109,20 +112,18 @@ class TextField extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: ConstrainedBox(
                     constraints: BoxConstraints.tight( Size(400.sm, 400.sm)),
-                    child: Expanded(
-                      child: TextFormField(
-                        controller: inputController,
-                        style: const TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 15),
-                        decoration: const InputDecoration(
-                            border: InputBorder.none,
-                            hintText: 'Write text here...'),
-                        keyboardType: TextInputType.multiline,
-                        onSaved: (String? value) {
-                          debugPrint('Value for field  saved as "$value"');
-                        },
-                        maxLines: 20,
-                      ),
+                    child: TextFormField(
+                      controller: inputController,
+                      style: const TextStyle(
+                          fontWeight: FontWeight.bold, fontSize: 15),
+                      decoration: const InputDecoration(
+                          border: InputBorder.none,
+                          hintText: 'Write text here...'),
+                      keyboardType: TextInputType.multiline,
+                      onSaved: (String? value) {
+                        debugPrint('Value for field  saved as "$value"');
+                      },
+                      maxLines: 20,
                     ),
                   ),
                 ))));

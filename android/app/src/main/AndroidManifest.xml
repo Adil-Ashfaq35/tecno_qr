@@ -6,7 +6,7 @@
 
       
    <application
-        android:label="Tecno Code"
+        android:label="TecnoCode"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher"
         android:usesCleartextTraffic="true"

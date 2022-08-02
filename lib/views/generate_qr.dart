@@ -86,9 +86,10 @@ class CreateQrPage extends StatelessWidget {
           title: translation(context).qr_Code,
           iconButton: IconButton(
               onPressed: () {
-                navigationController.flowFromhistory.value?
-                navigationController.goBack():
-                navigationController.getOffAll(RouteGenerator.customDrawer);
+                navigationController.flowFromhistory.value
+                    ? navigationController.goBack()
+                    : navigationController
+                        .getOffAll(RouteGenerator.customDrawer);
               },
               icon: const Icon(Icons.arrow_back))),
       body: SafeArea(
@@ -109,13 +110,12 @@ class CreateQrPage extends StatelessWidget {
             Center(
               child: RepaintBoundary(
                 key: qrKey,
-                child: navigationController.flowFromhistory.value ?
-                Image.file(
+                child: navigationController.flowFromhistory.value
+                    ? Image.file(
                         File(historyController.currentHistoryImage.value),
-                height: 0.4.sh,
-                  width: 0.75.sw,
-
-                )
+                        height: 0.4.sh,
+                        width: 0.75.sw,
+                      )
                     : QrImage(
                         data: qrProvider.texttoGenerate.value,
                         size: 250,
@@ -129,7 +129,15 @@ class CreateQrPage extends StatelessWidget {
               icon: CupertinoIcons.camera,
               optionText: translation(context).download_Button_Text,
               onTap: () {
-                takeScreenShot(context, true);
+                if (behaviourController.isClicked.value == false) {
+                  behaviourController.disableButton();
+                  takeScreenShot(context, true);
+                }
+                else{
+                  if (kDebugMode) {
+                    print("tab is delayed and file is already downloaded");
+                  }
+                }
               },
             ),
             OptionsWidget(

@@ -18,8 +18,8 @@
   "scan_Tree_Item": "Tarama geçmişi",
   "generate_Tree_item":"Geçmiş oluşturun",
   "first_Line":"TecnoCode Version 6.0.1.0",
-  "second_Line":"© 2022 TecnoWays All rights reserved" ,
-  "third_Line":"© 2022-2025 TecnoWays All rights reserved",
+  "second_Line":"TecnoWays All rights reserved" ,
+  "third_Line":"TecnoWays All rights reserved",
   "oK_Button_Text":"TAMAM." ,
   "cancel_Button_Text":"İptal",
   "save_Button_Text": "Kaydet ",
@@ -29,6 +29,7 @@
   "tecno_Code": "Tekno kodu",
   "enter_Qr": "Qr girin",
   "text": "Metin",
+  "help": "Yardım",
   "paste": "yapıştır",
   "qr_Code": "Qr Kodu",
   "history_Screen": "Geçmiş Ekranı",
@@ -37,6 +38,12 @@
   "invalid_Url": "Geçersiz url",
   "result_Text_Type_Is_Not_Url_To_Navigate": "Sonuç Metin türü gezinmek için URL değil",
   "copied": "Kopyalandı",
-  "read_history": "Geçmişi oku"
+  "read_History": "Geçmişi oku",
+  "local_Permission_Alert": "Yerel Depolama İzni Gerekli",
+  "local_Alert_Description": "Bu özelliği etkinleştirmek için yerel depolamaya erişime izin verin veya uygulamayı izinsiz kullanmak için aşağıdaki adımları takip edebilirsiniz:\n1- Kamera uygulamanız aracılığıyla QR Code görüntüsünü yakalayın veya yerel dosyalarınızdan yerel bir görüntü seçin.\n2- Resmi TecnoCode uygulamasına paylaşın.\n3- Sonuç doğrudan TecnoCode uygulamasında görüntülenecektir.",
+  "camera_Permission_Alert":"Kamera İzni Gerekli",
+  "camera_Alert_Description":"Bu özelliği etkinleştirmek için kameraya erişime izin verin veya uygulamayı izinsiz kullanmak için aşağıdaki adımları takip edebilirsiniz:\n1- Kamera uygulamanız aracılığıyla QR Code görüntüsünü yakalayın veya yerel dosyalarınızdan yerel bir görüntü seçin.\n2- Resmi TecnoCode uygulamasına paylaşın.\n3- Sonuç doğrudan TecnoCode uygulamasında görüntülenecektir.",
+  "grant_Access":"Erişim İzni",
+  "cancel":"İptal"
 }
 

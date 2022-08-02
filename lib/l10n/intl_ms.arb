@@ -18,8 +18,8 @@
   "scan_Tree_Item": "Imbas Sejarah",
   "generate_Tree_item":"Menjana Sejarah",
   "first_Line":"TecnoCode Versi 6.0.1.0",
-  "second_Line":"© 2022 TecnoWays Semua hak terpelihara" ,
-  "third_Line":"© 2022-2025 TecnoWays Semua hak terpelihara",
+  "second_Line":"TecnoWays Semua hak terpelihara" ,
+  "third_Line":"TecnoWays Semua hak terpelihara",
   "oK_Button_Text":"okey" ,
   "cancel_Button_Text":"Batal",
   "save_Button_Text": "Jimat",
@@ -29,6 +29,7 @@
   "tecno_Code": "Kod tecno",
   "enter_Qr": "Masukkan Qr",
   "text": "Teks",
+  "help": "Tolong",
   "paste": "tampal",
   "qr_Code": "Qr Code",
   "history_Screen": "Skrin Sejarah",
@@ -37,6 +38,12 @@
   "invalid_Url": "URL tidak sah",
   "result_Text_Type_Is_Not_Url_To_Navigate": "Jenis Teks Hasil bukan Url untuk dinavigasi",
   "copied": "Disalin",
-  "read_history": "Baca sejarah"
+  "read_History": "Baca sejarah",
+  "local_Permission_Alert": "Kebenaran Storan Tempatan Diperlukan",
+  "local_Alert_Description": "Benarkan akses kepada storan setempat untuk mendayakan ciri ini atau anda boleh mengikuti langkah berikut untuk menggunakan aplikasi tanpa kebenaran:\n1- Tangkap imej Kod QR melalui aplikasi kamera anda atau pilih imej tempatan daripada fail tempatan anda.\n2- Kongsi imej ke aplikasi TecnoCode.\n3- Hasilnya akan dipaparkan terus dalam aplikasi TecnoCode.",
+  "camera_Permission_Alert":"Kebenaran Kamera Diperlukan",
+  "camera_Alert_Description":"Benarkan akses kepada kamera untuk mendayakan ciri ini atau anda boleh mengikuti langkah berikut untuk menggunakan aplikasi tanpa kebenaran:\n1- Tangkap imej Kod QR melalui aplikasi kamera anda atau pilih imej tempatan daripada fail tempatan anda.\n2- Kongsi imej ke aplikasi TecnoCode.\n3- Hasilnya akan dipaparkan terus dalam aplikasi TecnoCode.",
+  "grant_Access":"Berikan Akses",
+  "cancel":"Batal"
 }
 

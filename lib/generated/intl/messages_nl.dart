@@ -23,6 +23,11 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "about": MessageLookupByLibrary.simpleMessage("Over"),
+        "camera_Alert_Description": MessageLookupByLibrary.simpleMessage(
+            "Sta toegang tot de camera toe om deze functie in te schakelen of u kunt de volgende stappen volgen om de applicatie zonder toestemming te gebruiken:\n1- Leg de QR-codeafbeelding vast via uw cameratoepassing of selecteer een lokale afbeelding uit uw lokale bestanden.\n2- Deel de afbeelding met de TecnoCode-toepassing.\n3- Het resultaat wordt direct weergegeven in de TecnoCode-applicatie."),
+        "camera_Permission_Alert": MessageLookupByLibrary.simpleMessage(
+            "Cameratoestemming is vereist"),
+        "cancel": MessageLookupByLibrary.simpleMessage("Annuleren"),
         "cancel_Button_Text": MessageLookupByLibrary.simpleMessage("Annuleren"),
         "copied": MessageLookupByLibrary.simpleMessage("Gekopieerd"),
         "copy_Button_Text": MessageLookupByLibrary.simpleMessage("Kopiëren"),
@@ -36,12 +41,18 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Genereer uit tekst"),
         "generate_Tree_item":
             MessageLookupByLibrary.simpleMessage("Genereer geschiedenis"),
+        "grant_Access":
+            MessageLookupByLibrary.simpleMessage("Toegang verlenen"),
         "history": MessageLookupByLibrary.simpleMessage("Geschiedenis"),
         "history_Screen":
             MessageLookupByLibrary.simpleMessage("Geschiedenisscherm"),
         "home": MessageLookupByLibrary.simpleMessage("Homepage"),
         "invalid_Url": MessageLookupByLibrary.simpleMessage("Ongeldige url"),
         "language": MessageLookupByLibrary.simpleMessage("Taal"),
+        "local_Alert_Description": MessageLookupByLibrary.simpleMessage(
+            "Sta toegang tot lokale opslag toe om deze functie in te schakelen of u kunt de volgende stappen volgen om de applicatie zonder toestemming te gebruiken:\n1- Leg de QR-codeafbeelding vast via uw cameratoepassing of selecteer een lokale afbeelding uit uw lokale bestanden.\n2- Deel de afbeelding met de TecnoCode-toepassing.\n3- Het resultaat wordt direct weergegeven in de TecnoCode-applicatie."),
+        "local_Permission_Alert": MessageLookupByLibrary.simpleMessage(
+            "Toestemming voor lokale opslag is vereist"),
         "navigate_Button_Text": MessageLookupByLibrary.simpleMessage("Ga naar"),
         "oK_Button_Text": MessageLookupByLibrary.simpleMessage("OK"),
         "paste": MessageLookupByLibrary.simpleMessage("plakken"),
@@ -51,7 +62,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Qr niet gevonden in afbeelding"),
         "read_Button_Text":
             MessageLookupByLibrary.simpleMessage("Lezen van lokale afbeelding"),
-        "read_history":
+        "read_History":
             MessageLookupByLibrary.simpleMessage("Geschiedenis lezen"),
         "result_Language_Label":
             MessageLookupByLibrary.simpleMessage("Resultaat"),
@@ -66,7 +77,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "scan_Tree_Item":
             MessageLookupByLibrary.simpleMessage("Geschiedenis scannen"),
         "second_Line": MessageLookupByLibrary.simpleMessage(
-            "© 2022 TecnoWays All rights reserved"),
+            "TecnoWays All rights reserved"),
         "share_App": MessageLookupByLibrary.simpleMessage("App delen"),
         "share_Button_Text": MessageLookupByLibrary.simpleMessage("Deel"),
         "shown_Only_On_The_Early_First_Time": MessageLookupByLibrary.simpleMessage(
@@ -76,6 +87,6 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Gebruiksvoorwaarden"),
         "text": MessageLookupByLibrary.simpleMessage("Tekst"),
         "third_Line": MessageLookupByLibrary.simpleMessage(
-            "© 2022-2025 TecnoWays All rights reserved")
+            "TecnoWays All rights reserved")
       };
 }
