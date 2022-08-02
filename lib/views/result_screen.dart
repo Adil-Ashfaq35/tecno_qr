@@ -57,10 +57,10 @@ class ResultScreen extends StatelessWidget {
                         icon: Icons.link,
                         optionText: translation(context).navigate_Button_Text,
                         onTap: () {
-                          bool _validURL =
+                          bool validURL =
                               Uri.parse(resultController.resultText.value)
                                   .isAbsolute;
-                          _validURL
+                          validURL
                               ? resultController.navigatetoLink()
                               : Get.snackbar(
                                   translation(context).invalid_Url,
