@@ -230,20 +230,20 @@ class S {
     );
   }
 
-  /// `© 2022 TecnoWays All rights reserved`
+  /// ` TecnoWays All rights reserved`
   String get second_Line {
     return Intl.message(
-      '© 2022 TecnoWays All rights reserved',
+      ' TecnoWays All rights reserved',
       name: 'second_Line',
       desc: '',
       args: [],
     );
   }
 
-  /// `© 2022-2025 TecnoWays All rights reserved`
+  /// `TecnoWays All rights reserved`
   String get third_Line {
     return Intl.message(
-      '© 2022-2025 TecnoWays All rights reserved',
+      'TecnoWays All rights reserved',
       name: 'third_Line',
       desc: '',
       args: [],
@@ -310,10 +310,10 @@ class S {
     );
   }
 
-  /// `Tecno code`
+  /// `TecnoCode`
   String get tecno_Code {
     return Intl.message(
-      'Tecno code',
+      'TecnoCode',
       name: 'tecno_Code',
       desc: '',
       args: [],
@@ -421,10 +421,70 @@ class S {
   }
 
   /// `Read History`
-  String get read_history {
+  String get read_History {
     return Intl.message(
       'Read History',
-      name: 'read_history',
+      name: 'read_History',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Local Storage Permission is Required`
+  String get local_Permission_Alert {
+    return Intl.message(
+      'Local Storage Permission is Required',
+      name: 'local_Permission_Alert',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Allow access to local storage to enable this feature or you can follow the following steps to use the application without permission:\n1- Capture the QR Code image via your camera application or select a local image from your local files.\n2- Share the image to TecnoCode application.\n3- The result will be displayed directly in the TecnoCode application.`
+  String get local_Alert_Description {
+    return Intl.message(
+      'Allow access to local storage to enable this feature or you can follow the following steps to use the application without permission:\n1- Capture the QR Code image via your camera application or select a local image from your local files.\n2- Share the image to TecnoCode application.\n3- The result will be displayed directly in the TecnoCode application.',
+      name: 'local_Alert_Description',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Camera Permission is Required`
+  String get camera_Permission_Alert {
+    return Intl.message(
+      'Camera Permission is Required',
+      name: 'camera_Permission_Alert',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Allow access to camera to enable this feature or you can follow the following steps to use the application without permission:\n1- Capture the QR Code image via your camera application or select a local image from your local files.\n2- Share the image to TecnoCode application.\n3- The result will be displayed directly in the TecnoCode application.`
+  String get camera_Alert_Description {
+    return Intl.message(
+      'Allow access to camera to enable this feature or you can follow the following steps to use the application without permission:\n1- Capture the QR Code image via your camera application or select a local image from your local files.\n2- Share the image to TecnoCode application.\n3- The result will be displayed directly in the TecnoCode application.',
+      name: 'camera_Alert_Description',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Grant Access`
+  String get grant_Access {
+    return Intl.message(
+      'Grant Access',
+      name: 'grant_Access',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cancel`
+  String get cancel {
+    return Intl.message(
+      'Cancel',
+      name: 'cancel',
       desc: '',
       args: [],
     );

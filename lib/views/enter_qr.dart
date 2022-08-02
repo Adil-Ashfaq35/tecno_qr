@@ -29,7 +29,7 @@ class EnterText extends StatelessWidget {
         child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             // crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisSize: MainAxisSize.max,
+
             children: [
               Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -42,6 +42,10 @@ class EnterText extends StatelessWidget {
                 ),
               ),
               Expanded(
+<<<<<<< HEAD
+=======
+                flex: 1,
+>>>>>>> 8835fe954dfab7fffcfb7ae46118687f34cf617a
                 child: TextField(
                   inputController: _inputController,
                 ),

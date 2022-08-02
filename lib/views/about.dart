@@ -18,6 +18,8 @@ class AboutScreen extends StatefulWidget {
 
 class _AboutScreenState extends State<AboutScreen> {
 
+
+
   PackageInfo _packageInfo = PackageInfo(
     appName: 'Unknown',
     packageName: 'Unknown',
@@ -37,6 +39,9 @@ class _AboutScreenState extends State<AboutScreen> {
   }
   @override
   Widget build(BuildContext context) {
+    DateTime Year =DateTime(DateTime.now().year);
+    String currentYear =Year.toString().substring(0,4) ;
+    int NYear =int.parse(currentYear)+1;
 
     return Scaffold(
       appBar:  AppBarWidget(
@@ -46,42 +51,99 @@ class _AboutScreenState extends State<AboutScreen> {
                 navigationController.goBack();
               },
               icon: const Icon(Icons.arrow_back))),
-      body: Column(
+      body:currentYear=="2022"?
+      Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
         children:  [
           SizedBox(
-            height: 0.03.sh,
+            height: 0.3.sh,
           ),
           Padding(
             padding: const EdgeInsets.all(10.0),
-            child:Column(
+            child:
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                Center(
+                  child: Text("© 2022",
+                    style: Theme.of(context).textTheme.headline1?.copyWith(
+                      color: AppTheme.darkTextColor,
+                      fontSize: 25.sm,
+                      fontWeight: FontWeight.w800,
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 20.sm,
+                ),
                 Text(translation(context).second_Line,
                   style: Theme.of(context).textTheme.headline3?.copyWith(
                     color: AppTheme.darkTextColor,
                     fontSize: 20.sm,
                   ),
                 ),
-                Text(translation(context).third_Line,
-                  style: Theme.of(context).textTheme.headline3?.copyWith(
+                SizedBox(
+                  height: 20.sm,
+                ),
+                Center(
+                  child:Text("TecnoCode Version \n  ${_packageInfo.version}",textAlign: TextAlign.center,style: Theme.of(context).textTheme.bodyText1?.copyWith(
                     color: AppTheme.darkTextColor,
                     fontSize: 20.sm,
-                  ),
+                    fontWeight: FontWeight.bold,
+                  ),),
+                ),
+                SizedBox(
+                  height: 50.sm,
                 ),
               ],
             )
           ),
-          SizedBox(
-            height: 0.04.sh,
-          ),
-          Center(
-         child:Text("TecnoCode Version:  ${_packageInfo.version}",style: Theme.of(context).textTheme.bodyText1?.copyWith(
-           color: AppTheme.darkTextColor,
-           fontSize: 20.sm,
-           fontWeight: FontWeight.bold,
-         ),),
-       )
         ],
-      ),
+      ):Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children:  [
+          SizedBox(
+            height: 0.3.sh,
+          ),
+          Padding(
+              padding: const EdgeInsets.all(10.0),
+              child:
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text("© 2022-${NYear.toString()}",
+                    style: Theme.of(context).textTheme.headline3?.copyWith(
+                      color: AppTheme.darkTextColor,
+                      fontSize: 25.sm,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 20.sm,
+                  ),
+                  Text(" ${translation(context).third_Line}",
+                    style: Theme.of(context).textTheme.headline3?.copyWith(
+                      color: AppTheme.darkTextColor,
+                      fontSize: 20.sm,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 20.sm,
+                  ),
+                  Center(
+                    child:Text("TecnoCode Version \n  ${_packageInfo.version}",textAlign: TextAlign.center,style: Theme.of(context).textTheme.bodyText1?.copyWith(
+                      color: AppTheme.darkTextColor,
+                      fontSize: 20.sm,
+                      fontWeight: FontWeight.bold,
+                    ),),
+                  ),
+                ],
+              )
+          ),
+
+
+        ],
+      )
     );
   }
 }

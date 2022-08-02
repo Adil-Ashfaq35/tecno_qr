@@ -1,20 +1,36 @@
 
 
-import 'package:firebase_analytics/firebase_analytics.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:lottie/lottie.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
+import 'package:permission_handler/permission_handler.dart';
 import 'package:technoapp_qr/constants/controllers.dart';
 import 'package:technoapp_qr/constants/utils/apptheme.dart';
 import 'package:technoapp_qr/core/router/router_generator.dart';
 import 'package:technoapp_qr/models/language/lnaguage_constant.dart';
+import 'package:technoapp_qr/views/result_screen.dart';
+import 'package:technoapp_qr/views/widgets/dialogs/alertDialog.dart';
 
 
 
-class ScanQr extends StatelessWidget {
+class ScanQr extends StatefulWidget {
+  @override
+  State<ScanQr> createState() => _ScanQrState();
+}
+
+
+class _ScanQrState extends State<ScanQr> {
   MobileScannerController cameraController = MobileScannerController();
+  @override
+  void initState() {
 
+    
+    super.initState();
+  }
 
 
 

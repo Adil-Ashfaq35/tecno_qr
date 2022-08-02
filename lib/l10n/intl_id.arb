@@ -18,8 +18,8 @@
   "scan_Tree_Item": "Pindai Riwayat",
   "generate_Tree_item":"Hasilkan Riwayat",
   "first_Line":"TecnoCode Versi 6.0.1.0",
-  "second_Line":"© 2022 TecnoWays Semua hak dilindungi undang-undang" ,
-  "third_Line":"© 2022-2025 TecnoWays Semua hak dilindungi undang-undang",
+  "second_Line":"TecnoWays Semua hak dilindungi undang-undang" ,
+  "third_Line":"TecnoWays Semua hak dilindungi undang-undang",
   "oK_Button_Text":"OK" ,
   "cancel_Button_Text":"Batal",
   "save_Button_Text": "Simpan ",
@@ -30,6 +30,7 @@
   "enter_Qr": "Masukkan Qr",
   "text": "Teks",
   "paste": "tempel",
+  "help": "Bantuan",
   "qr_Code": "Kode QR",
   "history_Screen": "Layar Riwayat",
   "qr_Not_Found_In_Image": "Qr tidak ditemukan dalam gambar",
@@ -37,6 +38,12 @@
   "invalid_Url": "url tidak valid",
   "result_Text_Type_Is_Not_Url_To_Navigate": "Jenis Teks Hasil bukan Url untuk dinavigasi",
   "copied": "Disalin",
-  "read_history": "Baca sejarah"
+  "read_history": "Baca sejarah",
+  "local_Permission_Alert": "Izin Penyimpanan Lokal Diperlukan",
+  "local_Alert_Description": "Izinkan akses ke penyimpanan lokal untuk mengaktifkan fitur ini atau Anda dapat mengikuti langkah-langkah berikut untuk menggunakan aplikasi tanpa izin:\n1- Tangkap gambar Kode QR melalui aplikasi kamera Anda atau pilih gambar lokal dari file lokal Anda.\n2- Bagikan gambar ke aplikasi TecnoCode.\n3- Hasilnya akan langsung ditampilkan di aplikasi TecnoCode.",
+  "camera_Permission_Alert":"Izin Kamera Diperlukan",
+  "camera_Alert_Description":"Izinkan akses ke kamera untuk mengaktifkan fitur ini atau Anda dapat mengikuti langkah-langkah berikut untuk menggunakan aplikasi tanpa izin:\n1- Tangkap gambar Kode QR melalui aplikasi kamera Anda atau pilih gambar lokal dari file lokal Anda.\n2- Bagikan gambar ke aplikasi TecnoCode.\n3- Hasilnya akan langsung ditampilkan di aplikasi TecnoCode.",
+  "grant_Access":"Berikan Akses",
+  "cancel":"Membatalkan"
 }
 

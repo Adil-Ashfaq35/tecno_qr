@@ -17,6 +17,7 @@ import 'package:technoapp_qr/core/controllers/result_controller.dart';
 import 'package:technoapp_qr/core/controllers/settings_controller.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'constants/utils/apptheme.dart';
+import 'core/controllers/behaviourController.dart';
 import 'core/router/router_generator.dart';
 import 'models/language/lnaguage_constant.dart';
 import 'models/qr_model.dart';
@@ -59,6 +60,7 @@ void initControllers() {
   Get.put(ResultController());
   Get.put(QrScanProvider());
   Get.put(HistoryController());
+  Get.put(BehaviourController());
 }
 
 class MyApp extends StatefulWidget {

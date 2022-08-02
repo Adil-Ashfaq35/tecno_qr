@@ -23,6 +23,11 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "about": MessageLookupByLibrary.simpleMessage("Tentang"),
+        "camera_Alert_Description": MessageLookupByLibrary.simpleMessage(
+            "Izinkan akses ke kamera untuk mengaktifkan fitur ini atau Anda dapat mengikuti langkah-langkah berikut untuk menggunakan aplikasi tanpa izin:\n1- Tangkap gambar Kode QR melalui aplikasi kamera Anda atau pilih gambar lokal dari file lokal Anda.\n2- Bagikan gambar ke aplikasi TecnoCode.\n3- Hasilnya akan langsung ditampilkan di aplikasi TecnoCode."),
+        "camera_Permission_Alert":
+            MessageLookupByLibrary.simpleMessage("Izin Kamera Diperlukan"),
+        "cancel": MessageLookupByLibrary.simpleMessage("Membatalkan"),
         "cancel_Button_Text": MessageLookupByLibrary.simpleMessage("Batal"),
         "copied": MessageLookupByLibrary.simpleMessage("Disalin"),
         "copy_Button_Text": MessageLookupByLibrary.simpleMessage("Salin"),
@@ -36,11 +41,17 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Hasilkan dari Teks"),
         "generate_Tree_item":
             MessageLookupByLibrary.simpleMessage("Hasilkan Riwayat"),
+        "grant_Access": MessageLookupByLibrary.simpleMessage("Berikan Akses"),
+        "help": MessageLookupByLibrary.simpleMessage("Bantuan"),
         "history": MessageLookupByLibrary.simpleMessage("Sejarah"),
         "history_Screen": MessageLookupByLibrary.simpleMessage("Layar Riwayat"),
         "home": MessageLookupByLibrary.simpleMessage("Rumah"),
         "invalid_Url": MessageLookupByLibrary.simpleMessage("url tidak valid"),
         "language": MessageLookupByLibrary.simpleMessage("Bahasa"),
+        "local_Alert_Description": MessageLookupByLibrary.simpleMessage(
+            "Izinkan akses ke penyimpanan lokal untuk mengaktifkan fitur ini atau Anda dapat mengikuti langkah-langkah berikut untuk menggunakan aplikasi tanpa izin:\n1- Tangkap gambar Kode QR melalui aplikasi kamera Anda atau pilih gambar lokal dari file lokal Anda.\n2- Bagikan gambar ke aplikasi TecnoCode.\n3- Hasilnya akan langsung ditampilkan di aplikasi TecnoCode."),
+        "local_Permission_Alert": MessageLookupByLibrary.simpleMessage(
+            "Izin Penyimpanan Lokal Diperlukan"),
         "navigate_Button_Text":
             MessageLookupByLibrary.simpleMessage("Navigasi"),
         "oK_Button_Text": MessageLookupByLibrary.simpleMessage("OK"),
@@ -52,7 +63,6 @@ class MessageLookup extends MessageLookupByLibrary {
             "Qr tidak ditemukan dalam gambar"),
         "read_Button_Text":
             MessageLookupByLibrary.simpleMessage("Baca dari Gambar Lokal"),
-        "read_history": MessageLookupByLibrary.simpleMessage("Baca sejarah"),
         "result_Language_Label": MessageLookupByLibrary.simpleMessage("Hasil"),
         "result_Screen": MessageLookupByLibrary.simpleMessage("Layar Hasil"),
         "result_Text_Type_Is_Not_Url_To_Navigate":
@@ -64,7 +74,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "scan_Tree_Item":
             MessageLookupByLibrary.simpleMessage("Pindai Riwayat"),
         "second_Line": MessageLookupByLibrary.simpleMessage(
-            "© 2022 TecnoWays Semua hak dilindungi undang-undang"),
+            "TecnoWays Semua hak dilindungi undang-undang"),
         "share_App": MessageLookupByLibrary.simpleMessage("Bagikan Aplikasi"),
         "share_Button_Text": MessageLookupByLibrary.simpleMessage("Bagikan"),
         "shown_Only_On_The_Early_First_Time": MessageLookupByLibrary.simpleMessage(
@@ -74,6 +84,6 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Ketentuan penggunaan"),
         "text": MessageLookupByLibrary.simpleMessage("Teks"),
         "third_Line": MessageLookupByLibrary.simpleMessage(
-            "© 2022-2025 TecnoWays Semua hak dilindungi undang-undang")
+            "TecnoWays Semua hak dilindungi undang-undang")
       };
 }

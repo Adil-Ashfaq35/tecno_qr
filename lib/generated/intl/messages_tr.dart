@@ -23,6 +23,11 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "about": MessageLookupByLibrary.simpleMessage("Hakkında"),
+        "camera_Alert_Description": MessageLookupByLibrary.simpleMessage(
+            "Bu özelliği etkinleştirmek için kameraya erişime izin verin veya uygulamayı izinsiz kullanmak için aşağıdaki adımları takip edebilirsiniz:\n1- Kamera uygulamanız aracılığıyla QR Code görüntüsünü yakalayın veya yerel dosyalarınızdan yerel bir görüntü seçin.\n2- Resmi TecnoCode uygulamasına paylaşın.\n3- Sonuç doğrudan TecnoCode uygulamasında görüntülenecektir."),
+        "camera_Permission_Alert":
+            MessageLookupByLibrary.simpleMessage("Kamera İzni Gerekli"),
+        "cancel": MessageLookupByLibrary.simpleMessage("İptal"),
         "cancel_Button_Text": MessageLookupByLibrary.simpleMessage("İptal"),
         "copied": MessageLookupByLibrary.simpleMessage("Kopyalandı"),
         "copy_Button_Text": MessageLookupByLibrary.simpleMessage("kopyala"),
@@ -35,11 +40,17 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Metinden oluştur"),
         "generate_Tree_item":
             MessageLookupByLibrary.simpleMessage("Geçmiş oluşturun"),
+        "grant_Access": MessageLookupByLibrary.simpleMessage("Erişim İzni"),
+        "help": MessageLookupByLibrary.simpleMessage("Yardım"),
         "history": MessageLookupByLibrary.simpleMessage("Tarih"),
         "history_Screen": MessageLookupByLibrary.simpleMessage("Geçmiş Ekranı"),
         "home": MessageLookupByLibrary.simpleMessage("Anasayfa"),
         "invalid_Url": MessageLookupByLibrary.simpleMessage("Geçersiz url"),
         "language": MessageLookupByLibrary.simpleMessage("Dil"),
+        "local_Alert_Description": MessageLookupByLibrary.simpleMessage(
+            "Bu özelliği etkinleştirmek için yerel depolamaya erişime izin verin veya uygulamayı izinsiz kullanmak için aşağıdaki adımları takip edebilirsiniz:\n1- Kamera uygulamanız aracılığıyla QR Code görüntüsünü yakalayın veya yerel dosyalarınızdan yerel bir görüntü seçin.\n2- Resmi TecnoCode uygulamasına paylaşın.\n3- Sonuç doğrudan TecnoCode uygulamasında görüntülenecektir."),
+        "local_Permission_Alert":
+            MessageLookupByLibrary.simpleMessage("Yerel Depolama İzni Gerekli"),
         "navigate_Button_Text":
             MessageLookupByLibrary.simpleMessage("Şuraya gidin"),
         "oK_Button_Text": MessageLookupByLibrary.simpleMessage("TAMAM."),
@@ -51,7 +62,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Qr resimde bulunamadı"),
         "read_Button_Text":
             MessageLookupByLibrary.simpleMessage("Yerel görüntüden okuma"),
-        "read_history": MessageLookupByLibrary.simpleMessage("Geçmişi oku"),
+        "read_History": MessageLookupByLibrary.simpleMessage("Geçmişi oku"),
         "result_Language_Label": MessageLookupByLibrary.simpleMessage("Sonuç"),
         "result_Screen": MessageLookupByLibrary.simpleMessage("Sonuç Ekranı"),
         "result_Text_Type_Is_Not_Url_To_Navigate":
@@ -63,7 +74,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "scan_Tree_Item":
             MessageLookupByLibrary.simpleMessage("Tarama geçmişi"),
         "second_Line": MessageLookupByLibrary.simpleMessage(
-            "© 2022 TecnoWays All rights reserved"),
+            "TecnoWays All rights reserved"),
         "share_App": MessageLookupByLibrary.simpleMessage("Uygulamayı Paylaş"),
         "share_Button_Text": MessageLookupByLibrary.simpleMessage("Paylaş"),
         "shown_Only_On_The_Early_First_Time": MessageLookupByLibrary.simpleMessage(
@@ -73,6 +84,6 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Kullanım Koşulları"),
         "text": MessageLookupByLibrary.simpleMessage("Metin"),
         "third_Line": MessageLookupByLibrary.simpleMessage(
-            "© 2022-2025 TecnoWays All rights reserved")
+            "TecnoWays All rights reserved")
       };
 }

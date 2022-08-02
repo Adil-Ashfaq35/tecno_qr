@@ -23,6 +23,11 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "about": MessageLookupByLibrary.simpleMessage("Acerca de"),
+        "camera_Alert_Description": MessageLookupByLibrary.simpleMessage(
+            "Permita el acceso a la cámara para habilitar esta función o puede seguir los siguientes pasos para usar la aplicación sin permiso:\n1- Capture la imagen del código QR a través de la aplicación de su cámara o seleccione una imagen local de sus archivos locales.\n2- Comparte la imagen en la aplicación TecnoCode.\n3- El resultado se visualizará directamente en la aplicación TecnoCode."),
+        "camera_Permission_Alert": MessageLookupByLibrary.simpleMessage(
+            "Se requiere permiso de cámara"),
+        "cancel": MessageLookupByLibrary.simpleMessage("Cancelar"),
         "cancel_Button_Text": MessageLookupByLibrary.simpleMessage("Cancelar"),
         "copied": MessageLookupByLibrary.simpleMessage("Copiado"),
         "copy_Button_Text": MessageLookupByLibrary.simpleMessage("Copiar"),
@@ -36,13 +41,18 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Generar desde el texto"),
         "generate_Tree_item":
             MessageLookupByLibrary.simpleMessage("Generar historial"),
-        "help": MessageLookupByLibrary.simpleMessage("ayuda"),
+        "grant_Access": MessageLookupByLibrary.simpleMessage("Conceder acceso"),
+        "help": MessageLookupByLibrary.simpleMessage("Ayuda"),
         "history": MessageLookupByLibrary.simpleMessage("Historia"),
         "history_Screen":
             MessageLookupByLibrary.simpleMessage("Pantalla de historial"),
         "home": MessageLookupByLibrary.simpleMessage("Inicio"),
         "invalid_Url": MessageLookupByLibrary.simpleMessage("URL no válida"),
         "language": MessageLookupByLibrary.simpleMessage("Idioma"),
+        "local_Alert_Description": MessageLookupByLibrary.simpleMessage(
+            "Permita el acceso al almacenamiento local para habilitar esta función o puede seguir los siguientes pasos para usar la aplicación sin permiso:\n1- Capture la imagen del código QR a través de la aplicación de su cámara o seleccione una imagen local de sus archivos locales.\n2- Comparte la imagen en la aplicación TecnoCode.\n3- El resultado se visualizará directamente en la aplicación TecnoCode."),
+        "local_Permission_Alert": MessageLookupByLibrary.simpleMessage(
+            "Se requiere permiso de almacenamiento local"),
         "navigate_Button_Text": MessageLookupByLibrary.simpleMessage("Navegue"),
         "oK_Button_Text": MessageLookupByLibrary.simpleMessage("OK"),
         "paste": MessageLookupByLibrary.simpleMessage("pegar"),
@@ -53,7 +63,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Qr no encontrado en la imagen"),
         "read_Button_Text":
             MessageLookupByLibrary.simpleMessage("Leer desde una imagen local"),
-        "read_history": MessageLookupByLibrary.simpleMessage("Leer historial"),
+        "read_History": MessageLookupByLibrary.simpleMessage("Leer historial"),
         "result_Language_Label":
             MessageLookupByLibrary.simpleMessage("Resultado"),
         "result_Screen":
@@ -67,7 +77,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "scan_Tree_Item":
             MessageLookupByLibrary.simpleMessage("Escanear el historial"),
         "second_Line": MessageLookupByLibrary.simpleMessage(
-            "2022 TecnoWays Todos los derechos reservados"),
+            "TecnoWays Todos los derechos reservados"),
         "share_App":
             MessageLookupByLibrary.simpleMessage("Compartir aplicación"),
         "share_Button_Text": MessageLookupByLibrary.simpleMessage("Compartir"),
@@ -78,6 +88,6 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Condiciones de uso"),
         "text": MessageLookupByLibrary.simpleMessage("Texto"),
         "third_Line": MessageLookupByLibrary.simpleMessage(
-            "© 2022-2025 TecnoWays Todos los derechos reservados")
+            "TecnoWays Todos los derechos reservados")
       };
 }
