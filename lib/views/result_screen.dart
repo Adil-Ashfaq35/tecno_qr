@@ -54,6 +54,7 @@ class _ResultScreenState extends State<ResultScreen> {
           continueTap: () async {
             Get.back();
               await openAppSettings();
+            navigationController.getOffAll(RouteGenerator.customDrawer);
 
           },
         );

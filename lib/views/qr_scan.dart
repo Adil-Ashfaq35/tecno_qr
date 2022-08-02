@@ -11,8 +11,8 @@ import 'package:permission_handler/permission_handler.dart';
 import 'package:technoapp_qr/constants/controllers.dart';
 import 'package:technoapp_qr/constants/utils/apptheme.dart';
 import 'package:technoapp_qr/core/router/router_generator.dart';
+import 'package:technoapp_qr/main.dart';
 import 'package:technoapp_qr/models/language/lnaguage_constant.dart';
-import 'package:technoapp_qr/views/result_screen.dart';
 import 'package:technoapp_qr/views/widgets/dialogs/alertDialog.dart';
 
 
@@ -28,7 +28,7 @@ class _ScanQrState extends State<ScanQr> {
   @override
   void initState() {
     permission();
-    // TODO: implement initState
+
     super.initState();
   }
 
@@ -56,16 +56,17 @@ class _ScanQrState extends State<ScanQr> {
           },
           continueTap: () async {
             Get.back();
-            await openAppSettings();
-
+            await openAppSettings(
+            );
+            navigationController.getOffAll(RouteGenerator.customDrawer);
           },
         );
       });
     }
     else if(allow.isDenied){
-      await  DialogWidget(
+               DialogWidget(
         title:  translation(context).camera_Permission_Alert,
-        description:  translation(context).camera_Alert_Description,
+        description:translation(context).camera_Alert_Description,
         cancelTap: (){
           Get.back();
         },

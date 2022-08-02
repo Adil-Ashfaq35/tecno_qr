@@ -74,13 +74,13 @@ class MyDialog {
 
 class CustomDialogBox extends StatefulWidget {
   final String title, descriptions, text;
-  final Widget img;
+  final Widget? img;
   final VoidCallback onPressed;
 
   const CustomDialogBox({
     Key? key,
     required this.text,
-    required this.img,
+    this.img,
     required this.onPressed,
     required this.title,
     required this.descriptions,
@@ -171,27 +171,32 @@ class _CustomDialogBoxState extends State<CustomDialogBox> {
           //   ],
           // ),
         ),
-        Positioned(
-          left: 20,
-          right: 20,
-          child: CircleAvatar(
-            backgroundColor: Colors.transparent,
-            radius: Constants.avatarRadius,
-            child: ClipRRect(
-              borderRadius: const BorderRadius.all(
-                  Radius.circular(Constants.avatarRadius)),
-              child: widget.img,
-            ),
-          ),
-        ),
-          Align(
-          alignment: Alignment.bottomLeft,
+        // Positioned(
+        //   left: 20,
+        //   right: 20,
+        //   child: CircleAvatar(
+        //     backgroundColor: Colors.transparent,
+        //     radius: Constants.avatarRadius,
+        //     child: ClipRRect(
+        //       borderRadius: const BorderRadius.all(
+        //           Radius.circular(Constants.avatarRadius)),
+        //       child: widget.img,
+        //     ),
+        //   ),
+        // ),
+          Positioned(
+          right: 6,
+          bottom: 0,
           child: FlatButton(
               color: AppTheme.primaryColor,
               onPressed: widget.onPressed,
+              shape: RoundedRectangleBorder(side: const BorderSide(
+                  width: 1,
+                  style: BorderStyle.solid
+              ), borderRadius: BorderRadius.circular(50)),
               child: Text(
                 widget.text,
-                style: const TextStyle(fontSize: 12, color: Colors.white),
+                style: const TextStyle(fontSize: 15, color: Colors.white),
               )),
         ),
 

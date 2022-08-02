@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -31,7 +33,28 @@ class _CustomDrawerState extends State<CustomDrawer>
     animationController = AnimationController(
         vsync: this, duration: const Duration(milliseconds: 250));
   }
-
+  Future<bool> _onWillPop() async {
+    return (await showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: const Text('Are you sure?'),
+        content: const Text('Do you want to exit an App'),
+        actions: <Widget>[
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(false), //<-- SEE HERE
+            child: const Text('No'),
+          ),
+          TextButton(
+            onPressed: () {
+              exit(0);
+         }, // <-- SEE HERE
+            child: const Text('Yes'),
+          ),
+        ],
+      ),
+    )) ??
+        false;
+  }
   @override
   Widget build(BuildContext context) {
     Widget _buildDrawer() => Drawer(
@@ -136,18 +159,21 @@ class _CustomDrawerState extends State<CustomDrawer>
           ),
         );
 
-    Widget _buildHome() => Container(
-        decoration: BoxDecoration(boxShadow: [
-          BoxShadow(
-            color: Colors.black45.withOpacity(0.25),
-            spreadRadius: 10,
-            blurRadius: 7,
-            offset: const Offset(0, 3), // changes position of shadow
-          ),
-        ], borderRadius: BorderRadius.circular(25.r)),
-        child: HomeScreen(
-          animation: toggleAnimation,
-        ));
+    Widget _buildHome() => WillPopScope(
+      onWillPop:_onWillPop,
+      child: Container(
+          decoration: BoxDecoration(boxShadow: [
+            BoxShadow(
+              color: Colors.black45.withOpacity(0.25),
+              spreadRadius: 10,
+              blurRadius: 7,
+              offset: const Offset(0, 3), // changes position of shadow
+            ),
+          ], borderRadius: BorderRadius.circular(25.r)),
+          child: HomeScreen(
+            animation: toggleAnimation,
+          )),
+    );
     return ScreenUtilInit(
       builder: (context, widget) => Scaffold(
         backgroundColor: AppTheme.lightBackgroundColor,

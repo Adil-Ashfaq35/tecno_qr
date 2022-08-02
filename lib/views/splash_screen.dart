@@ -30,7 +30,7 @@ class _SplashScreenState extends State<SplashScreen>
   Future<void> initRouting() async {
     bool isFirstTime = await SharedPref().readBool('isFirsttime');
 
-        isFirstTime
+        !isFirstTime
         ? forFirstTime()
         : navigationController.navigateToNamed(RouteGenerator.customDrawer);
 
@@ -80,11 +80,6 @@ class _SplashScreenState extends State<SplashScreen>
           title: 'Privacy Policy Confirmation',
           text: 'Agree',
           descriptions: ConstantSettings.privacydes,
-          img: const Icon(
-              Icons.privacy_tip_outlined,
-            color: AppTheme.primaryColor,
-            size: 100,
-          ),
           onPressed: () {
             settingController.addDocument();
             isuserAgreed=true;
