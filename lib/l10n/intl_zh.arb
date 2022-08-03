@@ -18,15 +18,15 @@
   "scan_Tree_Item": "扫描历史记录",
   "generate_Tree_item":"生成历史记录",
   "first_Line":"TecnoCode 6.0.1.0 版",
-  "second_Line":"TecnoWays 保留所有权利" ,
-  "third_Line":"TecnoWays 保留所有权利。",
+  "second_Line":"TecnoWays LLC 保留所有权利" ,
+  "third_Line":"TecnoWays LLC 保留所有权利。",
   "oK_Button_Text":"确定" ,
   "cancel_Button_Text":"取消",
   "save_Button_Text": "挽救 ",
   "shown_Only_On_The_Early_First_Time":"安装或使用此应用程序，即表示您接受英文版本的隐私政策。",
   "share_App": "分享应用",
   "help":"帮助",
-  "tecno_Code": "技术代码",
+  "tecno_Code": "TecnoCode",
   "enter_Qr": "输入 Qr",
   "text": "文本",
   "paste":"粘贴",
@@ -43,7 +43,9 @@
   "camera_Permission_Alert":"需要相机权限",
   "camera_Alert_Description":"允许访问相机以启用此功能，或者您可以按照以下步骤在未经许可的情况下使用该应用程序：\n1- 通过相机应用程序捕获 QR 码图像或从本地文件中选择本地图像。\n2- 将图像分享到 TecnoCode 应用程序。\n3- 结果将直接显示在 TecnoCode 应用程序中.",
   "grant_Access":"授权访问",
-  "cancel":"取消"
+  "cancel":"取消",
+  "privacy_Policy_Confirmation":"安装或使用此应用程序，即表示您接受英文版本的隐私政策.",
+  "camera_Permission_Cancel_Message_Button": "继续"
 
 }
 

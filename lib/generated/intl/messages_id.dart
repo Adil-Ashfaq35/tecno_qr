@@ -27,6 +27,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Izinkan akses ke kamera untuk mengaktifkan fitur ini atau Anda dapat mengikuti langkah-langkah berikut untuk menggunakan aplikasi tanpa izin:\n1- Tangkap gambar Kode QR melalui aplikasi kamera Anda atau pilih gambar lokal dari file lokal Anda.\n2- Bagikan gambar ke aplikasi TecnoCode.\n3- Hasilnya akan langsung ditampilkan di aplikasi TecnoCode."),
         "camera_Permission_Alert":
             MessageLookupByLibrary.simpleMessage("Izin Kamera Diperlukan"),
+        "camera_Permission_Cancel_Message_Button":
+            MessageLookupByLibrary.simpleMessage("Lanjutkan"),
         "cancel": MessageLookupByLibrary.simpleMessage("Membatalkan"),
         "cancel_Button_Text": MessageLookupByLibrary.simpleMessage("Batal"),
         "copied": MessageLookupByLibrary.simpleMessage("Disalin"),
@@ -58,6 +60,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "paste": MessageLookupByLibrary.simpleMessage("tempel"),
         "privacy_Policy":
             MessageLookupByLibrary.simpleMessage("Kebijakan Privasi"),
+        "privacy_Policy_Confirmation": MessageLookupByLibrary.simpleMessage(
+            "Dengan menginstal atau menggunakan aplikasi ini, Anda menerima kebijakan privasi versi bahasa Inggris"),
         "qr_Code": MessageLookupByLibrary.simpleMessage("Kode QR"),
         "qr_Not_Found_In_Image": MessageLookupByLibrary.simpleMessage(
             "Qr tidak ditemukan dalam gambar"),
@@ -74,16 +78,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "scan_Tree_Item":
             MessageLookupByLibrary.simpleMessage("Pindai Riwayat"),
         "second_Line": MessageLookupByLibrary.simpleMessage(
-            "TecnoWays Semua hak dilindungi undang-undang"),
+            "TecnoWays LLC Semua hak dilindungi undang-undang"),
         "share_App": MessageLookupByLibrary.simpleMessage("Bagikan Aplikasi"),
         "share_Button_Text": MessageLookupByLibrary.simpleMessage("Bagikan"),
         "shown_Only_On_The_Early_First_Time": MessageLookupByLibrary.simpleMessage(
             "Dengan menginstal atau menggunakan aplikasi ini, Anda menerima kebijakan privasi versi bahasa Inggris"),
-        "tecno_Code": MessageLookupByLibrary.simpleMessage("Kode Tecno"),
+        "tecno_Code": MessageLookupByLibrary.simpleMessage("TecnoCode"),
         "terms_Of_Use":
             MessageLookupByLibrary.simpleMessage("Ketentuan penggunaan"),
         "text": MessageLookupByLibrary.simpleMessage("Teks"),
         "third_Line": MessageLookupByLibrary.simpleMessage(
-            "TecnoWays Semua hak dilindungi undang-undang")
+            "TecnoWays LLC Semua hak dilindungi undang-undang")
       };
 }

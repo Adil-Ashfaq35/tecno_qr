@@ -27,6 +27,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Bu özelliği etkinleştirmek için kameraya erişime izin verin veya uygulamayı izinsiz kullanmak için aşağıdaki adımları takip edebilirsiniz:\n1- Kamera uygulamanız aracılığıyla QR Code görüntüsünü yakalayın veya yerel dosyalarınızdan yerel bir görüntü seçin.\n2- Resmi TecnoCode uygulamasına paylaşın.\n3- Sonuç doğrudan TecnoCode uygulamasında görüntülenecektir."),
         "camera_Permission_Alert":
             MessageLookupByLibrary.simpleMessage("Kamera İzni Gerekli"),
+        "camera_Permission_Cancel_Message_Button":
+            MessageLookupByLibrary.simpleMessage("Devam et"),
         "cancel": MessageLookupByLibrary.simpleMessage("İptal"),
         "cancel_Button_Text": MessageLookupByLibrary.simpleMessage("İptal"),
         "copied": MessageLookupByLibrary.simpleMessage("Kopyalandı"),
@@ -57,6 +59,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "paste": MessageLookupByLibrary.simpleMessage("yapıştır"),
         "privacy_Policy":
             MessageLookupByLibrary.simpleMessage("Gizlilik Politikası"),
+        "privacy_Policy_Confirmation": MessageLookupByLibrary.simpleMessage(
+            "Bu uygulamayı yükleyerek veya kullanarak gizlilik politikasının İngilizce versiyonunu kabul etmiş olursunuz"),
         "qr_Code": MessageLookupByLibrary.simpleMessage("Qr Kodu"),
         "qr_Not_Found_In_Image":
             MessageLookupByLibrary.simpleMessage("Qr resimde bulunamadı"),
@@ -74,16 +78,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "scan_Tree_Item":
             MessageLookupByLibrary.simpleMessage("Tarama geçmişi"),
         "second_Line": MessageLookupByLibrary.simpleMessage(
-            "TecnoWays All rights reserved"),
+            "TecnoWays LLC All rights reserved"),
         "share_App": MessageLookupByLibrary.simpleMessage("Uygulamayı Paylaş"),
         "share_Button_Text": MessageLookupByLibrary.simpleMessage("Paylaş"),
         "shown_Only_On_The_Early_First_Time": MessageLookupByLibrary.simpleMessage(
             "Bu uygulamayı yükleyerek veya kullanarak gizlilik politikasının İngilizce versiyonunu kabul etmiş olursunuz"),
-        "tecno_Code": MessageLookupByLibrary.simpleMessage("Tekno kodu"),
+        "tecno_Code": MessageLookupByLibrary.simpleMessage("TecnoCode"),
         "terms_Of_Use":
             MessageLookupByLibrary.simpleMessage("Kullanım Koşulları"),
         "text": MessageLookupByLibrary.simpleMessage("Metin"),
         "third_Line": MessageLookupByLibrary.simpleMessage(
-            "TecnoWays All rights reserved")
+            "TecnoWays LLC All rights reserved")
       };
 }
