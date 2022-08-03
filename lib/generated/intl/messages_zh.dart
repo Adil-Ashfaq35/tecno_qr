@@ -27,6 +27,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "允许访问相机以启用此功能，或者您可以按照以下步骤在未经许可的情况下使用该应用程序：\n1- 通过相机应用程序捕获 QR 码图像或从本地文件中选择本地图像。\n2- 将图像分享到 TecnoCode 应用程序。\n3- 结果将直接显示在 TecnoCode 应用程序中."),
         "camera_Permission_Alert":
             MessageLookupByLibrary.simpleMessage("需要相机权限"),
+        "camera_Permission_Cancel_Message_Button":
+            MessageLookupByLibrary.simpleMessage("继续"),
         "cancel": MessageLookupByLibrary.simpleMessage("取消"),
         "cancel_Button_Text": MessageLookupByLibrary.simpleMessage("取消"),
         "copied": MessageLookupByLibrary.simpleMessage("复制"),
@@ -53,6 +55,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "oK_Button_Text": MessageLookupByLibrary.simpleMessage("确定"),
         "paste": MessageLookupByLibrary.simpleMessage("粘贴"),
         "privacy_Policy": MessageLookupByLibrary.simpleMessage("隐私政策"),
+        "privacy_Policy_Confirmation":
+            MessageLookupByLibrary.simpleMessage("安装或使用此应用程序，即表示您接受英文版本的隐私政策."),
         "qr_Code": MessageLookupByLibrary.simpleMessage("二维码"),
         "qr_Not_Found_In_Image":
             MessageLookupByLibrary.simpleMessage("图片中未找到 Qr"),
@@ -65,14 +69,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "save_Button_Text": MessageLookupByLibrary.simpleMessage("挽救 "),
         "scan_Button_Text": MessageLookupByLibrary.simpleMessage("从相机扫描"),
         "scan_Tree_Item": MessageLookupByLibrary.simpleMessage("扫描历史记录"),
-        "second_Line": MessageLookupByLibrary.simpleMessage("TecnoWays 保留所有权利"),
+        "second_Line":
+            MessageLookupByLibrary.simpleMessage("TecnoWays LLC 保留所有权利"),
         "share_App": MessageLookupByLibrary.simpleMessage("分享应用"),
         "share_Button_Text": MessageLookupByLibrary.simpleMessage("分享"),
         "shown_Only_On_The_Early_First_Time":
             MessageLookupByLibrary.simpleMessage("安装或使用此应用程序，即表示您接受英文版本的隐私政策。"),
-        "tecno_Code": MessageLookupByLibrary.simpleMessage("技术代码"),
+        "tecno_Code": MessageLookupByLibrary.simpleMessage("TecnoCode"),
         "terms_Of_Use": MessageLookupByLibrary.simpleMessage("使用条款"),
         "text": MessageLookupByLibrary.simpleMessage("文本"),
-        "third_Line": MessageLookupByLibrary.simpleMessage("TecnoWays 保留所有权利。")
+        "third_Line":
+            MessageLookupByLibrary.simpleMessage("TecnoWays LLC 保留所有权利。")
       };
 }

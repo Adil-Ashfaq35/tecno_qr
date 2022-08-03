@@ -27,6 +27,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Allow access to camera to enable this feature or you can follow the following steps to use the application without permission:\n1- Capture the QR Code image via your camera application or select a local image from your local files.\n2- Share the image to TecnoCode application.\n3- The result will be displayed directly in the TecnoCode application."),
         "camera_Permission_Alert": MessageLookupByLibrary.simpleMessage(
             "Camera Permission is Required"),
+        "camera_Permission_Cancel_Message_Button":
+            MessageLookupByLibrary.simpleMessage("Continue"),
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "cancel_Button_Text": MessageLookupByLibrary.simpleMessage("Cancel"),
         "copied": MessageLookupByLibrary.simpleMessage("Copied"),
@@ -59,6 +61,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "paste": MessageLookupByLibrary.simpleMessage("paste"),
         "privacy_Policy":
             MessageLookupByLibrary.simpleMessage("Privacy Policy"),
+        "privacy_Policy_Confirmation": MessageLookupByLibrary.simpleMessage(
+            "By installing or using this application you are accepting the "),
         "qr_Code": MessageLookupByLibrary.simpleMessage("Qr Code"),
         "qr_Not_Found_In_Image":
             MessageLookupByLibrary.simpleMessage("Qr not found in image"),
@@ -75,7 +79,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Scan From Camera"),
         "scan_Tree_Item": MessageLookupByLibrary.simpleMessage("Scan History"),
         "second_Line": MessageLookupByLibrary.simpleMessage(
-            " TecnoWays All rights reserved"),
+            " TecnoWays LLC All rights reserved"),
         "share_App": MessageLookupByLibrary.simpleMessage("Share App"),
         "share_Button_Text": MessageLookupByLibrary.simpleMessage("Share"),
         "shown_Only_On_The_Early_First_Time": MessageLookupByLibrary.simpleMessage(
@@ -84,6 +88,6 @@ class MessageLookup extends MessageLookupByLibrary {
         "terms_Of_Use": MessageLookupByLibrary.simpleMessage("Terms of use"),
         "text": MessageLookupByLibrary.simpleMessage("Text"),
         "third_Line": MessageLookupByLibrary.simpleMessage(
-            "TecnoWays All rights reserved")
+            "TecnoWays LLC All rights reserved")
       };
 }

@@ -27,6 +27,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Consenti l\'accesso alla fotocamera per abilitare questa funzione oppure puoi seguire i seguenti passaggi per utilizzare l\'applicazione senza autorizzazione:\n1- Cattura l\'immagine del codice QR tramite l\'applicazione della fotocamera o seleziona un\'immagine locale dai tuoi file locali.\n2- Condividi l\'immagine con l\'applicazione TecnoCode.\n3- Il risultato verrà visualizzato direttamente nell\'applicazione TecnoCode."),
         "camera_Permission_Alert": MessageLookupByLibrary.simpleMessage(
             "È richiesta l\'autorizzazione alla fotocamera"),
+        "camera_Permission_Cancel_Message_Button":
+            MessageLookupByLibrary.simpleMessage("Continua"),
         "cancel": MessageLookupByLibrary.simpleMessage("Annulla"),
         "cancel_Button_Text": MessageLookupByLibrary.simpleMessage("Annulla"),
         "copied": MessageLookupByLibrary.simpleMessage("Copiato"),
@@ -35,8 +37,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Scaricare"),
         "enter_Qr": MessageLookupByLibrary.simpleMessage("Inserisci Qr"),
         "fAQ": MessageLookupByLibrary.simpleMessage("Domande frequenti"),
-        "first_Line":
-            MessageLookupByLibrary.simpleMessage("TecnoCode Versione 6.0.1.0"),
+        "first_Line": MessageLookupByLibrary.simpleMessage(
+            "TecnoCode LLC Versione 6.0.1.0"),
         "generate_Button_Text":
             MessageLookupByLibrary.simpleMessage("Generazione da testo"),
         "generate_Tree_item":
@@ -60,6 +62,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "paste": MessageLookupByLibrary.simpleMessage("incolla"),
         "privacy_Policy":
             MessageLookupByLibrary.simpleMessage("Informativa sulla privacy"),
+        "privacy_Policy_Confirmation": MessageLookupByLibrary.simpleMessage(
+            "Installando o utilizzando questa applicazione si accetta la versione inglese dell\'informativa sulla privacy."),
         "qr_Code": MessageLookupByLibrary.simpleMessage("Qr Code"),
         "qr_Not_Found_In_Image": MessageLookupByLibrary.simpleMessage(
             "Qr non trovato nell\'immagine"),
@@ -80,13 +84,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "scan_Tree_Item":
             MessageLookupByLibrary.simpleMessage("Scansione della cronologia"),
         "second_Line": MessageLookupByLibrary.simpleMessage(
-            "TecnoWays Tutti i diritti riservati"),
+            "TecnoWays LLC Tutti i diritti riservati"),
         "share_App": MessageLookupByLibrary.simpleMessage("Condividi app"),
         "share_Button_Text":
             MessageLookupByLibrary.simpleMessage("Condividere"),
         "shown_Only_On_The_Early_First_Time": MessageLookupByLibrary.simpleMessage(
             "Installando o utilizzando questa applicazione si accetta la versione inglese dell\'informativa sulla privacy."),
-        "tecno_Code": MessageLookupByLibrary.simpleMessage("Codice Tecno"),
+        "tecno_Code": MessageLookupByLibrary.simpleMessage("TecnoCode"),
         "terms_Of_Use":
             MessageLookupByLibrary.simpleMessage("Condizioni d\'uso"),
         "third_Line": MessageLookupByLibrary.simpleMessage(

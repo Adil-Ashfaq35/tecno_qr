@@ -32,7 +32,7 @@ class DialogWidget extends StatelessWidget {
       actions: [
         TextButton(
         onPressed: cancelTap,
-          child:  Text(translation(context).cancel),
+          child:  Text(translation(context).camera_Permission_Cancel_Message_Button),
         ),
         TextButton(
           onPressed:  continueTap,

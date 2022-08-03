@@ -1,5 +1,8 @@
 // ignore_for_file: deprecated_member_use
 
+import 'dart:io';
+
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -99,21 +102,31 @@ class Constants {
 }
 
 class _CustomDialogBoxState extends State<CustomDialogBox> {
+  Future<bool> onWillPop() async {
+
+    return exit(0);
+  }
   @override
   Widget build(BuildContext context) {
-    return Dialog(
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(Constants.padding),
+    return WillPopScope(
+      onWillPop: onWillPop,
+      child: Dialog(
+
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(Constants.padding),
+        ),
+        elevation: 0,
+        backgroundColor: Colors.transparent,
+        child: contentBox(context),
+
       ),
-      elevation: 0,
-      backgroundColor: Colors.transparent,
-      child: contentBox(context),
     );
   }
 
   contentBox(context) {
-    return Stack(
-      children: <Widget>[
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
         Container(
           padding: const EdgeInsets.only(
               left: Constants.padding,
@@ -127,39 +140,59 @@ class _CustomDialogBoxState extends State<CustomDialogBox> {
               borderRadius: BorderRadius.circular(8),
               boxShadow: const [
                 BoxShadow(
-                    color: Colors.grey, offset: Offset(0, 0),),
+                  color: Colors.grey,
+                  offset: Offset(0, 0),
+                ),
               ]),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
-            children:  [
-              Text(widget.descriptions,softWrap: true,style:
-              Theme.of(context).textTheme.headline6?.copyWith(
-                fontSize: Constants.size.sm,
-              ),),
-             ClipOval(
-               child: TextButton(
-                    child:Text("Privacy Policy",style: Theme.of(context).textTheme.headline6?.copyWith(
-                      fontSize: Constants.size.sm,
-                       color: AppTheme.linkColor,
-                      decoration: TextDecoration.underline,
-                    ),),
-                    onPressed: (){
-                      launchUrl(Uri.parse(ConstantSettings.privacyUrl));
-                    },
+            children: [
+
+              RichText(
+                  text:TextSpan(
+                    text: widget.descriptions,
+                    style: const TextStyle(
+                   color: AppTheme.darkBackgroundColor,
+                          fontSize: Constants.size,
+                    ),
+                    children:  [
+                      TextSpan(
+                        text: "Privacy policy",
+                        style:  const TextStyle(
+                          color: AppTheme.btnColor,
+                          fontSize: Constants.size,
+                          decoration: TextDecoration.underline,
+                        ),
+                          recognizer: TapGestureRecognizer()
+                          ..onTap =(){
+                            launchUrl(Uri.parse(
+                                ConstantSettings.privacyUrl,
+                            ));
+                          }
+                      ),
+                    ]
                   ),
-             ),
-              FlatButton(onPressed:widget.onPressed ,
-              color: AppTheme.linkColor, child: Text(widget.text,
-              style: Theme.of(context).textTheme.headline3?.copyWith(
-                fontSize: 14.sm,
-                color: Colors.black,
-                fontWeight: FontWeight.w500,
+
+
               ),
+              SizedBox(
+                height: 0.02.sh,
               ),
+              Center(
+                child: FlatButton(
+                  onPressed: widget.onPressed,
+                  color: AppTheme.linkColor,
+                  child: Text(
+                    widget.text,
+                    style: Theme.of(context).textTheme.headline3?.copyWith(
+                          fontSize: 14.sm,
+                          color: Colors.black,
+                          fontWeight: FontWeight.w500,
+                        ),
+                  ),
+                ),
               )
-
-
             ],
           ),
 
@@ -226,7 +259,6 @@ class _CustomDialogBoxState extends State<CustomDialogBox> {
         //         style: const TextStyle(fontSize: 15, color: Colors.white),
         //       )),
         // ),
-
       ],
     );
   }

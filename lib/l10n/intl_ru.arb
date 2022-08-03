@@ -18,15 +18,15 @@
   "scan_Tree_Item": "Сканировать историю",
   "generate_Tree_item":"Генерировать историю",
   "first_Line":"TecnoCode Version 6.0.1.0",
-  "second_Line":"TecnoWays All rights reserved" ,
-  "third_Line":"TecnoWays All rights reserved",
+  "second_Line":"TecnoWays LLC All rights reserved" ,
+  "third_Line":"TecnoWays LLC All rights reserved",
   "oK_Button_Text":"OK" ,
   "cancel_Button_Text":"Отменить",
   "save_Button_Text": "Сохранить ",
   "shown_Only_On_The_Early_First_Time":"Устанавливая или используя это приложение, вы принимаете английскую версию политики конфиденциальности",
   "share_App": "Поделиться приложением",
   "help": "Помощь",
-  "tecno_Code": "Техно код",
+  "tecno_Code": "TecnoCode",
   "enter_Qr": "Введите Qr",
   "text": "Текст",
   "paste": "вставить",
@@ -43,6 +43,8 @@
   "camera_Permission_Alert":"Требуется разрешение камеры",
   "camera_Alert_Description":"Разрешите доступ к камере, чтобы включить эту функцию, или вы можете выполнить следующие шаги, чтобы использовать приложение без разрешения:\n1- Захватите изображение QR-кода с помощью приложения камеры или выберите локальное изображение из ваших локальных файлов.\n2- Поделитесь изображением с приложением TecnoCode.\n3- Результат будет отображаться непосредственно в приложении TecnoCode.",
   "grant_Access":"Предоставление доступа",
-  "cancel":"Отмена  "
+  "cancel":"Отмена",
+  "privacy_Policy_Confirmation":"Устанавливая или используя это приложение, вы принимаете английскую версию политики конфиденциальности",
+  "camera_Permission_Cancel_Message_Button": "Продолжить"
 }
 

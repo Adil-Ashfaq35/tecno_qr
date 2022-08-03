@@ -18,15 +18,15 @@
   "scan_Tree_Item": "سجل عمليات مسح الأكواد",
   "generate_Tree_item":"سجل عمليات توليد الأكواد",
   "first_Line":"إصدار TecnoCode 6.0.1.0",
-  "second_Line":"جميع الحقوق محفوظة لشركة TecnoWays" ,
-  "third_Line ":"جميع الحقوق محفوظة لشركة TecnoWays",
+  "second_Line":"جميع الحقوق محفوظة لشركة TecnoWays LLC" ,
+  "third_Line ":"جميع الحقوق محفوظة لشركة TecnoWays LLC",
   "oK_Button_Text":"موافق" ,
   "cancel_Button_Text":"إلغاء",
   "save_Button_Text": "حفظ ",
   "shown_Only_On_The_Early_First_Time":"تثبيت هذا التطبيق أو استخدامه يعتبرموافقة منك على النسخة الإنجليزية من سياسة الخصوصية",
   "share_App": "مشاركة التطبيق",
   "help": "مساعدة",
-  "tecno_Code": "كود تكنو",
+  "tecno_Code": "TecnoCode",
   "enter_Qr": "أدخل ريال قطري" ,
   "text": "نص",
   "paste": "لصق" ,
@@ -43,5 +43,7 @@
   "camera_Permission_Alert":"مطلوب إذن الكاميرا",
   "camera_Alert_Description":"اسمح بالوصول إلى الكاميرا لتمكين هذه الميزة أو يمكنك اتباع الخطوات التالية لاستخدام التطبيق بدون إذن:\n1- التقط صورة QR Code عبر تطبيق الكاميرا أو حدد صورة محلية من ملفاتك المحلية.\n2- شارك الصورة في تطبيق TecnoCode.\n3- سيتم عرض النتيجة مباشرة في تطبيق TecnoCode.",
   "grant_Access":"منح صلاحية الوصول",
-  "cancel":"يلغي"
+  "cancel":"يلغي",
+  "privacy_Policy_Confirmation":"تثبيت هذا التطبيق أو استخدامه يعتبرموافقة منك على النسخة الإنجليزية من سياسة الخصوصية",
+  "camera_Permission_Cancel_Message_Button": "استمرار"
 }

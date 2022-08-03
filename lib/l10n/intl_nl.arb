@@ -18,15 +18,15 @@
   "scan_Tree_Item": "Geschiedenis scannen",
   "generate_Tree_item":"Genereer geschiedenis",
   "first_Line":"TecnoCode Version 6.0.1.0",
-  "second_Line":"TecnoWays All rights reserved" ,
-  "third_Line":"TecnoWays All rights reserved",
+  "second_Line":"TecnoWays LLC All rights reserved" ,
+  "third_Line":"TecnoWays LLC All rights reserved",
   "oK_Button_Text":"OK" ,
   "cancel_Button_Text":"Annuleren",
   "save_Button_Text": "Save ",
   "shown_Only_On_The_Early_First_Time":"Door deze toepassing te installeren of te gebruiken, aanvaardt u de Engelse versie van het privacybeleid",
   "share_App": "App delen",
   "Help":" Help",
-  "tecno_Code": "Tecno-code",
+  "tecno_Code": "TecnoCode",
   "enter_Qr": "Voer Qr in",
   "text": "Tekst",
   "paste": "plakken",
@@ -43,6 +43,8 @@
   "camera_Permission_Alert":"Cameratoestemming is vereist",
   "camera_Alert_Description":"Sta toegang tot de camera toe om deze functie in te schakelen of u kunt de volgende stappen volgen om de applicatie zonder toestemming te gebruiken:\n1- Leg de QR-codeafbeelding vast via uw cameratoepassing of selecteer een lokale afbeelding uit uw lokale bestanden.\n2- Deel de afbeelding met de TecnoCode-toepassing.\n3- Het resultaat wordt direct weergegeven in de TecnoCode-applicatie.",
   "grant_Access":"Toegang verlenen",
-  "cancel":"Annuleren"
+  "cancel":"Annuleren",
+  "privacy_Policy_Confirmation":"Door deze toepassing te installeren of te gebruiken, aanvaardt u de Engelse versie van het privacybeleid",
+  "camera_Permission_Cancel_Message_Button": "Ga door"
 }
 

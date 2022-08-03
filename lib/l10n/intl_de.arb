@@ -18,15 +18,15 @@
   "scan_Tree_Item": "Verlauf scannen",
   "generate_Tree_item":"Verlauf generieren",
   "first_Line":"TecnoCode Version 6.0.1.0",
-  "second_Line":"TecnoWays Alle Rechte vorbehalten" ,
-  "third_Line":"TecnoWays Alle Rechte vorbehalten",
+  "second_Line":"TecnoWays LLC Alle Rechte vorbehalten" ,
+  "third_Line":"TecnoWays LLC Alle Rechte vorbehalten",
   "oK_Button_Text":"OK" ,
   "cancel_Button_Text":"Abbrechen",
   "save_Button_Text": "Speichern ",
   "shown_Only_On_The_Early_First_Time":"Durch die Installation oder Nutzung dieser Anwendung akzeptieren Sie die englische Version der Datenschutzrichtlinie",
   "share_App": "App teilen",
   "help":" Hilfe",
-  "tecno_Code": "Tecno-Code",
+  "tecno_Code": "TecnoCode",
   "enter_Qr": "Qr eingeben",
   "text": "Text",
   "paste": "einfügen",
@@ -43,7 +43,9 @@
   "camera_Permission_Alert":"Eine Kameraerlaubnis ist erforderlich",
   "camera_Alert_Description":"Erlauben Sie den Zugriff auf die Kamera, um diese Funktion zu aktivieren, oder führen Sie die folgenden Schritte aus, um die Anwendung ohne Erlaubnis zu verwenden:\n1- Erfassen Sie das QR-Code-Bild über Ihre Kameraanwendung oder wählen Sie ein lokales Bild aus Ihren lokalen Dateien aus.\n2- Teilen Sie das Bild mit der TecnoCode-Anwendung.\n3- Das Ergebnis wird direkt in der TecnoCode-Anwendung angezeigt.",
   "grant_Access":"Zugang gewähren",
-  "cancel":"Absagen"
+  "cancel":"Absagen",
+  "privacy_Policy_Confirmation":"Durch die Installation oder Nutzung dieser Anwendung akzeptieren Sie die englische Version der Datenschutzrichtlinie",
+  "camera_Permission_Cancel_Message_Button": "Weiter"
 
 
 }

@@ -4,6 +4,7 @@ import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:hive_flutter/hive_flutter.dart';
@@ -35,6 +36,7 @@ Future<InitData> init() async {
   String routeName = homeRoute;
 
   WidgetsFlutterBinding.ensureInitialized();
+
 
   await Hive.initFlutter();
   Hive.registerAdapter((QRModelAdapter()));
@@ -142,6 +144,7 @@ class _MyAppState extends State<MyApp> {
           title: "QR Code",
           localizationsDelegates: AppLocalizations.localizationsDelegates,
           supportedLocales: AppLocalizations.supportedLocales,
+
           locale: _locale,
           onGenerateRoute: RouteGenerator.onGeneratedRoutes,
           theme: AppTheme.lightTheme,
