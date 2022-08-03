@@ -18,8 +18,8 @@
   "scan_Tree_Item": "Scan History",
   "generate_Tree_item":"Generate History",
   "first_Line":"TecnoCode Version 6.0.1.0",
-  "second_Line":" TecnoWays All rights reserved" ,
-  "third_Line":"TecnoWays All rights reserved",
+  "second_Line":" TecnoWays LLC All rights reserved" ,
+  "third_Line":"TecnoWays LLC All rights reserved",
   "oK_Button_Text":"OK" ,
   "cancel_Button_Text":"Cancel",
   "save_Button_Text": "Save ",
@@ -44,6 +44,7 @@
   "camera_Alert_Description": "Allow access to camera to enable this feature or you can follow the following steps to use the application without permission:\n1- Capture the QR Code image via your camera application or select a local image from your local files.\n2- Share the image to TecnoCode application.\n3- The result will be displayed directly in the TecnoCode application.",
   "grant_Access":"Grant Access",
   "cancel":"Cancel",
-  "privacy_Policy_Confirmation":"By installing or using this application you are accepting the privacy policy"
+  "privacy_Policy_Confirmation":"By installing or using this application you are accepting the ",
+  "camera_Permission_Cancel_Message_Button": "Continue"
 }
 

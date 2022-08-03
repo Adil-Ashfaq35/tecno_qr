@@ -27,6 +27,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Разрешите доступ к камере, чтобы включить эту функцию, или вы можете выполнить следующие шаги, чтобы использовать приложение без разрешения:\n1- Захватите изображение QR-кода с помощью приложения камеры или выберите локальное изображение из ваших локальных файлов.\n2- Поделитесь изображением с приложением TecnoCode.\n3- Результат будет отображаться непосредственно в приложении TecnoCode."),
         "camera_Permission_Alert":
             MessageLookupByLibrary.simpleMessage("Требуется разрешение камеры"),
+        "camera_Permission_Cancel_Message_Button":
+            MessageLookupByLibrary.simpleMessage("Продолжить"),
         "cancel": MessageLookupByLibrary.simpleMessage("Отмена"),
         "cancel_Button_Text": MessageLookupByLibrary.simpleMessage("Отменить"),
         "copied": MessageLookupByLibrary.simpleMessage("Скопировано"),
@@ -80,17 +82,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "scan_Tree_Item":
             MessageLookupByLibrary.simpleMessage("Сканировать историю"),
         "second_Line": MessageLookupByLibrary.simpleMessage(
-            "TecnoWays All rights reserved"),
+            "TecnoWays LLC All rights reserved"),
         "share_App":
             MessageLookupByLibrary.simpleMessage("Поделиться приложением"),
         "share_Button_Text": MessageLookupByLibrary.simpleMessage("Поделиться"),
         "shown_Only_On_The_Early_First_Time": MessageLookupByLibrary.simpleMessage(
             "Устанавливая или используя это приложение, вы принимаете английскую версию политики конфиденциальности"),
-        "tecno_Code": MessageLookupByLibrary.simpleMessage("Техно код"),
+        "tecno_Code": MessageLookupByLibrary.simpleMessage("TecnoCode"),
         "terms_Of_Use":
             MessageLookupByLibrary.simpleMessage("Условия использования"),
         "text": MessageLookupByLibrary.simpleMessage("Текст"),
         "third_Line": MessageLookupByLibrary.simpleMessage(
-            "TecnoWays All rights reserved")
+            "TecnoWays LLC All rights reserved")
       };
 }

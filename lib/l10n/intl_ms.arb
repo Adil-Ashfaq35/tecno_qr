@@ -18,15 +18,15 @@
   "scan_Tree_Item": "Imbas Sejarah",
   "generate_Tree_item":"Menjana Sejarah",
   "first_Line":"TecnoCode Versi 6.0.1.0",
-  "second_Line":"TecnoWays Semua hak terpelihara" ,
-  "third_Line":"TecnoWays Semua hak terpelihara",
+  "second_Line":"TecnoWays LLC Semua hak terpelihara" ,
+  "third_Line":"TecnoWays LLC Semua hak terpelihara",
   "oK_Button_Text":"okey" ,
   "cancel_Button_Text":"Batal",
   "save_Button_Text": "Jimat",
   "shown_Only_On_The_Early_First_Time":"Dengan memasang atau menggunakan aplikasi ini anda menerima versi bahasa Inggeris dasar privasi",
   "share_App": "Kongsi Apl",
   "tolong":" tolong",
-  "tecno_Code": "Kod tecno",
+  "tecno_Code": "TecnoCode",
   "enter_Qr": "Masukkan Qr",
   "text": "Teks",
   "help": "Tolong",
@@ -45,6 +45,7 @@
   "camera_Alert_Description":"Benarkan akses kepada kamera untuk mendayakan ciri ini atau anda boleh mengikuti langkah berikut untuk menggunakan aplikasi tanpa kebenaran:\n1- Tangkap imej Kod QR melalui aplikasi kamera anda atau pilih imej tempatan daripada fail tempatan anda.\n2- Kongsi imej ke aplikasi TecnoCode.\n3- Hasilnya akan dipaparkan terus dalam aplikasi TecnoCode.",
   "grant_Access":"Berikan Akses",
   "cancel":"Batal",
-  "privacy_Policy_Confirmation":"Dengan memasang atau menggunakan aplikasi ini anda menerima versi bahasa Inggeris dasar privasi"
+  "privacy_Policy_Confirmation":"Dengan memasang atau menggunakan aplikasi ini anda menerima versi bahasa Inggeris dasar privasi",
+  "camera_Permission_Cancel_Message_Button": "teruskan"
 }
 

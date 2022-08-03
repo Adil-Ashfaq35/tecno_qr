@@ -27,6 +27,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Erlauben Sie den Zugriff auf die Kamera, um diese Funktion zu aktivieren, oder führen Sie die folgenden Schritte aus, um die Anwendung ohne Erlaubnis zu verwenden:\n1- Erfassen Sie das QR-Code-Bild über Ihre Kameraanwendung oder wählen Sie ein lokales Bild aus Ihren lokalen Dateien aus.\n2- Teilen Sie das Bild mit der TecnoCode-Anwendung.\n3- Das Ergebnis wird direkt in der TecnoCode-Anwendung angezeigt."),
         "camera_Permission_Alert": MessageLookupByLibrary.simpleMessage(
             "Eine Kameraerlaubnis ist erforderlich"),
+        "camera_Permission_Cancel_Message_Button":
+            MessageLookupByLibrary.simpleMessage("Weiter"),
         "cancel": MessageLookupByLibrary.simpleMessage("Absagen"),
         "cancel_Button_Text": MessageLookupByLibrary.simpleMessage("Abbrechen"),
         "copied": MessageLookupByLibrary.simpleMessage("kopiert"),
@@ -79,16 +81,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "scan_Tree_Item":
             MessageLookupByLibrary.simpleMessage("Verlauf scannen"),
         "second_Line": MessageLookupByLibrary.simpleMessage(
-            "TecnoWays Alle Rechte vorbehalten"),
+            "TecnoWays LLC Alle Rechte vorbehalten"),
         "share_App": MessageLookupByLibrary.simpleMessage("App teilen"),
         "share_Button_Text": MessageLookupByLibrary.simpleMessage("Freigeben"),
         "shown_Only_On_The_Early_First_Time": MessageLookupByLibrary.simpleMessage(
             "Durch die Installation oder Nutzung dieser Anwendung akzeptieren Sie die englische Version der Datenschutzrichtlinie"),
-        "tecno_Code": MessageLookupByLibrary.simpleMessage("Tecno-Code"),
+        "tecno_Code": MessageLookupByLibrary.simpleMessage("TecnoCode"),
         "terms_Of_Use":
             MessageLookupByLibrary.simpleMessage("Bedingungen für die Nutzung"),
         "text": MessageLookupByLibrary.simpleMessage("Text"),
         "third_Line": MessageLookupByLibrary.simpleMessage(
-            "TecnoWays Alle Rechte vorbehalten")
+            "TecnoWays LLC Alle Rechte vorbehalten")
       };
 }

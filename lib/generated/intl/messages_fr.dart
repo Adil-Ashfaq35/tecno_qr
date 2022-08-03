@@ -27,6 +27,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Autorisez l\'accès à la caméra pour activer cette fonctionnalité ou vous pouvez suivre les étapes suivantes pour utiliser l\'application sans autorisation :\n1- Capturez l\'image du QR Code via votre application appareil photo ou sélectionnez une image locale à partir de vos fichiers locaux.\n2- Partagez l\'image avec l\'application TecnoCode.\n3- Le résultat sera affiché directement dans l\'application TecnoCode."),
         "camera_Permission_Alert": MessageLookupByLibrary.simpleMessage(
             "L\'autorisation de la caméra est requise"),
+        "camera_Permission_Cancel_Message_Button":
+            MessageLookupByLibrary.simpleMessage("Continuer"),
         "cancel": MessageLookupByLibrary.simpleMessage("Annuler"),
         "cancel_Button_Text": MessageLookupByLibrary.simpleMessage("Annuler"),
         "copied": MessageLookupByLibrary.simpleMessage("Copié"),
@@ -83,17 +85,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "scan_Tree_Item":
             MessageLookupByLibrary.simpleMessage("Scanner l\'historique"),
         "second_Line": MessageLookupByLibrary.simpleMessage(
-            "TecnoWays Tous droits réservés"),
+            "TecnoWays LLC Tous droits réservés"),
         "share_App":
             MessageLookupByLibrary.simpleMessage("Partager l\'application"),
         "share_Button_Text": MessageLookupByLibrary.simpleMessage("Partager"),
         "shown_Only_On_The_Early_First_Time": MessageLookupByLibrary.simpleMessage(
             "En installant ou en utilisant cette application, vous acceptez la version anglaise de la politique de confidentialité."),
-        "tecno_Code": MessageLookupByLibrary.simpleMessage("Code Tecno"),
+        "tecno_Code": MessageLookupByLibrary.simpleMessage("TecnoCode"),
         "terms_Of_Use":
             MessageLookupByLibrary.simpleMessage("Conditions d\'utilisation"),
         "text": MessageLookupByLibrary.simpleMessage("Texte"),
         "third_Line": MessageLookupByLibrary.simpleMessage(
-            "TecnoWays Tous droits réservés")
+            "TecnoWays LLC Tous droits réservés")
       };
 }

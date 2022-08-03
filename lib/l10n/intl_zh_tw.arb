@@ -18,15 +18,15 @@
   "scan_Tree_Item": "掃描歷史",
   "generate_Tree_item":"生成歷史",
   "first_Line":"TecnoCode 版本 6.0.1.0",
-  "second_Line":"TecnoWays 版權所有" ,
-  "third_Line":"TecnoWays 版權所有",
+  "second_Line":"TecnoWays LLC 版權所有" ,
+  "third_Line":"TecnoWays LLC 版權所有",
   "oK_Button_Text":"好的" ,
   "cancel_Button_Text":"取消",
   "save_Button_Text": "節省 ",
   "shown_Only_On_The_Early_First_Time":"安裝或使用此應用程序即表示您接受英文版隱私政策",
   "share_App": "分享應用",
   "help":"幫助",
-  "tecno_Code": "技術代碼",
+  "tecno_Code": "TecnoCode",
   "enter_Qr": "輸入 Qr",
   "text": "文本",
   "paste":"粘貼",
@@ -44,6 +44,7 @@
   "camera_Alert_Description":"允許訪問相機以啟用此功能，或者您可以按照以下步驟在未經許可的情況下使用該應用程序：\n1- 通過相機應用程序捕獲 QR 碼圖像或從本地文件中選擇本地圖像。\n2- 將圖像分享到 TecnoCode 應用程序。\n3- 結果將直接顯示在 TecnoCode 應用程序中.",
   "grant_Access":"授予訪問權限",
   "cancel":"取消",
-  "privacy_Policy_Confirmation":"安裝或使用此應用程序即表示您接受英文版隱私政策"
+  "privacy_Policy_Confirmation":"安裝或使用此應用程序即表示您接受英文版隱私政策",
+  "camera_Permission_Cancel_Message_Button": "繼續"
 }
 

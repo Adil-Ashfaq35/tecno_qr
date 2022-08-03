@@ -27,6 +27,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "允許訪問相機以啟用此功能，或者您可以按照以下步驟在未經許可的情況下使用該應用程序：\n1- 通過相機應用程序捕獲 QR 碼圖像或從本地文件中選擇本地圖像。\n2- 將圖像分享到 TecnoCode 應用程序。\n3- 結果將直接顯示在 TecnoCode 應用程序中."),
         "camera_Permission_Alert":
             MessageLookupByLibrary.simpleMessage("需要相機權限"),
+        "camera_Permission_Cancel_Message_Button":
+            MessageLookupByLibrary.simpleMessage("繼續"),
         "cancel": MessageLookupByLibrary.simpleMessage("取消"),
         "cancel_Button_Text": MessageLookupByLibrary.simpleMessage("取消"),
         "copied": MessageLookupByLibrary.simpleMessage("複製"),
@@ -67,14 +69,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "save_Button_Text": MessageLookupByLibrary.simpleMessage("節省 "),
         "scan_Button_Text": MessageLookupByLibrary.simpleMessage("從相機掃描"),
         "scan_Tree_Item": MessageLookupByLibrary.simpleMessage("掃描歷史"),
-        "second_Line": MessageLookupByLibrary.simpleMessage("TecnoWays 版權所有"),
+        "second_Line":
+            MessageLookupByLibrary.simpleMessage("TecnoWays LLC 版權所有"),
         "share_App": MessageLookupByLibrary.simpleMessage("分享應用"),
         "share_Button_Text": MessageLookupByLibrary.simpleMessage("分享"),
         "shown_Only_On_The_Early_First_Time":
             MessageLookupByLibrary.simpleMessage("安裝或使用此應用程序即表示您接受英文版隱私政策"),
-        "tecno_Code": MessageLookupByLibrary.simpleMessage("技術代碼"),
+        "tecno_Code": MessageLookupByLibrary.simpleMessage("TecnoCode"),
         "terms_Of_Use": MessageLookupByLibrary.simpleMessage("使用條款"),
         "text": MessageLookupByLibrary.simpleMessage("文本"),
-        "third_Line": MessageLookupByLibrary.simpleMessage("TecnoWays 版權所有")
+        "third_Line": MessageLookupByLibrary.simpleMessage("TecnoWays LLC 版權所有")
       };
 }

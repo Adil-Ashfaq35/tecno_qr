@@ -27,6 +27,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "اسمح بالوصول إلى الكاميرا لتمكين هذه الميزة أو يمكنك اتباع الخطوات التالية لاستخدام التطبيق بدون إذن:\n1- التقط صورة QR Code عبر تطبيق الكاميرا أو حدد صورة محلية من ملفاتك المحلية.\n2- شارك الصورة في تطبيق TecnoCode.\n3- سيتم عرض النتيجة مباشرة في تطبيق TecnoCode."),
         "camera_Permission_Alert":
             MessageLookupByLibrary.simpleMessage("مطلوب إذن الكاميرا"),
+        "camera_Permission_Cancel_Message_Button":
+            MessageLookupByLibrary.simpleMessage("استمرار"),
         "cancel": MessageLookupByLibrary.simpleMessage("يلغي"),
         "cancel_Button_Text": MessageLookupByLibrary.simpleMessage("إلغاء"),
         "copied": MessageLookupByLibrary.simpleMessage("نسخ"),
@@ -80,12 +82,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "scan_Tree_Item":
             MessageLookupByLibrary.simpleMessage("سجل عمليات مسح الأكواد"),
         "second_Line": MessageLookupByLibrary.simpleMessage(
-            "جميع الحقوق محفوظة لشركة TecnoWays"),
+            "جميع الحقوق محفوظة لشركة TecnoWays LLC"),
         "share_App": MessageLookupByLibrary.simpleMessage("مشاركة التطبيق"),
         "share_Button_Text": MessageLookupByLibrary.simpleMessage("مشاركة"),
         "shown_Only_On_The_Early_First_Time": MessageLookupByLibrary.simpleMessage(
             "تثبيت هذا التطبيق أو استخدامه يعتبرموافقة منك على النسخة الإنجليزية من سياسة الخصوصية"),
-        "tecno_Code": MessageLookupByLibrary.simpleMessage("كود تكنو"),
+        "tecno_Code": MessageLookupByLibrary.simpleMessage("TecnoCode"),
         "terms_Of_Use": MessageLookupByLibrary.simpleMessage("شروط الاستخدام"),
         "text": MessageLookupByLibrary.simpleMessage("نص")
       };

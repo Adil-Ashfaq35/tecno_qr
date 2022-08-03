@@ -18,15 +18,15 @@
   "scan_Tree_Item": "Tarama geçmişi",
   "generate_Tree_item":"Geçmiş oluşturun",
   "first_Line":"TecnoCode Version 6.0.1.0",
-  "second_Line":"TecnoWays All rights reserved" ,
-  "third_Line":"TecnoWays All rights reserved",
+  "second_Line":"TecnoWays LLC All rights reserved" ,
+  "third_Line":"TecnoWays LLC All rights reserved",
   "oK_Button_Text":"TAMAM." ,
   "cancel_Button_Text":"İptal",
   "save_Button_Text": "Kaydet ",
   "shown_Only_On_The_Early_First_Time":"Bu uygulamayı yükleyerek veya kullanarak gizlilik politikasının İngilizce versiyonunu kabul etmiş olursunuz",
   "share_App": "Uygulamayı Paylaş",
   "yardım": "yardım",
-  "tecno_Code": "Tekno kodu",
+  "tecno_Code": "TecnoCode",
   "enter_Qr": "Qr girin",
   "text": "Metin",
   "help": "Yardım",
@@ -45,6 +45,7 @@
   "camera_Alert_Description":"Bu özelliği etkinleştirmek için kameraya erişime izin verin veya uygulamayı izinsiz kullanmak için aşağıdaki adımları takip edebilirsiniz:\n1- Kamera uygulamanız aracılığıyla QR Code görüntüsünü yakalayın veya yerel dosyalarınızdan yerel bir görüntü seçin.\n2- Resmi TecnoCode uygulamasına paylaşın.\n3- Sonuç doğrudan TecnoCode uygulamasında görüntülenecektir.",
   "grant_Access":"Erişim İzni",
   "cancel":"İptal",
-  "privacy_Policy_Confirmation":"Bu uygulamayı yükleyerek veya kullanarak gizlilik politikasının İngilizce versiyonunu kabul etmiş olursunuz"
+  "privacy_Policy_Confirmation":"Bu uygulamayı yükleyerek veya kullanarak gizlilik politikasının İngilizce versiyonunu kabul etmiş olursunuz",
+  "camera_Permission_Cancel_Message_Button": "Devam et"
 }
 
