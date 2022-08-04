@@ -9,8 +9,14 @@ import '../main.dart';
 import '../models/language/language_model.dart';
 
 
-class LanguagePage extends StatelessWidget {
+class LanguagePage extends StatefulWidget {
+  @override
+  State<LanguagePage> createState() => _LanguagePageState();
+}
+
+class _LanguagePageState extends State<LanguagePage> {
   LanguageModel ?language;
+
   @override
   Widget build(BuildContext context) {
 
@@ -30,7 +36,7 @@ class LanguagePage extends StatelessWidget {
               child: SizedBox(
                 height: 0.8.sh,
                 child: ListView.builder(
-                  
+
                   shrinkWrap: true,
                   itemCount: LanguageModel.languageList().length,
                     itemBuilder:(context,index){
@@ -41,8 +47,10 @@ class LanguagePage extends StatelessWidget {
                         ),),
                         onTap: () async {
                           Locale locale =await setLocale(LanguageModel.languageList()[index].languageCode);
-                          MyApp.setLocale(context, locale);
-                          MyApp.currentLocale();
+
+                          setState(() {
+                            MyApp.setLocale(context, locale);
+                          });
                           if (kDebugMode) {
                             print(LanguageModel.languageList()[index].languageCode);
                           }
