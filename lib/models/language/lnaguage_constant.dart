@@ -25,12 +25,12 @@ const String ITALIAN = 'it';
 
 Future<Locale> setLocale(String languageCode ) async {
   await SharedPref().saveString(LAGUAGE_CODE, languageCode);
-  return _locale(languageCode);
+ return _locale(languageCode);
 }
 
 Future<Locale> getLocale()async  {
   String languageCode =await SharedPref().readString(LAGUAGE_CODE);
-  return _locale(languageCode);
+return _locale(languageCode);
 }
 
 Locale _locale(String languageCode) {
@@ -38,9 +38,9 @@ Locale _locale(String languageCode) {
     case ENGLISH:
       return const Locale(ENGLISH, '');
     case URDU:
-      return const Locale(URDU, "");
+      return const Locale(URDU, '');
     case ARABIC:
-      return const Locale(ARABIC, "");
+      return const Locale(ARABIC, '');
     case FRENCH:
       return const Locale(FRENCH, "");
     case SPANISH:

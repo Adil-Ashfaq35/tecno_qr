@@ -41,8 +41,9 @@ class LanguagePage extends StatelessWidget {
                         ),),
                         onTap: () async {
                           Locale locale =await setLocale(LanguageModel.languageList()[index].languageCode);
-                          MyApp.setLocale(context, locale);
-                          MyApp.currentLocale();
+                          // ignore: use_build_context_synchronously
+                          MyApp.setLocaleparent(context, locale);
+                          //MyApp.currentLocale();
                           if (kDebugMode) {
                             print(LanguageModel.languageList()[index].languageCode);
                           }

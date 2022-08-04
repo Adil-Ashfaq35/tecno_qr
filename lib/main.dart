@@ -4,7 +4,7 @@ import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
+
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:hive_flutter/hive_flutter.dart';
@@ -74,20 +74,20 @@ class MyApp extends StatefulWidget {
   @override
   State<MyApp> createState() => _MyAppState();
 
-  static void setLocale(BuildContext context, Locale newLocale) {
+  static void setLocaleparent(BuildContext context, Locale newLocale) {
     _MyAppState? state = context.findAncestorStateOfType<_MyAppState>();
-    state?.setLocale(newLocale);
+    state?.setlocale(newLocale);
 
   }
-   static  Future<bool> currentLocale() async {
-    Locale locale= await getLocale();
-    if(locale.languageCode=="en"){
-      return QrCodeProvider.instance.changeLanguage.value=true;
-    }
-    else{
-      return QrCodeProvider.instance.changeLanguage.value=false;
-    }
-  }
+  //  static  Future<bool> currentLocale() async {
+  //   Locale locale= await getLocale();
+  //   if(locale.languageCode=="en"){
+  //     return QrCodeProvider.instance.changeLanguage.value=true;
+  //   }
+  //   else{
+  //     return QrCodeProvider.instance.changeLanguage.value=false;
+  //   }
+  // }
 
 }
 
@@ -95,7 +95,7 @@ class _MyAppState extends State<MyApp> {
   Locale? _locale;
   StreamSubscription? intentDataStreamSubscription;
   List<SharedMediaFile>? _sharedFiles;
-  setLocale(Locale locale) {
+  setlocale(Locale locale) {
     setState(() {
       _locale = locale;
     });
@@ -106,7 +106,7 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
-    MyApp.currentLocale();
+    //MyApp.currentLocale();
     intentDataStreamSubscription = ReceiveSharingIntent.getMediaStream().listen(
         (List<SharedMediaFile> value) {
       if (kDebugMode) {
@@ -130,8 +130,7 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Future<void> didChangeDependencies() async {
-    Locale locale= await getLocale();
-    setLocale(locale);
+     getLocale().then((locale) => {setlocale(locale)});
     super.didChangeDependencies();
   }
 
@@ -144,12 +143,12 @@ class _MyAppState extends State<MyApp> {
           title: "QR Code",
           localizationsDelegates: AppLocalizations.localizationsDelegates,
           supportedLocales: AppLocalizations.supportedLocales,
-
-          locale: _locale,
+         
+          locale:_locale,
           onGenerateRoute: RouteGenerator.onGeneratedRoutes,
           theme: AppTheme.lightTheme,
-          initialRoute: widget.initdata.routeName
-
+          initialRoute: widget.initdata.routeName,
+         textDirection: _locale!.languageCode=='ur'?TextDirection.rtl:TextDirection.ltr,
           //  // '/ScanQr': (_) => const ScanQrPage(),
           // },
           );
