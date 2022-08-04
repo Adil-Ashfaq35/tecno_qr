@@ -185,7 +185,7 @@ class _CustomDrawerState extends State<CustomDrawer>
             animation: animationController,
             builder: (context, _) {
               double slide = 200.0 * animationController.value;
-              double scale = 1 - (animationController.value * 0.15);
+              double scale = 1-(animationController.value * 0.15);
               return Stack(
                 children: [
                   _buildDrawer(),

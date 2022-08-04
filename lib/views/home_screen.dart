@@ -45,7 +45,7 @@ class HomeScreen extends StatelessWidget {
                 optionText: translation(context).scan_Button_Text,
                 onTap: () async {
                   permission(context);
-                  
+
                   FirebaseAnalytics.instance
                       .logEvent(name: "Scan_from_camera", parameters: {
                     "image": "scanning from camera",
