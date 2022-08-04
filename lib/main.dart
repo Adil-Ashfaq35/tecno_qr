@@ -56,13 +56,14 @@ Future<InitData> init() async {
 }
 
 void initControllers() {
+   Get.put(BehaviourController());
   Get.put(SettingController());
   Get.put(NavigationController());
   Get.put(QrCodeProvider());
   Get.put(ResultController());
   Get.put(QrScanProvider());
   Get.put(HistoryController());
-  Get.put(BehaviourController());
+ 
 }
 
 class MyApp extends StatefulWidget {
@@ -86,7 +87,7 @@ class _MyAppState extends State<MyApp> {
     // String ?_locale;
     // String ? countryCode;
     Locale? _locale;
-    bool Isltr=true;
+    
   StreamSubscription? intentDataStreamSubscription;
   List<SharedMediaFile>? _sharedFiles;
   setlocale(Locale locale) {
@@ -94,7 +95,7 @@ class _MyAppState extends State<MyApp> {
       // _locale = locale.languageCode;
       // countryCode=locale.countryCode;
       _locale =locale;
-      Isltr=_locale!.languageCode=='ur'|| _locale!.languageCode=='ar'?false:true;
+    behaviourController.IsLtr.value=_locale!.languageCode=='ur'|| _locale!.languageCode=='ar'?false:true;
     });
   }
 
@@ -144,7 +145,7 @@ class _MyAppState extends State<MyApp> {
           onGenerateRoute: RouteGenerator.onGeneratedRoutes,
           theme: AppTheme.lightTheme,
           initialRoute: widget.initdata.routeName,
-           textDirection: Isltr?TextDirection.ltr:TextDirection.rtl,
+           textDirection: behaviourController.IsLtr.value?TextDirection.ltr:TextDirection.rtl,
         
           //  // '/ScanQr': (_) => const ScanQrPage(),
           // },

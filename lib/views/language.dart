@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:technoapp_qr/core/router/router_generator.dart';
 import 'package:technoapp_qr/models/language/lnaguage_constant.dart';
 import 'package:technoapp_qr/views/widgets/appbar_design.dart';
 import '../constants/controllers.dart';
@@ -25,7 +26,7 @@ class _LanguagePageState extends State<LanguagePage> {
           title: '${AppLocalizations.of(context)?.language}',
           iconButton: IconButton(
               onPressed: () {
-                navigationController.goBack();
+                navigationController.getOffAll(RouteGenerator.customDrawer);
               },
               icon: const Icon(Icons.arrow_back))),
       body: Column(
