@@ -19,6 +19,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       appBar: AppBarWidget(
         title: translation(context).tecno_Code,
         iconButton: IconButton(

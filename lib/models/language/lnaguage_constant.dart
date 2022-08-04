@@ -38,7 +38,7 @@ Locale _locale(String languageCode) {
     case ENGLISH:
       return const Locale(ENGLISH, '');
     case URDU:
-      return const Locale(URDU, "");
+      return const Locale(URDU, "PK");
     case ARABIC:
       return const Locale(ARABIC, "");
     case FRENCH:

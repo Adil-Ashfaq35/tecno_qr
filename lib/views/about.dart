@@ -80,7 +80,7 @@ class _AboutScreenState extends State<AboutScreen> {
                 Text(translation(context).second_Line,
                   style: Theme.of(context).textTheme.headline3?.copyWith(
                     color: AppTheme.darkTextColor,
-                    fontSize: 20.sm,
+                    fontSize: 18.sm,
                   ),
                 ),
                 SizedBox(
