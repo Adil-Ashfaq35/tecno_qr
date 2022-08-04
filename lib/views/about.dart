@@ -80,22 +80,20 @@ class _AboutScreenState extends State<AboutScreen> {
                 Text(translation(context).second_Line,
                   style: Theme.of(context).textTheme.headline3?.copyWith(
                     color: AppTheme.darkTextColor,
-                    fontSize: 20.sm,
+                    fontSize: 18.sm,
                   ),
                 ),
                 SizedBox(
                   height: 20.sm,
                 ),
                 Center(
-                  child:Text("TecnoCode Version \n  ${_packageInfo.version}",textAlign: TextAlign.center,style: Theme.of(context).textTheme.bodyText1?.copyWith(
-                    color: AppTheme.darkTextColor,
-                    fontSize: 20.sm,
+                  child:Text("TecnoCode Version: \n\n  ${_packageInfo.version}",textAlign: TextAlign.center,style: Theme.of(context).textTheme.bodyText1?.copyWith(
+                    color:const Color(0XFF434343),
+                    fontSize: 18.sm,
                     fontWeight: FontWeight.bold,
                   ),),
                 ),
-                SizedBox(
-                  height: 50.sm,
-                ),
+
               ],
             )
           ),
@@ -103,9 +101,7 @@ class _AboutScreenState extends State<AboutScreen> {
       ):Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children:  [
-          SizedBox(
-            height: 0.3.sh,
-          ),
+
           Padding(
               padding: const EdgeInsets.all(10.0),
               child:
@@ -131,9 +127,9 @@ class _AboutScreenState extends State<AboutScreen> {
                     height: 20.sm,
                   ),
                   Center(
-                    child:Text("TecnoCode Version \n  ${_packageInfo.version}",textAlign: TextAlign.center,style: Theme.of(context).textTheme.bodyText1?.copyWith(
-                      color: AppTheme.darkTextColor,
-                      fontSize: 20.sm,
+                    child:Text("TecnoCode Version: \n  ${_packageInfo.version}",textAlign: TextAlign.center,style: Theme.of(context).textTheme.bodyText1?.copyWith(
+                      color:const Color(0XFF434343),
+                      fontSize: 18.sm,
                       fontWeight: FontWeight.bold,
                     ),),
                   ),

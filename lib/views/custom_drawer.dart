@@ -33,8 +33,10 @@ class _CustomDrawerState extends State<CustomDrawer>
     animationController = AnimationController(
         vsync: this, duration: const Duration(milliseconds: 250));
   }
-  Future<bool> _onWillPop() async {
-    return (await showDialog(
+  Future<bool> onWillPop() async {
+
+    return (await
+    showDialog(
       context: context,
       builder: (context) => AlertDialog(
         title: const Text('Are you sure?'),
@@ -47,7 +49,7 @@ class _CustomDrawerState extends State<CustomDrawer>
           TextButton(
             onPressed: () {
               exit(0);
-         }, // <-- SEE HERE
+            }, // <-- SEE HERE
             child: const Text('Yes'),
           ),
         ],
@@ -57,6 +59,7 @@ class _CustomDrawerState extends State<CustomDrawer>
   }
   @override
   Widget build(BuildContext context) {
+
     Widget _buildDrawer() => Drawer(
           elevation: 0,
           backgroundColor: const Color.fromARGB(255, 28, 92, 146),
@@ -160,7 +163,7 @@ class _CustomDrawerState extends State<CustomDrawer>
         );
 
     Widget _buildHome() => WillPopScope(
-      onWillPop:_onWillPop,
+      onWillPop:onWillPop,
       child: Container(
           decoration: BoxDecoration(boxShadow: [
             BoxShadow(
@@ -181,7 +184,8 @@ class _CustomDrawerState extends State<CustomDrawer>
         body: AnimatedBuilder(
             animation: animationController,
             builder: (context, _) {
-              double slide = 200.0 * animationController.value;
+
+              double slide = behaviourController.IsLtr.value? 200.0 * animationController.value: 1- (200.0 * animationController.value);
               double scale = 1 - (animationController.value * 0.15);
               return Stack(
                 children: [

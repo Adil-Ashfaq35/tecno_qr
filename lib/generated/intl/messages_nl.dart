@@ -27,6 +27,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Sta toegang tot de camera toe om deze functie in te schakelen of u kunt de volgende stappen volgen om de applicatie zonder toestemming te gebruiken:\n1- Leg de QR-codeafbeelding vast via uw cameratoepassing of selecteer een lokale afbeelding uit uw lokale bestanden.\n2- Deel de afbeelding met de TecnoCode-toepassing.\n3- Het resultaat wordt direct weergegeven in de TecnoCode-applicatie."),
         "camera_Permission_Alert": MessageLookupByLibrary.simpleMessage(
             "Cameratoestemming is vereist"),
+        "camera_Permission_Cancel_Message_Button":
+            MessageLookupByLibrary.simpleMessage("Ga door"),
         "cancel": MessageLookupByLibrary.simpleMessage("Annuleren"),
         "cancel_Button_Text": MessageLookupByLibrary.simpleMessage("Annuleren"),
         "copied": MessageLookupByLibrary.simpleMessage("Gekopieerd"),
@@ -57,6 +59,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "oK_Button_Text": MessageLookupByLibrary.simpleMessage("OK"),
         "paste": MessageLookupByLibrary.simpleMessage("plakken"),
         "privacy_Policy": MessageLookupByLibrary.simpleMessage("Privacybeleid"),
+        "privacy_Policy_Confirmation": MessageLookupByLibrary.simpleMessage(
+            "Door deze toepassing te installeren of te gebruiken, aanvaardt u de Engelse versie van het privacybeleid"),
         "qr_Code": MessageLookupByLibrary.simpleMessage("Qr-code"),
         "qr_Not_Found_In_Image": MessageLookupByLibrary.simpleMessage(
             "Qr niet gevonden in afbeelding"),
@@ -77,16 +81,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "scan_Tree_Item":
             MessageLookupByLibrary.simpleMessage("Geschiedenis scannen"),
         "second_Line": MessageLookupByLibrary.simpleMessage(
-            "TecnoWays All rights reserved"),
+            "TecnoWays LLC All rights reserved"),
         "share_App": MessageLookupByLibrary.simpleMessage("App delen"),
         "share_Button_Text": MessageLookupByLibrary.simpleMessage("Deel"),
         "shown_Only_On_The_Early_First_Time": MessageLookupByLibrary.simpleMessage(
             "Door deze toepassing te installeren of te gebruiken, aanvaardt u de Engelse versie van het privacybeleid"),
-        "tecno_Code": MessageLookupByLibrary.simpleMessage("Tecno-code"),
+        "tecno_Code": MessageLookupByLibrary.simpleMessage("TecnoCode"),
         "terms_Of_Use":
             MessageLookupByLibrary.simpleMessage("Gebruiksvoorwaarden"),
         "text": MessageLookupByLibrary.simpleMessage("Tekst"),
         "third_Line": MessageLookupByLibrary.simpleMessage(
-            "TecnoWays All rights reserved")
+            "TecnoWays LLC All rights reserved")
       };
 }

@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:technoapp_qr/core/router/router_generator.dart';
 import 'package:technoapp_qr/models/language/lnaguage_constant.dart';
 import 'package:technoapp_qr/views/widgets/appbar_design.dart';
 import '../constants/controllers.dart';
@@ -9,8 +10,14 @@ import '../main.dart';
 import '../models/language/language_model.dart';
 
 
-class LanguagePage extends StatelessWidget {
+class LanguagePage extends StatefulWidget {
+  @override
+  State<LanguagePage> createState() => _LanguagePageState();
+}
+
+class _LanguagePageState extends State<LanguagePage> {
   LanguageModel ?language;
+
   @override
   Widget build(BuildContext context) {
 
@@ -19,7 +26,7 @@ class LanguagePage extends StatelessWidget {
           title: '${AppLocalizations.of(context)?.language}',
           iconButton: IconButton(
               onPressed: () {
-                navigationController.goBack();
+                navigationController.getOffAll(RouteGenerator.customDrawer);
               },
               icon: const Icon(Icons.arrow_back))),
       body: Column(
@@ -30,7 +37,7 @@ class LanguagePage extends StatelessWidget {
               child: SizedBox(
                 height: 0.8.sh,
                 child: ListView.builder(
-                  
+
                   shrinkWrap: true,
                   itemCount: LanguageModel.languageList().length,
                     itemBuilder:(context,index){
@@ -41,8 +48,10 @@ class LanguagePage extends StatelessWidget {
                         ),),
                         onTap: () async {
                           Locale locale =await setLocale(LanguageModel.languageList()[index].languageCode);
-                          MyApp.setLocale(context, locale);
-                          MyApp.currentLocale();
+
+                          setState(() {
+                            MyApp.setLocale(context, locale);
+                          });
                           if (kDebugMode) {
                             print(LanguageModel.languageList()[index].languageCode);
                           }

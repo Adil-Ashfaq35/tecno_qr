@@ -230,20 +230,20 @@ class S {
     );
   }
 
-  /// ` TecnoWays All rights reserved`
+  /// ` TecnoWays LLC All rights reserved`
   String get second_Line {
     return Intl.message(
-      ' TecnoWays All rights reserved',
+      ' TecnoWays LLC All rights reserved',
       name: 'second_Line',
       desc: '',
       args: [],
     );
   }
 
-  /// `TecnoWays All rights reserved`
+  /// `TecnoWays LLC All rights reserved`
   String get third_Line {
     return Intl.message(
-      'TecnoWays All rights reserved',
+      'TecnoWays LLC All rights reserved',
       name: 'third_Line',
       desc: '',
       args: [],
@@ -485,6 +485,26 @@ class S {
     return Intl.message(
       'Cancel',
       name: 'cancel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `By installing or using this application you are accepting the `
+  String get privacy_Policy_Confirmation {
+    return Intl.message(
+      'By installing or using this application you are accepting the ',
+      name: 'privacy_Policy_Confirmation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Continue`
+  String get camera_Permission_Cancel_Message_Button {
+    return Intl.message(
+      'Continue',
+      name: 'camera_Permission_Cancel_Message_Button',
       desc: '',
       args: [],
     );

@@ -69,6 +69,7 @@ dependencies:
   firebase_crashlytics: ^2.8.5
   firebase_analytics: ^9.2.0
   receive_sharing_intent: ^1.4.5
+  
 
 
        

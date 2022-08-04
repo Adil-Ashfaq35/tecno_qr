@@ -4,6 +4,7 @@ import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:hive_flutter/hive_flutter.dart';
@@ -36,6 +37,7 @@ Future<InitData> init() async {
 
   WidgetsFlutterBinding.ensureInitialized();
 
+
   await Hive.initFlutter();
   Hive.registerAdapter((QRModelAdapter()));
   await Hive.openBox('');
@@ -54,13 +56,14 @@ Future<InitData> init() async {
 }
 
 void initControllers() {
+   Get.put(BehaviourController());
   Get.put(SettingController());
   Get.put(NavigationController());
   Get.put(QrCodeProvider());
   Get.put(ResultController());
   Get.put(QrScanProvider());
   Get.put(HistoryController());
-  Get.put(BehaviourController());
+ 
 }
 
 class MyApp extends StatefulWidget {
@@ -74,28 +77,25 @@ class MyApp extends StatefulWidget {
 
   static void setLocale(BuildContext context, Locale newLocale) {
     _MyAppState? state = context.findAncestorStateOfType<_MyAppState>();
-    state?.setLocale(newLocale);
+     state?.setlocale(newLocale);
+  }
 
-  }
-   static  Future<bool> currentLocale() async {
-    Locale locale= await getLocale();
-    if(locale.languageCode=="en"){
-      return QrCodeProvider.instance.changeLanguage.value=true;
-    }
-    else{
-      return QrCodeProvider.instance.changeLanguage.value=false;
-    }
-  }
 
 }
 
 class _MyAppState extends State<MyApp> {
-  Locale? _locale;
+    // String ?_locale;
+    // String ? countryCode;
+    Locale? _locale;
+    
   StreamSubscription? intentDataStreamSubscription;
   List<SharedMediaFile>? _sharedFiles;
-  setLocale(Locale locale) {
+  setlocale(Locale locale) {
     setState(() {
-      _locale = locale;
+      // _locale = locale.languageCode;
+      // countryCode=locale.countryCode;
+      _locale =locale;
+    behaviourController.IsLtr.value=_locale!.languageCode=='ur'|| _locale!.languageCode=='ar'?false:true;
     });
   }
 
@@ -104,7 +104,6 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
-    MyApp.currentLocale();
     intentDataStreamSubscription = ReceiveSharingIntent.getMediaStream().listen(
         (List<SharedMediaFile> value) {
       if (kDebugMode) {
@@ -128,8 +127,8 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Future<void> didChangeDependencies() async {
-    Locale locale= await getLocale();
-    setLocale(locale);
+    getLocale().then((value) => {setlocale(value),
+    });
     super.didChangeDependencies();
   }
 
@@ -137,16 +136,17 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return ScreenUtilInit(builder: (BuildContext context, Widget? child) {
       return GetMaterialApp(
-          debugShowCheckedModeBanner: false,
-          navigatorKey: _navkey,
+          debugShowCheckedModeBanner: false, 
+        navigatorKey: _navkey,
           title: "QR Code",
           localizationsDelegates: AppLocalizations.localizationsDelegates,
           supportedLocales: AppLocalizations.supportedLocales,
-          locale: _locale,
+          locale:_locale,
           onGenerateRoute: RouteGenerator.onGeneratedRoutes,
           theme: AppTheme.lightTheme,
-          initialRoute: widget.initdata.routeName
-
+          initialRoute: widget.initdata.routeName,
+           textDirection: behaviourController.IsLtr.value?TextDirection.ltr:TextDirection.rtl,
+        
           //  // '/ScanQr': (_) => const ScanQrPage(),
           // },
           );
@@ -163,6 +163,5 @@ class _MyAppState extends State<MyApp> {
 class InitData {
   List<SharedMediaFile>? sharedFiles;
   final String routeName;
-
   InitData(this.sharedFiles, this.routeName);
 }
