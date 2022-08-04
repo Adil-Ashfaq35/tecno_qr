@@ -44,7 +44,7 @@ class OptionsWidget extends StatelessWidget {
             SizedBox(
               width: 260.sm,
               child: Text(
-                  optionText,   overflow: TextOverflow.clip,
+                  optionText,   overflow: TextOverflow.ellipsis,
                 style: TextStyle(
                   letterSpacing: 1,
                   fontSize: 16.sp,

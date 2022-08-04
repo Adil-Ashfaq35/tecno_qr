@@ -4,7 +4,7 @@ import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
+
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:hive_flutter/hive_flutter.dart';
@@ -56,13 +56,14 @@ Future<InitData> init() async {
 }
 
 void initControllers() {
+   Get.put(BehaviourController());
   Get.put(SettingController());
   Get.put(NavigationController());
   Get.put(QrCodeProvider());
   Get.put(ResultController());
   Get.put(QrScanProvider());
   Get.put(HistoryController());
-  Get.put(BehaviourController());
+ 
 }
 
 class MyApp extends StatefulWidget {
@@ -76,7 +77,7 @@ class MyApp extends StatefulWidget {
 
   static void setLocale(BuildContext context, Locale newLocale) {
     _MyAppState? state = context.findAncestorStateOfType<_MyAppState>();
-     state?.setLocale(newLocale);
+     state?.setlocale(newLocale);
   }
 
 
@@ -86,15 +87,15 @@ class _MyAppState extends State<MyApp> {
     // String ?_locale;
     // String ? countryCode;
     Locale? _locale;
-    bool Isltr=true;
+    
   StreamSubscription? intentDataStreamSubscription;
   List<SharedMediaFile>? _sharedFiles;
-  setLocale(Locale locale) {
+  setlocale(Locale locale) {
     setState(() {
       // _locale = locale.languageCode;
       // countryCode=locale.countryCode;
       _locale =locale;
-      Isltr=_locale!.languageCode=='ur'|| _locale!.languageCode=='ar'?false:true;
+    behaviourController.IsLtr.value=_locale!.languageCode=='ur'|| _locale!.languageCode=='ar'?false:true;
     });
   }
 
@@ -103,7 +104,6 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
-
     intentDataStreamSubscription = ReceiveSharingIntent.getMediaStream().listen(
         (List<SharedMediaFile> value) {
       if (kDebugMode) {
@@ -127,7 +127,7 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Future<void> didChangeDependencies() async {
-    getLocale().then((value) => {setLocale(value),
+    getLocale().then((value) => {setlocale(value),
     });
     super.didChangeDependencies();
   }
@@ -145,7 +145,7 @@ class _MyAppState extends State<MyApp> {
           onGenerateRoute: RouteGenerator.onGeneratedRoutes,
           theme: AppTheme.lightTheme,
           initialRoute: widget.initdata.routeName,
-           textDirection: Isltr?TextDirection.ltr:TextDirection.rtl,
+           textDirection: behaviourController.IsLtr.value?TextDirection.ltr:TextDirection.rtl,
         
           //  // '/ScanQr': (_) => const ScanQrPage(),
           // },

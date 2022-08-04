@@ -12,7 +12,7 @@ import 'package:get/get.dart';
 class BehaviourController extends GetxController {
   static BehaviourController instance = Get.find();
   RxBool isClicked=false.obs;
-
+  RxBool IsLtr=true.obs;
 
 
   Future<void> disableButton() async {

@@ -149,16 +149,13 @@ class HistoryScroll extends StatelessWidget {
               child: ExpansionTile(
                 backgroundColor: Colors.white,
                 title: ListTile(
-                  title: Align(
-                    alignment: Alignment(-1.0.sp, 0.sp),
-                    child: Text(
-                      title,
-                      style: Theme.of(context).textTheme.bodyText1?.copyWith(
-                            decoration: TextDecoration.underline,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 15.sp,
-                          ),
-                    ),
+                  title: Text(
+                    title,
+                    style: Theme.of(context).textTheme.bodyText1?.copyWith(
+                          decoration: TextDecoration.underline,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15.sp,
+                        ),
                   ),
                 ),
                 children: [children],

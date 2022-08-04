@@ -21,7 +21,7 @@ class EnterText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset: false,
+      resizeToAvoidBottomInset: true,
       appBar: AppBarWidget(
           title: translation(context).enter_Qr,
           iconButton: IconButton(
