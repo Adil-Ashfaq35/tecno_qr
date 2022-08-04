@@ -74,30 +74,27 @@ class MyApp extends StatefulWidget {
   @override
   State<MyApp> createState() => _MyAppState();
 
-  static void setLocaleparent(BuildContext context, Locale newLocale) {
+  static void setLocale(BuildContext context, Locale newLocale) {
     _MyAppState? state = context.findAncestorStateOfType<_MyAppState>();
-    state?.setlocale(newLocale);
-
+     state?.setlocale(newLocale);
   }
-  //  static  Future<bool> currentLocale() async {
-  //   Locale locale= await getLocale();
-  //   if(locale.languageCode=="en"){
-  //     return QrCodeProvider.instance.changeLanguage.value=true;
-  //   }
-  //   else{
-  //     return QrCodeProvider.instance.changeLanguage.value=false;
-  //   }
-  // }
+
 
 }
 
 class _MyAppState extends State<MyApp> {
-  Locale? _locale;
+    // String ?_locale;
+    // String ? countryCode;
+    Locale? _locale;
+    bool Isltr=true;
   StreamSubscription? intentDataStreamSubscription;
   List<SharedMediaFile>? _sharedFiles;
   setlocale(Locale locale) {
     setState(() {
-      _locale = locale;
+      // _locale = locale.languageCode;
+      // countryCode=locale.countryCode;
+      _locale =locale;
+      Isltr=_locale!.languageCode=='ur'|| _locale!.languageCode=='ar'?false:true;
     });
   }
 
@@ -106,7 +103,6 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
-    //MyApp.currentLocale();
     intentDataStreamSubscription = ReceiveSharingIntent.getMediaStream().listen(
         (List<SharedMediaFile> value) {
       if (kDebugMode) {
@@ -130,7 +126,8 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Future<void> didChangeDependencies() async {
-     getLocale().then((locale) => {setlocale(locale)});
+    getLocale().then((value) => {setlocale(value),
+    });
     super.didChangeDependencies();
   }
 
@@ -138,17 +135,17 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return ScreenUtilInit(builder: (BuildContext context, Widget? child) {
       return GetMaterialApp(
-          debugShowCheckedModeBanner: false,
-          navigatorKey: _navkey,
+          debugShowCheckedModeBanner: false, 
+        navigatorKey: _navkey,
           title: "QR Code",
           localizationsDelegates: AppLocalizations.localizationsDelegates,
           supportedLocales: AppLocalizations.supportedLocales,
-         
           locale:_locale,
           onGenerateRoute: RouteGenerator.onGeneratedRoutes,
           theme: AppTheme.lightTheme,
           initialRoute: widget.initdata.routeName,
-         textDirection: _locale!.languageCode=='ur'?TextDirection.rtl:TextDirection.ltr,
+           textDirection: Isltr?TextDirection.ltr:TextDirection.rtl,
+        
           //  // '/ScanQr': (_) => const ScanQrPage(),
           // },
           );
@@ -165,6 +162,5 @@ class _MyAppState extends State<MyApp> {
 class InitData {
   List<SharedMediaFile>? sharedFiles;
   final String routeName;
-
   InitData(this.sharedFiles, this.routeName);
 }
