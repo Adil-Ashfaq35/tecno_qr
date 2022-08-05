@@ -32,13 +32,14 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+    
         leading: iconButton,
         title: Text(
           title,
           style: TextStyle(
               fontWeight: FontWeight.w600,
               color: Colors.white,
-              fontSize: 17.0.sp),
+              fontSize: 17.sp),
         ),
         // actions: const [
         //   Icon(Icons.favorite),

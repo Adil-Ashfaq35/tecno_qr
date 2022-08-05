@@ -89,7 +89,7 @@ class _AboutScreenState extends State<AboutScreen> {
                 Center(
                   child:Text("TecnoCode Version: \n\n  ${_packageInfo.version}",textAlign: TextAlign.center,style: Theme.of(context).textTheme.bodyText1?.copyWith(
                     color:const Color(0XFF434343),
-                    fontSize: 18.sm,
+                    fontSize: 16.sm,
                     fontWeight: FontWeight.bold,
                   ),),
                 ),
@@ -115,7 +115,7 @@ class _AboutScreenState extends State<AboutScreen> {
                     ),
                   ),
                   SizedBox(
-                    height: 20.sm,
+                    height: 10.sm,
                   ),
                   Text(" ${translation(context).third_Line}",
                     style: Theme.of(context).textTheme.headline3?.copyWith(
@@ -124,7 +124,7 @@ class _AboutScreenState extends State<AboutScreen> {
                     ),
                   ),
                   SizedBox(
-                    height: 20.sm,
+                    height: 10.sm,
                   ),
                   Center(
                     child:Text("TecnoCode Version: \n  ${_packageInfo.version}",textAlign: TextAlign.center,style: Theme.of(context).textTheme.bodyText1?.copyWith(

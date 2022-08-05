@@ -17,7 +17,7 @@ class SettingController extends GetxController {
   @override
   // ignore: must_call_super
   void onInit() {
-    getSettings();
+  
     //_getDeviceid();
 
 
@@ -36,43 +36,29 @@ class SettingController extends GetxController {
   //   } // iOS
   // }
 
-  Future<void> getSettings() async {
-    final ref =
-        firestore.collection("settings").doc("adminsettings").withConverter(
-              fromFirestore: st.Settings.fromFirestore,
-              toFirestore: (st.Settings settings, _) => settings.toFirestore(),
-            );
-    final docSnap = await ref.get();
-    final settingsdata = docSnap.data(); // Convert to City object
-    if (settingsdata != null) {
-      settingsData = settingsdata;
-    } else {
-      print("No such document.");
-    }
-  }
 
-  Future<void> addDocument() async {
-    CollectionReference users = firestore.collection("actions");
-    // Call the user's CollectionReference to add a new user
-    try {
-      users
-          .doc(deviceid)
-          .set({
-            'UpdateDate': DateTime.now(),
-            'GenerateActions': 0,
-            'ScanActions': 0,
-            'ReadActions': 0,
-          })
-          // ignore: avoid_print
-          .then((value) => print("Actions Added"))
-          // ignore: avoid_print
-          .catchError((error) => print("Failed to add Actions: $error"));
-    } on Exception catch (e) {
-      if (kDebugMode) {
-        print('here exception $e');
-      }
-    }
-  }
+  // Future<void> addDocument() async {
+  //   CollectionReference users = firestore.collection("actions");
+  //   // Call the user's CollectionReference to add a new user
+  //   try {
+  //     users
+  //         .doc(deviceid)
+  //         .set({
+  //           'UpdateDate': DateTime.now(),
+  //           'GenerateActions': 0,
+  //           'ScanActions': 0,
+  //           'ReadActions': 0,
+  //         })
+  //         // ignore: avoid_print
+  //         .then((value) => print("Actions Added"))
+  //         // ignore: avoid_print
+  //         .catchError((error) => print("Failed to add Actions: $error"));
+  //   } on Exception catch (e) {
+  //     if (kDebugMode) {
+  //       print('here exception $e');
+  //     }
+  //   }
+  // }
 
   // Future<void> updateHistoryitems(
   //     {required String generateCount,
