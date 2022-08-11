@@ -26,38 +26,38 @@ class MessageLookup extends MessageLookupByLibrary {
         "are_You_Sure":
             MessageLookupByLibrary.simpleMessage("Adakah anda pasti?"),
         "camera_Alert_Description": MessageLookupByLibrary.simpleMessage(
-            "Benarkan akses kepada kamera untuk mendayakan ciri ini atau anda boleh mengikuti langkah berikut untuk menggunakan aplikasi tanpa kebenaran:\n1- Tangkap imej Kod QR melalui aplikasi kamera anda atau pilih imej tempatan daripada fail tempatan anda.\n2- Kongsi imej ke aplikasi TecnoCode.\n3- Hasilnya akan dipaparkan terus dalam aplikasi TecnoCode."),
+            "Benarkan akses kepada kamera untuk mendayakan ciri ini atau anda boleh mengikuti langkah berikut untuk menggunakan aplikasi tanpa kebenaran:\n1- Tangkap imej melalui aplikasi kamera anda atau pilih imej setempat daripada fail setempat anda.\n2- Kongsi imej ke TecnoCode aplikasi.\n3- Hasilnya akan dipaparkan terus dalam aplikasi TecnoCode."),
         "camera_Permission_Alert":
             MessageLookupByLibrary.simpleMessage("Kebenaran Kamera Diperlukan"),
         "camera_Permission_Cancel_Message_Button":
             MessageLookupByLibrary.simpleMessage("teruskan"),
         "cancel": MessageLookupByLibrary.simpleMessage("Batal"),
         "cancel_Button_Text": MessageLookupByLibrary.simpleMessage("Batal"),
-        "copied": MessageLookupByLibrary.simpleMessage("Disalin"),
+        "copied": MessageLookupByLibrary.simpleMessage("disalin"),
         "copy_Button_Text": MessageLookupByLibrary.simpleMessage("Salinan"),
         "do_You_Want_To_Exit_This_Application":
             MessageLookupByLibrary.simpleMessage(
                 "Adakah anda mahu keluar dari aplikasi ini"),
         "download_Button_Text":
             MessageLookupByLibrary.simpleMessage("Muat turun"),
-        "enter_Qr": MessageLookupByLibrary.simpleMessage("Masukkan Qr"),
-        "fAQ":
-            MessageLookupByLibrary.simpleMessage("Soalan yang kerap ditanya"),
+        "enter_Qr":
+            MessageLookupByLibrary.simpleMessage("Hasilkan Daripada Teks"),
+        "fAQ": MessageLookupByLibrary.simpleMessage("Soalan Lazim"),
         "first_Line":
             MessageLookupByLibrary.simpleMessage("TecnoCode Versi 6.0.1.0"),
         "generate_Button_Text":
-            MessageLookupByLibrary.simpleMessage("Hasilkan daripada Teks"),
+            MessageLookupByLibrary.simpleMessage("Hasilkan Daripada Teks"),
         "generate_Tree_item":
-            MessageLookupByLibrary.simpleMessage("Menjana Sejarah"),
+            MessageLookupByLibrary.simpleMessage("Hasilkan Tindakan"),
         "grant_Access": MessageLookupByLibrary.simpleMessage("Berikan Akses"),
         "help": MessageLookupByLibrary.simpleMessage("Tolong"),
-        "history": MessageLookupByLibrary.simpleMessage("Sejarah"),
-        "history_Screen": MessageLookupByLibrary.simpleMessage("Skrin Sejarah"),
-        "home": MessageLookupByLibrary.simpleMessage("Halaman Utama"),
-        "invalid_Url": MessageLookupByLibrary.simpleMessage("URL tidak sah"),
+        "history": MessageLookupByLibrary.simpleMessage("Log Tindakan"),
+        "history_Screen": MessageLookupByLibrary.simpleMessage("Log Tindakan"),
+        "home": MessageLookupByLibrary.simpleMessage("Laman utama"),
+        "invalid_Url": MessageLookupByLibrary.simpleMessage("Pautan Tidak Sah"),
         "language": MessageLookupByLibrary.simpleMessage("Bahasa"),
         "local_Alert_Description": MessageLookupByLibrary.simpleMessage(
-            "Benarkan akses kepada storan setempat untuk mendayakan ciri ini atau anda boleh mengikuti langkah berikut untuk menggunakan aplikasi tanpa kebenaran:\n1- Tangkap imej Kod QR melalui aplikasi kamera anda atau pilih imej tempatan daripada fail tempatan anda.\n2- Kongsi imej ke aplikasi TecnoCode.\n3- Hasilnya akan dipaparkan terus dalam aplikasi TecnoCode."),
+            "Benarkan akses kepada storan setempat untuk mendayakan ciri ini atau anda boleh mengikuti langkah berikut untuk menggunakan aplikasi tanpa kebenaran:\n1- Tangkap imej melalui aplikasi kamera anda atau pilih imej setempat daripada fail setempat anda.\n2- Kongsi imej ke Aplikasi TecnoCode.\n3- Hasilnya akan dipaparkan terus dalam aplikasi TecnoCode."),
         "local_Permission_Alert": MessageLookupByLibrary.simpleMessage(
             "Kebenaran Storan Tempatan Diperlukan"),
         "navigate_Button_Text":
@@ -67,36 +67,36 @@ class MessageLookup extends MessageLookupByLibrary {
         "paste": MessageLookupByLibrary.simpleMessage("tampal"),
         "privacy_Policy": MessageLookupByLibrary.simpleMessage("Dasar Privasi"),
         "privacy_Policy_Confirmation": MessageLookupByLibrary.simpleMessage(
-            "Dengan memasang atau menggunakan aplikasi ini anda menerima versi bahasa Inggeris dasar privasi"),
-        "qr_Code": MessageLookupByLibrary.simpleMessage("Qr Code"),
-        "qr_Not_Found_In_Image":
-            MessageLookupByLibrary.simpleMessage("Qr tidak ditemui dalam imej"),
+            "Dengan memasang atau menggunakan aplikasi ini anda menerima versi bahasa inggeris "),
+        "qr_Code": MessageLookupByLibrary.simpleMessage("Kod QR"),
+        "qr_Not_Found_In_Image": MessageLookupByLibrary.simpleMessage(
+            "Tiada kod dikesan dalam imej"),
         "read_Button_Text":
-            MessageLookupByLibrary.simpleMessage("Baca daripada Imej Tempatan"),
-        "read_History": MessageLookupByLibrary.simpleMessage("Baca sejarah"),
+            MessageLookupByLibrary.simpleMessage("Baca Dari Imej Setempat"),
+        "read_History": MessageLookupByLibrary.simpleMessage("Baca Tindakan"),
         "result_Language_Label":
             MessageLookupByLibrary.simpleMessage("Hasilnya"),
-        "result_Screen":
-            MessageLookupByLibrary.simpleMessage("Skrin Keputusan"),
+        "result_Screen": MessageLookupByLibrary.simpleMessage("Hasilnya"),
         "result_Text_Type_Is_Not_Url_To_Navigate":
             MessageLookupByLibrary.simpleMessage(
-                "Jenis Teks Hasil bukan Url untuk dinavigasi"),
+                "Jenis Teks Hasil bukan pautan untuk menavigasi"),
         "save_Button_Text": MessageLookupByLibrary.simpleMessage("Jimat"),
         "scan_Button_Text":
-            MessageLookupByLibrary.simpleMessage("Imbas daripada Kamera"),
-        "scan_Tree_Item": MessageLookupByLibrary.simpleMessage("Imbas Sejarah"),
+            MessageLookupByLibrary.simpleMessage("Imbas Dari Kamera"),
+        "scan_Tree_Item":
+            MessageLookupByLibrary.simpleMessage("Tindakan Imbasan"),
         "second_Line": MessageLookupByLibrary.simpleMessage(
-            "TecnoWays LLC Semua hak terpelihara"),
+            "Hak Cipta Terpelihara TecnoWays LLC"),
         "share_App": MessageLookupByLibrary.simpleMessage("Kongsi Apl"),
         "share_Button_Text": MessageLookupByLibrary.simpleMessage("Kongsi"),
         "shown_Only_On_The_Early_First_Time": MessageLookupByLibrary.simpleMessage(
-            "Dengan memasang atau menggunakan aplikasi ini anda menerima versi bahasa Inggeris dasar privasi"),
+            "Dengan memasang atau menggunakan aplikasi ini anda menerima dasar privasi"),
         "tecno_Code": MessageLookupByLibrary.simpleMessage("TecnoCode"),
         "terms_Of_Use":
             MessageLookupByLibrary.simpleMessage("Syarat penggunaan"),
         "text": MessageLookupByLibrary.simpleMessage("Teks"),
         "third_Line": MessageLookupByLibrary.simpleMessage(
-            "TecnoWays LLC Semua hak terpelihara"),
+            "Hak Cipta Terpelihara TecnoWays LLC"),
         "yes": MessageLookupByLibrary.simpleMessage("ya")
       };
 }

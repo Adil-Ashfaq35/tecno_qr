@@ -25,9 +25,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "about": MessageLookupByLibrary.simpleMessage("À propos de"),
         "are_You_Sure": MessageLookupByLibrary.simpleMessage("Êtes-vous sûr?"),
         "camera_Alert_Description": MessageLookupByLibrary.simpleMessage(
-            "Autorisez l\'accès à la caméra pour activer cette fonctionnalité ou vous pouvez suivre les étapes suivantes pour utiliser l\'application sans autorisation :\n1- Capturez l\'image du QR Code via votre application appareil photo ou sélectionnez une image locale à partir de vos fichiers locaux.\n2- Partagez l\'image avec l\'application TecnoCode.\n3- Le résultat sera affiché directement dans l\'application TecnoCode."),
+            "Autorisez l\'accès à l\'appareil photo pour activer cette fonctionnalité ou vous pouvez suivre les étapes suivantes pour utiliser l\'application sans autorisation :\n1- Capturez l\'image via votre application appareil photo ou sélectionnez une image locale à partir de vos fichiers locaux.\n2- Partagez l\'image avec l\'application TecnoCode.\n3- Le résultat s\'affichera directement dans l\'application TecnoCode."),
         "camera_Permission_Alert": MessageLookupByLibrary.simpleMessage(
-            "L\'autorisation de la caméra est requise"),
+            "L\'autorisation de l\'appareil photo est requise"),
         "camera_Permission_Cancel_Message_Button":
             MessageLookupByLibrary.simpleMessage("Continuer"),
         "cancel": MessageLookupByLibrary.simpleMessage("Annuler"),
@@ -39,63 +39,62 @@ class MessageLookup extends MessageLookupByLibrary {
                 "Voulez-vous quitter cette application"),
         "download_Button_Text":
             MessageLookupByLibrary.simpleMessage("Télécharger"),
-        "enter_Qr": MessageLookupByLibrary.simpleMessage("Entrez Qr"),
+        "enter_Qr": MessageLookupByLibrary.simpleMessage(
+            "Générer à partir d\'un texte"),
         "fAQ": MessageLookupByLibrary.simpleMessage("FAQ"),
         "first_Line":
             MessageLookupByLibrary.simpleMessage("TecnoCode Version 6.0.1.0"),
-        "generate_Button_Text": MessageLookupByLibrary.simpleMessage(
-            "Générer à partir d\'un texte"),
+        "generate_Button_Text":
+            MessageLookupByLibrary.simpleMessage("Générer à partir du texte"),
         "generate_Tree_item":
-            MessageLookupByLibrary.simpleMessage("Générer l\'historique"),
+            MessageLookupByLibrary.simpleMessage("Générer des actions"),
         "grant_Access":
             MessageLookupByLibrary.simpleMessage("Accorder l\'accès"),
         "help": MessageLookupByLibrary.simpleMessage("Aide"),
-        "history": MessageLookupByLibrary.simpleMessage("Histoire"),
+        "history": MessageLookupByLibrary.simpleMessage("Journal des actions"),
         "history_Screen":
-            MessageLookupByLibrary.simpleMessage("Écran d\'historique"),
-        "home": MessageLookupByLibrary.simpleMessage("Accueil"),
-        "invalid_Url": MessageLookupByLibrary.simpleMessage("URL invalide"),
+            MessageLookupByLibrary.simpleMessage("Journal d\'action"),
+        "home": MessageLookupByLibrary.simpleMessage("Page d\'accueil"),
+        "invalid_Url": MessageLookupByLibrary.simpleMessage("Lien non valide"),
         "language": MessageLookupByLibrary.simpleMessage("Langue"),
         "local_Alert_Description": MessageLookupByLibrary.simpleMessage(
-            "Autorisez l\'accès au stockage local pour activer cette fonctionnalité ou vous pouvez suivre les étapes suivantes pour utiliser l\'application sans autorisation :\n1- Capturez l\'image du QR Code via votre application appareil photo ou sélectionnez une image locale à partir de vos fichiers locaux.\n2- Partagez l\'image avec l\'application TecnoCode.\n3- Le résultat sera affiché directement dans l\'application TecnoCode."),
+            "Autorisez l\'accès au stockage local pour activer cette fonctionnalité ou vous pouvez suivre les étapes suivantes pour utiliser l\'application sans autorisation :\n1- Capturez l\'image via votre application appareil photo ou sélectionnez une image locale dans vos fichiers locaux.\n2- Partagez l\'image avec l\'application TecnoCode.\n3- Le résultat sera affiché directement dans l\'application TecnoCode."),
         "local_Permission_Alert": MessageLookupByLibrary.simpleMessage(
             "L\'autorisation de stockage local est requise"),
         "navigate_Button_Text":
-            MessageLookupByLibrary.simpleMessage("Naviguez sur"),
+            MessageLookupByLibrary.simpleMessage("Naviguer sur"),
         "no": MessageLookupByLibrary.simpleMessage("Non"),
         "oK_Button_Text": MessageLookupByLibrary.simpleMessage("OK"),
-        "paste": MessageLookupByLibrary.simpleMessage("coller"),
+        "paste": MessageLookupByLibrary.simpleMessage("Coller"),
         "privacy_Policy": MessageLookupByLibrary.simpleMessage(
             "Politique de confidentialité"),
         "privacy_Policy_Confirmation": MessageLookupByLibrary.simpleMessage(
-            "En installant ou en utilisant cette application, vous acceptez la version anglaise de la politique de confidentialité."),
-        "qr_Code": MessageLookupByLibrary.simpleMessage("QrCode"),
+            "En installant ou en utilisant cette application, vous acceptez la version anglaise des "),
+        "qr_Code": MessageLookupByLibrary.simpleMessage("Code QR"),
         "qr_Not_Found_In_Image": MessageLookupByLibrary.simpleMessage(
-            "Qr introuvable dans l\'image"),
+            "Aucun code détecté dans l\'image"),
         "read_Button_Text": MessageLookupByLibrary.simpleMessage(
             "Lire à partir d\'une image locale"),
         "read_History":
-            MessageLookupByLibrary.simpleMessage("Lire l\'historique"),
+            MessageLookupByLibrary.simpleMessage("Actions de lecture"),
         "result_Language_Label":
             MessageLookupByLibrary.simpleMessage("Résultat"),
-        "result_Screen":
-            MessageLookupByLibrary.simpleMessage("Écran de résultat"),
+        "result_Screen": MessageLookupByLibrary.simpleMessage("Résultat"),
         "result_Text_Type_Is_Not_Url_To_Navigate":
             MessageLookupByLibrary.simpleMessage(
-                "Le type de texte de résultat n\'est pas l\'URL pour naviguer"),
-        "save_Button_Text":
-            MessageLookupByLibrary.simpleMessage("Sauvegarder "),
+                "Résultat Le type de texte n\'est pas un lien pour naviguer"),
+        "save_Button_Text": MessageLookupByLibrary.simpleMessage("Sauvegarder"),
         "scan_Button_Text": MessageLookupByLibrary.simpleMessage(
             "Scanner de l\'appareil photo"),
         "scan_Tree_Item":
-            MessageLookupByLibrary.simpleMessage("Scanner l\'historique"),
+            MessageLookupByLibrary.simpleMessage("Scanner les actions"),
         "second_Line": MessageLookupByLibrary.simpleMessage(
             "TecnoWays LLC Tous droits réservés"),
         "share_App":
             MessageLookupByLibrary.simpleMessage("Partager l\'application"),
         "share_Button_Text": MessageLookupByLibrary.simpleMessage("Partager"),
         "shown_Only_On_The_Early_First_Time": MessageLookupByLibrary.simpleMessage(
-            "En installant ou en utilisant cette application, vous acceptez la version anglaise de la politique de confidentialité."),
+            "En installant ou en utilisant cette application, vous acceptez la politique de confidentialité."),
         "tecno_Code": MessageLookupByLibrary.simpleMessage("TecnoCode"),
         "terms_Of_Use":
             MessageLookupByLibrary.simpleMessage("Conditions d\'utilisation"),

@@ -39,21 +39,20 @@ class MessageLookup extends MessageLookupByLibrary {
                 "Do you want to exit this application"),
         "download_Button_Text":
             MessageLookupByLibrary.simpleMessage("Download"),
-        "enter_Qr": MessageLookupByLibrary.simpleMessage("Enter Qr"),
+        "enter_Qr": MessageLookupByLibrary.simpleMessage("Generate From Text"),
         "fAQ": MessageLookupByLibrary.simpleMessage("FAQ"),
         "first_Line":
             MessageLookupByLibrary.simpleMessage("TecnoCode Version 6.0.1.0"),
         "generate_Button_Text":
             MessageLookupByLibrary.simpleMessage("Generate From Text"),
         "generate_Tree_item":
-            MessageLookupByLibrary.simpleMessage("Generate History"),
+            MessageLookupByLibrary.simpleMessage("Generate Actions"),
         "grant_Access": MessageLookupByLibrary.simpleMessage("Grant Access"),
         "help": MessageLookupByLibrary.simpleMessage("Help"),
-        "history": MessageLookupByLibrary.simpleMessage("History"),
-        "history_Screen":
-            MessageLookupByLibrary.simpleMessage("History Screen"),
+        "history": MessageLookupByLibrary.simpleMessage("Action Log"),
+        "history_Screen": MessageLookupByLibrary.simpleMessage("Action Log"),
         "home": MessageLookupByLibrary.simpleMessage("Home"),
-        "invalid_Url": MessageLookupByLibrary.simpleMessage("Invalid url"),
+        "invalid_Url": MessageLookupByLibrary.simpleMessage("Invalid Link"),
         "language": MessageLookupByLibrary.simpleMessage("Language"),
         "local_Alert_Description": MessageLookupByLibrary.simpleMessage(
             "Allow access to local storage to enable this feature or you can follow the following steps to use the application without permission:\n1- Capture the QR Code image via your camera application or select a local image from your local files.\n2- Share the image to TecnoCode application.\n3- The result will be displayed directly in the TecnoCode application."),
@@ -63,28 +62,28 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Navigate"),
         "no": MessageLookupByLibrary.simpleMessage("No"),
         "oK_Button_Text": MessageLookupByLibrary.simpleMessage("OK"),
-        "paste": MessageLookupByLibrary.simpleMessage("paste"),
+        "paste": MessageLookupByLibrary.simpleMessage("Paste"),
         "privacy_Policy":
             MessageLookupByLibrary.simpleMessage("Privacy Policy"),
         "privacy_Policy_Confirmation": MessageLookupByLibrary.simpleMessage(
             "By installing or using this application you are accepting the "),
-        "qr_Code": MessageLookupByLibrary.simpleMessage("Qr Code"),
-        "qr_Not_Found_In_Image":
-            MessageLookupByLibrary.simpleMessage("Qr not found in image"),
+        "qr_Code": MessageLookupByLibrary.simpleMessage("QR Code"),
+        "qr_Not_Found_In_Image": MessageLookupByLibrary.simpleMessage(
+            "No code detected in the image"),
         "read_Button_Text":
             MessageLookupByLibrary.simpleMessage("Read From Local Image"),
-        "read_History": MessageLookupByLibrary.simpleMessage("Read History"),
+        "read_History": MessageLookupByLibrary.simpleMessage("Read Actions"),
         "result_Language_Label": MessageLookupByLibrary.simpleMessage("Result"),
-        "result_Screen": MessageLookupByLibrary.simpleMessage("Result Screen"),
+        "result_Screen": MessageLookupByLibrary.simpleMessage("Result"),
         "result_Text_Type_Is_Not_Url_To_Navigate":
             MessageLookupByLibrary.simpleMessage(
-                "Result Text type is not Url to navigate"),
+                "Result Text type is not link to navigate"),
         "save_Button_Text": MessageLookupByLibrary.simpleMessage("Save "),
         "scan_Button_Text":
             MessageLookupByLibrary.simpleMessage("Scan From Camera"),
-        "scan_Tree_Item": MessageLookupByLibrary.simpleMessage("Scan History"),
+        "scan_Tree_Item": MessageLookupByLibrary.simpleMessage("Scan Actions"),
         "second_Line": MessageLookupByLibrary.simpleMessage(
-            " TecnoWays LLC All rights reserved"),
+            " TecnoWays LLC All Rights Reserved"),
         "share_App": MessageLookupByLibrary.simpleMessage("Share App"),
         "share_Button_Text": MessageLookupByLibrary.simpleMessage("Share"),
         "shown_Only_On_The_Early_First_Time": MessageLookupByLibrary.simpleMessage(
@@ -93,7 +92,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "terms_Of_Use": MessageLookupByLibrary.simpleMessage("Terms of use"),
         "text": MessageLookupByLibrary.simpleMessage("Text"),
         "third_Line": MessageLookupByLibrary.simpleMessage(
-            "TecnoWays LLC All rights reserved"),
+            " TecnoWays LLC All Rights Reserved"),
         "yes": MessageLookupByLibrary.simpleMessage("Yes")
       };
 }

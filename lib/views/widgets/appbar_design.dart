@@ -23,23 +23,26 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
     Key? key,
     required this.title,
     required this.iconButton,
+    this.orientation,
+
     // ignore: non_constant_identifier_names
   }) : super(key: key);
 
   final String title;
   final IconButton iconButton;
+  Orientation? orientation;
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
-    
+
         leading: iconButton,
         title: Text(
           title,
           style: TextStyle(
               fontWeight: FontWeight.w600,
               color: Colors.white,
-              fontSize: 17.sp),
+              fontSize:orientation==Orientation.portrait? 17.sp:12.sp),
         ),
         // actions: const [
         //   Icon(Icons.favorite),
@@ -49,7 +52,8 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
         //   ),
         //   Icon(Icons.more_vert),
         // ],
-        backgroundColor: Color.fromARGB(255, 28, 92, 146));
+        backgroundColor: const Color.fromARGB(255, 28, 92, 146));
+
   }
 
   @override

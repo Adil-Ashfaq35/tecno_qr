@@ -22,81 +22,158 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
 
-      appBar: AppBarWidget(
-        title: translation(context).tecno_Code,
-        iconButton: IconButton(
-          
-          hoverColor: AppTheme.splashColor,
-          disabledColor: Colors.grey[200],
-          focusColor: AppTheme.splashColor,
-          highlightColor: AppTheme.splashColor,
-          splashColor: AppTheme.splashColor,
-          splashRadius: 20.r,
-          icon: const Icon(Icons.menu),
-          onPressed: () {
-            animation!();
-          },
-        
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(66.sm),
+        child: AppBarWidget(
+          title: translation(context).tecno_Code,
+          iconButton: IconButton(
+
+            hoverColor: AppTheme.splashColor,
+            disabledColor: Colors.grey[200],
+            focusColor: AppTheme.splashColor,
+            highlightColor: AppTheme.splashColor,
+            splashColor: AppTheme.splashColor,
+            splashRadius: 20.r,
+            icon: const Icon(Icons.menu),
+            onPressed: () {
+              animation!();
+            },
+
+          ),
         ),
       ),
-      body: Container(
-        decoration: const BoxDecoration(color: AppTheme.lightBackgroundColor),
-        child: Column(mainAxisAlignment: MainAxisAlignment.center,
-            // crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              OptionsWidget(
-                icon: CupertinoIcons.camera,
-                optionText: translation(context).scan_Button_Text,
-                onTap: () async {
-             bool isGranted=    await permission(context,true);
-             isGranted ?
-               navigationController.navigateToNamed(RouteGenerator.scanQr):null;
-                  
-                  FirebaseAnalytics.instance
-                      .logEvent(name: "Scan_from_camera", parameters: {
-                    "image": "scanning from camera",
-                  });
-                },
-              ),
-              OptionsWidget(
-                icon: CupertinoIcons.photo,
-                optionText: '${AppLocalizations.of(context)?.read_Button_Text}',
-                onTap: () async {
+      body:OrientationBuilder(builder: (BuildContext context, Orientation orientation) {
+        return
+          orientation==Orientation.portrait?
+          Container(
+          decoration: const BoxDecoration(color: AppTheme.lightBackgroundColor),
+          child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              // crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                OptionsWidget(
+                  icon: CupertinoIcons.camera,
+                  optionText: translation(context).scan_Button_Text,
+                  onTap: () async {
+                    bool isGranted=    await permission(context,true);
+                    isGranted ?
+                    navigationController.navigateToNamed(RouteGenerator.scanQr):null;
 
-               bool isGranted=   await  permission(context,false);
-             if(isGranted) {
-                  FirebaseAnalytics.instance.logEvent(
-                    name: "Read_from_local_storage",
-                    parameters: {
-                      "image": "read_from_local_storage",
-                    },
-                  );
-                  bool isCompleted = await qrScanProvider.pickImage();
-                  isCompleted
-                      ? navigationController
+                    FirebaseAnalytics.instance
+                        .logEvent(name: "Scan_from_camera", parameters: {
+                      "image": "scanning from camera",
+                    });
+                  },
+                  orientation: orientation,
+                ),
+                OptionsWidget(
+                  icon: CupertinoIcons.photo,
+                  optionText: '${AppLocalizations.of(context)?.read_Button_Text}',
+                  onTap: () async {
+
+                    bool isGranted=   await  permission(context,false);
+                    if(isGranted) {
+                      FirebaseAnalytics.instance.logEvent(
+                        name: "Read_from_local_storage",
+                        parameters: {
+                          "image": "read_from_local_storage",
+                        },
+                      );
+                      bool isCompleted = await qrScanProvider.pickImage();
+                      isCompleted
+                          ? navigationController
                           .navigateToNamed(RouteGenerator.displayImage)
-                      : null;
-               }
-            
+                          : null;
+                    }
 
-                },
-              ),
-              OptionsWidget(
-                icon: CupertinoIcons.pen,
-                optionText: translation(context).generate_Button_Text,
-                onTap: () {
-                  FirebaseAnalytics.instance.logEvent(
-                    name: "Generate_from_text",
-                    parameters: {
-                      "QrGenerated": "Generated_from_text",
-                    },
-                  );
-                  navigationController
-                      .navigateToNamed(RouteGenerator.enterText);
-                },
-              ),
-            ]),
-      ),
+
+                  },
+                  orientation: orientation,
+                ),
+                OptionsWidget(
+                  icon: CupertinoIcons.pen,
+                  optionText: translation(context).generate_Button_Text,
+                  onTap: () {
+                    FirebaseAnalytics.instance.logEvent(
+                      name: "Generate_from_text",
+                      parameters: {
+                        "QrGenerated": "Generated_from_text",
+                      },
+                    );
+                    navigationController
+                        .navigateToNamed(RouteGenerator.enterText);
+                  },
+                  orientation: orientation,
+                ),
+              ]),
+        ): SingleChildScrollView(
+          child: Container(
+              decoration: const BoxDecoration(color: AppTheme.lightBackgroundColor),
+              child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  // crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    OptionsWidget(
+                      icon: CupertinoIcons.camera,
+                      optionText: translation(context).scan_Button_Text,
+                      onTap: () async {
+                        bool isGranted=    await permission(context,true);
+                        isGranted ?
+                        navigationController.navigateToNamed(RouteGenerator.scanQr):null;
+
+                        FirebaseAnalytics.instance
+                            .logEvent(name: "Scan_from_camera", parameters: {
+                          "image": "scanning from camera",
+                        });
+                      },
+                      orientation: orientation,
+                    ),
+                    OptionsWidget(
+                      icon: CupertinoIcons.photo,
+                      optionText: '${AppLocalizations.of(context)?.read_Button_Text}',
+                      onTap: () async {
+
+                        bool isGranted=   await  permission(context,false);
+                        if(isGranted) {
+                          FirebaseAnalytics.instance.logEvent(
+                            name: "Read_from_local_storage",
+                            parameters: {
+                              "image": "read_from_local_storage",
+                            },
+                          );
+                          bool isCompleted = await qrScanProvider.pickImage();
+                          isCompleted
+                              ? navigationController
+                              .navigateToNamed(RouteGenerator.displayImage)
+                              : null;
+                        }
+
+
+                      },
+                      orientation: orientation,
+                    ),
+                    OptionsWidget(
+                      icon: CupertinoIcons.pen,
+                      optionText: translation(context).generate_Button_Text,
+                      onTap: () {
+                        FirebaseAnalytics.instance.logEvent(
+                          name: "Generate_from_text",
+                          parameters: {
+                            "QrGenerated": "Generated_from_text",
+                          },
+                        );
+                        navigationController
+                            .navigateToNamed(RouteGenerator.enterText);
+                      },
+                      orientation: orientation,
+                    ),
+                  ]),
+            ),
+        );
+      },
+
+      )
+
     );
   }
 

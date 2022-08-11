@@ -60,13 +60,14 @@ class _CustomDrawerState extends State<CustomDrawer>
   @override
   Widget build(BuildContext context) {
 
-    Widget _buildDrawer() => Drawer(
+    Widget _buildDrawer() => OrientationBuilder(
+      builder: (BuildContext context, Orientation orientation) {
+        return  Drawer(
           elevation: 0,
           backgroundColor: const Color.fromARGB(255, 28, 92, 146),
           child: SingleChildScrollView(
             physics: const BouncingScrollPhysics(),
             child: Container(
-              height: 1.sh,
               padding: EdgeInsets.symmetric(
                 horizontal: 20.sp,
               ),
@@ -86,6 +87,7 @@ class _CustomDrawerState extends State<CustomDrawer>
                         },
                         title: translation(context).home,
                         iconData: Icons.home,
+                        orientation: orientation,
                       ),
                       SizedBox(
                         height: 0.05.sh,
@@ -97,6 +99,7 @@ class _CustomDrawerState extends State<CustomDrawer>
                         },
                         title:  translation(context).history,
                         iconData: Icons.history,
+                        orientation: orientation,
                       ),
                       SizedBox(
                         height: 0.05.sh,
@@ -108,6 +111,7 @@ class _CustomDrawerState extends State<CustomDrawer>
                         },
                         title: translation(context).language,
                         iconData: Icons.language,
+                        orientation: orientation,
                       ),
                       SizedBox(
                         height: 0.05.sh,
@@ -121,6 +125,7 @@ class _CustomDrawerState extends State<CustomDrawer>
                         },
                         title: translation(context).share_App,
                         iconData: Icons.share,
+                        orientation: orientation,
                       ),
                       SizedBox(
                         height: 0.05.sh,
@@ -131,7 +136,10 @@ class _CustomDrawerState extends State<CustomDrawer>
                             launchUrl(Uri.parse(ConstantSettings.helpUrl));
                           },
                           title:  translation(context).privacy_Policy,
-                          iconData: Icons.privacy_tip),
+                          iconData: Icons.privacy_tip,
+                        orientation: orientation,
+                      ),
+
                       SizedBox(
                         height: 0.05.sh,
                       ),
@@ -139,10 +147,11 @@ class _CustomDrawerState extends State<CustomDrawer>
                       Menuitem(
                         callback: () async {
                           //    PackageInfo info = await getVersion();
-                            launchUrl(Uri.parse(ConstantSettings.helpUrl));
+                          launchUrl(Uri.parse(ConstantSettings.helpUrl));
                         },
                         title: translation(context).help,
                         iconData: Icons.help,
+                        orientation: orientation,
                       ),
                       SizedBox(
                         height: 0.05.sh,
@@ -153,7 +162,9 @@ class _CustomDrawerState extends State<CustomDrawer>
                                 .navigateToNamed(RouteGenerator.aboutScreen);
                           },
                           title:  translation(context).about,
-                          iconData: Icons.person),
+                          iconData: Icons.person,
+                        orientation: orientation,
+                      ),
                     ],
                   ),
                 ],
@@ -161,6 +172,10 @@ class _CustomDrawerState extends State<CustomDrawer>
             ),
           ),
         );
+
+      },
+
+    );
 
     Widget _buildHome() => WillPopScope(
       onWillPop:onWillPop,
@@ -189,6 +204,7 @@ class _CustomDrawerState extends State<CustomDrawer>
               double scale = 1 - (animationController.value * 0.15);
               return Stack(
                 children: [
+
                   _buildDrawer(),
                   Transform(
                       transform: Matrix4.identity()
@@ -225,11 +241,13 @@ class Menuitem extends StatelessWidget {
     Key? key,
     required this.title,
     required this.callback,
-    required this.iconData,
+    required this.iconData, required this.orientation,
+
   }) : super(key: key);
   final String title;
   final VoidCallback callback;
   final IconData iconData;
+  final Orientation orientation;
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -254,7 +272,7 @@ class Menuitem extends StatelessWidget {
               style: Theme.of(context)
                   .textTheme
                   .headline2
-                  ?.copyWith(color: Colors.white, fontSize: 16.sp),
+                  ?.copyWith(color: Colors.white, fontSize: orientation == Orientation.portrait ? 16.sp:10.sp),
             ),
           )
         ],

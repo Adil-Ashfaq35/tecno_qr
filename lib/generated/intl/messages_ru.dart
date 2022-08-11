@@ -25,80 +25,82 @@ class MessageLookup extends MessageLookupByLibrary {
         "about": MessageLookupByLibrary.simpleMessage("О сайте"),
         "are_You_Sure": MessageLookupByLibrary.simpleMessage("Ты уверен"),
         "camera_Alert_Description": MessageLookupByLibrary.simpleMessage(
-            "Разрешите доступ к камере, чтобы включить эту функцию, или вы можете выполнить следующие шаги, чтобы использовать приложение без разрешения:\n1- Захватите изображение QR-кода с помощью приложения камеры или выберите локальное изображение из ваших локальных файлов.\n2- Поделитесь изображением с приложением TecnoCode.\n3- Результат будет отображаться непосредственно в приложении TecnoCode."),
-        "camera_Permission_Alert":
-            MessageLookupByLibrary.simpleMessage("Требуется разрешение камеры"),
+            "Разрешите доступ к камере, чтобы включить эту функцию, или вы можете выполнить следующие шаги, чтобы использовать приложение без разрешения:\n1- Захватите изображение с помощью приложения камеры или выберите локальное изображение из ваших локальных файлов.\n2- Поделитесь изображением с приложением TecnoCode.\n3- Результат будет отображен непосредственно в приложении TecnoCode."),
+        "camera_Permission_Alert": MessageLookupByLibrary.simpleMessage(
+            "Требуется разрешение на камеру"),
         "camera_Permission_Cancel_Message_Button":
             MessageLookupByLibrary.simpleMessage("Продолжить"),
-        "cancel": MessageLookupByLibrary.simpleMessage("Отмена"),
+        "cancel": MessageLookupByLibrary.simpleMessage("Отменить"),
         "cancel_Button_Text": MessageLookupByLibrary.simpleMessage("Отменить"),
         "copied": MessageLookupByLibrary.simpleMessage("Скопировано"),
-        "copy_Button_Text": MessageLookupByLibrary.simpleMessage("Поделиться"),
+        "copy_Button_Text": MessageLookupByLibrary.simpleMessage("Копировать"),
         "do_You_Want_To_Exit_This_Application":
             MessageLookupByLibrary.simpleMessage(
                 "Вы хотите выйти из этого приложения"),
         "download_Button_Text":
             MessageLookupByLibrary.simpleMessage("Загрузить"),
-        "enter_Qr": MessageLookupByLibrary.simpleMessage("Введите Qr"),
+        "enter_Qr":
+            MessageLookupByLibrary.simpleMessage("Генерировать из текста"),
         "fAQ": MessageLookupByLibrary.simpleMessage("ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ"),
         "first_Line":
-            MessageLookupByLibrary.simpleMessage("TecnoCode Version 6.0.1.0"),
+            MessageLookupByLibrary.simpleMessage("TecnoCode Версия 6.0.1.0"),
         "generate_Button_Text":
             MessageLookupByLibrary.simpleMessage("Генерировать из текста"),
         "generate_Tree_item":
-            MessageLookupByLibrary.simpleMessage("Генерировать историю"),
+            MessageLookupByLibrary.simpleMessage("Генерировать действия"),
         "grant_Access":
-            MessageLookupByLibrary.simpleMessage("Предоставление доступа"),
+            MessageLookupByLibrary.simpleMessage("Предоставить доступ"),
         "help": MessageLookupByLibrary.simpleMessage("Помощь"),
-        "history": MessageLookupByLibrary.simpleMessage("история"),
-        "history_Screen": MessageLookupByLibrary.simpleMessage("Экран истории"),
-        "home": MessageLookupByLibrary.simpleMessage("Главная страница"),
-        "invalid_Url": MessageLookupByLibrary.simpleMessage("Неверный URL"),
+        "history": MessageLookupByLibrary.simpleMessage("Журнал действий"),
+        "history_Screen":
+            MessageLookupByLibrary.simpleMessage("Журнал действий"),
+        "home": MessageLookupByLibrary.simpleMessage("Домашняя страница"),
+        "invalid_Url": MessageLookupByLibrary.simpleMessage("Неверная ссылка"),
         "language": MessageLookupByLibrary.simpleMessage("Язык"),
         "local_Alert_Description": MessageLookupByLibrary.simpleMessage(
-            "Разрешите доступ к локальному хранилищу, чтобы включить эту функцию, или вы можете выполнить следующие шаги, чтобы использовать приложение без разрешения:\n1- Захватите изображение QR-кода с помощью приложения камеры или выберите локальное изображение из ваших локальных файлов.\n2- Поделитесь изображением с приложением TecnoCode.\n3- Результат будет отображаться непосредственно в приложении TecnoCode."),
+            "Разрешите доступ к локальному хранилищу, чтобы включить эту функцию, или вы можете выполнить следующие шаги, чтобы использовать приложение без разрешения:\n1- Захватите изображение через приложение камеры или выберите локальное изображение из ваших локальных файлов.\n2- Поделитесь изображением с приложением TecnoCode.\n3- Результат будет отображен непосредственно в приложении TecnoCode."),
         "local_Permission_Alert": MessageLookupByLibrary.simpleMessage(
-            "Требуется разрешение на локальное хранилище"),
+            "Требуется разрешение на использование локального хранилища"),
         "navigate_Button_Text":
             MessageLookupByLibrary.simpleMessage("Перейдите по адресу"),
         "no": MessageLookupByLibrary.simpleMessage("Нет"),
         "oK_Button_Text": MessageLookupByLibrary.simpleMessage("OK"),
-        "paste": MessageLookupByLibrary.simpleMessage("вставить"),
+        "paste": MessageLookupByLibrary.simpleMessage("Вставить"),
         "privacy_Policy":
             MessageLookupByLibrary.simpleMessage("Политика конфиденциальности"),
         "privacy_Policy_Confirmation": MessageLookupByLibrary.simpleMessage(
-            "Устанавливая или используя это приложение, вы принимаете английскую версию политики конфиденциальности"),
-        "qr_Code": MessageLookupByLibrary.simpleMessage("Qr-код"),
-        "qr_Not_Found_In_Image":
-            MessageLookupByLibrary.simpleMessage("Qr не найден на изображении"),
-        "read_Button_Text":
-            MessageLookupByLibrary.simpleMessage("местный образ"),
-        "read_History": MessageLookupByLibrary.simpleMessage("Читать историю"),
+            "Устанавливая или используя это приложение, вы принимаете английскую версию документа "),
+        "qr_Code": MessageLookupByLibrary.simpleMessage("QR-код"),
+        "qr_Not_Found_In_Image": MessageLookupByLibrary.simpleMessage(
+            "Код не обнаружен на изображении"),
+        "read_Button_Text": MessageLookupByLibrary.simpleMessage(
+            "Считывание с локального изображения"),
+        "read_History":
+            MessageLookupByLibrary.simpleMessage("Действия при чтении"),
         "result_Language_Label":
             MessageLookupByLibrary.simpleMessage("Результат"),
-        "result_Screen":
-            MessageLookupByLibrary.simpleMessage("Экран результатов"),
+        "result_Screen": MessageLookupByLibrary.simpleMessage("Результат"),
         "result_Text_Type_Is_Not_Url_To_Navigate":
             MessageLookupByLibrary.simpleMessage(
-                "Тип текста результата не является URL для навигации"),
-        "save_Button_Text": MessageLookupByLibrary.simpleMessage("Сохранить "),
+                "Результат Тип текста не является ссылкой для перехода"),
+        "save_Button_Text": MessageLookupByLibrary.simpleMessage("Сохранить"),
         "scan_Button_Text":
             MessageLookupByLibrary.simpleMessage("Сканировать с камеры"),
         "scan_Tree_Item":
-            MessageLookupByLibrary.simpleMessage("Сканировать историю"),
+            MessageLookupByLibrary.simpleMessage("Сканировать действия"),
         "second_Line": MessageLookupByLibrary.simpleMessage(
-            "TecnoWays LLC All rights reserved"),
+            "TecnoWays LLC Все права защищены"),
         "share_App":
             MessageLookupByLibrary.simpleMessage("Поделиться приложением"),
         "share_Button_Text": MessageLookupByLibrary.simpleMessage("Поделиться"),
         "shown_Only_On_The_Early_First_Time": MessageLookupByLibrary.simpleMessage(
-            "Устанавливая или используя это приложение, вы принимаете английскую версию политики конфиденциальности"),
+            "Устанавливая или используя это приложение, вы принимаете политику конфиденциальности"),
         "tecno_Code": MessageLookupByLibrary.simpleMessage("TecnoCode"),
         "terms_Of_Use":
             MessageLookupByLibrary.simpleMessage("Условия использования"),
         "text": MessageLookupByLibrary.simpleMessage("Текст"),
         "third_Line": MessageLookupByLibrary.simpleMessage(
-            "TecnoWays LLC All rights reserved"),
+            "TecnoWays LLC Все права защищены"),
         "yes": MessageLookupByLibrary.simpleMessage("Да")
       };
 }

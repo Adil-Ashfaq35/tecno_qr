@@ -42,13 +42,24 @@ class _HistoryScreenState extends State<HistoryScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBarWidget(
-          title: 'History screen',
-          iconButton: IconButton(
-              onPressed: () {
-                navigationController.goBack();
-              },
-              icon: const Icon(Icons.arrow_back))),
+      appBar:PreferredSize(
+      preferredSize: Size.fromHeight(60.sm),
+      child: OrientationBuilder(
+        builder: (BuildContext context, Orientation orientation) {
+          return
+          AppBarWidget(
+            title: 'History screen',
+            iconButton: IconButton(
+                onPressed: () {
+                  navigationController.goBack();
+                },
+                icon: const Icon(Icons.arrow_back)),
+            orientation: orientation,
+
+          );
+        },
+
+      ),),
       body: Container(
         // color: Colors.black,
 

@@ -60,10 +60,10 @@ class S {
     );
   }
 
-  /// `History`
+  /// `Action Log`
   String get history {
     return Intl.message(
-      'History',
+      'Action Log',
       name: 'history',
       desc: '',
       args: [],
@@ -200,20 +200,20 @@ class S {
     );
   }
 
-  /// `Scan History`
+  /// `Scan Actions`
   String get scan_Tree_Item {
     return Intl.message(
-      'Scan History',
+      'Scan Actions',
       name: 'scan_Tree_Item',
       desc: '',
       args: [],
     );
   }
 
-  /// `Generate History`
+  /// `Generate Actions`
   String get generate_Tree_item {
     return Intl.message(
-      'Generate History',
+      'Generate Actions',
       name: 'generate_Tree_item',
       desc: '',
       args: [],
@@ -230,20 +230,20 @@ class S {
     );
   }
 
-  /// ` TecnoWays LLC All rights reserved`
+  /// ` TecnoWays LLC All Rights Reserved`
   String get second_Line {
     return Intl.message(
-      ' TecnoWays LLC All rights reserved',
+      ' TecnoWays LLC All Rights Reserved',
       name: 'second_Line',
       desc: '',
       args: [],
     );
   }
 
-  /// `TecnoWays LLC All rights reserved`
+  /// ` TecnoWays LLC All Rights Reserved`
   String get third_Line {
     return Intl.message(
-      'TecnoWays LLC All rights reserved',
+      ' TecnoWays LLC All Rights Reserved',
       name: 'third_Line',
       desc: '',
       args: [],
@@ -320,10 +320,10 @@ class S {
     );
   }
 
-  /// `Enter Qr`
+  /// `Generate From Text`
   String get enter_Qr {
     return Intl.message(
-      'Enter Qr',
+      'Generate From Text',
       name: 'enter_Qr',
       desc: '',
       args: [],
@@ -340,70 +340,70 @@ class S {
     );
   }
 
-  /// `paste`
+  /// `Paste`
   String get paste {
     return Intl.message(
-      'paste',
+      'Paste',
       name: 'paste',
       desc: '',
       args: [],
     );
   }
 
-  /// `Qr Code`
+  /// `QR Code`
   String get qr_Code {
     return Intl.message(
-      'Qr Code',
+      'QR Code',
       name: 'qr_Code',
       desc: '',
       args: [],
     );
   }
 
-  /// `History Screen`
+  /// `Action Log`
   String get history_Screen {
     return Intl.message(
-      'History Screen',
+      'Action Log',
       name: 'history_Screen',
       desc: '',
       args: [],
     );
   }
 
-  /// `Qr not found in image`
+  /// `No code detected in the image`
   String get qr_Not_Found_In_Image {
     return Intl.message(
-      'Qr not found in image',
+      'No code detected in the image',
       name: 'qr_Not_Found_In_Image',
       desc: '',
       args: [],
     );
   }
 
-  /// `Result Screen`
+  /// `Result`
   String get result_Screen {
     return Intl.message(
-      'Result Screen',
+      'Result',
       name: 'result_Screen',
       desc: '',
       args: [],
     );
   }
 
-  /// `Invalid url`
+  /// `Invalid Link`
   String get invalid_Url {
     return Intl.message(
-      'Invalid url',
+      'Invalid Link',
       name: 'invalid_Url',
       desc: '',
       args: [],
     );
   }
 
-  /// `Result Text type is not Url to navigate`
+  /// `Result Text type is not link to navigate`
   String get result_Text_Type_Is_Not_Url_To_Navigate {
     return Intl.message(
-      'Result Text type is not Url to navigate',
+      'Result Text type is not link to navigate',
       name: 'result_Text_Type_Is_Not_Url_To_Navigate',
       desc: '',
       args: [],
@@ -420,10 +420,10 @@ class S {
     );
   }
 
-  /// `Read History`
+  /// `Read Actions`
   String get read_History {
     return Intl.message(
-      'Read History',
+      'Read Actions',
       name: 'read_History',
       desc: '',
       args: [],

@@ -3,15 +3,17 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'appbar_design.dart';
 
 class OptionsWidget extends StatelessWidget {
-  const OptionsWidget({
+   OptionsWidget({
     Key? key,
     required this.icon,
     required this.optionText,
     required this.onTap,
+    this.orientation
   }) : super(key: key);
   final IconData icon;
   final String optionText;
   final VoidCallback onTap;
+  Orientation? orientation;
 
 
 
@@ -31,13 +33,13 @@ class OptionsWidget extends StatelessWidget {
             Container(
               margin:EdgeInsets.fromLTRB(40.sm, 20.sm, 30.sm, 20.sm),
 
-              height: 50.h,
-              width: 50.w,
+              height:orientation==Orientation.portrait? 50.h:90.h,
+              width:orientation==Orientation.portrait? 50.w:30.w,
               decoration: CustomWidgets.customDecoration(),
               child: Center(
                   child: Icon(
                    icon,
-                size: 35.h,
+                size:orientation==Orientation.portrait? 35.h:55.h,
                 color: Colors.white,
               )),
             ),
@@ -47,7 +49,7 @@ class OptionsWidget extends StatelessWidget {
                   optionText,   overflow: TextOverflow.clip,
                 style: TextStyle(
                   letterSpacing: 1,
-                  fontSize: 16.sp,
+                  fontSize:orientation==Orientation.portrait? 16.sp:13.sp,
                   fontWeight: FontWeight.bold,
                   color: Colors.black,
                 ),

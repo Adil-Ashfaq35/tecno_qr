@@ -56,7 +56,7 @@ class _AboutScreenState extends State<AboutScreen> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children:  [
           SizedBox(
-            height: 0.3.sh,
+            height: 0.2.sh,
           ),
           Padding(
             padding: const EdgeInsets.all(10.0),
@@ -75,7 +75,7 @@ class _AboutScreenState extends State<AboutScreen> {
                   ),
                 ),
                 SizedBox(
-                  height: 20.sm,
+                  height: 15.sm,
                 ),
                 Text(translation(context).second_Line,
                   style: Theme.of(context).textTheme.headline3?.copyWith(
@@ -84,10 +84,18 @@ class _AboutScreenState extends State<AboutScreen> {
                   ),
                 ),
                 SizedBox(
-                  height: 20.sm,
+                  height: 0.2.sh,
+                ),
+                 Text("TecnoCode Version :",textAlign: TextAlign.center,style: Theme.of(context).textTheme.bodyText1?.copyWith(
+                       color: AppTheme.darkTextColor,
+                       fontSize: 20.sm,
+                       fontWeight: FontWeight.bold,
+                     )),
+                SizedBox(
+                  height: 0.01.sh,
                 ),
                 Center(
-                  child:Text("TecnoCode Version: \n\n  ${_packageInfo.version}",textAlign: TextAlign.center,style: Theme.of(context).textTheme.bodyText1?.copyWith(
+                  child:Text(_packageInfo.version,textAlign: TextAlign.center,style: Theme.of(context).textTheme.bodyText1?.copyWith(
                     color:const Color(0XFF434343),
                     fontSize: 16.sm,
                     fontWeight: FontWeight.bold,
@@ -100,6 +108,7 @@ class _AboutScreenState extends State<AboutScreen> {
         ],
       ):Column(
         crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
         children:  [
 
           Padding(
@@ -124,10 +133,18 @@ class _AboutScreenState extends State<AboutScreen> {
                     ),
                   ),
                   SizedBox(
-                    height: 10.sm,
+                    height: 0.2.sh,
+                  ),
+                  Text("TecnoCode Version :",textAlign: TextAlign.center,style: Theme.of(context).textTheme.bodyText1?.copyWith(
+                    color: AppTheme.darkTextColor,
+                    fontSize: 20.sm,
+                    fontWeight: FontWeight.bold,
+                  )),
+                  SizedBox(
+                    height: 0.01.sh,
                   ),
                   Center(
-                    child:Text("TecnoCode Version: \n  ${_packageInfo.version}",textAlign: TextAlign.center,style: Theme.of(context).textTheme.bodyText1?.copyWith(
+                    child:Text(_packageInfo.version,textAlign: TextAlign.center,style: Theme.of(context).textTheme.bodyText1?.copyWith(
                       color:const Color(0XFF434343),
                       fontSize: 18.sm,
                       fontWeight: FontWeight.bold,
