@@ -26,7 +26,7 @@ class ResultScreen extends StatefulWidget {
 class _ResultScreenState extends State<ResultScreen> {
   @override
   void initState() {
-    permission();
+   // permission();
     super.initState();
   }
   permission() async {

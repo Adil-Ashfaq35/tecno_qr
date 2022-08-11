@@ -1,3 +1,5 @@
+
+
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
@@ -23,6 +25,7 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBarWidget(
         title: translation(context).tecno_Code,
         iconButton: IconButton(
+          
           hoverColor: AppTheme.splashColor,
           disabledColor: Colors.grey[200],
           focusColor: AppTheme.splashColor,
@@ -33,6 +36,7 @@ class HomeScreen extends StatelessWidget {
           onPressed: () {
             animation!();
           },
+        
         ),
       ),
       body: Container(
@@ -44,8 +48,10 @@ class HomeScreen extends StatelessWidget {
                 icon: CupertinoIcons.camera,
                 optionText: translation(context).scan_Button_Text,
                 onTap: () async {
-                  permission(context);
-
+             bool isGranted=    await permission(context,true);
+             isGranted ?
+               navigationController.navigateToNamed(RouteGenerator.scanQr):null;
+                  
                   FirebaseAnalytics.instance
                       .logEvent(name: "Scan_from_camera", parameters: {
                     "image": "scanning from camera",
@@ -56,6 +62,9 @@ class HomeScreen extends StatelessWidget {
                 icon: CupertinoIcons.photo,
                 optionText: '${AppLocalizations.of(context)?.read_Button_Text}',
                 onTap: () async {
+
+               bool isGranted=   await  permission(context,false);
+             if(isGranted) {
                   FirebaseAnalytics.instance.logEvent(
                     name: "Read_from_local_storage",
                     parameters: {
@@ -67,6 +76,9 @@ class HomeScreen extends StatelessWidget {
                       ? navigationController
                           .navigateToNamed(RouteGenerator.displayImage)
                       : null;
+               }
+            
+
                 },
               ),
               OptionsWidget(
@@ -88,43 +100,80 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  permission(context) async {
-    PermissionStatus;
-    PermissionStatus allow = await Permission.camera.request();
-    if (allow.isGranted) {
-      navigationController.navigateToNamed(RouteGenerator.scanQr);
-    } else if (allow.isPermanentlyDenied) {
+ Future<bool> permission(context,bool isCameraPermission) async {
+PermissionStatus allowstatus;
+if(isCameraPermission) {
+  allowstatus = await Permission.camera.request();
+} else {
+  
+  allowstatus = await Permission.storage.request();
+}
+
+    if (allowstatus.isGranted) {
+      return true;
+    
+    } else if (allowstatus.isPermanentlyDenied) {
       if (kDebugMode) {
         print("persmission denied");
       }
-      await showDialog(
-          context: context,
-          builder: (context) {
-            return DialogWidget(
-              title: translation(context).camera_Permission_Alert,
-              description: translation(context).camera_Alert_Description,
-              cancelTap: () {
-                navigationController.goBack();
-              },
-              continueTap: () async {
-                navigationController.goBack();
-                await openAppSettings();
-              },
-            );
-          });
-    } else if (allow.isDenied) {
-      await DialogWidget(
-        // ignore: use_build_context_synchronously
-        title: translation(context).camera_Permission_Alert,
-        description: translation(context).camera_Alert_Description,
-        cancelTap: () {
-          navigationController.goBack();
-        },
-        continueTap: () async {
-          navigationController.goBack();
-          await openAppSettings();
-        },
-      );
+      if(isCameraPermission)
+      {
+      await camCancellationdialog(context);
+
+      }
+      else{
+            await storageCancellationdialog(context);
+
+      }
+      return false;
+    } else if (allowstatus.isDenied) {
+      if(isCameraPermission)
+      {
+          await camCancellationdialog(context);
+      }
+      else{
+          await storageCancellationdialog(context);
+      }
+   return false;
+    }
+    else {
+      return false;
     }
   }
+
+ Future<void> storageCancellationdialog(context) async {
+     await showDialog(context: context, builder: (context){
+           return DialogWidget(
+             title: translation(context).local_Permission_Alert,
+             description: translation(context).local_Alert_Description,
+             cancelTap: (){
+             navigationController.goBack();
+             },
+             continueTap: () async {
+            navigationController.goBack();
+     await openAppSettings();
+   navigationController.getOffAll(RouteGenerator.customDrawer);
+   
+             },
+           );
+         });
+ }
+
+ Future<void> camCancellationdialog(context) async {
+       await showDialog(
+       context: context,
+       builder: (context) {
+         return DialogWidget(
+           title: translation(context).camera_Permission_Alert,
+           description: translation(context).camera_Alert_Description,
+           cancelTap: () {
+             navigationController.goBack();
+           },
+           continueTap: () async {
+             navigationController.goBack();
+             await openAppSettings();
+           },
+         );
+       });
+ }
 }

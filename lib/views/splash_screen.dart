@@ -110,7 +110,7 @@ class _SplashScreenState extends State<SplashScreen>
           text: 'Continue',
           descriptions:translation(context).privacy_Policy_Confirmation,
           onPressed: () async {
-            settingController.addDocument();
+       
 
                 await SharedPref().saveBool('isFirsttime', false);
 
