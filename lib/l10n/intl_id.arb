@@ -46,6 +46,10 @@
   "grant_Access":"Berikan Akses",
   "cancel":"Membatalkan",
   "privacy_Policy_Confirmation":"Dengan menginstal atau menggunakan aplikasi ini, Anda menerima kebijakan privasi versi bahasa Inggris",
-  "camera_Permission_Cancel_Message_Button": "Lanjutkan"
+  "camera_Permission_Cancel_Message_Button": "Lanjutkan",
+  "no": "Tidak",
+  "yes": "Ya",
+  "are_You_Sure": "Apa kamu yakin?",
+  "do_You_Want_To_Exit_This_Application": "Apakah Anda ingin keluar dari aplikasi ini?"
 }
 

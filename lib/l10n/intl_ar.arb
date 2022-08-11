@@ -45,5 +45,9 @@
   "grant_Access":"منح صلاحية الوصول",
   "cancel":"يلغي",
   "privacy_Policy_Confirmation":"تثبيت هذا التطبيق أو استخدامه يعتبرموافقة منك على النسخة الإنجليزية من سياسة الخصوصية",
-  "camera_Permission_Cancel_Message_Button": "استمرار"
+  "camera_Permission_Cancel_Message_Button": "استمرار",
+  "no": "رقم",
+  "yes": "نعم",
+  "are_You_Sure": "هل أنت واثق؟",
+  "do_You_Want_To_Exit_This_Application": "هل تريد الخروج من هذا التطبيق"
 }

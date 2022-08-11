@@ -45,6 +45,10 @@
   "grant_Access":"授予訪問權限",
   "cancel":"取消",
   "privacy_Policy_Confirmation":"安裝或使用此應用程序即表示您接受英文版隱私政策",
-  "camera_Permission_Cancel_Message_Button": "繼續"
+  "camera_Permission_Cancel_Message_Button": "繼續",
+  "no": "不",
+  "yes": "是的",
+  "are_You_Sure": "你確定嗎？",
+  "do_You_Want_To_Exit_This_Application": "是否要退出此應用程序"
 }
 

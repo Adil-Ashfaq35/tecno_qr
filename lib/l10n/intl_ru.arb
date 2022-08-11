@@ -45,6 +45,10 @@
   "grant_Access":"Предоставление доступа",
   "cancel":"Отмена",
   "privacy_Policy_Confirmation":"Устанавливая или используя это приложение, вы принимаете английскую версию политики конфиденциальности",
-  "camera_Permission_Cancel_Message_Button": "Продолжить"
+  "camera_Permission_Cancel_Message_Button": "Продолжить",
+  "no": "Нет",
+  "yes": "Да",
+  "are_You_Sure": "Ты уверен",
+  "do_You_Want_To_Exit_This_Application": "Вы хотите выйти из этого приложения"
 }
 

@@ -23,6 +23,8 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "about": MessageLookupByLibrary.simpleMessage("Over"),
+        "are_You_Sure":
+            MessageLookupByLibrary.simpleMessage("Weet je het zeker?"),
         "camera_Alert_Description": MessageLookupByLibrary.simpleMessage(
             "Sta toegang tot de camera toe om deze functie in te schakelen of u kunt de volgende stappen volgen om de applicatie zonder toestemming te gebruiken:\n1- Leg de QR-codeafbeelding vast via uw cameratoepassing of selecteer een lokale afbeelding uit uw lokale bestanden.\n2- Deel de afbeelding met de TecnoCode-toepassing.\n3- Het resultaat wordt direct weergegeven in de TecnoCode-applicatie."),
         "camera_Permission_Alert": MessageLookupByLibrary.simpleMessage(
@@ -33,6 +35,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "cancel_Button_Text": MessageLookupByLibrary.simpleMessage("Annuleren"),
         "copied": MessageLookupByLibrary.simpleMessage("Gekopieerd"),
         "copy_Button_Text": MessageLookupByLibrary.simpleMessage("Kopiëren"),
+        "do_You_Want_To_Exit_This_Application":
+            MessageLookupByLibrary.simpleMessage(
+                "Wilt u deze applicatie afsluiten"),
         "download_Button_Text":
             MessageLookupByLibrary.simpleMessage("Download"),
         "enter_Qr": MessageLookupByLibrary.simpleMessage("Voer Qr in"),
@@ -56,6 +61,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "local_Permission_Alert": MessageLookupByLibrary.simpleMessage(
             "Toestemming voor lokale opslag is vereist"),
         "navigate_Button_Text": MessageLookupByLibrary.simpleMessage("Ga naar"),
+        "no": MessageLookupByLibrary.simpleMessage("Nee"),
         "oK_Button_Text": MessageLookupByLibrary.simpleMessage("OK"),
         "paste": MessageLookupByLibrary.simpleMessage("plakken"),
         "privacy_Policy": MessageLookupByLibrary.simpleMessage("Privacybeleid"),
@@ -91,6 +97,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Gebruiksvoorwaarden"),
         "text": MessageLookupByLibrary.simpleMessage("Tekst"),
         "third_Line": MessageLookupByLibrary.simpleMessage(
-            "TecnoWays LLC All rights reserved")
+            "TecnoWays LLC All rights reserved"),
+        "yes": MessageLookupByLibrary.simpleMessage("Ja")
       };
 }

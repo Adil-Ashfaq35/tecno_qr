@@ -23,6 +23,7 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "about": MessageLookupByLibrary.simpleMessage("About"),
+        "are_You_Sure": MessageLookupByLibrary.simpleMessage("Are you sure?"),
         "camera_Alert_Description": MessageLookupByLibrary.simpleMessage(
             "Allow access to camera to enable this feature or you can follow the following steps to use the application without permission:\n1- Capture the QR Code image via your camera application or select a local image from your local files.\n2- Share the image to TecnoCode application.\n3- The result will be displayed directly in the TecnoCode application."),
         "camera_Permission_Alert": MessageLookupByLibrary.simpleMessage(
@@ -33,6 +34,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "cancel_Button_Text": MessageLookupByLibrary.simpleMessage("Cancel"),
         "copied": MessageLookupByLibrary.simpleMessage("Copied"),
         "copy_Button_Text": MessageLookupByLibrary.simpleMessage("Copy"),
+        "do_You_Want_To_Exit_This_Application":
+            MessageLookupByLibrary.simpleMessage(
+                "Do you want to exit this application"),
         "download_Button_Text":
             MessageLookupByLibrary.simpleMessage("Download"),
         "enter_Qr": MessageLookupByLibrary.simpleMessage("Enter Qr"),
@@ -57,6 +61,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Local Storage Permission is Required"),
         "navigate_Button_Text":
             MessageLookupByLibrary.simpleMessage("Navigate"),
+        "no": MessageLookupByLibrary.simpleMessage("No"),
         "oK_Button_Text": MessageLookupByLibrary.simpleMessage("OK"),
         "paste": MessageLookupByLibrary.simpleMessage("paste"),
         "privacy_Policy":
@@ -88,6 +93,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "terms_Of_Use": MessageLookupByLibrary.simpleMessage("Terms of use"),
         "text": MessageLookupByLibrary.simpleMessage("Text"),
         "third_Line": MessageLookupByLibrary.simpleMessage(
-            "TecnoWays LLC All rights reserved")
+            "TecnoWays LLC All rights reserved"),
+        "yes": MessageLookupByLibrary.simpleMessage("Yes")
       };
 }

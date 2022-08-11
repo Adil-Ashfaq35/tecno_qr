@@ -39,18 +39,18 @@ class _CustomDrawerState extends State<CustomDrawer>
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text('Are you sure?'),
-        content: const Text('Do you want to exit this App'),
+        title:  Text(translation(context).are_You_Sure),
+        content:  Text(translation(context).do_You_Want_To_Exit_This_Application),
         actions: <Widget>[
           TextButton(
             onPressed: () => Navigator.of(context).pop(false), //<-- SEE HERE
-            child: const Text('No'),
+            child:  Text(translation(context).no),
           ),
           TextButton(
             onPressed: () {
               exit(0);
             }, // <-- SEE HERE
-            child: const Text('Yes'),
+            child:  Text(translation(context).yes),
           ),
         ],
       ),

@@ -45,6 +45,10 @@
   "grant_Access":"Accorder l'accès",
   "cancel":"Annuler",
   "privacy_Policy_Confirmation":"En installant ou en utilisant cette application, vous acceptez la version anglaise de la politique de confidentialité.",
-  "camera_Permission_Cancel_Message_Button": "Continuer"
+  "camera_Permission_Cancel_Message_Button": "Continuer",
+  "no": "Non",
+  "yes": "Oui",
+  "are_You_Sure": "Êtes-vous sûr?",
+  "do_You_Want_To_Exit_This_Application": "Voulez-vous quitter cette application"
 }
 

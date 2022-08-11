@@ -46,6 +46,10 @@
   "grant_Access":"Berikan Akses",
   "cancel":"Batal",
   "privacy_Policy_Confirmation":"Dengan memasang atau menggunakan aplikasi ini anda menerima versi bahasa Inggeris dasar privasi",
-  "camera_Permission_Cancel_Message_Button": "teruskan"
+  "camera_Permission_Cancel_Message_Button": "teruskan",
+  "no": "Tidak",
+  "yes": "ya",
+  "are_You_Sure": "Adakah anda pasti?",
+  "do_You_Want_To_Exit_This_Application": "Adakah anda mahu keluar dari aplikasi ini"
 }
 

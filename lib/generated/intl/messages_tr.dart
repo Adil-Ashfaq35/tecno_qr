@@ -23,6 +23,7 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "about": MessageLookupByLibrary.simpleMessage("Hakkında"),
+        "are_You_Sure": MessageLookupByLibrary.simpleMessage("Emin misin?"),
         "camera_Alert_Description": MessageLookupByLibrary.simpleMessage(
             "Bu özelliği etkinleştirmek için kameraya erişime izin verin veya uygulamayı izinsiz kullanmak için aşağıdaki adımları takip edebilirsiniz:\n1- Kamera uygulamanız aracılığıyla QR Code görüntüsünü yakalayın veya yerel dosyalarınızdan yerel bir görüntü seçin.\n2- Resmi TecnoCode uygulamasına paylaşın.\n3- Sonuç doğrudan TecnoCode uygulamasında görüntülenecektir."),
         "camera_Permission_Alert":
@@ -33,6 +34,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "cancel_Button_Text": MessageLookupByLibrary.simpleMessage("İptal"),
         "copied": MessageLookupByLibrary.simpleMessage("Kopyalandı"),
         "copy_Button_Text": MessageLookupByLibrary.simpleMessage("kopyala"),
+        "do_You_Want_To_Exit_This_Application":
+            MessageLookupByLibrary.simpleMessage(
+                "Bu uygulamadan çıkmak istiyor musunuz?"),
         "download_Button_Text": MessageLookupByLibrary.simpleMessage("İndir"),
         "enter_Qr": MessageLookupByLibrary.simpleMessage("Qr girin"),
         "fAQ": MessageLookupByLibrary.simpleMessage("Sıkça sorulan sorular"),
@@ -55,6 +59,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Yerel Depolama İzni Gerekli"),
         "navigate_Button_Text":
             MessageLookupByLibrary.simpleMessage("Şuraya gidin"),
+        "no": MessageLookupByLibrary.simpleMessage("Numara"),
         "oK_Button_Text": MessageLookupByLibrary.simpleMessage("TAMAM."),
         "paste": MessageLookupByLibrary.simpleMessage("yapıştır"),
         "privacy_Policy":
@@ -88,6 +93,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Kullanım Koşulları"),
         "text": MessageLookupByLibrary.simpleMessage("Metin"),
         "third_Line": MessageLookupByLibrary.simpleMessage(
-            "TecnoWays LLC All rights reserved")
+            "TecnoWays LLC All rights reserved"),
+        "yes": MessageLookupByLibrary.simpleMessage("Evet")
       };
 }

@@ -23,6 +23,7 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "about": MessageLookupByLibrary.simpleMessage("À propos de"),
+        "are_You_Sure": MessageLookupByLibrary.simpleMessage("Êtes-vous sûr?"),
         "camera_Alert_Description": MessageLookupByLibrary.simpleMessage(
             "Autorisez l\'accès à la caméra pour activer cette fonctionnalité ou vous pouvez suivre les étapes suivantes pour utiliser l\'application sans autorisation :\n1- Capturez l\'image du QR Code via votre application appareil photo ou sélectionnez une image locale à partir de vos fichiers locaux.\n2- Partagez l\'image avec l\'application TecnoCode.\n3- Le résultat sera affiché directement dans l\'application TecnoCode."),
         "camera_Permission_Alert": MessageLookupByLibrary.simpleMessage(
@@ -33,6 +34,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "cancel_Button_Text": MessageLookupByLibrary.simpleMessage("Annuler"),
         "copied": MessageLookupByLibrary.simpleMessage("Copié"),
         "copy_Button_Text": MessageLookupByLibrary.simpleMessage("Copier"),
+        "do_You_Want_To_Exit_This_Application":
+            MessageLookupByLibrary.simpleMessage(
+                "Voulez-vous quitter cette application"),
         "download_Button_Text":
             MessageLookupByLibrary.simpleMessage("Télécharger"),
         "enter_Qr": MessageLookupByLibrary.simpleMessage("Entrez Qr"),
@@ -58,6 +62,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "L\'autorisation de stockage local est requise"),
         "navigate_Button_Text":
             MessageLookupByLibrary.simpleMessage("Naviguez sur"),
+        "no": MessageLookupByLibrary.simpleMessage("Non"),
         "oK_Button_Text": MessageLookupByLibrary.simpleMessage("OK"),
         "paste": MessageLookupByLibrary.simpleMessage("coller"),
         "privacy_Policy": MessageLookupByLibrary.simpleMessage(
@@ -96,6 +101,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Conditions d\'utilisation"),
         "text": MessageLookupByLibrary.simpleMessage("Texte"),
         "third_Line": MessageLookupByLibrary.simpleMessage(
-            "TecnoWays LLC Tous droits réservés")
+            "TecnoWays LLC Tous droits réservés"),
+        "yes": MessageLookupByLibrary.simpleMessage("Oui")
       };
 }

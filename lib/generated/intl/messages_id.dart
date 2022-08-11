@@ -23,6 +23,7 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "about": MessageLookupByLibrary.simpleMessage("Tentang"),
+        "are_You_Sure": MessageLookupByLibrary.simpleMessage("Apa kamu yakin?"),
         "camera_Alert_Description": MessageLookupByLibrary.simpleMessage(
             "Izinkan akses ke kamera untuk mengaktifkan fitur ini atau Anda dapat mengikuti langkah-langkah berikut untuk menggunakan aplikasi tanpa izin:\n1- Tangkap gambar Kode QR melalui aplikasi kamera Anda atau pilih gambar lokal dari file lokal Anda.\n2- Bagikan gambar ke aplikasi TecnoCode.\n3- Hasilnya akan langsung ditampilkan di aplikasi TecnoCode."),
         "camera_Permission_Alert":
@@ -33,6 +34,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "cancel_Button_Text": MessageLookupByLibrary.simpleMessage("Batal"),
         "copied": MessageLookupByLibrary.simpleMessage("Disalin"),
         "copy_Button_Text": MessageLookupByLibrary.simpleMessage("Salin"),
+        "do_You_Want_To_Exit_This_Application":
+            MessageLookupByLibrary.simpleMessage(
+                "Apakah Anda ingin keluar dari aplikasi ini?"),
         "download_Button_Text": MessageLookupByLibrary.simpleMessage("Unduh"),
         "enter_Qr": MessageLookupByLibrary.simpleMessage("Masukkan Qr"),
         "fAQ": MessageLookupByLibrary.simpleMessage(
@@ -56,6 +60,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Izin Penyimpanan Lokal Diperlukan"),
         "navigate_Button_Text":
             MessageLookupByLibrary.simpleMessage("Navigasi"),
+        "no": MessageLookupByLibrary.simpleMessage("Tidak"),
         "oK_Button_Text": MessageLookupByLibrary.simpleMessage("OK"),
         "paste": MessageLookupByLibrary.simpleMessage("tempel"),
         "privacy_Policy":
@@ -88,6 +93,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Ketentuan penggunaan"),
         "text": MessageLookupByLibrary.simpleMessage("Teks"),
         "third_Line": MessageLookupByLibrary.simpleMessage(
-            "TecnoWays LLC Semua hak dilindungi undang-undang")
+            "TecnoWays LLC Semua hak dilindungi undang-undang"),
+        "yes": MessageLookupByLibrary.simpleMessage("Ya")
       };
 }

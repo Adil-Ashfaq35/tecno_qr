@@ -45,7 +45,11 @@
   "grant_Access":"授权访问",
   "cancel":"取消",
   "privacy_Policy_Confirmation":"安装或使用此应用程序，即表示您接受英文版本的隐私政策.",
-  "camera_Permission_Cancel_Message_Button": "继续"
+  "camera_Permission_Cancel_Message_Button": "继续",
+  "no": "不",
+  "yes": "是的",
+  "are_You_Sure": "你确定吗？",
+  "do_You_Want_To_Exit_This_Application": "是否要退出此应用程序"
 
 }
 

@@ -45,6 +45,10 @@
   "grant_Access":"Grant Access",
   "cancel":"Cancel",
   "privacy_Policy_Confirmation":"By installing or using this application you are accepting the ",
-  "camera_Permission_Cancel_Message_Button": "Continue"
+  "camera_Permission_Cancel_Message_Button": "Continue",
+  "no": "No",
+  "yes": "Yes",
+  "are_You_Sure": "Are you sure?",
+  "do_You_Want_To_Exit_This_Application": "Do you want to exit this application"
 }
 

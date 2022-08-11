@@ -23,6 +23,7 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "about": MessageLookupByLibrary.simpleMessage("關於"),
+        "are_You_Sure": MessageLookupByLibrary.simpleMessage("你確定嗎？"),
         "camera_Alert_Description": MessageLookupByLibrary.simpleMessage(
             "允許訪問相機以啟用此功能，或者您可以按照以下步驟在未經許可的情況下使用該應用程序：\n1- 通過相機應用程序捕獲 QR 碼圖像或從本地文件中選擇本地圖像。\n2- 將圖像分享到 TecnoCode 應用程序。\n3- 結果將直接顯示在 TecnoCode 應用程序中."),
         "camera_Permission_Alert":
@@ -33,6 +34,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "cancel_Button_Text": MessageLookupByLibrary.simpleMessage("取消"),
         "copied": MessageLookupByLibrary.simpleMessage("複製"),
         "copy_Button_Text": MessageLookupByLibrary.simpleMessage("複製"),
+        "do_You_Want_To_Exit_This_Application":
+            MessageLookupByLibrary.simpleMessage("是否要退出此應用程序"),
         "download_Button_Text": MessageLookupByLibrary.simpleMessage("下載"),
         "enter_Qr": MessageLookupByLibrary.simpleMessage("輸入 Qr"),
         "fAQ": MessageLookupByLibrary.simpleMessage("常見問題"),
@@ -52,6 +55,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "local_Permission_Alert":
             MessageLookupByLibrary.simpleMessage("需要本地存儲權限"),
         "navigate_Button_Text": MessageLookupByLibrary.simpleMessage("導航"),
+        "no": MessageLookupByLibrary.simpleMessage("不"),
         "oK_Button_Text": MessageLookupByLibrary.simpleMessage("好的"),
         "paste": MessageLookupByLibrary.simpleMessage("粘貼"),
         "privacy_Policy": MessageLookupByLibrary.simpleMessage("隱私政策"),
@@ -78,6 +82,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "tecno_Code": MessageLookupByLibrary.simpleMessage("TecnoCode"),
         "terms_Of_Use": MessageLookupByLibrary.simpleMessage("使用條款"),
         "text": MessageLookupByLibrary.simpleMessage("文本"),
-        "third_Line": MessageLookupByLibrary.simpleMessage("TecnoWays LLC 版權所有")
+        "third_Line":
+            MessageLookupByLibrary.simpleMessage("TecnoWays LLC 版權所有"),
+        "yes": MessageLookupByLibrary.simpleMessage("是的")
       };
 }

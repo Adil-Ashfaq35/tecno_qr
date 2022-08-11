@@ -45,7 +45,11 @@
   "grant_Access":"Zugang gewähren",
   "cancel":"Absagen",
   "privacy_Policy_Confirmation":"Durch die Installation oder Nutzung dieser Anwendung akzeptieren Sie die englische Version der Datenschutzrichtlinie",
-  "camera_Permission_Cancel_Message_Button": "Weiter"
+  "camera_Permission_Cancel_Message_Button": "Weiter",
+  "no": "nein",
+  "yes": "Jawohl",
+  "are_You_Sure": "Bist du dir sicher?",
+  "do_You_Want_To_Exit_This_Application": "möchten Sie diese Anwendung beenden"
 
 
 }

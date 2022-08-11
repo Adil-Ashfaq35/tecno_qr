@@ -44,5 +44,9 @@
   "grant_Access":"رسائی فراہم کریں۔",
   "cancel":"منسوخ کریں۔",
   "privacy_Policy_Confirmation":"اس ایپلی کیشن کو انسٹال یا استعمال کرکے آپ رازداری کی پالیسی کے انگریزی ورژن کو قبول کر رہے ہیں۔",
-  "camera_Permission_Cancel_Message_Button": "جاری رہے"
+  "camera_Permission_Cancel_Message_Button": "جاری رہے",
+  "no": "نہیں",
+  "yes": "جی ہاں",
+  "are_You_Sure": "کیا تمہیں یقین ہے؟",
+  "do_You_Want_To_Exit_This_Application": "کیا آپ اس ایپلیکیشن سے باہر نکلنا چاہتے ہیں؟"
 }

@@ -509,6 +509,46 @@ class S {
       args: [],
     );
   }
+
+  /// `No`
+  String get no {
+    return Intl.message(
+      'No',
+      name: 'no',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Yes`
+  String get yes {
+    return Intl.message(
+      'Yes',
+      name: 'yes',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Are you sure?`
+  String get are_You_Sure {
+    return Intl.message(
+      'Are you sure?',
+      name: 'are_You_Sure',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Do you want to exit this application`
+  String get do_You_Want_To_Exit_This_Application {
+    return Intl.message(
+      'Do you want to exit this application',
+      name: 'do_You_Want_To_Exit_This_Application',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

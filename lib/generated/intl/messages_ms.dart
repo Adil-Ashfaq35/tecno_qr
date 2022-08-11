@@ -23,6 +23,8 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "about": MessageLookupByLibrary.simpleMessage("Tentang"),
+        "are_You_Sure":
+            MessageLookupByLibrary.simpleMessage("Adakah anda pasti?"),
         "camera_Alert_Description": MessageLookupByLibrary.simpleMessage(
             "Benarkan akses kepada kamera untuk mendayakan ciri ini atau anda boleh mengikuti langkah berikut untuk menggunakan aplikasi tanpa kebenaran:\n1- Tangkap imej Kod QR melalui aplikasi kamera anda atau pilih imej tempatan daripada fail tempatan anda.\n2- Kongsi imej ke aplikasi TecnoCode.\n3- Hasilnya akan dipaparkan terus dalam aplikasi TecnoCode."),
         "camera_Permission_Alert":
@@ -33,6 +35,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "cancel_Button_Text": MessageLookupByLibrary.simpleMessage("Batal"),
         "copied": MessageLookupByLibrary.simpleMessage("Disalin"),
         "copy_Button_Text": MessageLookupByLibrary.simpleMessage("Salinan"),
+        "do_You_Want_To_Exit_This_Application":
+            MessageLookupByLibrary.simpleMessage(
+                "Adakah anda mahu keluar dari aplikasi ini"),
         "download_Button_Text":
             MessageLookupByLibrary.simpleMessage("Muat turun"),
         "enter_Qr": MessageLookupByLibrary.simpleMessage("Masukkan Qr"),
@@ -57,6 +62,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Kebenaran Storan Tempatan Diperlukan"),
         "navigate_Button_Text":
             MessageLookupByLibrary.simpleMessage("Navigasi"),
+        "no": MessageLookupByLibrary.simpleMessage("Tidak"),
         "oK_Button_Text": MessageLookupByLibrary.simpleMessage("okey"),
         "paste": MessageLookupByLibrary.simpleMessage("tampal"),
         "privacy_Policy": MessageLookupByLibrary.simpleMessage("Dasar Privasi"),
@@ -90,6 +96,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Syarat penggunaan"),
         "text": MessageLookupByLibrary.simpleMessage("Teks"),
         "third_Line": MessageLookupByLibrary.simpleMessage(
-            "TecnoWays LLC Semua hak terpelihara")
+            "TecnoWays LLC Semua hak terpelihara"),
+        "yes": MessageLookupByLibrary.simpleMessage("ya")
       };
 }

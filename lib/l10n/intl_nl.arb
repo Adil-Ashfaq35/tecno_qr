@@ -45,6 +45,10 @@
   "grant_Access":"Toegang verlenen",
   "cancel":"Annuleren",
   "privacy_Policy_Confirmation":"Door deze toepassing te installeren of te gebruiken, aanvaardt u de Engelse versie van het privacybeleid",
-  "camera_Permission_Cancel_Message_Button": "Ga door"
+  "camera_Permission_Cancel_Message_Button": "Ga door",
+  "no": "Nee",
+  "yes": "Ja",
+  "are_You_Sure": "Weet je het zeker?",
+  "do_You_Want_To_Exit_This_Application": "Wilt u deze applicatie afsluiten"
 }
 

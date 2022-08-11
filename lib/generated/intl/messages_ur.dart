@@ -23,6 +23,8 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "about": MessageLookupByLibrary.simpleMessage("کے بارے میں"),
+        "are_You_Sure":
+            MessageLookupByLibrary.simpleMessage("کیا تمہیں یقین ہے؟"),
         "camera_Alert_Description": MessageLookupByLibrary.simpleMessage(
             "اس فیچر کو فعال کرنے کے لیے کیمرے تک رسائی کی اجازت دیں یا آپ بغیر اجازت کے ایپلیکیشن کو استعمال کرنے کے لیے درج ذیل اقدامات پر عمل کر سکتے ہیں:\n1- اپنے کیمرہ ایپلیکیشن کے ذریعے کیو آر کوڈ کی تصویر کیپچر کریں یا اپنی مقامی فائلوں سے مقامی تصویر منتخب کریں۔\n2- تصویر کو ٹیکنو کوڈ ایپلیکیشن پر شیئر کریں۔\n3- نتیجہ براہ راست TecnoCode ایپلیکیشن میں دکھایا جائے گا۔"),
         "camera_Permission_Alert":
@@ -34,6 +36,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("منسوخ کریں۔"),
         "copied": MessageLookupByLibrary.simpleMessage("کاپی شدہ"),
         "copy_Button_Text": MessageLookupByLibrary.simpleMessage("کاپی کریں۔"),
+        "do_You_Want_To_Exit_This_Application":
+            MessageLookupByLibrary.simpleMessage(
+                "کیا آپ اس ایپلیکیشن سے باہر نکلنا چاہتے ہیں؟"),
         "download_Button_Text":
             MessageLookupByLibrary.simpleMessage("ڈاؤن لوڈ کریں"),
         "enter_Qr": MessageLookupByLibrary.simpleMessage("Qr درج کریں"),
@@ -58,6 +63,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "مقامی اسٹوریج کی اجازت درکار ہے۔"),
         "navigate_Button_Text":
             MessageLookupByLibrary.simpleMessage("نیویگیٹ کریں۔"),
+        "no": MessageLookupByLibrary.simpleMessage("نہیں"),
         "oK_Button_Text": MessageLookupByLibrary.simpleMessage("ٹھیک ہے"),
         "paste": MessageLookupByLibrary.simpleMessage("پیسٹ"),
         "privacy_Policy":
@@ -89,6 +95,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "tecno_Code": MessageLookupByLibrary.simpleMessage("TecnoCode"),
         "terms_Of_Use":
             MessageLookupByLibrary.simpleMessage("استعمال کی شرائط"),
-        "text": MessageLookupByLibrary.simpleMessage("متن")
+        "text": MessageLookupByLibrary.simpleMessage("متن"),
+        "yes": MessageLookupByLibrary.simpleMessage("جی ہاں")
       };
 }

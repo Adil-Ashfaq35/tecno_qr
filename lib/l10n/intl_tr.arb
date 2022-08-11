@@ -46,6 +46,10 @@
   "grant_Access":"Erişim İzni",
   "cancel":"İptal",
   "privacy_Policy_Confirmation":"Bu uygulamayı yükleyerek veya kullanarak gizlilik politikasının İngilizce versiyonunu kabul etmiş olursunuz",
-  "camera_Permission_Cancel_Message_Button": "Devam et"
+  "camera_Permission_Cancel_Message_Button": "Devam et",
+  "no": "Numara",
+  "yes": "Evet",
+  "are_You_Sure": "Emin misin?",
+  "do_You_Want_To_Exit_This_Application": "Bu uygulamadan çıkmak istiyor musunuz?"
 }
 

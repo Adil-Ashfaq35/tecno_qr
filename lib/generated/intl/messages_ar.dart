@@ -23,6 +23,7 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "about": MessageLookupByLibrary.simpleMessage("حول التطبيق"),
+        "are_You_Sure": MessageLookupByLibrary.simpleMessage("هل أنت واثق؟"),
         "camera_Alert_Description": MessageLookupByLibrary.simpleMessage(
             "اسمح بالوصول إلى الكاميرا لتمكين هذه الميزة أو يمكنك اتباع الخطوات التالية لاستخدام التطبيق بدون إذن:\n1- التقط صورة QR Code عبر تطبيق الكاميرا أو حدد صورة محلية من ملفاتك المحلية.\n2- شارك الصورة في تطبيق TecnoCode.\n3- سيتم عرض النتيجة مباشرة في تطبيق TecnoCode."),
         "camera_Permission_Alert":
@@ -33,6 +34,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "cancel_Button_Text": MessageLookupByLibrary.simpleMessage("إلغاء"),
         "copied": MessageLookupByLibrary.simpleMessage("نسخ"),
         "copy_Button_Text": MessageLookupByLibrary.simpleMessage("نسخ"),
+        "do_You_Want_To_Exit_This_Application":
+            MessageLookupByLibrary.simpleMessage(
+                "هل تريد الخروج من هذا التطبيق"),
         "download_Button_Text": MessageLookupByLibrary.simpleMessage("تحميل"),
         "enter_Qr": MessageLookupByLibrary.simpleMessage("أدخل ريال قطري"),
         "fAQ": MessageLookupByLibrary.simpleMessage("الأسئلة الشائعة"),
@@ -57,6 +61,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "local_Permission_Alert":
             MessageLookupByLibrary.simpleMessage("مطلوب إذن التخزين المحلي"),
         "navigate_Button_Text": MessageLookupByLibrary.simpleMessage("انتقال"),
+        "no": MessageLookupByLibrary.simpleMessage("رقم"),
         "oK_Button_Text": MessageLookupByLibrary.simpleMessage("موافق"),
         "paste": MessageLookupByLibrary.simpleMessage("لصق"),
         "privacy_Policy":
@@ -89,6 +94,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "تثبيت هذا التطبيق أو استخدامه يعتبرموافقة منك على النسخة الإنجليزية من سياسة الخصوصية"),
         "tecno_Code": MessageLookupByLibrary.simpleMessage("TecnoCode"),
         "terms_Of_Use": MessageLookupByLibrary.simpleMessage("شروط الاستخدام"),
-        "text": MessageLookupByLibrary.simpleMessage("نص")
+        "text": MessageLookupByLibrary.simpleMessage("نص"),
+        "yes": MessageLookupByLibrary.simpleMessage("نعم")
       };
 }
