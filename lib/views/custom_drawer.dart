@@ -188,8 +188,14 @@ class _CustomDrawerState extends State<CustomDrawer>
               offset: const Offset(0, 3), // changes position of shadow
             ),
           ], borderRadius: BorderRadius.circular(25.r)),
-          child: HomeScreen(
-            animation: toggleAnimation,
+          child: OrientationBuilder(
+
+            builder: (BuildContext context, Orientation orientation) {
+              return  HomeScreen(
+                animation: toggleAnimation, orientation: orientation,
+              );
+            },
+
           )),
     );
     return ScreenUtilInit(

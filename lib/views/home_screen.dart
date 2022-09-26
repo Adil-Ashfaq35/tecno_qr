@@ -16,31 +16,33 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '../models/language/lnaguage_constant.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key, this.animation}) : super(key: key);
+   HomeScreen({Key? key, this.animation,required this.orientation}) : super(key: key);
   final VoidCallback? animation;
+  Orientation orientation;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
 
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(66.sm),
-        child: AppBarWidget(
-          title: translation(context).tecno_Code,
-          iconButton: IconButton(
+        preferredSize: Size.fromHeight(50.sm),
+        child:    AppBarWidget(
+            title: translation(context).tecno_Code,
+            iconButton: IconButton(
 
-            hoverColor: AppTheme.splashColor,
-            disabledColor: Colors.grey[200],
-            focusColor: AppTheme.splashColor,
-            highlightColor: AppTheme.splashColor,
-            splashColor: AppTheme.splashColor,
-            splashRadius: 20.r,
-            icon: const Icon(Icons.menu),
-            onPressed: () {
-              animation!();
-            },
+              hoverColor: AppTheme.splashColor,
+              disabledColor: Colors.grey[200],
+              focusColor: AppTheme.splashColor,
+              highlightColor: AppTheme.splashColor,
+              splashColor: AppTheme.splashColor,
+              splashRadius: 20.r,
+              icon: const Icon(Icons.menu),
+              onPressed: () {
+                animation!();
+              },
 
-          ),
-        ),
+            ),
+            orientation: orientation,
+          )
       ),
       body:OrientationBuilder(builder: (BuildContext context, Orientation orientation) {
         return

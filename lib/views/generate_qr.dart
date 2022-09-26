@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'dart:ui' as ui;
+  import 'dart:ui' as ui;
 
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/cupertino.dart';
@@ -81,86 +81,102 @@ class CreateQrPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBarWidget(
-          title: translation(context).qr_Code,
-          iconButton: IconButton(
-              onPressed: () {
-                navigationController.flowFromhistory.value
-                    ? navigationController.goBack()
-                    : navigationController
-                        .getOffAll(RouteGenerator.customDrawer);
-              },
-              icon: const Icon(Icons.arrow_back))),
-      body: SafeArea(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                "${translation(context).result_Language_Label}${translation(context).qr_Code}",
-                style: const TextStyle(
-                    color: Color.fromARGB(115, 33, 33, 33),
-                    fontWeight: FontWeight.bold,
-                    fontSize: 25),
-              ),
+    return OrientationBuilder(
+      builder: (BuildContext context, Orientation orientation) {
+        return
+        Scaffold(
+          appBar: PreferredSize(
+            
+            preferredSize: Size.fromHeight(50.sm),
+            child: AppBarWidget(
+                title: translation(context).qr_Code,
+                iconButton: IconButton(
+                    onPressed: () {
+                      navigationController.flowFromhistory.value
+                          ? navigationController.goBack()
+                          : navigationController
+                          .getOffAll(RouteGenerator.customDrawer);
+                    },
+                    icon: const Icon(Icons.arrow_back)),
+            orientation: orientation,
             ),
-            const SizedBox(height: 25),
-            Center(
-              child: RepaintBoundary(
-                key: qrKey,
-                child: navigationController.flowFromhistory.value
-                    ? Image.file(
-                        File(historyController.currentHistoryImage.value),
-                        height: 0.4.sh,
-                        width: 0.75.sw,
-                      )
-                    : QrImage(
-                        data: qrProvider.texttoGenerate.value,
-                        size: 250,
-                        backgroundColor: Colors.white,
-                        version: QrVersions.auto,
-                      ),
-              ),
-            ),
-            const SizedBox(height: 25),
-            OptionsWidget(
-              icon: CupertinoIcons.camera,
-              optionText: translation(context).download_Button_Text,
-              onTap: () {
-                if (behaviourController.isClicked.value == false) {
-                  behaviourController.disableButton();
-                  takeScreenShot(context, true);
-                }
-                else{
-                  if (kDebugMode) {
-                    print("tab is delayed and file is already downloaded");
-                  }
-                }
-              },
-            ),
-            OptionsWidget(
-              icon: Icons.share,
-              optionText: translation(context).share_Button_Text,
-              onTap: () async {
-                File? imagefile = await takeScreenShot(context, false);
-                Share.shareFiles([(imagefile!.path)], text: 'Qr Code');
-                FirebaseAnalytics.instance
-                    .logEvent(name: "share_qr", parameters: {
-                  "qr_shared": "shared_gen_qr",
-                });
-              },
-            ),
-            // CupertinoButton(
-            //   child: const Text("Download"),
-            //   onPressed: () => takeScreenShot(qrProvider),
-            // ),
+          ),
+          body: SafeArea(
+            child:
+            SingleChildScrollView(    child:        Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    "${translation(context).result_Language_Label}${translation(context).qr_Code}",
+                    style: const TextStyle(
+                        color: Color.fromARGB(115, 33, 33, 33),
+                        fontWeight: FontWeight.bold,
+                        fontSize: 25),
+                  ),
+                ),
+                const SizedBox(height: 25),
+                Center(
+                  child: RepaintBoundary(
+                    key: qrKey,
+                    child: navigationController.flowFromhistory.value
+                        ? Image.file(
+                      File(historyController.currentHistoryImage.value),
+                      height: 0.4.sh,
+                      width: 0.75.sw,
+                    )
+                        : QrImage(
+                      data: qrProvider.texttoGenerate.value,
+                      size: 250,
+                      backgroundColor: Colors.white,
+                      version: QrVersions.auto,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 25),
+                OptionsWidget(
+                  icon: CupertinoIcons.camera,
+                  optionText: translation(context).download_Button_Text,
+                  onTap: () {
+                    if (behaviourController.isClicked.value == false) {
+                      behaviourController.disableButton();
+                      takeScreenShot(context, true);
+                    }
+                    else{
+                      if (kDebugMode) {
+                        print("tab is delayed and file is already downloaded");
+                      }
+                    }
+                  },
+                  orientation: orientation,
+                ),
+                OptionsWidget(
+                  icon: Icons.share,
+                  optionText: translation(context).share_Button_Text,
+                  onTap: () async {
+                    File? imagefile = await takeScreenShot(context, false);
+                      Share.shareFiles([(imagefile!.path)], text: 'Qr Code');
+                    FirebaseAnalytics.instance
+                        .logEvent(name: "share_qr", parameters: {
+                      "qr_shared": "shared_gen_qr",
+                    });
+                  },
+                  orientation: orientation,
+                ),
+                // CupertinoButton(
+                //   child: const Text("Download"),
+                //   onPressed: () => takeScreenShot(qrProvider),
+                // ),
 
-            const SizedBox(height: 25)
-          ],
-        ),
-      ),
+                const SizedBox(height: 25)
+              ],
+            ),
+            ),
+          ),
+        );
+      },
+
     );
   }
 }

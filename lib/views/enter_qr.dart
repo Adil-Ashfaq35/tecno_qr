@@ -20,100 +20,120 @@ class EnterText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      resizeToAvoidBottomInset: true,
-      appBar: AppBarWidget(
-          title: translation(context).enter_Qr,
-          iconButton: IconButton(
-              onPressed: () {
-                navigationController.goBack();
-              },
-              icon: const Icon(Icons.arrow_back))),
-      body: Container(
-        decoration: const BoxDecoration(color: AppTheme.lightBackgroundColor),
-        child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            // crossAxisAlignment: CrossAxisAlignment.center,
+    return OrientationBuilder(
 
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(
-                  translation(context).text,
-                  style: const TextStyle(
-                      color: Color.fromARGB(115, 33, 33, 33),
-                      fontWeight: FontWeight.bold,
-                      fontSize: 25),
-                ),
-              ),
-              Expanded(
-                flex: 1,
-                child: TextField(
-                  inputController: _inputController,
-                ),
-              ),
-              Column(
-                children: [
-                  OptionsWidget(
-                      icon: Icons.qr_code,
-                      optionText: translation(context).generate_Button_Text,
-                      onTap: () async {
+      builder: (BuildContext context, Orientation orientation) {
+        return
+        Scaffold(
+          resizeToAvoidBottomInset: true,
+          appBar: PreferredSize(
+            preferredSize: Size.fromHeight(50.sm),
+            child: AppBarWidget(
+                title: translation(context).enter_Qr,
+                iconButton: IconButton(
+                    onPressed: () {
+                      navigationController.goBack();
+                    },
+                    icon: const Icon(Icons.arrow_back)),
+            orientation: orientation,
+            ),
+          ),
+          body: SingleChildScrollView(
+            child: Container(
+              height:orientation==Orientation.landscape? 1.5.sh:0.9.sh,
+              decoration: const BoxDecoration(color: AppTheme.lightBackgroundColor),
+              child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  // crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(
+                        translation(context).text,
+                        style: const TextStyle(
+                            color: Color.fromARGB(115, 33, 33, 33),
+                            fontWeight: FontWeight.bold,
+                            fontSize: 25),
+                      ),
+                    ),
+                    SizedBox(
+                      height: orientation==Orientation.landscape? 0.8.sh:0.4.sh,
+                      width:  orientation==Orientation.landscape?0.8.sw:null,
+                      child: TextField(
+                        inputController: _inputController,
+                      ),
+                    ),
+                    SizedBox(
+                       height:orientation==Orientation.landscape? 0.49.sh:null,
+                      child: Column(
+                        children: [
+                          OptionsWidget(
+                              icon: Icons.qr_code,
+                              optionText: translation(context).generate_Button_Text,
+                              onTap: () async {
+                                PermissionStatus status=  await Permission.storage.request();
+                                if(status.isDenied){
+                                  await showDialog(context: context, builder: (context){
+                                    return DialogWidget(
+                                      title: translation(context).local_Permission_Alert,
+                                      description: translation(context).local_Alert_Description,
+                                      cancelTap: (){
+                                        navigationController.goBack();
+                                      },
+                                      continueTap: () async {
+                                        navigationController.goBack();
+                                        await openAppSettings(
+                                        );
+                                        navigationController.getOffAll(homeRoute);
+                                      },
+                                    );
+                                  });
+                                }
+                                else if(status.isPermanentlyDenied){
+                                  await showDialog(context: context, builder: (context){
+                                    return DialogWidget(
+                                      title: translation(context).local_Permission_Alert,
+                                      description: translation(context).local_Alert_Description,
+                                      cancelTap: (){
+                                        navigationController.goBack();
+                                      },
+                                      continueTap: () async {
+                                        navigationController.goBack();
+                                        await openAppSettings(
+                                        );
+                                        navigationController.getOffAll(RouteGenerator.customDrawer);
+                                      },
+                                    );
+                                  });
+                                }
+                                else if(status.isGranted){
+                                  if (_inputController.text.isNotEmpty) {
+                                    qrProvider.setTexttogenerate(_inputController.text);
+                                    navigationController.flowFromhistory.value = false;
+                                    navigationController
+                                        .navigateToNamed(RouteGenerator.createQr);
+                                  }
+                                }
+                              },
+                          orientation: orientation,
+                          ),
+                          OptionsWidget(
+                              icon: Icons.paste,
+                              optionText: translation(context).paste,
+                              onTap: () async {
+                                _inputController.text = (await _getClipboardText())!;
+                              },
+                          orientation: orientation,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ]),
+            ),
+          ),
+        );
+      },
 
-
-                        PermissionStatus status=  await Permission.storage.request();
-                        if(status.isDenied){
-                          await showDialog(context: context, builder: (context){
-                            return DialogWidget(
-                              title: translation(context).local_Permission_Alert,
-                              description: translation(context).local_Alert_Description,
-                              cancelTap: (){
-                                navigationController.goBack();
-                              },
-                              continueTap: () async {
-                                navigationController.goBack();
-                                await openAppSettings(
-                                );
-                                navigationController.getOffAll(homeRoute);
-                              },
-                            );
-                          });
-                        }
-                        else if(status.isPermanentlyDenied){
-                          await showDialog(context: context, builder: (context){
-                            return DialogWidget(
-                              title: translation(context).local_Permission_Alert,
-                              description: translation(context).local_Alert_Description,
-                              cancelTap: (){
-                                navigationController.goBack();
-                              },
-                              continueTap: () async {
-                                navigationController.goBack();
-                                await openAppSettings(
-                                );
-                                navigationController.getOffAll(RouteGenerator.customDrawer);
-                              },
-                            );
-                          });
-                        }
-                        else if(status.isGranted){
-                          if (_inputController.text.isNotEmpty) {
-                            qrProvider.setTexttogenerate(_inputController.text);
-                            navigationController.flowFromhistory.value = false;
-                            navigationController
-                                .navigateToNamed(RouteGenerator.createQr);
-                          }
-                        }
-                      }),
-                  OptionsWidget(
-                      icon: Icons.paste,
-                      optionText: translation(context).paste,
-                      onTap: () async {
-                        _inputController.text = (await _getClipboardText())!;
-                      }),
-                ],
-              )
-            ]),
-      ),
     );
   }
 
@@ -153,21 +173,23 @@ class TextField extends StatelessWidget {
                   Form.of(primaryFocus!.context!)!.save();
                 },
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(5.0),
                   child: ConstrainedBox(
                     constraints: BoxConstraints.tight( Size(400.sm, 400.sm)),
-                    child: TextFormField(
-                      controller: inputController,
-                      style: const TextStyle(
-                          fontWeight: FontWeight.bold, fontSize: 15),
-                      decoration: const InputDecoration(
-                          border: InputBorder.none,
-                          hintText: 'Write text here...'),
-                      keyboardType: TextInputType.multiline,
-                      onSaved: (String? value) {
-                        debugPrint('Value for field  saved as "$value"');
-                      },
-                      maxLines: 20,
+                    child: SingleChildScrollView(
+                      child: TextFormField(
+                        controller: inputController,
+                        style: const TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 15),
+                        decoration: const InputDecoration(
+                            border: InputBorder.none,
+                            hintText: 'Write text here...'),
+                        keyboardType: TextInputType.multiline,
+                        onSaved: (String? value) {
+                          debugPrint('Value for field  saved as "$value"');
+                        },
+                        maxLines: 20,
+                      ),
                     ),
                   ),
                 ))));

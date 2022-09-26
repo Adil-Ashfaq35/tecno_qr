@@ -41,94 +41,95 @@ class _HistoryScreenState extends State<HistoryScreen> {
   //List<String> options = ['Scan History', 'Read History', 'Generate History'];
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar:PreferredSize(
-      preferredSize: Size.fromHeight(60.sm),
-      child: OrientationBuilder(
-        builder: (BuildContext context, Orientation orientation) {
-          return
-          AppBarWidget(
-            title: 'History screen',
-            iconButton: IconButton(
-                onPressed: () {
-                  navigationController.goBack();
-                },
-                icon: const Icon(Icons.arrow_back)),
-            orientation: orientation,
+    return OrientationBuilder(
 
-          );
-        },
+      builder: (BuildContext context, Orientation orientation) {
+        return Scaffold(
+          appBar:PreferredSize(
+              preferredSize: Size.fromHeight(50.sm),
+              child: AppBarWidget(
+                title: 'History screen',
+                iconButton: IconButton(
+                    onPressed: () {
+                      navigationController.goBack();
+                    },
+                    icon: const Icon(Icons.arrow_back)),
+                orientation: orientation,
 
-      ),),
-      body: Container(
-        // color: Colors.black,
+              ),
+          ),
+          body: Container(
+            // color: Colors.black,
 
-        padding: EdgeInsets.symmetric(
-          horizontal: 15.sp,
-        ),
-        child: CustomScrollView(
-          controller: _scrollController,
-          slivers: [
-            SliverList(
-                delegate: SliverChildListDelegate([
-              SizedBox(
-                  height: 0.90.sh,
-                  child: RefreshIndicator(
-                    onRefresh: () async {},
-                    child: CustomScrollView(
-                        physics: BouncingScrollPhysics(),
-                        controller: _scrollController,
-                        // scrollDirection: Axis.vertical,
-                        // shrinkWrap: true,
-                        slivers: [
-                          SliverList(
-                              delegate: SliverChildBuilderDelegate(
-                            (BuildContext context, int typeindex) {
-                              return HistoryScroll(
-                                scrollController: _scrollController,
-                                index: typeindex,
-                                title:typeindex==0?
-                                    translation(context).scan_Tree_Item:translation(context).read_History,
-                                // historyController.qrHistory[typeindex].title,
-                                children: ExpansionPanelhistory(
-                                  qrslist: historyController
-                                      .qrHistory[typeindex].qrsList,
-                                  images: historyController.images,
-                                  isQRCreated: false,
-                                ),
-                              );
-                            },
-                            childCount: historyController.qrHistory.length,
+            padding: EdgeInsets.symmetric(
+              horizontal: 15.sp,
+            ),
+            child: CustomScrollView(
+              controller: _scrollController,
+              slivers: [
+                SliverList(
+                    delegate: SliverChildListDelegate([
+                      SizedBox(
+                          height: 0.90.sh,
+                          child: RefreshIndicator(
+                            onRefresh: () async {},
+                            child: CustomScrollView(
+                                physics: BouncingScrollPhysics(),
+                                controller: _scrollController,
+                                // scrollDirection: Axis.vertical,
+                                // shrinkWrap: true,
+                                slivers: [
+                                  SliverList(
+                                      delegate: SliverChildBuilderDelegate(
+                                            (BuildContext context, int typeindex) {
+                                          return HistoryScroll(
+                                            scrollController: _scrollController,
+                                            index: typeindex,
+                                            title:typeindex==0?
+                                            translation(context).scan_Tree_Item:translation(context).read_History,
+                                            // historyController.qrHistory[typeindex].title,
+                                            children: ExpansionPanelhistory(
+                                              qrslist: historyController
+                                                  .qrHistory[typeindex].qrsList,
+                                              images: historyController.images,
+                                              isQRCreated: false,
+                                            ),
+                                          );
+                                        },
+                                        childCount: historyController.qrHistory.length,
+                                      )),
+                                  SliverList(
+                                      delegate: SliverChildBuilderDelegate(
+                                              (BuildContext context, int typeindex) {
+                                            return HistoryScroll(
+                                              scrollController: _scrollController,
+                                              index: typeindex,
+                                              title: translation(context).generate_Button_Text,
+                                              children: ExpansionPanelhistory(
+                                                qrslist:
+                                                historyController.qrHistory[typeindex].qrsList,
+                                                images: historyController.images,
+                                                isQRCreated: true,
+                                              ),
+                                            );
+                                          }, childCount: 1)),
+                                ]),
                           )),
-                          SliverList(
-                              delegate: SliverChildBuilderDelegate(
-                                  (BuildContext context, int typeindex) {
-                            return HistoryScroll(
-                              scrollController: _scrollController,
-                              index: typeindex,
-                              title: translation(context).generate_Button_Text,
-                              children: ExpansionPanelhistory(
-                                qrslist:
-                                historyController.qrHistory[typeindex].qrsList,
-                                images: historyController.images,
-                                isQRCreated: true,
-                              ),
-                            );
-                          }, childCount: 1)),
-                        ]),
-                  )),
-            ])),
+                    ])),
 
-            //           ],
-            //         )
-            //     ),
-            //   ],
-            // ),
+                //           ],
+                //         )
+                //     ),
+                //   ],
+                // ),
 
-            // ),
-          ],
-        ),
-      ),
+                // ),
+              ],
+            ),
+          ),
+        );
+      },
+
     );
   }
 }

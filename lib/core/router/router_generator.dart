@@ -38,16 +38,19 @@ class RouteGenerator {
 
   // FUNCTION THAT HANDLES ROUTING
   static Route<dynamic> onGeneratedRoutes(RouteSettings settings) {
-    late dynamic args;
+    Map<String, dynamic> args = {};
+
+    // GETTING ARGUMENTS IF PASSED
     if (settings.arguments != null) {
-      args = settings.arguments as Map;
+      args = settings.arguments as Map<String, dynamic>;
+      debugPrint("${settings.arguments}");
     }
     debugPrint(settings.name);
     switch (settings.name) {
       case mainSplashScreen:
         return _getPageRoute(const SplashScreen());
       case homeScreen:
-        return _getPageRoute(const HomeScreen());
+        return _getPageRoute( HomeScreen(orientation: args['orientation'],));
       case createQr:
         return _getPageRoute(CreateQrPage());
       case scanQr:

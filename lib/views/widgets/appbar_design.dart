@@ -42,7 +42,7 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
           style: TextStyle(
               fontWeight: FontWeight.w600,
               color: Colors.white,
-              fontSize:orientation==Orientation.portrait? 17.sp:12.sp),
+              fontSize:orientation==Orientation.landscape? 12.sp:20.sp),
         ),
         // actions: const [
         //   Icon(Icons.favorite),
