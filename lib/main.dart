@@ -4,6 +4,7 @@ import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -37,7 +38,9 @@ Future<InitData> init() async {
 
   WidgetsFlutterBinding.ensureInitialized();
 
-
+  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+    statusBarColor: Colors.transparent,
+  ));
   await Hive.initFlutter();
   Hive.registerAdapter((QRModelAdapter()));
   await Hive.openBox('');
@@ -63,6 +66,7 @@ void initControllers() {
   Get.put(ResultController());
   Get.put(QrScanProvider());
   Get.put(HistoryController());
+
  
 }
 

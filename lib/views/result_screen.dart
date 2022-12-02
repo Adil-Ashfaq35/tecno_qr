@@ -104,7 +104,9 @@ class _ResultScreenState extends State<ResultScreen> {
                         navigationController.goBack():
                         navigationController.getOffAll(RouteGenerator.customDrawer);
                       },
-                      icon: const Icon(Icons.arrow_back)),
+                      icon: const Icon(Icons.arrow_back_ios_new_outlined,
+                      color: AppTheme.primaryColor,
+                      )),
               orientation: orientation,
               ),
             ),
@@ -120,9 +122,9 @@ class _ResultScreenState extends State<ResultScreen> {
                         Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Text(
-                            "${translation(context).result_Language_Label}${translation(context).text}",
+                            "${translation(context).result_Language_Label} ${translation(context).text}",
                             style: const TextStyle(
-                                color: Color.fromARGB(115, 33, 33, 33),
+                                color: AppTheme.primaryColor,
                                 fontWeight: FontWeight.bold,
                                 fontSize: 25),
                           ),

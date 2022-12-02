@@ -180,9 +180,8 @@ class _CustomDialogBoxState extends State<CustomDialogBox> {
                 height: 0.02.sh,
               ),
               Center(
-                child: FlatButton(
+                child: TextButton(
                   onPressed: widget.onPressed,
-                  color: AppTheme.linkColor,
                   child: Text(
                     widget.text,
                     style: Theme.of(context).textTheme.headline3?.copyWith(

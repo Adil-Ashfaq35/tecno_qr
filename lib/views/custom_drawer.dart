@@ -64,7 +64,7 @@ class _CustomDrawerState extends State<CustomDrawer>
       builder: (BuildContext context, Orientation orientation) {
         return  Drawer(
           elevation: 0,
-          backgroundColor: const Color.fromARGB(255, 28, 92, 146),
+          backgroundColor: Colors.blueGrey.shade100,
           child: SingleChildScrollView(
             physics: const BouncingScrollPhysics(),
             child: Container(
@@ -267,7 +267,7 @@ class Menuitem extends StatelessWidget {
             padding:  EdgeInsets.only(right: 8.sm,),
             child: Icon(
               iconData,
-              color: Colors.white,
+              color: AppTheme.primaryColor,
             ),
           ),
           SizedBox(
@@ -278,7 +278,9 @@ class Menuitem extends StatelessWidget {
               style: Theme.of(context)
                   .textTheme
                   .headline2
-                  ?.copyWith(color: Colors.white, fontSize: orientation == Orientation.portrait ? 16.sp:10.sp),
+                  ?.copyWith( color: AppTheme.primaryColor, fontSize: orientation == Orientation.portrait ? 16.sp:10.sp,
+                  fontWeight: FontWeight.w700
+              ),
             ),
           )
         ],

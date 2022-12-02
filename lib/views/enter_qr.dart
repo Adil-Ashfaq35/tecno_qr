@@ -34,7 +34,9 @@ class EnterText extends StatelessWidget {
                     onPressed: () {
                       navigationController.goBack();
                     },
-                    icon: const Icon(Icons.arrow_back)),
+                    icon: const Icon(Icons.arrow_back_ios_new_outlined,
+                    color: AppTheme.primaryColor,
+                    )),
             orientation: orientation,
             ),
           ),
@@ -51,7 +53,7 @@ class EnterText extends StatelessWidget {
                       child: Text(
                         translation(context).text,
                         style: const TextStyle(
-                            color: Color.fromARGB(115, 33, 33, 33),
+                            color: AppTheme.primaryColor,
                             fontWeight: FontWeight.bold,
                             fontSize: 25),
                       ),

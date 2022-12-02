@@ -10,12 +10,13 @@ class AppTheme {
   static const Color darkBackgroundColor = Color(0xFF181C1E);
   static const Color darkCardColor = Color(0xFF262F34);
   static const Color linkColor = Colors.blue;
+  static const Color primaryColor = Color(0xff00005C);
+  static const Color optionWidgetColors = Color(0xffF0CAA3);
 
   static const Color darkLightColor = Color(0xFF656D77);
-  static const Color lightBackgroundColor = Color(0xFFFFFFFF);
+  static const Color lightBackgroundColor =  Color(0xFFCFD8DC);
   static const Color lightComponentsColor = Color(0xFF40CAFF);
   static const Color lightCardColor = Color(0xFFF4F8FA);
-  static const Color primaryColor = Color.fromARGB(255, 28, 92, 146);
   static const Color errorColor = Color(0xFFD73A49);
   static const Color btnColor = Color(0xFFFF9900);
   static const Color lightTextColor = Color(0xFFF4F8FA);
@@ -53,7 +54,7 @@ class AppTheme {
   static ThemeData get lightTheme {
     return ThemeData(
       fontFamily: GoogleFonts.montserrat().fontFamily,
-      primaryColor: Color.fromARGB(255, 28, 92, 146),
+      primaryColor: const Color.fromARGB(255, 28, 92, 146),
       backgroundColor: lightBackgroundColor,
       scaffoldBackgroundColor: lightBackgroundColor,
       primaryColorLight: const Color(0xFFF1F1F1),

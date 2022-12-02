@@ -5,6 +5,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:technoapp_qr/constants/controllers.dart';
 import 'package:technoapp_qr/constants/utils/apptheme.dart';
@@ -22,7 +23,6 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(50.sm),
         child:    AppBarWidget(
@@ -32,10 +32,14 @@ class HomeScreen extends StatelessWidget {
               hoverColor: AppTheme.splashColor,
               disabledColor: Colors.grey[200],
               focusColor: AppTheme.splashColor,
-              highlightColor: AppTheme.splashColor,
+              color: AppTheme.primaryColor,
               splashColor: AppTheme.splashColor,
               splashRadius: 20.r,
-              icon: const Icon(Icons.menu),
+              icon:   ImageIcon(
+                      const AssetImage("assets/images/hamburger.png"),
+                size: 25.sm,
+
+              ),
               onPressed: () {
                 animation!();
               },
@@ -48,13 +52,13 @@ class HomeScreen extends StatelessWidget {
         return
           orientation==Orientation.portrait?
           Container(
-          decoration: const BoxDecoration(color: AppTheme.lightBackgroundColor),
+          decoration:  BoxDecoration(color: Colors.blueGrey.shade100),
           child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               // crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 OptionsWidget(
-                  icon: CupertinoIcons.camera,
+                  icon:Icons.qr_code_scanner_outlined,
                   optionText: translation(context).scan_Button_Text,
                   onTap: () async {
                     bool isGranted=    await permission(context,true);
@@ -69,7 +73,7 @@ class HomeScreen extends StatelessWidget {
                   orientation: orientation,
                 ),
                 OptionsWidget(
-                  icon: CupertinoIcons.photo,
+                  icon: Icons.image_search_sharp,
                   optionText: '${AppLocalizations.of(context)?.read_Button_Text}',
                   onTap: () async {
 
@@ -93,7 +97,7 @@ class HomeScreen extends StatelessWidget {
                   orientation: orientation,
                 ),
                 OptionsWidget(
-                  icon: CupertinoIcons.pen,
+                  icon: Icons.edit,
                   optionText: translation(context).generate_Button_Text,
                   onTap: () {
                     FirebaseAnalytics.instance.logEvent(

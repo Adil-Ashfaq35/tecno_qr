@@ -5,7 +5,7 @@ import 'package:technoapp_qr/constants/utils/apptheme.dart';
 class CustomWidgets {
   static BoxDecoration customDecoration() {
     return BoxDecoration(
-        color: AppTheme.primaryColor.withOpacity(0.8),
+        color: AppTheme.optionWidgetColors,
         boxShadow: [
           BoxShadow(
             color: Colors.black45.withOpacity(0.25),
@@ -35,13 +35,13 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-
+        elevation: 0,
         leading: iconButton,
         title: Text(
           title,
           style: TextStyle(
               fontWeight: FontWeight.w600,
-              color: Colors.white,
+              color: AppTheme.primaryColor,
               fontSize:orientation==Orientation.landscape? 12.sp:20.sp),
         ),
         // actions: const [
@@ -52,7 +52,7 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
         //   ),
         //   Icon(Icons.more_vert),
         // ],
-        backgroundColor: const Color.fromARGB(255, 28, 92, 146));
+        backgroundColor:  Colors.blueGrey.shade100);
 
   }
 

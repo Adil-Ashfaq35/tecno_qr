@@ -18,6 +18,7 @@ import 'package:share_plus/share_plus.dart';
 import 'package:technoapp_qr/core/router/router_generator.dart';
 
 import '../constants/controllers.dart';
+import '../constants/utils/apptheme.dart';
 import '../models/language/lnaguage_constant.dart';
 import 'widgets/appbar_design.dart';
 import 'widgets/options_widget.dart';
@@ -97,7 +98,9 @@ class CreateQrPage extends StatelessWidget {
                           : navigationController
                           .getOffAll(RouteGenerator.customDrawer);
                     },
-                    icon: const Icon(Icons.arrow_back)),
+                    icon: const Icon(Icons.arrow_back_ios_new_outlined,
+                    color: AppTheme.primaryColor,
+                    )),
             orientation: orientation,
             ),
           ),
@@ -109,9 +112,9 @@ class CreateQrPage extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
-                    "${translation(context).result_Language_Label}${translation(context).qr_Code}",
+                    "${translation(context).result_Language_Label} ${translation(context).qr_Code}",
                     style: const TextStyle(
-                        color: Color.fromARGB(115, 33, 33, 33),
+                        color: AppTheme.primaryColor,
                         fontWeight: FontWeight.bold,
                         fontSize: 25),
                   ),
@@ -136,7 +139,7 @@ class CreateQrPage extends StatelessWidget {
                 ),
                 const SizedBox(height: 25),
                 OptionsWidget(
-                  icon: CupertinoIcons.camera,
+                  icon: CupertinoIcons.down_arrow,
                   optionText: translation(context).download_Button_Text,
                   onTap: () {
                     if (behaviourController.isClicked.value == false) {

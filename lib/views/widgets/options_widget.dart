@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../constants/utils/apptheme.dart';
 import 'appbar_design.dart';
 
 class OptionsWidget extends StatelessWidget {
@@ -40,7 +41,7 @@ class OptionsWidget extends StatelessWidget {
                   child: Icon(
                    icon,
                 size:orientation==Orientation.portrait? 35.h:55.h,
-                color: Colors.white,
+                color: AppTheme.primaryColor,
               )),
             ),
             SizedBox(
